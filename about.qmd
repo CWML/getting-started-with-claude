@@ -1,0 +1,55 @@
+---
+title: "About this site"
+---
+
+These pages hold the materials for two Cushing/Whitney Medical Library classes: **Part 1: Getting started with Claude** and **Part 2: Analyzing research data with Claude Code**.
+
+## Who maintains it {#owner}
+
+- **Owner:** `[name]`, Cushing/Whitney Medical Library
+- **Contact:** `[owner email]`
+- **Features last checked:** 2026-10-30
+- **Next review due:** `[date]`
+
+## How we keep it current {#review}
+
+Claude and Claude Code change often. Menus get renamed, and features move or depend on your admin's settings.
+
+- We review the site **within 30 days of a major Claude change**, and **at least every 6 months**.
+- We check feature claims against the [Claude Help Center](https://support.claude.com) and the [Claude Code docs](https://code.claude.com/docs).
+- Features that depend on Yale's admin settings are marked **(if enabled)**. Local details, such as links, contacts, and approvals, appear in `[square brackets]` until they're confirmed.
+- If a page doesn't match what you see in Claude, trust what you see, and [tell us](#report).
+
+## Corrections log {#corrections}
+
+| Date | Change |
+|---|---|
+| 2026-10-31 | Part 2 cheat sheet: `Esc` and the Stop button now interrupt Claude in the panel too (v2.1.286 or later); `/config` doesn't open in the panel. Site navigation: each section has its own sidebar, so the navbar highlights the right page |
+| 2026-10-30 | Part 1 rebuilt as a hands-on Project workshop; class page and slides now come from one source; CWML style applied |
+
+## How this site was made {#ai-use}
+
+**AI use:** Drafted with Claude and Claude Code; reviewed by `[instructor]`. Every feature claim was checked against official documentation on the date above.
+
+**Data:** The class files are synthetic (made up) or public. No real patient data is used anywhere on this site. The Kit A article is an open-access paper reused under its Creative Commons license: Hickey MD et al., *PLoS Medicine* 2025, [doi:10.1371/journal.pmed.1004632](https://doi.org/10.1371/journal.pmed.1004632). It was reformatted as text for teaching.
+
+**Style:** The look follows the Cushing/Whitney Medical Library web style (CWML web style draft 0.1), applied through a Quarto adapter. Dark mode is a local extension and isn't part of the CWML style. The site's layout borrows from the library's `[All of Us workshop site link]`.
+
+**Built with:** [Quarto](https://quarto.org), published on GitHub Pages.
+
+## License {#license}
+
+`[Content: CC BY 4.0. Code: MIT. Confirm before publishing, including that the footer's 'All Rights Reserved' wording fits with this license.]`
+
+The copyright line in the site footer is the standard Yale web footer. The class content and code on this site are shared under the licenses above.
+
+The article in Kit A keeps its original license and attribution.
+
+## Report a problem {#report}
+
+Found a mistake, a broken link, or a feature that no longer works the way a page says?
+
+- Open an issue: `[repo issues link]`
+- Or email: `[owner email]`
+
+Please include the page, what you expected, and what you saw. Leave out any patient or other sensitive information.

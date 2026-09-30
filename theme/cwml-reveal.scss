@@ -1,0 +1,42 @@
+/*
+ * CWML web style (draft 0.1) for Quarto reveal.js decks. Light only
+ * (projectors and the style are light). Use: theme: [default, cwml-reveal.scss]
+ */
+/*-- scss:defaults --*/
+$cwml-teal: #007c85; $cwml-teal-dark: #00636a; $cwml-teal-bright: #00a0ab;
+$cwml-aqua: #a2d7db; $cwml-aqua-tint: #effafb; $cwml-heading: #282828; $cwml-text: #050505;
+$cwml-muted: #5a5a5a; $cwml-bg-muted: #f5f5f5; $cwml-yale-blue: #00356b;
+
+$body-bg: #ffffff;
+$body-color: $cwml-text;
+$link-color: $cwml-teal;
+$link-color-hover: $cwml-teal-dark;
+$selection-bg: $cwml-aqua;
+$selection-color: #000;
+$font-family-sans-serif: "Mallory", "Gill Sans", "Gill Sans MT", Calibri, Arial, sans-serif;
+$font-family-monospace: ui-monospace, SFMono-Regular, Consolas, "DejaVu Sans Mono", Menlo, monospace;
+$presentation-heading-font: "YaleNew", "Yale", Georgia, "Times New Roman", Times, serif;
+$presentation-heading-color: $cwml-heading;
+$presentation-heading-font-weight: 400;
+$presentation-font-size-root: 36px;   // back row of SHM L 111
+$code-block-bg: $cwml-bg-muted;
+$code-block-border-color: #dddddd;
+$code-block-font-size: 0.7em;          // ~25px: readable from the back row
+$callout-color-note: $cwml-teal;
+$callout-color-tip: $cwml-teal-dark;
+$callout-color-important: $cwml-yale-blue;
+$callout-color-warning: #8a4b00;
+$callout-color-caution: #8a4b00;
+
+/*-- scss:rules --*/
+.reveal h1, .reveal h2 { font-variant-numeric: oldstyle-nums; }
+.reveal .slide > h2 { padding-bottom: .25em; border-bottom: 2px solid $cwml-teal-bright; }  // the header rule
+.reveal a { text-decoration: underline; text-underline-offset: .15em; }
+.reveal strong { font-weight: 600; }
+.reveal pre code { white-space: pre-wrap; overflow-wrap: anywhere; padding-right: 1.5em; max-height: none; } // long prompts wrap, never clip
+.reveal div.sourceCode, .reveal pre { width: 100%; }
+.reveal .slide-number, .reveal .footer { color: $cwml-muted; }
+.reveal .footer a { color: $cwml-teal-dark; }
+.reveal :focus-visible { outline: 3px solid $cwml-teal; outline-offset: 2px; }
+.reveal .do-now { background: $cwml-aqua-tint; border-left: 6px solid $cwml-teal; padding: .4em .8em; } // "Your turn" boxes
+@media (prefers-reduced-motion: reduce) { .reveal .slides section { transition: none !important; } }

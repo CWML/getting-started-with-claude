@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "[server-name]": {
+      "type": "http",
+      "url": "[approved MCP server URL]"
+    }
+  }
+}

@@ -1,0 +1,146 @@
+/*
+ * CWML web style (draft 0.1) for Quarto websites: light theme layer.
+ * Use as: theme: { light: [cosmo, cwml.scss], dark: [cosmo, cwml.scss, cwml-dark.scss] }
+ * Token values from CWML/cwml-web-style tokens/tokens.json (v0.1, Oct 2026).
+ * No Yale fonts (github.io can't load them), no logos, no favicon.
+ */
+
+/*-- scss:defaults --*/
+// ---- CWML tokens (light) ----
+$cwml-teal:        #007c85 !default;
+$cwml-teal-dark:   #00636a !default;
+$cwml-teal-bright: #00a0ab !default;   // rules and borders only, never text
+$cwml-aqua:        #a2d7db !default;
+$cwml-aqua-tint:   #effafb !default;
+$cwml-yale-blue:   #00356b !default;
+$cwml-text:        #050505 !default;
+$cwml-heading:     #282828 !default;
+$cwml-link-dark:   #222222 !default;
+$cwml-muted:       #5a5a5a !default;
+$cwml-border:      #858585 !default;
+$cwml-border-light:#dddddd !default;
+$cwml-rule:        #cccccc !default;
+$cwml-bg:          #ffffff !default;
+$cwml-bg-subtle:   #f9f9f9 !default;
+$cwml-bg-muted:    #f5f5f5 !default;   // code blocks: keeps syntax colours >= 4.5:1
+$cwml-code-bg:     #eceff3 !default;   // inline code
+$cwml-success:     #067963 !default;
+$cwml-warning:     #8a4b00 !default;
+$cwml-danger:      #b42318 !default;
+$cwml-focus:       $cwml-teal !default;
+
+$cwml-font-sans:  "Mallory", "Gill Sans", "Gill Sans MT", Calibri, Arial, sans-serif;
+$cwml-font-serif: "YaleNew", "Yale", Georgia, "Times New Roman", Times, serif;
+$cwml-font-mono:  ui-monospace, SFMono-Regular, Consolas, "DejaVu Sans Mono", Menlo, monospace;
+
+// ---- Bootstrap ----
+$primary:   $cwml-teal;
+$secondary: $cwml-muted;
+$success:   $cwml-success;
+$info:      $cwml-teal;
+$warning:   $cwml-warning;
+$danger:    $cwml-danger;
+$body-bg:    $cwml-bg;
+$body-color: $cwml-text;
+$link-color: $cwml-teal;
+$link-hover-color: $cwml-teal-dark;
+$link-decoration: underline;
+$font-family-sans-serif: $cwml-font-sans;
+$font-family-monospace:  $cwml-font-mono;
+$font-size-root: null;           // respect the reader's browser size
+$font-size-base: 1.0625rem;      // 17px
+$line-height-base: 1.65;
+$headings-color: $cwml-heading;
+$headings-font-weight: 400;
+$headings-line-height: 1.25;
+$border-radius: 4px;
+$border-radius-sm: 3px;
+$border-radius-lg: 8px;
+$mark-bg: $cwml-aqua;
+$table-border-color: #dddddd;
+
+// ---- Quarto ----
+$navbar-bg: $cwml-bg;
+$navbar-fg: $cwml-link-dark;
+$navbar-hl: $cwml-teal;
+$sidebar-bg: $cwml-bg-subtle;
+$sidebar-fg: $cwml-link-dark;
+$sidebar-hl: $cwml-teal;
+$footer-bg: $cwml-bg-subtle;
+$footer-fg: $cwml-muted;
+$toc-color: $cwml-teal;
+$code-color: $cwml-text;
+$code-bg: $cwml-code-bg;
+$code-block-bg: $cwml-bg-muted;
+$callout-color-note:      $cwml-teal;
+$callout-color-tip:       $cwml-teal-dark;   // "Instructor tip" boxes
+$callout-color-important: $cwml-yale-blue;   // the one place Yale Blue appears (open question #1)
+$callout-color-caution:   $cwml-warning;
+$callout-color-warning:   $cwml-warning;
+
+/*-- scss:rules --*/
+:root {
+  --cwml-header-rule: #{$cwml-teal-bright};
+  --cwml-focus: #{$cwml-focus};
+  --cwml-heading: #{$cwml-heading};
+  --cwml-rule: #{$cwml-rule};
+}
+
+// Header: white with the library's 2px teal rule; site name in plain text
+#quarto-header .navbar { border-bottom: 2px solid var(--cwml-header-rule); box-shadow: none; }
+#quarto-header .navbar-title { font-weight: 400; color: var(--cwml-heading); }
+// Keep menu items on one line; let the long site title wrap instead of truncating
+#quarto-header .navbar-nav .nav-link { white-space: nowrap; }
+#quarto-header .navbar-title { white-space: normal; line-height: 1.2; }
+@media (min-width: 1200px) { #quarto-header .navbar-brand-container { max-width: 22rem; } }
+
+// h1/h2 in YaleNew/Georgia with old-style figures; short rule under the page title
+h1, h2, .h1, .h2, .title { font-family: $cwml-font-serif; font-variant-numeric: oldstyle-nums; }
+h3, h4, h5, h6 { font-family: $cwml-font-sans; }
+h4, h5, h6 { font-weight: 500; }
+#title-block-header .title { position: relative; padding-bottom: .5em; }
+#title-block-header .title::after { content: ""; position: absolute; left: 0; bottom: 0; width: 100px; height: 2px; background: var(--cwml-rule); }
+strong, b { font-weight: 600; }   // fallback fonts have no 500
+
+// Links: underlined in text (WCAG 1.4.1), thicker on hover; quiet in nav and TOC
+main a:not(.btn, .nav-link, .sidebar-link, .anchorjs-link, .quarto-xref) {
+  font-weight: 500; text-underline-offset: .18em; text-decoration-thickness: 1px;
+  &:hover { text-decoration-thickness: 2px; }
+}
+.callout-warning a, .callout-caution a, .callout-important a { color: $cwml-teal-dark; } // teal < 4.5:1 there
+
+// Focus: 3px teal ring, 2px offset, everywhere
+:focus-visible, .btn:focus-visible, .nav-link:focus-visible, .form-control:focus,
+.sidebar-link:focus-visible, .code-copy-button:focus-visible, .callout-header:focus-visible {
+  outline: 3px solid var(--cwml-focus) !important; outline-offset: 2px; box-shadow: none !important;
+}
+
+// Tables: light header, quiet borders, no zebra
+table thead th { background: $cwml-bg-subtle; font-weight: 600; border-bottom: 2px solid $cwml-border !important; }
+
+// Callouts: CWML shape (4px left bar, square-ish corners)
+div.callout { border-left-width: 4px !important; border-radius: 0 4px 4px 0; }
+
+// Buttons: aqua by default, teal on hover (the library's pattern)
+.btn-primary { --bs-btn-bg: #{$cwml-aqua}; --bs-btn-color: #{$cwml-heading}; --bs-btn-border-color: transparent;
+  --bs-btn-hover-bg: #{$cwml-teal}; --bs-btn-hover-color: #fff; --bs-btn-hover-border-color: transparent; }
+
+// Previous/next section bar (AoU pattern), if used
+.section-nav { display: flex; justify-content: space-between; gap: 1rem; margin-top: 2.5rem; padding-top: 1rem; border-top: 1px solid $cwml-border-light; }
+.section-nav a { padding: .6rem 1rem; border: 1px solid $cwml-teal-bright; border-radius: 3px; text-decoration: none; }
+.section-nav a:hover { background: $cwml-aqua; color: $cwml-heading; }
+
+// Skip link (Quarto 1.9 has none): include-before-body: theme/skip-link.html
+.cwml-skip-link { position: absolute; left: .5rem; top: .5rem; z-index: 2000; padding: .75rem 1.5rem;
+  background: $body-bg; color: $cwml-link-dark; box-shadow: 0 0 2px 2px rgba(0,0,0,.6); transform: translateY(-200%); }
+.cwml-skip-link:focus { transform: none; }
+
+// Slide columns stack on phones when a deck is rendered as a page
+@media (max-width: 767.98px) { .columns > .column { display: block; width: 100% !important; } }
+
+// Footer legal line: links underlined among plain text
+.nav-footer a { text-decoration: underline; text-underline-offset: .18em; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; scroll-behavior: auto !important; }
+}

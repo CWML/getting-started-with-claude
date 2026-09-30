@@ -1,0 +1,97 @@
+---
+title: "Intensive vs. Standard BP Control: Primary Analysis"
+subtitle: "Class example. All data are synthetic."
+format:
+  html:
+    embed-resources: true
+    toc: true
+execute:
+  echo: false
+  message: false
+  warning: false
+---
+
+```{r}
+#| label: setup
+# Run R/01_clean.R to R/04_figure.R first. This report only reads their outputs.
+library(tidyverse)
+library(here)
+library(gt)
+
+here::i_am("reports/report.qmd")
+
+cleaning_log <- read_csv(here("output", "cleaning_log.csv"), show_col_types = FALSE)
+population   <- read_csv(here("output", "analysis_population.csv"), show_col_types = FALSE)
+model        <- read_csv(here("output", "primary_model.csv"), show_col_types = FALSE)
+
+arm_effect <- filter(model, term == "armIntensive")
+n_analyzed <- sum(population$analyzed)
+```
+
+## Summary
+
+In `r n_analyzed` patients with baseline and 12-month systolic BP, the adjusted mean difference in 12-month SBP change (Intensive − Standard) was **`r sprintf("%.1f", arm_effect$estimate)` mmHg** (95% CI `r sprintf("%.1f", arm_effect$conf.low)` to `r sprintf("%.1f", arm_effect$conf.high)`), adjusted for baseline SBP and site.
+
+## Data cleaning
+
+The raw file was not changed. The cleaning script (`R/01_clean.R`) made these changes:
+
+```{r}
+#| label: cleaning-log
+cleaning_log |>
+  gt() |>
+  cols_label(step = "Step", variable = "Variable", n_changed = "Rows changed", details = "Details")
+```
+
+## Analysis population
+
+```{r}
+#| label: population
+population |>
+  gt() |>
+  fmt_number(mean_change, decimals = 1) |>
+  cols_label(arm = "Arm", randomized = "Randomized", missing_baseline = "Missing baseline SBP",
+             missing_12_months = "Missing 12-month SBP", analyzed = "Analyzed",
+             mean_change = "Mean SBP change (mmHg)")
+```
+
+## Table 1. Baseline characteristics
+
+```{r}
+#| label: table1
+n_by_arm <- setNames(population$randomized, population$arm)
+
+read_csv(here("output", "table1.csv"), show_col_types = FALSE) |>
+  gt() |>
+  sub_missing(missing_text = "") |>
+  cols_label(
+    Overall   = paste0("Overall (N = ", sum(n_by_arm), ")"),
+    Intensive = paste0("Intensive (N = ", n_by_arm["Intensive"], ")"),
+    Standard  = paste0("Standard (N = ", n_by_arm["Standard"], ")")
+  ) |>
+  tab_footnote("Mean (SD) or n (%).")
+```
+
+## Primary analysis
+
+ANCOVA: `sbp_change ~ arm + sbp_v0 + site`, with Standard as the reference arm.
+
+```{r}
+#| label: model
+model |>
+  gt() |>
+  fmt_number(c(estimate, conf.low, conf.high), decimals = 2) |>
+  fmt_number(p.value, n_sigfig = 2) |>
+  cols_label(term = "Term", estimate = "Estimate", conf.low = "95% CI lower",
+             conf.high = "95% CI upper", p.value = "p-value")
+```
+
+## Systolic BP over time
+
+![Mean systolic BP (95% CI) by visit and arm](../output/fig_sbp_by_visit.png)
+
+## Limitations
+
+- Complete-case analysis. Loss to follow-up was higher in older patients, so the planned sensitivity analyses (multiple imputation and a mixed model using all visits) should be run.
+- Sex codes `1` and `2` were recoded as M and F. This needs confirmation from the data manager.
+- `cuff_size` is not in the data dictionary and was not used.
