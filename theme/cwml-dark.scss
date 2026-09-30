@@ -1,0 +1,28 @@
+/*
+ * Dark layer for cwml.scss. NOT part of the CWML style (v0.1 is light-only);
+ * derived here and contrast-checked (all text pairs >= 7:1, UI >= 3:1).
+ */
+/*-- scss:defaults --*/
+$cwml-teal:        #7fd0d6;   // links on dark (10.1:1 on bg)
+$cwml-teal-dark:   #a2d7db;   // hover (11.3:1)
+$cwml-teal-bright: #00a0ab;   // header rule (5.6:1)
+$cwml-aqua:        #2b5b5f;   // button/mark bg on dark
+$cwml-text:        #e9ecec;   // 15.0:1
+$cwml-heading:     #f3f5f5;
+$cwml-link-dark:   #e9ecec;
+$cwml-muted:       #b3bbbd;   // 9.2:1
+$cwml-border:      #7b8589;   // 4.7:1
+$cwml-border-light:#3a4245;
+$cwml-rule:        #4a5357;
+$cwml-bg:          #14181a;
+$cwml-bg-subtle:   #1b2023;
+$cwml-bg-muted:    #20272a;
+$cwml-code-bg:     #20272a;
+$cwml-yale-blue:   #8fb4e3;   // lightened for dark backgrounds
+$cwml-success:     #6fd3b2;
+$cwml-warning:     #f0b46a;
+$cwml-danger:      #ff8a80;
+$cwml-focus:       #a2d7db;
+$mark-color: #e9ecec;
+$table-border-color: #3a4245;
+/*-- scss:rules --*/

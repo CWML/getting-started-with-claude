@@ -1,0 +1,11 @@
+/.quarto/
+/_site/
+.DS_Store
+.Rhistory
+.RData
+.Rproj.user/
+__pycache__/
+.ipynb_checkpoints/
+*_files/
+
+**/*.quarto_ipynb

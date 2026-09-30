@@ -1,0 +1,107 @@
+project:
+  type: website
+  output-dir: _site
+  # Only render the course pages. materials/ and instructor/ hold R/Python
+  # projects (including their own .qmd reports) that participants run locally.
+  render:
+    - index.qmd
+    - part1.qmd
+    - part1-reference.qmd
+    - part2.qmd
+    - part2-slides.qmd
+    - cheatsheet.qmd
+    - about.qmd
+  resources:
+    - materials/part1-kits/*
+  post-render: scripts/build_downloads.py
+
+website:
+  title: "Claude & Claude Code at the School of Medicine"
+  site-url: "[https://cwml.github.io/your-repo]"
+  repo-url: "[https://github.com/CWML/your-repo]"
+  repo-actions: [issue]
+  search: true
+  page-navigation: true
+  navbar:
+    collapse-below: xl
+    left:
+      - text: "Cushing/Whitney Medical Library"
+        href: https://library.medicine.yale.edu/
+      - href: index.qmd
+        text: Home & setup
+      - href: part1.qmd
+        text: "Part 1: Claude"
+      - href: part2.qmd
+        text: "Part 2: Claude Code"
+      - href: about.qmd
+        text: About
+    right:
+      - icon: envelope
+        href: "mailto:[owner email]?subject=Claude%20classes%20feedback"
+        aria-label: Send feedback by email
+      - icon: github
+        href: "[https://github.com/CWML/your-repo]"
+        aria-label: GitHub repository
+  # One sidebar per section. Quarto highlights the first navbar item whose page
+  # is in the current sidebar, so a shared sidebar would always highlight Home.
+  # Links back to Home use an anchor (index.html#...) so they don't count.
+  sidebar:
+    - id: part1
+      title: "Part 1: Getting started with Claude"
+      style: docked
+      contents:
+        - href: part1.qmd
+          text: Class page
+        - href: part1-slides.html
+          text: Slides
+        - href: part1-reference.qmd
+          text: Quick reference
+        - href: index.html#setup-part1
+          text: Setup for Part 1
+    - id: part2
+      title: "Part 2: Analyzing research data with Claude Code"
+      contents:
+        - href: part2.qmd
+          text: Class page
+        - href: part2-slides.qmd
+          text: Slides
+        - href: cheatsheet.qmd
+          text: Cheat sheet
+        - href: index.html#setup-part2
+          text: Setup for Part 2
+    - id: about
+      title: About
+      contents:
+        - about.qmd
+        - href: index.html#links
+          text: Recommended links
+    - id: home
+      title: "Home & setup"
+      contents:
+        - href: index.qmd
+          text: Home
+        - href: index.html#setup-part1
+          text: Setup for Part 1
+        - href: index.html#setup-part2
+          text: Setup for Part 2
+        - href: index.html#access
+          text: Access and alternatives
+        - href: index.html#links
+          text: Recommended links
+  page-footer:
+    left: "Cushing/Whitney Medical Library · Yale School of Medicine · [contact]"
+    center: "Copyright © 2026 Yale University · All Rights Reserved · [Accessibility at Yale](https://usability.yale.edu/digital-accessibility/accessibility-at-yale) · [Privacy Policy](https://privacy.yale.edu/resources/privacy-statement)"
+    right: "Built with [Quarto](https://quarto.org)"
+
+format:
+  html:
+    theme:
+      light: [cosmo, theme/cwml.scss]
+      dark: [cosmo, theme/cwml.scss, theme/cwml-dark.scss]
+    respect-user-color-scheme: true
+    toc: true
+    code-copy: true
+    include-before-body: theme/skip-link.html
+
+filters:
+  - theme/notes-to-tips.lua
