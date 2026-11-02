@@ -52,7 +52,7 @@ Then replace the `[placeholder]` values in `_quarto.yml` (`site-url`, `repo-url`
 
 ## Before each class
 
-- Check every `[bracketed placeholder]` (sign-up and HIPAA-version request links, policy links, contacts, enabled connectors, site URL).
+- Check every `[bracketed placeholder]` (sign-up and HIPAA-version request links, policy links, contacts, enabled connectors).
 - Check the Claude and Claude Code features against both Yale workspaces (standard enterprise and HIPAA-supported), since they change often.
 - Follow the instructor prep checklist: Part 1 in `instructor/README.md`, Part 2 at the top of `part2.qmd`.
 - After any content change, update the last-checked date and corrections log in `about.qmd`.

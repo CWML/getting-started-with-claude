@@ -4,7 +4,7 @@ A working document for `[Reviewer 1]` and `[Reviewer 2]` to review both classes 
 
 - **Review window:** `[start date]` to `[end date]`
 - **Target class dates:** Part 1 `[date]`, Part 2 `[date]`
-- **Where to view:** the rendered site at `[site URL]` (or run `quarto preview` locally)
+- **Where to view:** the rendered site at `https://cwml.github.io/getting-started-with-claude` (or run `quarto preview` locally)
 
 ## 1. How we'll review
 
@@ -138,7 +138,7 @@ Answer these once you've done the dry run.
 | License and footer wording for the public site | `[options]` | |
 | Part 2 restructure (more verification time, shorter feature tour, catch-up download) | Adopt the draft agenda / keep the current one | |
 | Rewording the fourth Part 2 objective (commands are now skills) | `[proposed wording]` | |
-| Bracketed placeholders still to fill (site URL, HIPAA request link, contacts, policy links) | Who confirms each one | |
+| Bracketed placeholders still to fill (HIPAA request link, contacts, policy links) | Who confirms each one | |
 | `[add more]` | | |
 
 ## 8. Findings log
@@ -156,4 +156,4 @@ One row per issue. Use the file and section heading so we can find it.
 - [ ] Apply the fixes, updating each class page and its slides together.
 - [ ] Update `about.qmd`: the "features last checked" date, the next review date, and a corrections log row for each fix to a fact, link, or instruction.
 - [ ] Re-render the site and spot-check the changed pages.
-- [ ] Move private items (demo account, room logistics, answers) into `instructor/README.md` if any turned up.
+- [ ] Move private items (such as demo account details) into `instructor/README.md` if any turned up.

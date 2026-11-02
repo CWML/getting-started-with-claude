@@ -10,11 +10,11 @@ These files are for **Part 1: Getting started with Claude**. In class you put on
 ## How to use a kit
 
 1. Download your kit (the zip file, or the single files from the class page).
-2. In the Claude app, create a Project and paste the Project instructions from the class page: [site URL]/part1.html#build-project
+2. In the Claude app, create a Project and paste the Project instructions from the class page: https://cwml.github.io/getting-started-with-claude/part1.html#build-project
 3. Upload the files listed above for your kit. Don't upload this README.
 4. Follow the steps on the class page.
 
-The files are plain text (`.md`). You can open them in any text editor or web browser, and you can search them with Ctrl+F (Cmd+F on a Mac). If your computer saves a file as `.md.txt`, see the troubleshooting notes on the setup page: [site URL]/index.html#setup-part1
+The files are plain text (`.md`). You can open them in any text editor or web browser, and you can search them with Ctrl+F (Cmd+F on a Mac). If your computer saves a file as `.md.txt`, see the troubleshooting notes on the setup page: https://cwml.github.io/getting-started-with-claude/index.html#setup-part1
 
 ## What's in each file
 

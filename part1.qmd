@@ -14,7 +14,7 @@ format:
     height: 720
     code-copy: true
     code-line-numbers: false
-    footer: "[site URL]/part1.html"
+    footer: "https://cwml.github.io/getting-started-with-claude/part1.html"
 # Single source for the Part 1 class page (part1.html) and deck (part1-slides.html).
 #   ## = timed segment (divider slide); ### = one slide.
 #   Page-only:  ::: {.content-visible unless-format="revealjs"}
@@ -43,7 +43,7 @@ You can still take part. In class, pair with a neighbor who has an account. To d
 
 ## 1. Welcome and sign in (0:00 – 0:03) {#welcome}
 
-**Sign in to Claude in a browser tab now.** Open this page: `[site URL]/part1.html` `[QR code]`
+**Sign in to Claude in a browser tab now.** Open this page: `https://cwml.github.io/getting-started-with-claude/part1.html` `[QR code]`
 
 Green card up = a new chat is open. Track A Foundations · Beginner
 
@@ -305,7 +305,7 @@ Windows users who get `.md.txt` files: the fix is on the setup page.
 ::: {.content-visible when-format="revealjs"}
 ### What's in your Project instructions
 
-**Copy them from the class page** ([site URL]/part1.html#build-project), paste into **Set project instructions**, then change one line.
+**Copy them from the class page** (https://cwml.github.io/getting-started-with-claude/part1.html#build-project), paste into **Set project instructions**, then change one line.
 
 - **Sources:** use only the Project files; never invent numbers or quotes; label outside knowledge.
 - **How to work:** ask me up to 3 questions first; give real numbers; use cautious language.
@@ -437,7 +437,7 @@ Start a **new chat inside your Project**. Use the default model and effort.
 ### Your turn: Turn 1
 
 ::: {.do-now}
-Copy **Turn 1** for your kit from the class page ([site URL]/part1.html#run-prompt). Fill in the two brackets, send, then answer Claude's questions.
+Copy **Turn 1** for your kit from the class page (https://cwml.github.io/getting-started-with-claude/part1.html#run-prompt). Fill in the two brackets, send, then answer Claude's questions.
 :::
 
 ::: {.content-visible when-format="revealjs"}

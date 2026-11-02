@@ -8,7 +8,7 @@ format:
     transition: none
     width: 1280
     height: 720
-    footer: "Class page: [site URL]/part2.html"
+    footer: "Class page: https://cwml.github.io/getting-started-with-claude/part2.html"
 ---
 
 ## Analyzing Research Data with Claude Code {.center}
@@ -17,7 +17,7 @@ Part 2: a 90-minute hands-on class
 
 [Instructor name], [Library name]
 
-**Open the class page:** `[site URL]/part2.html`
+**Open the class page:** `https://cwml.github.io/getting-started-with-claude/part2.html`
 
 **Download:** `hypertension-cohort.zip`, then open the folder in Positron
 
