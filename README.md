@@ -22,7 +22,7 @@ part2-description.md       # Part 2 entry for the library's training request for
 materials/part1-kits/      # Part 1 Project kits: Kit A (Article Explainer), Kit B (Committee Assistant)
 materials/hypertension-cohort/  # the Part 2 practice project (zipped at build time)
 theme/                     # CWML web style adapter: cwml.scss, cwml-dark.scss, cwml-reveal.scss, notes-to-tips.lua, skip-link.html
-instructor/                # not rendered: README (Part 1 prep and answer keys, data spec, Part 2 answer keys), make_data.R, solutions, Part 2 answer key
+instructor/                # not rendered: README (Part 1 prep and answer keys, data spec, Part 2 answer keys), make_data.R, solutions, Part 2 answer key, review-outline.md (checklist for reviewing the materials)
 scripts/build_downloads.py # post-render step that builds the zip downloads
 ```
 
