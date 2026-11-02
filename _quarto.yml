@@ -17,7 +17,7 @@ project:
   post-render: scripts/build_downloads.py
 
 website:
-  title: "Claude & Claude Code at the School of Medicine"
+  title: "Getting Started with Claude"
   description: "Two hands-on library classes: getting started with Claude, and analyzing research data with Claude Code."
   site-url: "https://cwml.github.io/getting-started-with-claude/"
   repo-url: "https://github.com/CWML/getting-started-with-claude"
