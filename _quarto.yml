@@ -1,6 +1,6 @@
 project:
   type: website
-  output-dir: _site
+  output-dir: docs   # committed; GitHub Pages serves main /docs
   # Only render the course pages. materials/ and instructor/ hold R/Python
   # projects (including their own .qmd reports) that participants run locally.
   render:
@@ -12,11 +12,13 @@ project:
     - cheatsheet.qmd
     - about.qmd
   resources:
+    - "/.nojekyll"
     - materials/part1-kits/*
   post-render: scripts/build_downloads.py
 
 website:
   title: "Claude & Claude Code at the School of Medicine"
+  description: "Two hands-on library classes: getting started with Claude, and analyzing research data with Claude Code."
   site-url: "https://cwml.github.io/getting-started-with-claude/"
   repo-url: "https://github.com/CWML/getting-started-with-claude"
   repo-actions: [issue]
@@ -36,12 +38,12 @@ website:
       - href: about.qmd
         text: About
     right:
-      - icon: envelope
-        href: "mailto:[owner email]?subject=Claude%20classes%20feedback"
-        aria-label: Send feedback by email
+      - text: "Feedback"
+        icon: envelope
+        href: "mailto:justin.demayo@yale.edu?subject=Claude%20classes%20feedback"
       - icon: github
         href: "https://github.com/CWML/getting-started-with-claude"
-        aria-label: GitHub repository
+        aria-label: "Course materials on GitHub"
   # One sidebar per section. Quarto highlights the first navbar item whose page
   # is in the current sidebar, so a shared sidebar would always highlight Home.
   # Links back to Home use an anchor (index.html#...) so they don't count.
@@ -87,8 +89,8 @@ website:
         - href: index.html#links
           text: Recommended links
   page-footer:
-    left: "Cushing/Whitney Medical Library · Yale School of Medicine · [contact]"
-    center: "Copyright © 2026 Yale University · All Rights Reserved · [Accessibility at Yale](https://usability.yale.edu/digital-accessibility/accessibility-at-yale) · [Privacy Policy](https://privacy.yale.edu/resources/privacy-statement)"
+    left: "Cushing/Whitney Medical Library · Yale School of Medicine"
+    center: "Questions or feedback? Email [justin.demayo@yale.edu](mailto:justin.demayo@yale.edu?subject=Claude%20classes%20feedback) · Copyright © 2026 Yale University · All Rights Reserved · [Accessibility at Yale](https://usability.yale.edu/digital-accessibility/accessibility-at-yale) · [Privacy Policy](https://privacy.yale.edu/resources/privacy-statement)"
     right: "Built with [Quarto](https://quarto.org)"
 
 format:
@@ -98,5 +100,7 @@ format:
       dark: [cosmo, theme/cwml.scss, theme/cwml-dark.scss]
     respect-user-color-scheme: true
     toc: true
+    toc-title: "On this page"
     code-copy: true
+    code-overflow: wrap
     include-before-body: theme/skip-link.html

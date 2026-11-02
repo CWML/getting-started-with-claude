@@ -7,7 +7,7 @@ These pages hold the materials for two Cushing/Whitney Medical Library classes: 
 ## Who maintains it {#owner}
 
 - **Owner:** `[name]`, Cushing/Whitney Medical Library
-- **Contact:** `[owner email]`
+- **Contact:** [justin.demayo@yale.edu](mailto:justin.demayo@yale.edu?subject=Claude%20classes%20feedback)
 - **Features last checked:** 2026-10-30
 - **Next review due:** `[date]`
 
@@ -24,7 +24,7 @@ Claude and Claude Code change often. Menus get renamed, and features move or dep
 
 | Date | Change |
 |---|---|
-| 2026-11-02 | Part 1 is now taught from the class page: the Part 1 slide deck and the Instructor tips on the page are gone. The Part 2 page no longer has instructor boxes either. Both parts' teaching notes, prep checklists and backup plans moved to the instructor guide. Home page recommended links: added AI at Yale and Yale data classification links; removed the library AI services placeholder. Filled in the site and repository links, including "Open an issue" below |
+| 2026-11-02 | Site setup: feedback link in the navbar and footer (justin.demayo@yale.edu); readable code blocks, tabs, and page links in dark mode; Part 2 slides can be downloaded as one HTML file. Part 1 is now taught from the class page: the Part 1 slide deck and the Instructor tips on the page are gone. The Part 2 page no longer has instructor boxes either. Both parts' teaching notes, prep checklists and backup plans moved to the instructor guide. Home page recommended links: added AI at Yale and Yale data classification links; removed the library AI services placeholder. Filled in the site and repository links, including "Open an issue" below |
 | 2026-10-31 | Part 2 cheat sheet: `Esc` and the Stop button now interrupt Claude in the panel too (v2.1.286 or later); `/config` doesn't open in the panel. Site navigation: each section has its own sidebar, so the navbar highlights the right page |
 | 2026-10-30 | Part 1 rebuilt as a hands-on Project workshop; class page and slides now come from one source; CWML style applied |
 
@@ -51,6 +51,6 @@ The article in Kit A keeps its original license and attribution.
 Found a mistake, a broken link, or a feature that no longer works the way a page says?
 
 - Open an issue: [GitHub issues](https://github.com/CWML/getting-started-with-claude/issues)
-- Or email: `[owner email]`
+- Or email: [justin.demayo@yale.edu](mailto:justin.demayo@yale.edu?subject=Claude%20classes%20feedback)
 
 Please include the page, what you expected, and what you saw. Leave out any patient or other sensitive information.

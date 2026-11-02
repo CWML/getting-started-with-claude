@@ -1,4 +1,4 @@
-"""Quarto post-render step: zip the class downloads into _site/downloads/.
+"""Quarto post-render step: zip the class downloads into docs/downloads/.
 
 - hypertension-cohort.zip: the Part 2 starter project.
 - part1-kit-a.zip and part1-kit-b.zip: one Part 1 kit folder plus the kits README.
@@ -11,7 +11,7 @@ from pathlib import Path
 root = Path(__file__).resolve().parent.parent
 project = root / "materials" / "hypertension-cohort"
 kits = root / "materials" / "part1-kits"
-downloads = root / "_site" / "downloads"
+downloads = root / "docs" / "downloads"
 downloads.mkdir(parents=True, exist_ok=True)
 
 shutil.make_archive(

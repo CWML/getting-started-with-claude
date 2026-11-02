@@ -1,5 +1,4 @@
 /.quarto/
-/_site/
 .DS_Store
 .Rhistory
 .RData
@@ -7,5 +6,6 @@
 __pycache__/
 .ipynb_checkpoints/
 *_files/
+!docs/**/*_files/
 
 **/*.quarto_ipynb

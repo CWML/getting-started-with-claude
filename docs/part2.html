@@ -1,0 +1,1738 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Part 2: Analyzing Research Data with Claude Code – Claude &amp; Claude Code at the School of Medicine</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./part2-slides.html" rel="next">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ac0a192a280d01e3ff19409a8090d491.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-bb70dbc775e3eaf74af9c6cd576cde24.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ac0a192a280d01e3ff19409a8090d491.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-b415a55bb24f02d078fdecd4dbf90cdc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-e302654dfcd61cd30f39cb9489bea35f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-b415a55bb24f02d078fdecd4dbf90cdc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const queryPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkModeDefault = queryPrefersDark.matches;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    queryPrefersDark.addEventListener("change", e => {
+      if(window.localStorage.getItem("quarto-color-scheme") !== null)
+        return;
+      const alternate = e.matches
+      toggleColorMode(alternate);
+      localAlternateSentinel = e.matches ? 'alternate' : 'default'; // this is used alongside local storage!
+      toggleGiscusIfUsed(alternate, darkModeDefault);
+    });
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-xl " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Claude &amp; Claude Code at the School of Medicine</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://library.medicine.yale.edu/"> 
+<span class="menu-text">Cushing/Whitney Medical Library</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home &amp; setup</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./part1.html"> 
+<span class="menu-text">Part 1: Claude</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./part2.html" aria-current="page"> 
+<span class="menu-text">Part 2: Claude Code</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="mailto:justin.demayo@yale.edu?subject=Claude%20classes%20feedback"> <i class="bi bi-envelope" role="img">
+</i> 
+<span class="menu-text">Feedback</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/CWML/getting-started-with-claude"> <i class="bi bi-github" role="img" aria-label="Course materials on GitHub">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./part2.html">Class page</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part2.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Class page</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part2-slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Slides</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./cheatsheet.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cheat sheet</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html#setup-part2" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Setup for Part 2</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#before-class" id="toc-before-class" class="nav-link active" data-scroll-target="#before-class">Before class</a></li>
+  <li><a href="#download" id="toc-download" class="nav-link" data-scroll-target="#download">Download</a></li>
+  <li><a href="#agenda" id="toc-agenda" class="nav-link" data-scroll-target="#agenda">Agenda</a></li>
+  <li><a href="#welcome-and-setup-check-000-005" id="toc-welcome-and-setup-check-000-005" class="nav-link" data-scroll-target="#welcome-and-setup-check-000-005">1. Welcome and setup check (0:00 – 0:05)</a></li>
+  <li><a href="#data-rules-and-project-setup-005-017" id="toc-data-rules-and-project-setup-005-017" class="nav-link" data-scroll-target="#data-rules-and-project-setup-005-017">2. Data rules and project setup (0:05 – 0:17)</a>
+  <ul class="collapse">
+  <li><a href="#a.-claude-code-sends-what-it-reads-4-min" id="toc-a.-claude-code-sends-what-it-reads-4-min" class="nav-link" data-scroll-target="#a.-claude-code-sends-what-it-reads-4-min">2a. Claude Code sends what it reads (4 min)</a></li>
+  <li><a href="#b.-claude.md-and-the-memory-hierarchy-4-min" id="toc-b.-claude.md-and-the-memory-hierarchy-4-min" class="nav-link" data-scroll-target="#b.-claude.md-and-the-memory-hierarchy-4-min">2b. <code>CLAUDE.md</code> and the memory hierarchy (4 min)</a></li>
+  <li><a href="#c.-protect-the-data-manual-mode-a-deny-rule-and-git-4-min" id="toc-c.-protect-the-data-manual-mode-a-deny-rule-and-git-4-min" class="nav-link" data-scroll-target="#c.-protect-the-data-manual-mode-a-deny-rule-and-git-4-min">2c. Protect the data: Manual mode, a deny rule, and git (4 min)</a></li>
+  </ul></li>
+  <li><a href="#exercise-1" id="toc-exercise-1" class="nav-link" data-scroll-target="#exercise-1">3. Plan, build, verify (0:17 – 0:42)</a>
+  <ul class="collapse">
+  <li><a href="#a.-plan-mode-on-the-sap-5-min" id="toc-a.-plan-mode-on-the-sap-5-min" class="nav-link" data-scroll-target="#a.-plan-mode-on-the-sap-5-min">3a. Plan mode on the SAP (5 min)</a></li>
+  <li><a href="#b.-claude-writes-and-runs-the-cleaning-script-8-min" id="toc-b.-claude-writes-and-runs-the-cleaning-script-8-min" class="nav-link" data-scroll-target="#b.-claude-writes-and-runs-the-cleaning-script-8-min">3b. Claude writes and runs the cleaning script (8 min)</a></li>
+  <li><a href="#c.-check-it-yourself-in-positron-3-min" id="toc-c.-check-it-yourself-in-positron-3-min" class="nav-link" data-scroll-target="#c.-check-it-yourself-in-positron-3-min">3c. Check it yourself in Positron (3 min)</a></li>
+  <li><a href="#d.-table-1-the-primary-model-and-a-quarto-report-6-min" id="toc-d.-table-1-the-primary-model-and-a-quarto-report-6-min" class="nav-link" data-scroll-target="#d.-table-1-the-primary-model-and-a-quarto-report-6-min">3d. Table 1, the primary model, and a Quarto report (6 min)</a></li>
+  <li><a href="#e.-safety-nets-checkpoints-rewind-and-git-3-min" id="toc-e.-safety-nets-checkpoints-rewind-and-git-3-min" class="nav-link" data-scroll-target="#e.-safety-nets-checkpoints-rewind-and-git-3-min">3e. Safety nets: checkpoints, rewind, and git (3 min)</a></li>
+  </ul></li>
+  <li><a href="#break-catch-up-042-047" id="toc-break-catch-up-042-047" class="nav-link" data-scroll-target="#break-catch-up-042-047">Break / catch-up (0:42 – 0:47)</a></li>
+  <li><a href="#working-well-047-057" id="toc-working-well-047-057" class="nav-link" data-scroll-target="#working-well-047-057">4. Working well (0:47 – 0:57)</a>
+  <ul class="collapse">
+  <li><a href="#a.-context-is-the-budget-2-min" id="toc-a.-context-is-the-budget-2-min" class="nav-link" data-scroll-target="#a.-context-is-the-budget-2-min">4a. Context is the budget (2 min)</a></li>
+  <li><a href="#b.-model-and-effort-3-min" id="toc-b.-model-and-effort-3-min" class="nav-link" data-scroll-target="#b.-model-and-effort-3-min">4b. <code>/model</code> and <code>/effort</code> (3 min)</a></li>
+  <li><a href="#c.-ultracode-and-dynamic-workflows-if-enabled-3-min" id="toc-c.-ultracode-and-dynamic-workflows-if-enabled-3-min" class="nav-link" data-scroll-target="#c.-ultracode-and-dynamic-workflows-if-enabled-3-min">4c. Ultracode and dynamic workflows (if enabled) (3 min)</a></li>
+  <li><a href="#d.-check-in-from-your-phone-rc-if-enabled-2-min" id="toc-d.-check-in-from-your-phone-rc-if-enabled-2-min" class="nav-link" data-scroll-target="#d.-check-in-from-your-phone-rc-if-enabled-2-min">4d. Check in from your phone: <code>/rc</code> (if enabled) (2 min)</a></li>
+  </ul></li>
+  <li><a href="#extending-claude-code-057-112" id="toc-extending-claude-code-057-112" class="nav-link" data-scroll-target="#extending-claude-code-057-112">5. Extending Claude Code (0:57 – 1:12)</a>
+  <ul class="collapse">
+  <li><a href="#a.-where-does-each-instruction-belong-2-min" id="toc-a.-where-does-each-instruction-belong-2-min" class="nav-link" data-scroll-target="#a.-where-does-each-instruction-belong-2-min">5a. Where does each instruction belong? (2 min)</a></li>
+  <li><a href="#b.-demo-two-skills-a-reviewer-and-a-hook-5-min" id="toc-b.-demo-two-skills-a-reviewer-and-a-hook-5-min" class="nav-link" data-scroll-target="#b.-demo-two-skills-a-reviewer-and-a-hook-5-min">5b. Demo: two skills, a reviewer, and a hook (5 min)</a></li>
+  <li><a href="#exercise-2" id="toc-exercise-2" class="nav-link" data-scroll-target="#exercise-2">5c. Exercise 2: build one skill (8 min)</a></li>
+  </ul></li>
+  <li><a href="#messy-sources" id="toc-messy-sources" class="nav-link" data-scroll-target="#messy-sources">6. Messy real-world sources (1:12 – 1:20)</a>
+  <ul class="collapse">
+  <li><a href="#a.-harmonize-the-redcap-exports" id="toc-a.-harmonize-the-redcap-exports" class="nav-link" data-scroll-target="#a.-harmonize-the-redcap-exports">6a. Harmonize the REDCap exports</a></li>
+  <li><a href="#b.-explain-or-translate-legacy-sas-and-stata-code" id="toc-b.-explain-or-translate-legacy-sas-and-stata-code" class="nav-link" data-scroll-target="#b.-explain-or-translate-legacy-sas-and-stata-code">6b. Explain or translate legacy SAS and Stata code</a></li>
+  </ul></li>
+  <li><a href="#verification" id="toc-verification" class="nav-link" data-scroll-target="#verification">7. Verification and research integrity (1:20 – 1:27)</a>
+  <ul class="collapse">
+  <li><a href="#give-claude-a-check-it-can-run" id="toc-give-claude-a-check-it-can-run" class="nav-link" data-scroll-target="#give-claude-a-check-it-can-run">Give Claude a check it can run</a></li>
+  <li><a href="#why-cleaning-matters" id="toc-why-cleaning-matters" class="nav-link" data-scroll-target="#why-cleaning-matters">Why cleaning matters</a></li>
+  <li><a href="#garden-of-forking-paths" id="toc-garden-of-forking-paths" class="nav-link" data-scroll-target="#garden-of-forking-paths">Garden of forking paths</a></li>
+  <li><a href="#disclosure-and-the-audit-trail" id="toc-disclosure-and-the-audit-trail" class="nav-link" data-scroll-target="#disclosure-and-the-audit-trail">Disclosure and the audit trail</a></li>
+  </ul></li>
+  <li><a href="#wrap-up-127-130" id="toc-wrap-up-127-130" class="nav-link" data-scroll-target="#wrap-up-127-130">8. Wrap-up (1:27 – 1:30)</a>
+  <ul class="collapse">
+  <li><a href="#try-at-home" id="toc-try-at-home" class="nav-link" data-scroll-target="#try-at-home">Try at home</a></li>
+  </ul></li>
+  <li><a href="#finished-files" id="toc-finished-files" class="nav-link" data-scroll-target="#finished-files">Finished files</a></li>
+  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/CWML/getting-started-with-claude/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<a class="cwml-skip-link" href="#quarto-document-content">Skip to main content</a>
+<script>document.body.prepend(document.querySelector(".cwml-skip-link"));</script>
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Part 2: Analyzing Research Data with Claude Code</h1>
+<p class="subtitle lead">A 90-minute hands-on class for researchers with light R or Python</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>In this class you’ll use <strong>Claude Code inside Positron</strong> (or VS Code) to take a synthetic clinical trial from raw CSV to a Quarto report. You’ll plan first, let Claude write and run the code, check every step yourself, and finish by building a reusable tool for your own research data. Bring a laptop. This page has every prompt, ready to copy. <a href="./part2-slides.html">Slides</a> · <a href="./cheatsheet.html">Cheat sheet</a></p>
+<p><strong>For:</strong> faculty, postdocs, students, research coordinators, analysts, and clinicians who can read a little R or Python. <a href="./part1.html">Part 1</a> (the Claude app) is helpful but not required.</p>
+<p><strong>By the end of class, you’ll be able to:</strong></p>
+<ol type="1">
+<li><strong>Configure</strong> a Claude Code project that protects raw and restricted data.</li>
+<li><strong>Implement</strong> a plan-first workflow to clean and analyze study data.</li>
+<li><strong>Evaluate</strong> AI-generated code and results against the analysis plan.</li>
+<li><strong>Build</strong> a reusable command, skill, or hook for a research data task.</li>
+</ol>
+<section id="before-class" class="level2">
+<h2 class="anchored" data-anchor-id="before-class">Before class</h2>
+<div class="callout callout-style-default callout-important callout-titled" title="Setup (about 30 minutes)">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Setup (about 30 minutes)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Do the <a href="./index.html#setup-part2">Part 2 setup steps</a> before class. In short: an enterprise Claude account whose seat includes Claude Code (<code>[how to check / who to ask]</code>), Positron (or VS Code) with the Claude Code extension, the R or Python packages, and git with your name and email set. The Claude mobile app and the standalone CLI are optional.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Using Python instead of R?">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Using Python instead of R?
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Install the Python packages listed in the <a href="./index.html#setup-part2">setup steps</a> instead of the R ones. In class, delete <code>CLAUDE.md</code> from the project, rename <code>CLAUDE.python.md</code> to <code>CLAUDE.md</code>, and start a new Claude conversation. Claude will then put scripts in <code>python/</code>. Every exercise below has a Python tab.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="download" class="level2">
+<h2 class="anchored" data-anchor-id="download">Download</h2>
+<p><a href="./part2-slides.html" class="btn btn-outline-secondary btn-sm">View slides</a> <a href="./part2-slides.html" class="btn btn-outline-secondary btn-sm" download="part2-slides.html">⬇ Download slides (HTML)</a></p>
+<p>In the slides, press <strong>F</strong> for full screen and <strong>Esc</strong> for an overview. To save a PDF, add <code>?print-pdf</code> to the slides’ web address and print to PDF (works best in Chrome).</p>
+<p><a href="downloads/hypertension-cohort.zip"><strong>hypertension-cohort.zip</strong></a> is the class project. It contains synthetic data from a fictional two-arm blood-pressure trial at three sites, the data dictionary, a one-page statistical analysis plan (<code>docs/SAP.md</code>), per-site “REDCap exports,” legacy SAS and Stata code, a stand-in <code>data/restricted/</code> folder, and <code>CLAUDE.md</code>. The <code>R/</code>, <code>output/</code>, and <code>reports/</code> folders are empty, because you’ll fill them in class.</p>
+<p>Unzip it somewhere easy to find, such as <code>Documents/</code>, and open the <code>hypertension-cohort</code> folder in Positron (<strong>File → Open Folder</strong>).</p>
+<div class="callout callout-style-default callout-important callout-titled" title="Data rule for today">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Data rule for today
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Every file in the project is <strong>synthetic</strong>, including <code>data/restricted/visit_notes.csv</code>, which only <em>stands in</em> for data Claude must never read. Don’t add real patient data to this project. Guardrails like deny rules are safety nets. They don’t make it OK to keep PHI or DUA-restricted data in a folder Claude Code works in. Policy comes first: <code>[Yale data classification / policy link]</code>.</p>
+</div>
+</div>
+</section>
+<section id="agenda" class="level2">
+<h2 class="anchored" data-anchor-id="agenda">Agenda</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Time</th>
+<th>Segment</th>
+<th>What you’ll do</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0:00 – 0:05</td>
+<td>1. Welcome and setup check</td>
+<td>Open the project and the Claude panel</td>
+</tr>
+<tr class="even">
+<td>0:05 – 0:17</td>
+<td>2. Data rules and project setup</td>
+<td><code>CLAUDE.md</code>, a deny rule, git</td>
+</tr>
+<tr class="odd">
+<td>0:17 – 0:42</td>
+<td>3. Plan, build, verify</td>
+<td><strong>Hands-on:</strong> Exercise 1</td>
+</tr>
+<tr class="even">
+<td>0:42 – 0:47</td>
+<td><em>Break / catch-up</em></td>
+<td>Finish Exercise 1</td>
+</tr>
+<tr class="odd">
+<td>0:47 – 0:57</td>
+<td>4. Working well</td>
+<td>Context, models, effort, ultracode, Remote Control</td>
+</tr>
+<tr class="even">
+<td>0:57 – 1:12</td>
+<td>5. Extending Claude Code</td>
+<td>Demo + <strong>hands-on:</strong> Exercise 2</td>
+</tr>
+<tr class="odd">
+<td>1:12 – 1:20</td>
+<td>6. Messy real-world sources (cut first if late)</td>
+<td>REDCap exports, legacy SAS/Stata</td>
+</tr>
+<tr class="even">
+<td>1:20 – 1:27</td>
+<td>7. Verification and research integrity</td>
+<td>Demo + discussion</td>
+</tr>
+<tr class="odd">
+<td>1:27 – 1:30</td>
+<td>8. Wrap-up</td>
+<td>Try at home, Q&amp;A</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="welcome-and-setup-check-000-005" class="level2">
+<h2 class="anchored" data-anchor-id="welcome-and-setup-check-000-005">1. Welcome and setup check (0:00 – 0:05)</h2>
+<ol type="1">
+<li>Open the <code>hypertension-cohort</code> folder in Positron.</li>
+<li>Open the <strong>Claude Code panel</strong>: click the Spark icon in the editor toolbar (open any file first), or click <strong>✻ Claude Code</strong> in the status bar.</li>
+<li>Type <code>/status</code> in the panel’s prompt box to confirm your account, version, and model.</li>
+</ol>
+<p><strong>Panel or terminal?</strong> Today we use the <strong>extension panel</strong>. It shows Claude’s edits as side-by-side diffs, opens plans as documents you can comment on, and lets you rewind from any message. A few things only work in the <strong>terminal CLI</strong> (<code>claude</code> in Positron’s Terminal tab). When we use one, we’ll say so.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Extension panel</th>
+<th>Terminal CLI</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Commands</td>
+<td>A subset: type <code>/</code> to see yours</td>
+<td>All commands</td>
+</tr>
+<tr class="even">
+<td>Review edits</td>
+<td>Side-by-side diffs; accept or reject each change</td>
+<td>In the terminal, or in Positron with <code>/ide</code></td>
+</tr>
+<tr class="odd">
+<td>Undo</td>
+<td>Hover a message → rewind button</td>
+<td><code>Esc</code> <code>Esc</code> or <code>/rewind</code></td>
+</tr>
+<tr class="even">
+<td><code>!</code> shell prefix, tab completion</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="data-rules-and-project-setup-005-017" class="level2">
+<h2 class="anchored" data-anchor-id="data-rules-and-project-setup-005-017">2. Data rules and project setup (0:05 – 0:17)</h2>
+<section id="a.-claude-code-sends-what-it-reads-4-min" class="level3">
+<h3 class="anchored" data-anchor-id="a.-claude-code-sends-what-it-reads-4-min">2a. Claude Code sends what it reads (4 min)</h3>
+<p>When Claude Code opens a file, runs a command, or sees its output, that content goes to the model. The same rules apply as for uploading a file to the Claude app. In the extension, Claude also sees <strong>text you select</strong> in the editor and the <strong>name of the file you have open</strong>.</p>
+<p><strong>Two patterns that keep sensitive data out:</strong></p>
+<ul>
+<li><strong>“Claude writes the code, you run it on the real data.”</strong> Give Claude the data dictionary, the SAP, and a few synthetic rows. It writes and tests the pipeline. You run the finished script yourself, in an approved environment that Claude never sees.</li>
+<li><strong>“Synthetic first.”</strong> Build and debug everything on synthetic or public data, like today’s cohort. Switch to real data only after the code is reviewed, and only where policy allows.</li>
+</ul>
+<p><strong>Habits that help:</strong> keep the “print at most 10 rows” rule in <code>CLAUDE.md</code>. Check data in Positron’s Data Explorer rather than asking Claude to print it. Don’t open restricted files in the editor while Claude is running.</p>
+<p><strong>What about the HIPAA-supported version?</strong> A HIPAA-supported version of Claude is available by request: <code>[request link]</code>. Being HIPAA-supported doesn’t approve your project, every feature, or every data set, and Claude Code may not be covered even there. Anthropic’s documentation says the VS Code extension (the one Positron uses) isn’t covered by its HIPAA agreement, and that Remote Control and cloud sessions are turned off in the HIPAA configuration. <code>[confirm with ITS which Claude Code surfaces are covered]</code>. Follow <code>[Yale data classification / policy link]</code>, and send questions to <code>[HSIT / HIPAA Privacy Office contact]</code>. Today’s class uses synthetic data only.</p>
+</section>
+<section id="b.-claude.md-and-the-memory-hierarchy-4-min" class="level3">
+<h3 class="anchored" data-anchor-id="b.-claude.md-and-the-memory-hierarchy-4-min">2b. <code>CLAUDE.md</code> and the memory hierarchy (4 min)</h3>
+<p>Open <code>CLAUDE.md</code> in the project. Claude reads it at the start of every conversation. It sets the study rules: <code>data/raw/</code> is read-only, never read <code>data/restricted/</code>, write numbered scripts in <code>R/</code>, log every cleaning change, ask before deciding about missing data or outliers, and print at most 10 rows.</p>
+<p>Claude Code loads instructions from several places. They’re all combined, and none overrides another:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Scope</th>
+<th>Location</th>
+<th>Shared with</th>
+<th>Use for</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Managed policy</td>
+<td>Set by IT</td>
+<td>Everyone in the org</td>
+<td>Institutional rules <code>[if your org deploys one]</code></td>
+</tr>
+<tr class="even">
+<td>User</td>
+<td><code>~/.claude/CLAUDE.md</code></td>
+<td>Just you, every project</td>
+<td>“I prefer tidyverse and <code>here::here()</code>”</td>
+</tr>
+<tr class="odd">
+<td>Project</td>
+<td><code>./CLAUDE.md</code></td>
+<td>Your team, via git</td>
+<td>Today’s study rules</td>
+</tr>
+<tr class="even">
+<td>Local</td>
+<td><code>./CLAUDE.local.md</code> (gitignored)</td>
+<td>Just you, this project</td>
+<td>Personal paths and preferences</td>
+</tr>
+<tr class="odd">
+<td>Auto memory</td>
+<td>Panel: <code>/</code> → <strong>Customize → Memory</strong></td>
+<td>Just you, this machine</td>
+<td>Notes Claude saves from your corrections</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Keep it short:</strong> the docs suggest under 200 lines per file. An import line like <code>@docs/SAP.md</code> loads another file every session: fine for a 2-page SAP, not for a 40-page protocol.</li>
+<li><strong>Advice, not enforcement:</strong> <code>CLAUDE.md</code> shapes what Claude <em>tries</em> to do. It doesn’t limit what Claude <em>can</em> do. That’s what permission rules are for (next).</li>
+<li><strong>If you took Part 1:</strong> a Claude Code project folder plays the role of your Claude app Project. The Project’s instructions become <code>CLAUDE.md</code>, and its files become documents in the folder, such as <code>docs/SAP.md</code>.</li>
+<li><strong>In the panel:</strong> <code>/</code> → <strong>Customize → Instructions</strong> opens your <code>CLAUDE.md</code> files, and <strong>Memory</strong> turns auto memory on or off and shows what it saved. In the CLI, use <code>/memory</code>. For your own projects, <code>/init</code> drafts a <code>CLAUDE.md</code>. If it isn’t in your panel’s <code>/</code> menu, run it in the CLI.</li>
+</ul>
+</section>
+<section id="c.-protect-the-data-manual-mode-a-deny-rule-and-git-4-min" class="level3">
+<h3 class="anchored" data-anchor-id="c.-protect-the-data-manual-mode-a-deny-rule-and-git-4-min">2c. Protect the data: Manual mode, a deny rule, and git (4 min)</h3>
+<p><strong>1. Choose Manual mode.</strong> Click the mode indicator at the bottom of the prompt box and choose <strong>Manual</strong>, so Claude asks before every edit and most commands. Recent versions (v2.1.283 and later) start in <strong>Auto</strong> unless your organization turns it off. The extension ignores a project’s default-mode setting, so pick Manual yourself today.</p>
+<p><strong>2. Add a deny rule for <code>data/restricted/</code>.</strong> In the panel, type <code>/</code> and choose <strong>Customize → Permissions</strong>, add a <strong>Deny</strong> rule, and save it to <strong>project</strong> settings:</p>
+<pre class="text"><code>Read(./data/restricted/**)</code></pre>
+<p>Or create <code>.claude/settings.json</code> in Positron’s Explorer with:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"permissions"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"deny"</span><span class="fu">:</span> <span class="ot">[</span><span class="st">"Read(./data/restricted/**)"</span><span class="ot">]</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>3. Test it.</strong> Start a new conversation, so the new settings are loaded, and send:</p>
+<pre class="text"><code>This is a test of a permission rule. Try to read
+data/restricted/visit_notes.csv with your Read tool and tell me the
+exact message you get. Don't try any other way to open it.</code></pre>
+<p>You want a <strong>permission-denied</strong> message from Claude Code, not just a polite refusal. A refusal means Claude followed <code>CLAUDE.md</code> (advice). A denial means Claude Code blocked the tool (enforcement).</p>
+<p><strong>4. Start version control.</strong> Ask Claude, and approve the commands:</p>
+<pre class="text"><code>Initialize a git repository here, add a .gitignore that excludes
+.claude/settings.local.json and CLAUDE.local.md, and commit everything
+with the message "Part 2 start".</code></pre>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Know the gap.</strong> Read deny rules cover Claude’s own file tools and shell commands it recognizes, such as <code>cat</code> and <code>head</code>. They <strong>don’t</strong> cover a program that opens the file itself, like an R script that Claude writes and runs. The <strong>sandbox</strong> closes that gap at the operating-system level (<code>/sandbox</code>; macOS, Linux, or WSL2). That’s one more reason the real rule is “don’t put restricted data in the project.”</p>
+</div>
+</div>
+</section>
+</section>
+<section id="exercise-1" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-1">3. Plan, build, verify (0:17 – 0:42)</h2>
+<p><strong>Exercise 1 (hands-on, about 25 minutes).</strong> You’ll direct Claude through the SAP: plan, clean, check, analyze, report, and commit. Work at your own pace. If you fall behind, finish the cleaning script and the Data Explorer check. The instructor will show the rest on screen.</p>
+<section id="a.-plan-mode-on-the-sap-5-min" class="level3">
+<h3 class="anchored" data-anchor-id="a.-plan-mode-on-the-sap-5-min">3a. Plan mode on the SAP (5 min)</h3>
+<p>Switch to <strong>plan mode</strong>: click the mode indicator and choose <strong>Plan</strong>, or type <code>/plan</code> in the prompt box. In plan mode, Claude reads and proposes, and doesn’t change files.</p>
+<pre class="text"><code>Read docs/SAP.md and data/data_dictionary.csv. Then inspect
+data/raw/class_cohort.csv: column names, types, value counts, and
+ranges, printing no more than 10 rows. Propose a step-by-step plan to
+clean the data and run the primary analysis. List every data problem
+you find, and every decision you need from me. Don't write code yet.</code></pre>
+<p>The prompt doesn’t name a language, because <code>CLAUDE.md</code> (or <code>CLAUDE.python.md</code>, renamed) already does.</p>
+<p>The plan opens as a document. <strong>Read it before you approve.</strong> You can add inline comments to change anything you disagree with. When you approve, pick the option that keeps you approving each edit, not one that accepts edits automatically, so you still review every change in 3b. How many data problems did Claude find? Planning first protects research integrity: you decide the analysis <em>before</em> you see results.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="When Claude asks how to handle a problem">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>When Claude asks how to handle a problem
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><code>CLAUDE.md</code> tells Claude to ask you before handling missing data or outliers. For today, follow the SAP:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Claude asks about</th>
+<th>Your answer for today</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Implausible values (outside the dictionary’s range)</td>
+<td>Set them to missing and log them. Don’t guess the intended value.</td>
+</tr>
+<tr class="even">
+<td><code>-99</code>, <code>999</code>, blanks, <code>NA</code></td>
+<td>All are missing (see the dictionary’s <code>missing_codes</code> column).</td>
+</tr>
+<tr class="odd">
+<td>Sex coded <code>Female</code>, <code>Male</code>, <code>f</code>, <code>1</code>, <code>2</code></td>
+<td>Recode to <code>F</code>/<code>M</code>. Assume <code>1</code> = M and <code>2</code> = F, and log it as a question for the data manager.</td>
+</tr>
+<tr class="even">
+<td>Duplicate rows</td>
+<td>Remove exact duplicates, then confirm that every <code>patient_id</code> is unique.</td>
+</tr>
+<tr class="odd">
+<td>Mixed date formats</td>
+<td>Parse each format with its own rule, and stop if any date fails to parse.</td>
+</tr>
+<tr class="even">
+<td><code>cuff_size</code> (not in the dictionary)</td>
+<td>Keep it, don’t use it, and log it as a question for the data manager.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="b.-claude-writes-and-runs-the-cleaning-script-8-min" class="level3">
+<h3 class="anchored" data-anchor-id="b.-claude-writes-and-runs-the-cleaning-script-8-min">3b. Claude writes and runs the cleaning script (8 min)</h3>
+<p>Switch back to <strong>Manual</strong>. Then send:</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset" data-group="language">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Python</a></li></ul>
+<div class="tab-content" data-group="language">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<pre class="text"><code>Following the approved plan, write R/01_clean.R. It should read
+data/raw/class_cohort.csv, fix each problem we agreed on, and write
+output/cohort_clean.csv and output/cleaning_log.csv, with one row per
+change: step, variable, patient_id, old value, new value, reason.
+Print the row count before and after each step. Run it with Rscript
+and fix any errors.</code></pre>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<pre class="text"><code>Following the approved plan, write python/01_clean.py. It should read
+data/raw/class_cohort.csv, fix each problem we agreed on, and write
+output/cohort_clean.csv and output/cleaning_log.csv, with one row per
+change: step, variable, patient_id, old value, new value, reason.
+Print the row count before and after each step. Run it and fix any
+errors.</code></pre>
+</div>
+</div>
+</div>
+<p><strong>Review each change.</strong> In Manual mode, every edit opens as a side-by-side diff. Accept or reject each change, or tell Claude what to do instead. Approve the <code>Rscript</code> command when Claude asks. Watch the loop: write, run, read the error, fix, rerun.</p>
+</section>
+<section id="c.-check-it-yourself-in-positron-3-min" class="level3">
+<h3 class="anchored" data-anchor-id="c.-check-it-yourself-in-positron-3-min">3c. Check it yourself in Positron (3 min)</h3>
+<p>Don’t take Claude’s summary on trust. In Positron’s <strong>R Console</strong>, run:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>clean <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">"output/cohort_clean.csv"</span>)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>log   <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">"output/cleaning_log.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><em>Python:</em> <code>import pandas as pd; clean = pd.read_csv("output/cohort_clean.csv")</code></p>
+<p>Open <code>clean</code> from the <strong>Variables</strong> pane in the <strong>Data Explorer</strong>, and check:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">The row count is what you expect after removing duplicates.</label></li>
+<li><label><input type="checkbox">Sorting <code>sbp_v1</code> from high to low shows no 1200. Sorting <code>sbp_v0</code> from low to high shows no <code>-99</code>.</label></li>
+<li><label><input type="checkbox"><code>sex</code> has only <code>F</code>, <code>M</code>, and missing values.</label></li>
+<li><label><input type="checkbox">Every fix in <code>log</code> names the patient IDs it changed. Pick one row of the log and find that patient in <code>clean</code>.</label></li>
+</ul>
+<p>This is what “trace every change” means: the script is the record, the log shows each change, and you’ve checked both.</p>
+</section>
+<section id="d.-table-1-the-primary-model-and-a-quarto-report-6-min" class="level3">
+<h3 class="anchored" data-anchor-id="d.-table-1-the-primary-model-and-a-quarto-report-6-min">3d. Table 1, the primary model, and a Quarto report (6 min)</h3>
+<pre class="text"><code>Write R/02_table1.R (baseline characteristics by arm, as the SAP
+describes) and R/03_primary_model.R (the SAP's primary analysis,
+reporting n by arm and the adjusted difference with its 95% CI). Read
+output/cohort_clean.csv, save results to output/, and run both.</code></pre>
+<pre class="text"><code>Write reports/report.qmd, a Quarto report that presents Table 1, the
+analysis population, and the primary result. Read every number from
+the files in output/; don't type numbers into the text. Render it to
+HTML.</code></pre>
+<p><em>Python:</em> change the script names to <code>python/02_table1.py</code> and <code>python/03_primary_model.py</code>. The report uses Quarto’s Jupyter engine.</p>
+<p>Open <code>reports/report.html</code> in Positron’s Viewer, next to its source.</p>
+<p><strong>Check it against the SAP.</strong> While the report renders, open <code>R/03_primary_model.R</code> (or <code>python/03_primary_model.py</code>) and <code>R/02_table1.R</code> next to <code>docs/SAP.md</code>, and check:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">The model is <code>sbp_change ~ arm + sbp_v0 + site</code>, with <strong>Standard</strong> as the reference arm.</label></li>
+<li><label><input type="checkbox">The analysis population is complete case: patients with both <code>sbp_v0</code> and <code>sbp_v3</code>.</label></li>
+<li><label><input type="checkbox">The result is the adjusted difference, Intensive − Standard, with its 95% CI and p-value.</label></li>
+<li><label><input type="checkbox">Table 1 shows missing counts and has no p-values.</label></li>
+</ul>
+<p>Anything that doesn’t match is a finding. Tell Claude what the SAP says, and have it fix the script.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Check your numbers">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Check your numbers
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>After cleaning: 500 patients (250 per arm). Analyzed (complete case): <strong>n = 451</strong> (Standard 222, Intensive 229). Adjusted difference, Intensive − Standard: <strong>−11.0 mmHg (95% CI −12.8 to −9.2)</strong>. If yours differ, compare the n’s first. Most differences come from cleaning choices, such as how the <code>1</code>/<code>2</code> sex codes or implausible values were handled, and only choices that affect <code>sbp_v0</code>, <code>sbp_v3</code>, <code>arm</code>, <code>site</code>, or duplicates change the primary result.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="e.-safety-nets-checkpoints-rewind-and-git-3-min" class="level3">
+<h3 class="anchored" data-anchor-id="e.-safety-nets-checkpoints-rewind-and-git-3-min">3e. Safety nets: checkpoints, rewind, and git (3 min)</h3>
+<p><strong>Checkpoints</strong> let you undo Claude’s file edits within a session. Hover over any of your messages and click the rewind button. Then choose <strong>Fork conversation from here</strong>, <strong>Rewind code to here</strong>, or both. Try it on a deliberate mistake:</p>
+<pre class="text"><code>In R/01_clean.R, rename every variable to upper case.</code></pre>
+<p>Accept the change, then hover over that message and choose <strong>Rewind code to here</strong>.</p>
+<p><strong>Checkpoints have limits.</strong> They track only edits made by Claude’s file-editing tools. Files written <em>by your scripts</em> (everything in <code>output/</code> and <code>reports/report.html</code>) and changes from shell commands aren’t captured. <strong>Git is your real safety net:</strong></p>
+<pre class="text"><code>Commit the scripts, the outputs, and the report with a descriptive
+message. Show me git log --oneline afterward.</code></pre>
+</section>
+</section>
+<section id="break-catch-up-042-047" class="level2">
+<h2 class="anchored" data-anchor-id="break-catch-up-042-047">Break / catch-up (0:42 – 0:47)</h2>
+<p>Finish Exercise 1, or at least get <code>R/01_clean.R</code> working and committed. Segment 5 uses it.</p>
+</section>
+<section id="working-well-047-057" class="level2">
+<h2 class="anchored" data-anchor-id="working-well-047-057">4. Working well (0:47 – 0:57)</h2>
+<section id="a.-context-is-the-budget-2-min" class="level3">
+<h3 class="anchored" data-anchor-id="a.-context-is-the-budget-2-min">4a. Context is the budget (2 min)</h3>
+<p>Everything Claude reads fills its <strong>context window</strong>: your messages, <code>CLAUDE.md</code>, every file it opens, and every line of output. As it fills, quality drops. The prompt box has a <strong>context indicator</strong> that shows how full it is.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>When…</th>
+<th>Do this</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>The session is long, but you’re on the same task</td>
+<td><code>/compact keep the cleaning decisions and the n at each step</code></td>
+</tr>
+<tr class="even">
+<td>You’re switching to an unrelated task</td>
+<td>Start a new conversation (new tab or <strong>New Conversation</strong>); CLI: <code>/clear</code></td>
+</tr>
+<tr class="odd">
+<td>You want to see what’s using space</td>
+<td>CLI: <code>/context</code> (the panel shows the indicator)</td>
+</tr>
+<tr class="even">
+<td>You have a quick side question</td>
+<td><code>/btw &lt;question&gt;</code>: answered beside the chat, not added to it</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Rule of thumb from the docs:</strong> if you’ve corrected Claude more than twice on the same issue, start a fresh conversation with a better prompt that includes what you learned.</p>
+</section>
+<section id="b.-model-and-effort-3-min" class="level3">
+<h3 class="anchored" data-anchor-id="b.-model-and-effort-3-min">4b. <code>/model</code> and <code>/effort</code> (3 min)</h3>
+<p><strong>In the panel,</strong> click the model name at the bottom of the prompt box, or choose <strong>Switch model…</strong> from the <code>/</code> menu. The picker has an <strong>Effort</strong> row. <strong>In the CLI,</strong> use <code>/model</code> and <code>/effort</code>. If you took Part 1, these are the same two dials as the model and effort menu next to Send in the Claude app.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Model alias</th>
+<th>What it uses</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>default</code></td>
+<td>Your account’s default (Opus 5.5 on Enterprise, unless your admin set an organization default)</td>
+</tr>
+<tr class="even">
+<td><code>opus</code> / <code>sonnet</code> / <code>haiku</code></td>
+<td>Latest Opus (hardest reasoning) / Sonnet (everyday work) / Haiku (fast, simple tasks)</td>
+</tr>
+<tr class="odd">
+<td><code>opusplan</code></td>
+<td><strong>Opus in plan mode, then Sonnet to carry out the plan</strong>. A good fit for today’s plan-first workflow</td>
+</tr>
+<tr class="even">
+<td><code>fable</code> / <code>best</code></td>
+<td>Fable, the most capable model, for long, hard tasks (if available; may bill to usage credits)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Effort</strong> controls how much Claude reasons on each step: <code>low</code>, <code>medium</code>, <code>high</code>, <code>xhigh</code>, or <code>max</code>. Opus 5.5, Sonnet 5.5, and Haiku 5.5 default to <strong><code>medium</code></strong>. Higher effort tests more edge cases and verifies more, but uses more tokens and time. <code>max</code> applies to the current session only, and your organization may cap the levels you can choose.</p>
+<p><strong><code>ultrathink</code>, for one turn.</strong> Put the word <code>ultrathink</code> anywhere in a prompt to ask for deeper reasoning on that turn only, without changing your effort setting:</p>
+<pre class="text"><code>ultrathink: The SAP's primary analysis is complete case, and loss to
+follow-up is higher in older patients. What could that do to the
+estimate, and which planned sensitivity analysis addresses it? Don't
+write code.</code></pre>
+</section>
+<section id="c.-ultracode-and-dynamic-workflows-if-enabled-3-min" class="level3">
+<h3 class="anchored" data-anchor-id="c.-ultracode-and-dynamic-workflows-if-enabled-3-min">4c. Ultracode and dynamic workflows (if enabled) (3 min)</h3>
+<p>A <strong>dynamic workflow</strong> is a script Claude writes that runs many subagents in the background. Each one checks part of the job, and you get one report at the end.</p>
+<ul>
+<li><strong>One task:</strong> start a prompt with the keyword <strong><code>ultracode</code></strong>. The docs say this works when you type it in the IDE extension panel. It doesn’t trigger in <code>claude -p</code>.</li>
+<li><strong>A whole session:</strong> <code>/effort ultracode</code> (CLI), or the <strong>Ultracode</strong> switch under the Effort row in the panel’s model picker. Ultracode is a <em>setting</em>, not an effort level. Claude then plans a workflow for every substantive task until you turn it off (<code>/effort ultracode off</code>).</li>
+<li><strong>Built in:</strong> <code>/deep-research &lt;question&gt;</code> searches the web from several angles, cross-checks sources, and returns a cited report. It needs web search to be available.</li>
+</ul>
+<pre class="text"><code>ultracode: review every script in R/ against docs/SAP.md, one reviewer
+per script, then adversarially check each finding and report only the
+ones that survive. Don't change any files.</code></pre>
+<pre class="text"><code>/deep-research What do recent methods papers recommend for missing
+12-month outcomes in hypertension RCTs: complete case, multiple
+imputation, or mixed models?</code></pre>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Cost and usage.</strong> A workflow can use <strong>meaningfully more tokens</strong> than the same task in conversation, and it counts toward your plan’s usage limits. With ultracode on, every request costs more and takes longer. Try a small slice first, and turn ultracode off for routine work. Your organization can turn workflows off entirely. Verify every citation <code>/deep-research</code> returns, and keep study data out of research questions.</p>
+</div>
+</div>
+</section>
+<section id="d.-check-in-from-your-phone-rc-if-enabled-2-min" class="level3">
+<h3 class="anchored" data-anchor-id="d.-check-in-from-your-phone-rc-if-enabled-2-min">4d. Check in from your phone: <code>/rc</code> (if enabled) (2 min)</h3>
+<p><strong>Remote Control</strong> lets you check on your current local session from the Claude mobile app (iOS and Android) or a browser. Start a long render or model run, then check progress or approve permission prompts from another device. If you took Part 1, this is what the phone app’s <strong>Code</strong> tab is for.</p>
+<ol type="1">
+<li>In the panel, type <code>/rc</code> (or <code>/remote-control</code>). The first time, confirm <strong>Enable Remote Control</strong>. A <strong>Remote Control</strong> indicator appears in the prompt box footer. In the panel, the command takes no name and shows no QR code.</li>
+<li>On your phone, open the Claude app, tap <strong>Code</strong>, and pick the session (a computer icon with a green dot means it’s online). In a browser, the same session also shows in the Code section of the Claude web app.</li>
+<li>Type <code>/rc</code> again to disconnect.</li>
+</ol>
+<ul>
+<li><strong>Claude keeps running on your computer.</strong> Code execution and file access stay local, so your computer has to stay on and the session has to keep running.</li>
+<li><strong>Not the same as Claude Code on the web.</strong> Remote Control is <em>your local session</em>, viewed from your phone or a browser. Claude Code on the web runs separate <em>cloud</em> sessions on a GitHub repository (if enabled). It can’t see Positron or today’s project folder, so it isn’t a substitute for this class.</li>
+<li><strong>Governance:</strong> while connected, the session transcript (messages, responses, and tool activity) is stored on Anthropic servers. That’s another reason not to print data values into the session. It requires a claude.ai login, and on Enterprise an Owner must turn it on; custom roles also need the Remote Control permission, and your organization may require enrolled (“trusted”) devices. It isn’t available when your organization has the HIPAA configuration applied, under Zero Data Retention, through Amazon Bedrock, Google Cloud’s Agent Platform, or Microsoft Foundry, or through a custom gateway. Admins can disable it with <code>disableRemoteControl</code>.</li>
+<li><strong>CLI only:</strong> <code>claude --remote-control "name"</code> starts a session with it on, <code>claude remote-control</code> runs server mode with a QR code, and <code>/mobile</code> shows a QR code for getting the Claude app.</li>
+</ul>
+<p><strong>Optional: <code>/fast</code>.</strong> Fast mode makes Opus responses up to about 2.5× faster, at a higher price per token. On subscription plans it’s billed to usage credits, and on Enterprise an Owner must enable it. In the panel, use the <strong>Toggle fast mode</strong> command when your model supports it.</p>
+</section>
+</section>
+<section id="extending-claude-code-057-112" class="level2">
+<h2 class="anchored" data-anchor-id="extending-claude-code-057-112">5. Extending Claude Code (0:57 – 1:12)</h2>
+<section id="a.-where-does-each-instruction-belong-2-min" class="level3">
+<h3 class="anchored" data-anchor-id="a.-where-does-each-instruction-belong-2-min">5a. Where does each instruction belong? (2 min)</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Put it in…</th>
+<th>When it’s…</th>
+<th>Example in the answer key</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>CLAUDE.md</code></td>
+<td>A rule for <em>every</em> session</td>
+<td>“<code>data/raw/</code> is read-only”</td>
+</tr>
+<tr class="even">
+<td>A <strong>skill you run by name</strong></td>
+<td>A prompt you start yourself</td>
+<td><code>/check-data &lt;file&gt;</code></td>
+</tr>
+<tr class="odd">
+<td>A <strong>skill Claude loads when relevant</strong></td>
+<td>A procedure Claude should follow whenever it fits</td>
+<td><code>table1</code>: journal-ready Table 1</td>
+</tr>
+<tr class="even">
+<td>A <strong>subagent</strong></td>
+<td>Work in a <em>separate context</em>, such as an independent review</td>
+<td><code>biostat-reviewer</code></td>
+</tr>
+<tr class="odd">
+<td>A <strong>hook</strong></td>
+<td>Something that must happen <em>every time</em></td>
+<td>Block edits to <code>data/raw/</code></td>
+</tr>
+<tr class="even">
+<td>A <strong>deny rule</strong></td>
+<td>Something that must <em>never</em> happen</td>
+<td>Read <code>data/restricted/</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Skills</strong> are folders with a <code>SKILL.md</code> file: <code>.claude/skills/check-data/SKILL.md</code> becomes <code>/check-data</code>, and text after the name fills <code>$ARGUMENTS</code>. Only a skill’s short <code>description</code> loads at first, and Claude reads the rest when your request matches. Add <code>disable-model-invocation: true</code> to the frontmatter, and the skill runs only when <em>you</em> type its name.</li>
+<li><strong>Custom commands are now skills.</strong> Claude Code merged them: an older <code>.claude/commands/check-data.md</code> file still works the same way, but a skill folder is the recommended form.</li>
+<li><strong>If you took Part 1:</strong> a skill you use in the Claude app is the same <code>SKILL.md</code> format. Skills from claude.ai can sync into Claude Code (read-only, if enabled).</li>
+<li><strong>Subagents</strong> (<code>.claude/agents/*.md</code>) have their own instructions and tools, and start fresh. To make one, ask Claude to create it, or write the file yourself. (The <code>/agents</code> command now only prints that reminder.) <strong>Hooks</strong> are scripts Claude Code runs at set points, whatever Claude decides.</li>
+</ul>
+</section>
+<section id="b.-demo-two-skills-a-reviewer-and-a-hook-5-min" class="level3">
+<h3 class="anchored" data-anchor-id="b.-demo-two-skills-a-reviewer-and-a-hook-5-min">5b. Demo: two skills, a reviewer, and a hook (5 min)</h3>
+<p><strong><code>/check-data</code>.</strong> This skill, which runs only when you type it, checks a file against the data dictionary by <em>writing and running a script</em>, so results are computed, not guessed. You’ll build it yourself in Exercise 2, so the demo runs it on <code>redcap_export_site_A.csv</code>.</p>
+<p><strong>The Table 1 skill.</strong> Claude loads this one on its own when your request matches. It encodes your judgment: no p-values for baseline characteristics in an RCT (CONSORT), missing values shown as their own row, and labels from the dictionary. A plain request should load it:</p>
+<pre class="text"><code>Make a baseline characteristics table by treatment arm.</code></pre>
+<p><strong>The skeptical biostatistician.</strong> It has read-only tools (<code>Read</code>, <code>Grep</code>, <code>Glob</code>), so it <em>can’t</em> change files:</p>
+<pre class="text"><code>Use the biostat-reviewer agent to review R/01_clean.R and
+R/03_primary_model.R against docs/SAP.md.</code></pre>
+<p><em>Python:</em> review <code>python/01_clean.py</code> and <code>python/03_primary_model.py</code>.</p>
+<p><strong>A hook that protects <code>data/raw/</code>.</strong> A <code>PreToolUse</code> hook runs before every edit. If the target is in <code>data/raw/</code>, it blocks the edit and tells Claude to write to <code>output/</code> instead:</p>
+<pre class="text"><code>Change sex from Female to F in data/raw/class_cohort.csv.</code></pre>
+</section>
+<section id="exercise-2" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-2">5c. Exercise 2: build one skill (8 min)</h3>
+<p>Choose <strong>A</strong> or <strong>B</strong>.</p>
+<p><strong>Option A (everyone): the <code>/check-data</code> skill.</strong> In Positron’s Explorer, create the folder <code>.claude/skills/check-data/</code> and a new file in it named <code>SKILL.md</code> (capital letters). Paste in this text and save:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="an">name:</span><span class="co"> check-data</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> Data-quality check of a CSV against the data dictionary. Run it yourself with /check-data &lt;path-to-csv&gt;.</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="an">disable-model-invocation:</span><span class="co"> true</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="an">argument-hint:</span><span class="co"> [path-to-csv]</span></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="an">allowed-tools:</span><span class="co"> Bash(git status *)</span></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a><span class="fu">## Current repository state</span></span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>!<span class="in">`git status --short`</span></span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a><span class="fu">## Task</span></span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>Check the data file $ARGUMENTS against data/data_dictionary.csv.</span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Write a script in the project's language (see CLAUDE.md), saved in</span>
+<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a>   checks/, that reads the file and reports, for each variable: type</span>
+<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a>   vs. dictionary, missingness (including the codes in the dictionary's</span>
+<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a>   missing_codes column), values outside allowed_values or the plausible</span>
+<span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a>   range, inconsistent category codes, and duplicate patient_id values.</span>
+<span id="cb19-20"><a href="#cb19-20" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Run it. Fix errors and rerun.</span>
+<span id="cb19-21"><a href="#cb19-21" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Summarize problems in a table: variable, issue, n affected, example</span>
+<span id="cb19-22"><a href="#cb19-22" aria-hidden="true" tabindex="-1"></a>   value. Print at most 10 rows of data.</span>
+<span id="cb19-23"><a href="#cb19-23" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>List variables in the file that are missing from the dictionary, and</span>
+<span id="cb19-24"><a href="#cb19-24" aria-hidden="true" tabindex="-1"></a>   the reverse.</span>
+<span id="cb19-25"><a href="#cb19-25" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Don't modify the data file. Ask me before deciding how to fix anything.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Start a new conversation (or run <code>/reload-skills</code>), type <code>/check-data</code>, and run it on a REDCap export:</p>
+<pre class="text"><code>/check-data data/raw/redcap/redcap_export_site_B.csv</code></pre>
+<p>The <code>!`git status --short`</code> line runs <em>before</em> Claude sees the prompt, and <code>allowed-tools</code> pre-approves it. <code>disable-model-invocation: true</code> means Claude never starts this skill on its own; it runs only when you type <code>/check-data</code>. The skill says “the project’s language,” so it works unchanged for Python. (Older guides put the same text in <code>.claude/commands/check-data.md</code>. That still works, but skills are now the recommended form.)</p>
+<p><strong>Option B: a Table 1 skill.</strong> This needs <code>output/cohort_clean.csv</code> from Exercise 1.</p>
+<pre class="text"><code>Create a project skill in .claude/skills/table1/SKILL.md that builds a
+journal-ready Table 1 with gtsummary from output/cohort_clean.csv,
+stratified by the argument I give (default: arm). Rules: use only the
+baseline variables the SAP lists, no p-values for baseline
+characteristics, a separate Missing row, and labels from
+data/data_dictionary.csv. Report n per group as evidence. Write a
+description that makes you load it when I ask for a "Table 1" or
+"baseline characteristics." Show me the file before saving.</code></pre>
+<p><em>Python:</em> replace “with gtsummary” with “with pandas”.</p>
+<p>Start a new conversation and test both ways: a plain request (“Make a Table 1 by site”) and <code>/table1 site</code>.</p>
+<p><strong>If it doesn’t show up,</strong> check that the file is in the right folder, then start a new conversation. <strong>If a skill doesn’t load automatically,</strong> the description is usually too vague. Put the main use case first, in the words people actually type.</p>
+<p><strong>Then make it yours (2 min).</strong> Change one rule so your skill fits a data task you actually do. For example, add a check your own data needs to <code>/check-data</code> (visit dates out of order, IDs that don’t match your study’s format), or add a rule to the Table 1 skill (your target journal’s rounding rules, or a footnote that defines each abbreviation). Save, start a new conversation, and run it again.</p>
+</section>
+</section>
+<section id="messy-sources" class="level2">
+<h2 class="anchored" data-anchor-id="messy-sources">6. Messy real-world sources (1:12 – 1:20)</h2>
+<p><strong>Cut this segment first if you’re running late.</strong> It’s also a good “try at home” exercise.</p>
+<section id="a.-harmonize-the-redcap-exports" class="level3">
+<h3 class="anchored" data-anchor-id="a.-harmonize-the-redcap-exports">6a. Harmonize the REDCap exports</h3>
+<p><code>data/raw/redcap/</code> has one export per site, and each site exported a little differently. First investigate, without changing anything:</p>
+<pre class="text"><code>Use a subagent to compare the three REDCap exports in data/raw/redcap/
+with each other and with data/data_dictionary.csv: column names, codes
+for arm and sex, date formats, extra columns, and missing-data codes.
+Return one comparison table. Don't change any files.</code></pre>
+<p>Then plan and build:</p>
+<pre class="text"><code>Plan first: write R/05_harmonize_redcap.R that maps each site's export
+to the dictionary's names and codes, stacks the three sites, and logs
+every rename and recode to output/harmonize_log.csv. Then compare the
+result with data/raw/class_cohort.csv by patient_id and report every
+difference instead of hiding it.</code></pre>
+<p><em>Python:</em> use <code>python/05_harmonize_redcap.py</code>. For 6b, translate to <code>python/legacy_baseline_table.py</code> with pandas.</p>
+</section>
+<section id="b.-explain-or-translate-legacy-sas-and-stata-code" class="level3">
+<h3 class="anchored" data-anchor-id="b.-explain-or-translate-legacy-sas-and-stata-code">6b. Explain or translate legacy SAS and Stata code</h3>
+<pre class="text"><code>Explain what legacy/baseline_table.sas does, step by step, for someone
+who doesn't know SAS. Then list anything that looks like a bug, or
+that would give a different answer from the SAP. Don't run or change
+anything.</code></pre>
+<pre class="text"><code>Translate legacy/baseline_table.do into R/legacy_baseline_table.R with
+the tidyverse, keeping its logic, bugs included. Run it, compare its
+numbers with the Table 1 from Exercise 1, and explain each difference.</code></pre>
+</section>
+</section>
+<section id="verification" class="level2">
+<h2 class="anchored" data-anchor-id="verification">7. Verification and research integrity (1:20 – 1:27)</h2>
+<p><strong>Don’t cut this segment.</strong> Claude is a fast collaborator that can be confidently wrong. These checks are how you find out.</p>
+<section id="give-claude-a-check-it-can-run" class="level3">
+<h3 class="anchored" data-anchor-id="give-claude-a-check-it-can-run">Give Claude a check it can run</h3>
+<p>The docs’ first best practice is to give Claude a way to verify its work. Without a check, “looks done” is the only signal, and you’re the only verifier.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset" data-group="language">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">Python</a></li></ul>
+<div class="tab-content" data-group="language">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<pre class="text"><code>Using the data dictionary and SAP, write testthat tests in
+tests/testthat/test-cleaning.R for output/cohort_clean.csv: unique
+patient_id, 500 rows, no -99 or 999 codes, sbp_v0 to sbp_v3 within
+80-220, and sex coded F/M only. Add tests/run_checks.R to run them.
+Show that the tests FAIL on the raw file, then that they pass on the
+cleaned file. Don't edit the tests to make them pass. Show me the
+test output as evidence.</code></pre>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<pre class="text"><code>Using the data dictionary and SAP, write pytest tests in
+tests/test_cleaning.py for output/cohort_clean.csv: unique patient_id,
+500 rows, no -99 or 999 codes, sbp_v0 to sbp_v3 within 80-220, and sex
+coded F/M only. Show that the tests FAIL on the raw file, then that
+they pass on the cleaned file. Don't edit the tests to make them pass.
+Show me the test output as evidence.</code></pre>
+</div>
+</div>
+</div>
+<p><strong>Watch for</strong> Claude editing the <em>tests</em> instead of the code, or “fixing” a failure by dropping rows. Read the diff of <code>tests/</code> as carefully as the diff of your code.</p>
+<p><strong>Get an independent review:</strong> the <code>biostat-reviewer</code> subagent against the SAP (Segment 5), <code>/code-review</code> on the current diff (a bundled skill; type <code>/</code> to check it’s in your panel), and a human statistician or co-author, which is <strong>required, not optional</strong>.</p>
+</section>
+<section id="why-cleaning-matters" class="level3">
+<h3 class="anchored" data-anchor-id="why-cleaning-matters">Why cleaning matters</h3>
+<p>Same model, same data file, with and without the cleaning script:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>n analyzed</th>
+<th>Intensive − Standard (mmHg)</th>
+<th>95% CI</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Raw file, no cleaning (sentinel codes read as real BP; duplicates kept)</td>
+<td>462</td>
+<td>−8.4</td>
+<td>−19.6 to 2.9 (not significant)</td>
+</tr>
+<tr class="even">
+<td>After <code>01_clean</code></td>
+<td>451</td>
+<td><strong>−11.0</strong></td>
+<td><strong>−12.8 to −9.2</strong></td>
+</tr>
+</tbody>
+</table>
+<p>A few <code>-99</code> and <code>999</code> codes are enough to hide a 10 mmHg treatment effect. Fast code is only as good as the checks around it.</p>
+</section>
+<section id="garden-of-forking-paths" class="level3">
+<h3 class="anchored" data-anchor-id="garden-of-forking-paths">Garden of forking paths</h3>
+<p>Claude makes it cheap to run “one more model.” If you try 20 specifications and report the one that’s significant, the p-value no longer means what it says. <strong>Pre-specify</strong> analyses in the SAP, label sensitivity and post hoc analyses as such, and use plan mode to fix decisions <em>before</em> you see results. Watch for scope creep too: Claude “helpfully” changing a decision the SAP already fixed.</p>
+</section>
+<section id="disclosure-and-the-audit-trail" class="level3">
+<h3 class="anchored" data-anchor-id="disclosure-and-the-audit-trail">Disclosure and the audit trail</h3>
+<ul>
+<li><strong>Keep the record:</strong> commit <code>.claude/</code> (settings, skills, agents, hooks) with the analysis. Keep <code>settings.local.json</code> and <code>CLAUDE.local.md</code> out of git. Save key sessions with <code>/export</code>, and note the Claude Code version and model (<code>/status</code>).</li>
+<li><strong>Disclose specifically</strong>, for example: “Analysis code was drafted with Claude Code (version, model). All code was reviewed by the authors, tested against pre-specified checks, and rerun from raw data.” Follow each journal’s and funder’s policy: <code>[link to library guidance on AI disclosure]</code>.</li>
+</ul>
+<p><strong>Discuss (2 min):</strong> What would you need to see before you trusted an AI-assisted analysis in a paper you were reviewing?</p>
+</section>
+</section>
+<section id="wrap-up-127-130" class="level2">
+<h2 class="anchored" data-anchor-id="wrap-up-127-130">8. Wrap-up (1:27 – 1:30)</h2>
+<ol type="1">
+<li><strong>Protect first.</strong> Set up <code>CLAUDE.md</code>, a deny rule, Manual mode, and git before Claude touches the data. Remember: Claude Code sends what it reads.</li>
+<li><strong>Plan, build, verify.</strong> Plan against the SAP. Let Claude write and run the code. Check it yourself, and commit.</li>
+<li><strong>Encode your judgment once.</strong> Skills, subagents, and hooks turn good prompts into shared, versioned team tools.</li>
+</ol>
+<section id="try-at-home" class="level3">
+<h3 class="anchored" data-anchor-id="try-at-home">Try at home</h3>
+<ul>
+<li><strong>Worktrees (CLI):</strong> <code>claude --worktree sensitivity-mi</code> starts a separate git checkout, so you can build the SAP’s multiple-imputation sensitivity analysis without touching the main analysis.</li>
+<li><strong>Headless runs (CLI):</strong> <code>claude -p "Explain legacy/baseline_table.sas and list likely bugs" --allowedTools "Read"</code> runs once and prints the result, for scripts and batch jobs. Script deterministic steps (<code>Rscript</code>, <code>quarto render</code>) without AI.</li>
+<li><strong>The sandbox:</strong> turn on <code>/sandbox</code> (macOS, Linux, or WSL2) and repeat the restricted-data test with an R script.</li>
+<li><strong>MCP servers and connectors (if enabled):</strong> run <code>/mcp</code> to see what your organization has connected, such as PubMed. Use only approved servers: <code>[contact / policy link]</code>.</li>
+<li><strong>A real public dataset:</strong> repeat today’s workflow on <a href="https://wwwn.cdc.gov/nchs/nhanes/"><strong>NHANES</strong></a> blood-pressure files (for example, the blood pressure and demographics files from one cycle). Plan first, write a <code>CLAUDE.md</code>, and note that NHANES needs its survey weights. Avoid controlled-access data (MIMIC, dbGaP, UK Biobank), whose DUAs restrict external AI services.</li>
+</ul>
+</section>
+</section>
+<section id="finished-files" class="level2">
+<h2 class="anchored" data-anchor-id="finished-files">Finished files</h2>
+<ul>
+<li><strong>Exercise 1 answer key and fallback:</strong> <code>instructor/solutions/R/</code> and <code>instructor/solutions/python/</code> (<code>01_clean</code> … <code>04_figure</code> and <code>report.qmd</code>). The expected results and every planted problem are in <code>instructor/README.md</code> (in the repo, not on the site).</li>
+<li><strong>Segment 5 answer key:</strong> <code>instructor/part2-answer-key/</code>: <code>.claude/settings.json</code>, <code>skills/check-data/</code>, <code>skills/table1/</code>, <code>agents/biostat-reviewer.md</code>, <code>hooks/</code>, <code>rules/</code>, the <code>tests/</code>, and <code>CLAUDE-additions.md</code>. These files are R only. For Python, ask Claude to convert them, for example: “Convert .claude/skills/table1/SKILL.md and tests/ to Python with pandas and pytest.”</li>
+</ul>
+</section>
+<section id="resources" class="level2">
+<h2 class="anchored" data-anchor-id="resources">Resources</h2>
+<ul>
+<li>Claude Code docs: <a href="https://code.claude.com/docs" class="uri">https://code.claude.com/docs</a>. Start with <strong>Use Claude Code in VS Code</strong> (it also applies to Positron), <strong>Best practices</strong>, <strong>Model configuration</strong>, <strong>Skills</strong>, <strong>Subagents</strong>, <strong>Hooks</strong>, and <strong>Permissions</strong>.</li>
+<li><a href="./cheatsheet.html">Cheat sheet</a>: what works in the panel vs.&nbsp;the CLI, models and effort, key files</li>
+<li>Positron documentation: <a href="https://positron.posit.co" class="uri">https://positron.posit.co</a></li>
+<li>Claude Academy (free courses from Anthropic): <a href="https://academy.claude.com" class="uri">https://academy.claude.com</a></li>
+<li>Institutional AI and data policy: <code>[link]</code></li>
+<li>Library services: <code>[data services consults, office hours, follow-up workshops]</code></li>
+<li>Feedback on today’s class: <code>[link to short evaluation form]</code></li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/cwml\.github\.io\/getting-started-with-claude\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./part2-slides.html" class="pagination-link" aria-label="Slides">
+        <span class="nav-page-text">Slides</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Cushing/Whitney Medical Library · Yale School of Medicine</p>
+</div>   
+    <div class="nav-footer-center">
+<p>Questions or feedback? Email <a href="mailto:justin.demayo@yale.edu?subject=Claude%20classes%20feedback">justin.demayo@yale.edu</a> · Copyright © 2026 Yale University · All Rights Reserved · <a href="https://usability.yale.edu/digital-accessibility/accessibility-at-yale">Accessibility at Yale</a> · <a href="https://privacy.yale.edu/resources/privacy-statement">Privacy Policy</a></p>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/CWML/getting-started-with-claude/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>Built with <a href="https://quarto.org">Quarto</a></p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

@@ -5,6 +5,7 @@ format:
     theme: [default, theme/cwml-reveal.scss]
     slide-number: true
     chalkboard: false
+    embed-resources: true
     transition: none
     width: 1280
     height: 720
@@ -22,7 +23,7 @@ Part 2: a 90-minute hands-on class
 **Download:** `hypertension-cohort.zip`, then open the folder in Positron
 
 ::: notes
-**Before 0:00:** demo reset done (see the instructor callout on the [class page](part2.qmd)). Positron open on the demo project at `part2-start`, the Claude panel docked on the right in **Manual** mode, `/status` checked, fonts enlarged. Put this slide up as people arrive.
+**Before 0:00:** demo reset done (see "Part 2: instructor prep" in `instructor/README.md`). Positron open on the demo project at `part2-start`, the Claude panel docked on the right in **Manual** mode, `/status` checked, fonts enlarged. Put this slide up as people arrive.
 
 **0:00.** Welcome. Introduce yourself and the library's role in data services. Every prompt today is on the class page, ready to copy. All data is synthetic.
 :::

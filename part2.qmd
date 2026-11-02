@@ -26,6 +26,10 @@ Install the Python packages listed in the [setup steps](index.qmd#setup-part2) i
 
 ## Download
 
+[View slides](part2-slides.qmd){.btn .btn-outline-secondary .btn-sm} [⬇ Download slides (HTML)](part2-slides.qmd){.btn .btn-outline-secondary .btn-sm download="part2-slides.html"}
+
+In the slides, press **F** for full screen and **Esc** for an overview. To save a PDF, add `?print-pdf` to the slides' web address and print to PDF (works best in Chrome).
+
 [**hypertension-cohort.zip**](downloads/hypertension-cohort.zip) is the class project. It contains synthetic data from a fictional two-arm blood-pressure trial at three sites, the data dictionary, a one-page statistical analysis plan (`docs/SAP.md`), per-site "REDCap exports," legacy SAS and Stata code, a stand-in `data/restricted/` folder, and `CLAUDE.md`. The `R/`, `output/`, and `reports/` folders are empty, because you'll fill them in class.
 
 Unzip it somewhere easy to find, such as `Documents/`, and open the `hypertension-cohort` folder in Positron (**File → Open Folder**).

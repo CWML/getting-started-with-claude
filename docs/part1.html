@@ -1,0 +1,1587 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Part 1: Getting started with Claude – Claude &amp; Claude Code at the School of Medicine</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./part1-reference.html" rel="next">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ac0a192a280d01e3ff19409a8090d491.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-bb70dbc775e3eaf74af9c6cd576cde24.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ac0a192a280d01e3ff19409a8090d491.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-b415a55bb24f02d078fdecd4dbf90cdc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-e302654dfcd61cd30f39cb9489bea35f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-b415a55bb24f02d078fdecd4dbf90cdc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const queryPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkModeDefault = queryPrefersDark.matches;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    queryPrefersDark.addEventListener("change", e => {
+      if(window.localStorage.getItem("quarto-color-scheme") !== null)
+        return;
+      const alternate = e.matches
+      toggleColorMode(alternate);
+      localAlternateSentinel = e.matches ? 'alternate' : 'default'; // this is used alongside local storage!
+      toggleGiscusIfUsed(alternate, darkModeDefault);
+    });
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-xl " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Claude &amp; Claude Code at the School of Medicine</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://library.medicine.yale.edu/"> 
+<span class="menu-text">Cushing/Whitney Medical Library</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home &amp; setup</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./part1.html" aria-current="page"> 
+<span class="menu-text">Part 1: Claude</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./part2.html"> 
+<span class="menu-text">Part 2: Claude Code</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="mailto:justin.demayo@yale.edu?subject=Claude%20classes%20feedback"> <i class="bi bi-envelope" role="img">
+</i> 
+<span class="menu-text">Feedback</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/CWML/getting-started-with-claude"> <i class="bi bi-github" role="img" aria-label="Course materials on GitHub">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./part1.html">Class page</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part1.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Class page</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part1-reference.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Quick reference</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html#setup-part1" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Setup for Part 1</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#welcome" id="toc-welcome" class="nav-link active" data-scroll-target="#welcome">1. Welcome and sign in (0:00 – 0:03)</a>
+  <ul class="collapse">
+  <li><a href="#by-the-end-of-this-class-youll-be-able-to" id="toc-by-the-end-of-this-class-youll-be-able-to" class="nav-link" data-scroll-target="#by-the-end-of-this-class-youll-be-able-to">By the end of this class, you’ll be able to</a></li>
+  <li><a href="#today" id="toc-today" class="nav-link" data-scroll-target="#today">Today</a></li>
+  <li><a href="#no-working-account" id="toc-no-working-account" class="nav-link" data-scroll-target="#no-working-account">No working account?</a></li>
+  </ul></li>
+  <li><a href="#why-check" id="toc-why-check" class="nav-link" data-scroll-target="#why-check">2. Why we check (0:03 – 0:05)</a>
+  <ul class="collapse">
+  <li><a href="#watch-does-this-reference-exist" id="toc-watch-does-this-reference-exist" class="nav-link" data-scroll-target="#watch-does-this-reference-exist">Watch: does this reference exist?</a></li>
+  </ul></li>
+  <li><a href="#which-tool" id="toc-which-tool" class="nav-link" data-scroll-target="#which-tool">3. Which tool for which data (0:05 – 0:11)</a>
+  <ul class="collapse">
+  <li><a href="#which-tool-for-which-data" id="toc-which-tool-for-which-data" class="nav-link" data-scroll-target="#which-tool-for-which-data">Which tool for which data?</a></li>
+  <li><a href="#can-i-share-this" id="toc-can-i-share-this" class="nav-link" data-scroll-target="#can-i-share-this">Can I share this?</a></li>
+  <li><a href="#not-here-is-a-valid-answer" id="toc-not-here-is-a-valid-answer" class="nav-link" data-scroll-target="#not-here-is-a-valid-answer">“Not here” is a valid answer</a></li>
+  </ul></li>
+  <li><a href="#settings" id="toc-settings" class="nav-link" data-scroll-target="#settings">4. Lock your settings (0:11 – 0:15)</a>
+  <ul class="collapse">
+  <li><a href="#watch-then-do-memory-settings" id="toc-watch-then-do-memory-settings" class="nav-link" data-scroll-target="#watch-then-do-memory-settings">Watch, then do: memory settings</a></li>
+  <li><a href="#incognito-what-it-does-and-doesnt-do" id="toc-incognito-what-it-does-and-doesnt-do" class="nav-link" data-scroll-target="#incognito-what-it-does-and-doesnt-do">Incognito: what it does and doesn’t do</a></li>
+  </ul></li>
+  <li><a href="#watch-project" id="toc-watch-project" class="nav-link" data-scroll-target="#watch-project">5. Watch: build a Project (0:15 – 0:17)</a>
+  <ul class="collapse">
+  <li><a href="#five-steps" id="toc-five-steps" class="nav-link" data-scroll-target="#five-steps">Five steps</a></li>
+  </ul></li>
+  <li><a href="#build-project" id="toc-build-project" class="nav-link" data-scroll-target="#build-project">6. Your turn: build your Project (0:17 – 0:26)</a>
+  <ul class="collapse">
+  <li><a href="#your-turn-build-it" id="toc-your-turn-build-it" class="nav-link" data-scroll-target="#your-turn-build-it">Your turn: build it</a></li>
+  <li><a href="#your-kit" id="toc-your-kit" class="nav-link" data-scroll-target="#your-kit">Your kit</a></li>
+  </ul></li>
+  <li><a href="#strong-prompt" id="toc-strong-prompt" class="nav-link" data-scroll-target="#strong-prompt">7. Watch: anatomy of a strong prompt (0:26 – 0:28)</a>
+  <ul class="collapse">
+  <li><a href="#what-each-part-does" id="toc-what-each-part-does" class="nav-link" data-scroll-target="#what-each-part-does">What each part does</a></li>
+  </ul></li>
+  <li><a href="#run-prompt" id="toc-run-prompt" class="nav-link" data-scroll-target="#run-prompt">8. Your turn: run it, then push back (0:28 – 0:37)</a>
+  <ul class="collapse">
+  <li><a href="#your-turn-turn-1" id="toc-your-turn-turn-1" class="nav-link" data-scroll-target="#your-turn-turn-1">Your turn: Turn 1</a></li>
+  <li><a href="#your-turn-push-back-turn-2" id="toc-your-turn-push-back-turn-2" class="nav-link" data-scroll-target="#your-turn-push-back-turn-2">Your turn: push back (Turn 2)</a></li>
+  </ul></li>
+  <li><a href="#verify" id="toc-verify" class="nav-link" data-scroll-target="#verify">9. Verify before you use it (0:37 – 0:46)</a>
+  <ul class="collapse">
+  <li><a href="#your-turn-check-quotes-and-rules" id="toc-your-turn-check-quotes-and-rules" class="nav-link" data-scroll-target="#your-turn-check-quotes-and-rules">Your turn: check quotes and rules</a></li>
+  <li><a href="#your-turn-check-a-citation-turn-3" id="toc-your-turn-check-a-citation-turn-3" class="nav-link" data-scroll-target="#your-turn-check-a-citation-turn-3">Your turn: check a citation (Turn 3)</a></li>
+  <li><a href="#your-turn-add-one-rule" id="toc-your-turn-add-one-rule" class="nav-link" data-scroll-target="#your-turn-add-one-rule">Your turn: add one rule</a></li>
+  <li><a href="#youre-accountable-for-what-you-use" id="toc-youre-accountable-for-what-you-use" class="nav-link" data-scroll-target="#youre-accountable-for-what-you-use">You’re accountable for what you use</a></li>
+  </ul></li>
+  <li><a href="#tune" id="toc-tune" class="nav-link" data-scroll-target="#tune">10. Tune it: model, effort and skills (0:46 – 0:51)</a>
+  <ul class="collapse">
+  <li><a href="#watch-the-model-menu" id="toc-watch-the-model-menu" class="nav-link" data-scroll-target="#watch-the-model-menu">Watch: the model menu</a></li>
+  <li><a href="#your-turn-same-task-smaller-dial" id="toc-your-turn-same-task-smaller-dial" class="nav-link" data-scroll-target="#your-turn-same-task-smaller-dial">Your turn: same task, smaller dial</a></li>
+  <li><a href="#the-and-menus" id="toc-the-and-menus" class="nav-link" data-scroll-target="#the-and-menus">The <strong>+</strong> and <strong>/</strong> menus</a></li>
+  <li><a href="#watch-a-skill-makes-a-word-handout" id="toc-watch-a-skill-makes-a-word-handout" class="nav-link" data-scroll-target="#watch-a-skill-makes-a-word-handout">Watch: a skill makes a Word handout</a></li>
+  </ul></li>
+  <li><a href="#phone" id="toc-phone" class="nav-link" data-scroll-target="#phone">11. Take it with you: the phone app (0:51 – 0:55)</a>
+  <ul class="collapse">
+  <li><a href="#watch-then-try-your-project-on-your-phone" id="toc-watch-then-try-your-project-on-your-phone" class="nav-link" data-scroll-target="#watch-then-try-your-project-on-your-phone">Watch, then try: your Project on your phone</a></li>
+  <li><a href="#phone-rules" id="toc-phone-rules" class="nav-link" data-scroll-target="#phone-rules">Phone rules</a></li>
+  </ul></li>
+  <li><a href="#cowork-bridge" id="toc-cowork-bridge" class="nav-link" data-scroll-target="#cowork-bridge">12. Cowork and the bridge to Part 2 (0:55 – 0:57)</a>
+  <ul class="collapse">
+  <li><a href="#cowork-in-30-seconds" id="toc-cowork-in-30-seconds" class="nav-link" data-scroll-target="#cowork-in-30-seconds">Cowork in 30 seconds</a></li>
+  <li><a href="#from-today-to-part-2" id="toc-from-today-to-part-2" class="nav-link" data-scroll-target="#from-today-to-part-2">From today to Part 2</a></li>
+  </ul></li>
+  <li><a href="#exit" id="toc-exit" class="nav-link" data-scroll-target="#exit">13. Exit ticket and close (0:57 – 1:00)</a>
+  <ul class="collapse">
+  <li><a href="#exit-ticket" id="toc-exit-ticket" class="nav-link" data-scroll-target="#exit-ticket">Exit ticket</a></li>
+  </ul></li>
+  <li><a href="#next" id="toc-next" class="nav-link" data-scroll-target="#next">Where to go next</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/CWML/getting-started-with-claude/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<a class="cwml-skip-link" href="#quarto-document-content">Skip to main content</a>
+<script>document.body.prepend(document.querySelector(".cwml-skip-link"));</script>
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Part 1: Getting started with Claude</h1>
+<p class="subtitle lead">Build a Project you’ll keep using</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>A 60-minute, hands-on class in the Claude app. You’ll build a <strong>Project</strong> (a Claude workspace with its own instructions and files), use it on a real task, check what it gives you, and leave with a tool you can reuse. No programming needed.</p>
+<p><a href="./part1-reference.html">Quick reference</a> · Track A Foundations · Beginner</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Before class">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Before class
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Sign in to Claude, pick your kit, and (optionally) install the Claude phone app: see <a href="./index.html#setup-part1">Setup for Part 1</a>.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled" title="No working account, or your main appointment is at YNHHS?">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>No working account, or your main appointment is at YNHHS?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You can still take part. In class, pair with a neighbor who has an account. To do the same exercise in another tool, see <a href="./index.html#access">Access and alternatives</a> and <a href="./part1-reference.html#copilot">Do it in Copilot or Clarity</a>.</p>
+</div>
+</div>
+<p><strong>Ground rule:</strong> no patient information or other sensitive data today. Every file in class is public or made up.</p>
+<section id="welcome" class="level2">
+<h2 class="anchored" data-anchor-id="welcome">1. Welcome and sign in (0:00 – 0:03)</h2>
+<p><strong>Sign in to Claude in a browser tab now.</strong> Open this page: <code>https://cwml.github.io/getting-started-with-claude/part1.html</code> <code>[QR code]</code></p>
+<p>Green card up = a new chat is open. Track A Foundations · Beginner</p>
+<section id="by-the-end-of-this-class-youll-be-able-to" class="level3">
+<h3 class="anchored" data-anchor-id="by-the-end-of-this-class-youll-be-able-to">By the end of this class, you’ll be able to</h3>
+<ol type="1">
+<li>Identify the right tool and settings for your data.</li>
+<li>Apply prompting patterns to a real task.</li>
+<li>Evaluate Claude’s answers and citations before you use them.</li>
+<li>Create a Project you can reuse for your own work.</li>
+</ol>
+</section>
+<section id="today" class="level3">
+<h3 class="anchored" data-anchor-id="today">Today</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Time</th>
+<th>Segment</th>
+<th>What you’ll do</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0:00 – 0:03</td>
+<td>1. Welcome and sign in</td>
+<td>Sign in; open this page</td>
+</tr>
+<tr class="even">
+<td>0:03 – 0:05</td>
+<td>2. Why we check</td>
+<td>Watch a reference get checked</td>
+</tr>
+<tr class="odd">
+<td>0:05 – 0:11</td>
+<td>3. Which tool for which data</td>
+<td>Decide what you can share</td>
+</tr>
+<tr class="even">
+<td>0:11 – 0:15</td>
+<td>4. Lock your settings</td>
+<td>Set memory before uploading anything</td>
+</tr>
+<tr class="odd">
+<td>0:15 – 0:17</td>
+<td>5. Watch: build a Project</td>
+<td>Watch the steps once</td>
+</tr>
+<tr class="even">
+<td>0:17 – 0:26</td>
+<td>6. Your turn: build your Project</td>
+<td>Build it from your kit</td>
+</tr>
+<tr class="odd">
+<td>0:26 – 0:28</td>
+<td>7. Watch: anatomy of a strong prompt</td>
+<td>See what each part does</td>
+</tr>
+<tr class="even">
+<td>0:28 – 0:37</td>
+<td>8. Your turn: run it, then push back</td>
+<td>Run two prompts; compare</td>
+</tr>
+<tr class="odd">
+<td>0:37 – 0:46</td>
+<td>9. Verify before you use it</td>
+<td>Check quotes, rules, and a citation</td>
+</tr>
+<tr class="even">
+<td>0:46 – 0:51</td>
+<td>10. Tune it: model, effort and skills</td>
+<td>Try a smaller dial; see a skill</td>
+</tr>
+<tr class="odd">
+<td>0:51 – 0:55</td>
+<td>11. Take it with you: the phone app</td>
+<td>Open your Project on a phone (optional)</td>
+</tr>
+<tr class="even">
+<td>0:55 – 0:57</td>
+<td>12. Cowork and the bridge to Part 2</td>
+<td>Hear what comes next</td>
+</tr>
+<tr class="odd">
+<td>0:57 – 1:00</td>
+<td>13. Exit ticket and close</td>
+<td>Answer four quick questions</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="no-working-account" class="level3">
+<h3 class="anchored" data-anchor-id="no-working-account">No working account?</h3>
+<ul>
+<li><strong>Pair up:</strong> be the navigator for a neighbor who has one.</li>
+<li><strong>Main appointment at YNHHS?</strong> Follow the [Copilot] path on the class site.</li>
+<li><strong>Personal Claude account?</strong> Only for today’s public class files.</li>
+</ul>
+<p>Details: <a href="./index.html#access">Access and alternatives</a> · <a href="./part1-reference.html#copilot">Do it in Copilot or Clarity</a></p>
+</section>
+</section>
+<section id="why-check" class="level2">
+<h2 class="anchored" data-anchor-id="why-check">2. Why we check (0:03 – 0:05)</h2>
+<p>Evidence before enthusiasm.</p>
+<section id="watch-does-this-reference-exist" class="level3">
+<h3 class="anchored" data-anchor-id="watch-does-this-reference-exist">Watch: does this reference exist?</h3>
+<p>Claude gave this reference in a chat before class: <code>[pre-run citation]</code></p>
+<ol type="1">
+<li>Copy the PMID.</li>
+<li>Paste it into <a href="https://pubmed.ncbi.nlm.nih.gov">pubmed.ncbi.nlm.nih.gov</a>.</li>
+<li>Does the paper exist? Do the title, authors, and year match?</li>
+</ol>
+<p><strong>This is why the last hands-on step today is verification.</strong></p>
+</section>
+</section>
+<section id="which-tool" class="level2">
+<h2 class="anchored" data-anchor-id="which-tool">3. Which tool for which data (0:05 – 0:11)</h2>
+<p>Pick the tool that’s approved for your data before you open any tool.</p>
+<section id="which-tool-for-which-data" class="level3">
+<h3 class="anchored" data-anchor-id="which-tool-for-which-data">Which tool for which data?</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Tool</th>
+<th>Who can use it</th>
+<th>Data allowed</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>[Microsoft Copilot]</td>
+<td>[Yale and YNHHS]</td>
+<td>[classification, confirmed by HSIT on DATE]</td>
+</tr>
+<tr class="even">
+<td>[Clarity]</td>
+<td>[Yale]</td>
+<td>[classification, confirmed by HSIT on DATE]</td>
+</tr>
+<tr class="odd">
+<td>Claude, standard account</td>
+<td>Departmental sign-up (today’s class)</td>
+<td>[classification, confirmed by HSIT on DATE]</td>
+</tr>
+<tr class="even">
+<td>Claude, HIPAA-supported version</td>
+<td>By request: [request link]</td>
+<td>[classification, confirmed by HSIT on DATE]</td>
+</tr>
+<tr class="odd">
+<td>YNHHS work or data</td>
+<td>[Copilot] is the chat AI approved at YNHHS</td>
+<td>[YNHHS AI governance link, confirmed DATE]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>No tool is automatically approved for patient information.</strong> HIPAA-supported describes a contract and safeguards. It doesn’t approve your project, every feature, or every data set.</p>
+<p><strong>Before you use any tool for sensitive work:</strong></p>
+<ul>
+<li>Follow [Yale data classification / policy link]. Questions go to [HSIT / HIPAA Privacy Office contact].</li>
+<li>A HIPAA-supported version of Claude is available by request: [request link]. Some features in it may be off or look different (it keeps an older layout); check with [ITS].</li>
+<li>Removing a name isn’t de-identification. Dates, ZIP codes, record numbers, and rare details can identify someone.</li>
+<li>Your IRB protocol and any data use agreement may forbid sending data to outside AI services, even de-identified data.</li>
+</ul>
+<p>More detail, including which features the HIPAA-supported version covers: <a href="./part1-reference.html#tool-data">Quick reference: which tool for which data</a>.</p>
+</section>
+<section id="can-i-share-this" class="level3">
+<h3 class="anchored" data-anchor-id="can-i-share-this">Can I share this?</h3>
+<p><strong>OK</strong>, <strong>check first</strong>, or <strong>no</strong>? Show of hands.</p>
+<ol type="1">
+<li>An open-access article</li>
+<li>Your own draft lecture slides</li>
+<li>A clinic note with the patient’s name removed</li>
+<li>An NIH application you’re reviewing</li>
+<li>A YNHHS discharge-instruction template</li>
+<li>A PDF from a library subscription</li>
+</ol>
+</section>
+<section id="not-here-is-a-valid-answer" class="level3">
+<h3 class="anchored" data-anchor-id="not-here-is-a-valid-answer">“Not here” is a valid answer</h3>
+<ul>
+<li>Confidential peer review</li>
+<li>Final clinical decisions or doses</li>
+<li>Assessed work where course policy forbids AI</li>
+<li>Anything you can’t verify</li>
+<li>Tasks where checking takes longer than doing it yourself</li>
+</ul>
+<p><strong>Safer habits:</strong> describe the situation instead of pasting the record, use made-up examples, and share structure (a template or blank form) rather than content.</p>
+</section>
+</section>
+<section id="settings" class="level2">
+<h2 class="anchored" data-anchor-id="settings">4. Lock your settings (0:11 – 0:15)</h2>
+<p>Set memory <em>before</em> you upload anything.</p>
+<section id="watch-then-do-memory-settings" class="level3">
+<h3 class="anchored" data-anchor-id="watch-then-do-memory-settings">Watch, then do: memory settings</h3>
+<div class="do-now">
+<p><strong>Your turn.</strong> Click your name or initials (lower left) &gt; <strong>Settings &gt; Your Claude</strong> (older layout: <strong>Settings &gt; Memory</strong>).</p>
+<ol type="1">
+<li>Confirm <strong>Include sensitive topics in memory</strong> is <strong>off</strong>.</li>
+<li>Find <strong>Memory from chats</strong>: keep it on or off?</li>
+<li>Find <strong>Search and reference chats</strong>: keep it on or off?</li>
+</ol>
+</div>
+<p>To turn memory off for one chat: <strong>+ &gt; Memory</strong>, before your first message.</p>
+</section>
+<section id="incognito-what-it-does-and-doesnt-do" class="level3">
+<h3 class="anchored" data-anchor-id="incognito-what-it-does-and-doesnt-do">Incognito: what it does and doesn’t do</h3>
+<p>The ghost icon in a new chat starts an incognito chat. It isn’t saved to your history or memory, but:</p>
+<ul>
+<li>It isn’t available inside Projects.</li>
+<li>Chats are still kept [30 days by default, or Yale’s setting] and appear in your organization’s exports.</li>
+<li>In the new combined layout, it can’t create files or run code.</li>
+</ul>
+<p><strong>Incognito changes what Claude remembers, not what data is allowed.</strong></p>
+</section>
+</section>
+<section id="watch-project" class="level2">
+<h2 class="anchored" data-anchor-id="watch-project">5. Watch: build a Project (0:15 – 0:17)</h2>
+<p>A Project is a workspace for one ongoing piece of work: its own instructions, files, and memory.</p>
+<section id="five-steps" class="level3">
+<h3 class="anchored" data-anchor-id="five-steps">Five steps</h3>
+<ol type="1">
+<li><strong>Projects &gt; + New Project</strong> &gt; name it “Article Explainer” (Kit B: “Committee Assistant”).</li>
+<li><strong>Set project instructions</strong> &gt; paste the instructions &gt; <strong>change one line</strong> to fit your work.</li>
+<li>On the Project page, under <strong>Memory</strong>, turn <strong>Use account memory</strong> off.</li>
+<li><strong>+</strong> &gt; add your kit’s files.</li>
+<li>Start a new chat in the Project and send the test prompt.</li>
+</ol>
+</section>
+</section>
+<section id="build-project" class="level2">
+<h2 class="anchored" data-anchor-id="build-project">6. Your turn: build your Project (0:17 – 0:26)</h2>
+<p>Use the kit you chose: <strong>Kit A, Article Explainer</strong> (default) or <strong>Kit B, Committee Assistant</strong> (for administrative staff).</p>
+<section id="your-turn-build-it" class="level3">
+<h3 class="anchored" data-anchor-id="your-turn-build-it">Your turn: build it</h3>
+<div class="do-now">
+<ol type="1">
+<li>Download your kit’s files (links below).</li>
+<li><strong>Projects &gt; + New Project</strong>, then name it.</li>
+<li><strong>Set project instructions:</strong> paste them and <strong>change one line</strong> to fit your work.</li>
+<li>Under <strong>Memory</strong>, turn <strong>Use account memory</strong> off.</li>
+<li><strong>+</strong> &gt; add your kit’s files.</li>
+<li>Start a new chat in the Project and send the test prompt:</li>
+</ol>
+<pre class="text"><code>In 3 bullets: what files do you have, what will you do for me, and
+what will you refuse to do?</code></pre>
+</div>
+<p><strong>Green card</strong> when Claude names your files and quotes one of your rules.</p>
+</section>
+<section id="your-kit" class="level3">
+<h3 class="anchored" data-anchor-id="your-kit">Your kit</h3>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Kit A: Article Explainer</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Kit B: Committee Assistant</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>For anyone who reads research articles: turn an article into an accurate, plain-language explainer for your audience.</p>
+<p><strong>Files</strong> (or download both: <a href="downloads/part1-kit-a.zip">part1-kit-a.zip</a>)</p>
+<ul>
+<li><a href="materials/part1-kits/kit-a/explainer-style-guide.md">explainer-style-guide.md</a>: a made-up, one-page style guide with rules Claude must follow.</li>
+<li><a href="materials/part1-kits/kit-a/hickey-2025-telehealth-htn.md">hickey-2025-telehealth-htn.md</a>: a text copy of an open-access trial, Hickey MD et al., <em>PLoS Med</em> 2025;22(6):e1004632 (<a href="https://doi.org/10.1371/journal.pmed.1004632">original article</a>), reformatted for teaching under its Creative Commons license. It’s a text file so that searching with Ctrl/Cmd+F works in segment 9.</li>
+</ul>
+<p><strong>Project name:</strong> Article Explainer</p>
+<p><strong>Project instructions:</strong> copy, paste, then change one line (for example, swap “medical-school audiences” for your own audience).</p>
+<pre class="text"><code>You help me turn research articles into accurate, plain-language
+explainers for medical-school audiences.
+
+Sources
+- Use only the files in this Project unless I say otherwise. The
+  article is the source of truth; the style guide sets format and tone.
+- Never invent numbers or quotes. If the article doesn't say it,
+  write "NOT IN ARTICLE."
+- Label anything from outside the article as [general knowledge].
+- Don't add references unless I ask. If I ask, mark each one
+  UNVERIFIED and give its PMID or DOI so I can check it.
+
+How to work
+- Before a new explainer, ask me up to 3 questions about my audience
+  and purpose, then wait for my answers.
+- Report results with the actual numbers: both groups, the
+  difference, and the 95% confidence interval.
+- Use cautious language: "was associated with," not "caused," and
+  "early evidence" for pilot or small studies.
+- Flag anything that needs a clinician's or librarian's review
+  before I share it.
+
+Privacy
+- I won't share patient information here. If I paste anything that
+  looks like a name, MRN, date of birth, or other identifier, stop
+  and remind me not to.</code></pre>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p>For administrative staff: turn rough meeting notes into a summary email, an action-item table, and next month’s agenda.</p>
+<p><strong>File</strong> (or download: <a href="downloads/part1-kit-b.zip">part1-kit-b.zip</a>)</p>
+<ul>
+<li><a href="materials/part1-kits/kit-b/committee-pack-synthetic.md">committee-pack-synthetic.md</a>: a made-up committee charter plus rough meeting notes that use roles, not names.</li>
+</ul>
+<p><strong>Project name:</strong> Committee Assistant</p>
+<p><strong>Project instructions:</strong> copy, paste, then change one line (for example, name the kind of committee you staff).</p>
+<pre class="text"><code>You help me staff a curriculum committee.
+
+Sources
+- Use only the files in this Project. If the notes don't say it,
+  write "NOT IN NOTES."
+- Label anything not from the files [general knowledge].
+
+How to work
+- Ask me up to 3 questions before drafting, then wait for my answers.
+- Refer to people by role, never by name.
+- Every action item needs an owner (role), a due date, and the line
+  from the notes it came from.
+- Flag anything that looks confidential (personnel, student records,
+  appeals) and leave it out of drafts.
+
+Privacy
+- I won't share patient information here. If I paste anything that
+  looks like a name, MRN, date of birth, or other identifier, stop
+  and remind me not to.</code></pre>
+</div>
+</div>
+</div>
+<p><strong>Why it’s worth keeping:</strong> swap in the next open-access article and keep the instructions and style guide, or edit the style guide’s Audiences section for your course, clinic, or newsletter. Kit B becomes a reusable notes-to-minutes tool for non-confidential committees. Library-licensed PDFs may not allow upload: use open-access articles or check [library license guidance]. More: <a href="./part1-reference.html#projects-skills">Quick reference: Projects and skills</a>.</p>
+<p>The privacy line is advice, not enforcement: Claude will usually follow it, but nothing stops you from pasting something you shouldn’t.</p>
+</section>
+</section>
+<section id="strong-prompt" class="level2">
+<h2 class="anchored" data-anchor-id="strong-prompt">7. Watch: anatomy of a strong prompt (0:26 – 0:28)</h2>
+<p>The Project carries the context, so the prompt can stay short and reusable.</p>
+<section id="what-each-part-does" class="level3">
+<h3 class="anchored" data-anchor-id="what-each-part-does">What each part does</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Part of Turn 1</th>
+<th>Pattern</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>“I’m a [role]… for [audience]”</td>
+<td>Give context; say who it’s for</td>
+</tr>
+<tr class="even">
+<td>“Ask me up to 3 questions… Wait.”</td>
+<td>Ask first, with a clear stop</td>
+</tr>
+<tr class="odd">
+<td>“Give me: 1. … 5.”</td>
+<td>Numbered output</td>
+</tr>
+<tr class="even">
+<td>“150 words or fewer… use only the article”</td>
+<td>Constraints</td>
+</tr>
+<tr class="odd">
+<td>“Where this came from” table</td>
+<td>Every claim traced to a quote</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="run-prompt" class="level2">
+<h2 class="anchored" data-anchor-id="run-prompt">8. Your turn: run it, then push back (0:28 – 0:37)</h2>
+<p>Start a <strong>new chat inside your Project</strong>. Use the default model and effort.</p>
+<section id="your-turn-turn-1" class="level3">
+<h3 class="anchored" data-anchor-id="your-turn-turn-1">Your turn: Turn 1</h3>
+<div class="do-now">
+<p>Copy <strong>Turn 1</strong> for your kit below. Fill in the two brackets, send, then answer Claude’s questions.</p>
+</div>
+<p><strong>Kit A: Turn 1</strong></p>
+<pre class="text"><code>I'm a [your role, e.g., second-year medical student / clinic nurse
+educator / research coordinator / library staff].
+I need an explainer of the article in this Project for
+[audience, e.g., my journal club / adults in a blood-pressure clinic /
+our department newsletter].
+
+Before you write anything, ask me up to 3 questions about my audience
+and purpose. Wait for my answers.
+
+Then, following the style guide in this Project, give me:
+1. Study at a glance: question, design, who was studied, where, and
+   how many.
+2. The main result with the actual numbers (both groups, the
+   difference, 95% CI), and the main limitation the authors state.
+3. A plain-language version for my audience, 150 words or fewer.
+4. Three questions a careful reader should ask about the methods or
+   conclusions.
+5. A "Where this came from" table: for every number or claim in
+   parts 1-3, the exact sentence from the article and its section,
+   or [general knowledge]. If you can't find support, write
+   NOT IN ARTICLE.
+
+Rules: use only the article; don't add references; if the article
+is unclear or inconsistent on something, say so.</code></pre>
+<p><strong>Stuck on Claude’s questions?</strong> Fast answers:</p>
+<pre class="text"><code>Busy readers with no stats background; goal is a 2-minute read; tone
+friendly but accurate.</code></pre>
+<p><strong>Kit B: Turn 1</strong></p>
+<pre class="text"><code>I staff the [committee name]. Before you start, ask me up to 3
+questions about the audience or what has already been sent. Wait.
+
+Then, using only the files in this Project:
+1. A summary email to the committee, under 200 words.
+2. An action-item table: action | owner (role) | due date | exact
+   line from the notes. Use NOT IN NOTES if the notes don't say.
+3. Next month's agenda that fits in 60 minutes, each item tied to
+   one of the charter's duties.
+4. Anything that should NOT go into a wider email, and why.
+Roles only, no names; don't invent owners, dates, or decisions.</code></pre>
+</section>
+<section id="your-turn-push-back-turn-2" class="level3">
+<h3 class="anchored" data-anchor-id="your-turn-push-back-turn-2">Your turn: push back (Turn 2)</h3>
+<div class="do-now">
+<p>In the same chat, send Turn 2. <strong>Kit B:</strong> use the Kit B version below.</p>
+</div>
+<p><strong>Kit A: Turn 2</strong></p>
+<pre class="text"><code>Now act as a skeptical reviewer of your own explainer.
+- Flag any sentence that overstates the result (causal language,
+  "proves," or ignoring that this was a pilot).
+- Check the plain-language version against every rule in the style
+  guide and tell me which rule each problem breaks.
+- Check for assumptions about culture, literacy, language, gender,
+  or race, for race-based clinical claims, and for who these
+  results might not apply to.
+- List each problem with a fix, then give me the revised
+  plain-language version.</code></pre>
+<p><strong>With a neighbor:</strong> what did the second turn change?</p>
+<p><strong>Kit B: Turn 2</strong></p>
+<pre class="text"><code>Now act as a careful committee chair reviewing your drafts.
+- Check every action item: is the owner, due date, and quoted line
+  really in the notes? Mark anything you can't trace NOT IN NOTES.
+- Check the agenda against the charter's duties and the 60-minute
+  limit.
+- Flag anything confidential (personnel, student records, appeals)
+  that slipped into a draft.
+- Then rewrite the summary email for the full faculty list, leaving
+  out anything that should stay within the committee.</code></pre>
+</section>
+</section>
+<section id="verify" class="level2">
+<h2 class="anchored" data-anchor-id="verify">9. Verify before you use it (0:37 – 0:46)</h2>
+<p>Check against the source, not against Claude. <strong>Don’t cut:</strong> this segment stays even when class runs late.</p>
+<section id="your-turn-check-quotes-and-rules" class="level3">
+<h3 class="anchored" data-anchor-id="your-turn-check-quotes-and-rules">Your turn: check quotes and rules</h3>
+<div class="do-now">
+<p><strong>Quote check (2 min).</strong> Pick 2 rows of your “Where this came from” table. Open <a href="materials/part1-kits/kit-a/hickey-2025-telehealth-htn.md">the article</a> in a new browser tab, then search for each quote with <strong>Ctrl/Cmd+F</strong>. Mark it: <strong>exact</strong>, <strong>paraphrased</strong>, or <strong>not there</strong>.</p>
+<p><strong>Rule check (1 min).</strong> Is the plain-language version 150 words or fewer? If it’s for patients, does it end with “Talk with your care team”? Does it avoid “proves” and “breakthrough”?</p>
+</div>
+<p>Bonus: does the article agree with itself about how many people were in each group?</p>
+<p><strong>Kit B: what to check</strong></p>
+<ul>
+<li>Open <a href="materials/part1-kits/kit-b/committee-pack-synthetic.md">the committee pack</a> in a new browser tab. Trace 2 action items to the exact line in the notes with <strong>Ctrl/Cmd+F</strong>. Exact, paraphrased, or not there?</li>
+<li>Was the confidential student appeal left out of the drafts?</li>
+<li>Did Claude invent an owner or due date for the survey follow-up, or write NOT IN NOTES?</li>
+<li>Did it apply the charter’s “action items go out within 3 business days” rule?</li>
+</ul>
+</section>
+<section id="your-turn-check-a-citation-turn-3" class="level3">
+<h3 class="anchored" data-anchor-id="your-turn-check-a-citation-turn-3">Your turn: check a citation (Turn 3)</h3>
+<div class="do-now">
+<p>Send this, then look up <strong>one</strong> PMID at <a href="https://pubmed.ncbi.nlm.nih.gov">pubmed.ncbi.nlm.nih.gov</a> (your phone works). <strong>Kit B:</strong> your Turn 3 is below.</p>
+</div>
+<p><strong>Kit A: Turn 3</strong></p>
+<pre class="text"><code>Suggest three other published studies on this topic a reader could
+look at next. For each, give authors, year, journal, and PMID, and
+mark each UNVERIFIED.</code></pre>
+<p>Does it exist? Do the title, authors, and year match? If Claude declines or labels it UNVERIFIED, that’s good behavior. <strong>Check anyway.</strong></p>
+<p><strong>Kit B: Turn 3</strong></p>
+<pre class="text"><code>When do this meeting's action items have to go out, and when is the
+next meeting? For each rule you use, quote the charter line and show
+your date math. If the files don't say, write NOT IN NOTES.</code></pre>
+<p>Then open <a href="materials/part1-kits/kit-b/committee-pack-synthetic.md">the committee pack</a> and check each quoted charter line yourself. If you have time, watch someone at your table do the PubMed check: that’s the same skill.</p>
+</section>
+<section id="your-turn-add-one-rule" class="level3">
+<h3 class="anchored" data-anchor-id="your-turn-add-one-rule">Your turn: add one rule</h3>
+<div class="do-now">
+<p>Open your Project instructions. <strong>Add one line</strong> based on what you caught today.</p>
+</div>
+<p>For example:</p>
+<pre class="text"><code>Quote the exact sentence for every number, and flag any place the
+article contradicts itself.</code></pre>
+<p><strong>Show of hands:</strong> how many quotes were exact? Any citation that didn’t match?</p>
+</section>
+<section id="youre-accountable-for-what-you-use" class="level3">
+<h3 class="anchored" data-anchor-id="youre-accountable-for-what-you-use">You’re accountable for what you use</h3>
+<ul>
+<li><strong>Check against the source</strong>, not against Claude.</li>
+<li><strong>Watch for bias and overstatement:</strong> who might this not apply to?</li>
+<li><strong>Disclose your AI use.</strong> Follow journal policy (ICMJE, COPE); a template is on the site.</li>
+<li><strong>NIH:</strong> applications substantially developed by AI aren’t considered original (NOT-OD-25-132), and generative AI is prohibited in peer review (NOT-OD-23-149).</li>
+<li><strong>Systematic or scoping review?</strong> Follow RAISE and talk to a librarian.</li>
+</ul>
+</section>
+</section>
+<section id="tune" class="level2">
+<h2 class="anchored" data-anchor-id="tune">10. Tune it: model, effort and skills (0:46 – 0:51)</h2>
+<p>Use the smallest model and lowest effort that does the job.</p>
+<section id="watch-the-model-menu" class="level3">
+<h3 class="anchored" data-anchor-id="watch-the-model-menu">Watch: the model menu</h3>
+<p>The <strong>model menu next to Send</strong> sets the <strong>model</strong> and the <strong>effort</strong>.</p>
+<ul>
+<li>On the current models, thinking is always on, so <strong>effort is the main dial</strong>.</li>
+<li>More effort costs more time, usage, and energy.</li>
+<li>Your admin may hide some models or effort levels.</li>
+</ul>
+</section>
+<section id="your-turn-same-task-smaller-dial" class="level3">
+<h3 class="anchored" data-anchor-id="your-turn-same-task-smaller-dial">Your turn: same task, smaller dial</h3>
+<div class="do-now">
+<p>In your Project, switch to a <strong>smaller model</strong> or <strong>Low</strong> effort, then send (Kit B: see below):</p>
+<pre class="text"><code>Make a 6-term glossary for my audience from the article.</code></pre>
+<p>Good enough? Compare it with what you’d expect from the bigger setting.</p>
+</div>
+<p><strong>Kit B:</strong></p>
+<pre class="text"><code>Make a 6-term glossary for a new committee member from the charter.</code></pre>
+</section>
+<section id="the-and-menus" class="level3">
+<h3 class="anchored" data-anchor-id="the-and-menus">The <strong>+</strong> and <strong>/</strong> menus</h3>
+<p>In the chat box, click <strong>+</strong> or type <strong>/</strong> to open the menu.</p>
+<p>What you’ll see depends on your workspace: things like <strong>Memory</strong> for this chat, web search, connectors, and skills.</p>
+<div class="do-now">
+<p>Type <strong>/</strong> in your chat box and look at the list (10 seconds). Don’t pick anything yet.</p>
+</div>
+</section>
+<section id="watch-a-skill-makes-a-word-handout" class="level3">
+<h3 class="anchored" data-anchor-id="watch-a-skill-makes-a-word-handout">Watch: a skill makes a Word handout</h3>
+<pre class="text"><code>Using the style guide, turn the plain-language version into a
+one-page Word handout.</code></pre>
+<ul>
+<li>Built-in skills make Word, Excel, PowerPoint, and PDF files (if enabled).</li>
+<li>See and turn on skills in <strong>Customize &gt; Skills</strong>.</li>
+<li><strong>A Project is a workspace for one piece of work. A skill is a how-to Claude can use in any chat.</strong></li>
+</ul>
+<p><strong>Kit B:</strong></p>
+<pre class="text"><code>Turn next month's agenda into a one-page Word document.</code></pre>
+</section>
+</section>
+<section id="phone" class="level2">
+<h2 class="anchored" data-anchor-id="phone">11. Take it with you: the phone app (0:51 – 0:55)</h2>
+<p>Your Project should sync to the Claude phone app. Optional.</p>
+<section id="watch-then-try-your-project-on-your-phone" class="level3">
+<h3 class="anchored" data-anchor-id="watch-then-try-your-project-on-your-phone">Watch, then try: your Project on your phone</h3>
+<div class="do-now">
+<p><strong>Optional.</strong> If you installed the app: open <strong>Claude &gt; Projects &gt;</strong> your Project and ask, by voice or typing:</p>
+<pre class="text"><code>In two sentences, what's the main limitation of this study?</code></pre>
+</div>
+<p><strong>Kit B:</strong></p>
+<pre class="text"><code>In two sentences, what's the most urgent action item from these notes, and who owns it?</code></pre>
+<p>Create Projects on your laptop; they should open on your phone too. No phone? Keep verifying on the laptop.</p>
+</section>
+<section id="phone-rules" class="level3">
+<h3 class="anchored" data-anchor-id="phone-rules">Phone rules</h3>
+<ul>
+<li><strong>No photos</strong> of patient lists, charts, screens, or whiteboards.</li>
+<li>Follow [mobile device policy].</li>
+<li>The <strong>Code</strong> tab is where Part 2’s <code>/rc</code> shows up (if enabled; not available in the HIPAA-supported version). If you don’t see it, your plan or organization may not include it.</li>
+</ul>
+<p>Research (if enabled) on the phone searches only the web and skips connectors (if enabled) such as PubMed, without warning. More: <a href="./part1-reference.html#mobile">Quick reference: mobile</a>.</p>
+</section>
+</section>
+<section id="cowork-bridge" class="level2">
+<h2 class="anchored" data-anchor-id="cowork-bridge">12. Cowork and the bridge to Part 2 (0:55 – 0:57)</h2>
+<p>From chat to tasks, and from the app to Claude Code.</p>
+<section id="cowork-in-30-seconds" class="level3">
+<h3 class="anchored" data-anchor-id="cowork-in-30-seconds">Cowork in 30 seconds</h3>
+<ul>
+<li>Since Oct 23, 2026, Cowork is part of the Enterprise chat experience <strong>(if your admin turned it on)</strong>. It carries out multi-step tasks, not just answers.</li>
+<li><strong>Not for high-risk data.</strong> Web pages and files can hide instructions that steer it (“prompt injection”).</li>
+<li>The HIPAA-supported version keeps the older layout; Cowork may be off or limited there. Check with [ITS].</li>
+</ul>
+</section>
+<section id="from-today-to-part-2" class="level3">
+<h3 class="anchored" data-anchor-id="from-today-to-part-2">From today to Part 2</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>What you built today</th>
+<th>What it becomes in Part 2 (Claude Code)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Project instructions</td>
+<td>A <code>CLAUDE.md</code> file in your project folder</td>
+</tr>
+<tr class="even">
+<td>Project files</td>
+<td>Files in the project folder (for example, <code>docs/</code>)</td>
+</tr>
+<tr class="odd">
+<td>A skill (Word handout)</td>
+<td>A <code>SKILL.md</code> file (your app skills can sync in)</td>
+</tr>
+<tr class="even">
+<td>Memory settings</td>
+<td>Claude Code’s memory, reviewed with <code>/memory</code></td>
+</tr>
+<tr class="odd">
+<td>Model menu, effort, phone Code tab</td>
+<td><code>/model</code>, <code>/effort</code>, <code>/rc</code> (if enabled)</td>
+</tr>
+<tr class="even">
+<td><strong>+</strong> or <strong>/</strong> in the chat box</td>
+<td><strong>/</strong> in the Claude Code panel: commands and skills</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Part 2: Analyzing research data with Claude Code</strong> (90 min). <a href="./part2.html">Class page</a></p>
+</section>
+</section>
+<section id="exit" class="level2">
+<h2 class="anchored" data-anchor-id="exit">13. Exit ticket and close (0:57 – 1:00)</h2>
+<p>Four questions, one per objective. Show of hands or [exit-ticket form link].</p>
+<section id="exit-ticket" class="level3">
+<h3 class="anchored" data-anchor-id="exit-ticket">Exit ticket</h3>
+<ol type="1">
+<li>A spreadsheet of clinic no-shows with MRNs: which tool? And which setting did you lock today before uploading?</li>
+<li>Name one pattern from your prompt that changed the output.</li>
+<li>Claude gives you a PMID. What do you do first?</li>
+<li>One low-risk recurring task you’ll use your Project for this week.</li>
+</ol>
+<p><strong>Feedback:</strong> [feedback form link]</p>
+</section>
+</section>
+<section id="next" class="level2">
+<h2 class="anchored" data-anchor-id="next">Where to go next</h2>
+<ul>
+<li><a href="./part1-reference.html">Quick reference</a>: settings, prompts, verification, and more</li>
+<li><a href="https://academy.claude.com">Claude Academy: free courses from Anthropic</a></li>
+<li><a href="./part2.html">Part 2: Analyzing research data with Claude Code</a></li>
+<li>Library help: [literature search consults, evidence synthesis service, office hours]</li>
+<li>Questions about tools and data: [HSIT / ITS AI help]</li>
+</ul>
+<p><strong>On the Quick reference page:</strong></p>
+<ul>
+<li><a href="./part1-reference.html#tool-data">Which tool for which data</a></li>
+<li><a href="./part1-reference.html#settings">Settings and privacy</a></li>
+<li><a href="./part1-reference.html#projects-skills">Projects and skills how-to</a></li>
+<li><a href="./part1-reference.html#model-effort-commands">Model, effort and the Claude Code commands</a></li>
+<li><a href="./part1-reference.html#mobile">The phone app</a></li>
+<li><a href="./part1-reference.html#prompt-library">Prompt library</a></li>
+<li><a href="./part1-reference.html#verify-disclose">Verify and disclose</a></li>
+<li><a href="./part1-reference.html#cowork">Cowork in brief</a></li>
+<li><a href="./part1-reference.html#copilot">Do it in Copilot or Clarity</a></li>
+<li><a href="./part1-reference.html#next">More places to learn</a></li>
+</ul>
+<p><strong>Also useful:</strong> <a href="https://support.claude.com">Claude Help Center</a> · [teaching-center AI guidance] · [Office of Research Integrity] · [HSARG] · [AIR Tracks B–F offerings]</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/cwml\.github\.io\/getting-started-with-claude\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./part1-reference.html" class="pagination-link" aria-label="Quick reference">
+        <span class="nav-page-text">Quick reference</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Cushing/Whitney Medical Library · Yale School of Medicine</p>
+</div>   
+    <div class="nav-footer-center">
+<p>Questions or feedback? Email <a href="mailto:justin.demayo@yale.edu?subject=Claude%20classes%20feedback">justin.demayo@yale.edu</a> · Copyright © 2026 Yale University · All Rights Reserved · <a href="https://usability.yale.edu/digital-accessibility/accessibility-at-yale">Accessibility at Yale</a> · <a href="https://privacy.yale.edu/resources/privacy-statement">Privacy Policy</a></p>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/CWML/getting-started-with-claude/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>Built with <a href="https://quarto.org">Quarto</a></p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
