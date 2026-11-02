@@ -13,7 +13,7 @@ The repo is a [Quarto](https://quarto.org) website. Participants use the publish
 index.qmd                  # home page, participant setup, access and alternatives, recommended links
 part1.qmd                  # Part 1 class page, taught from directly (no deck)
 part1-reference.qmd        # Part 1 quick reference page
-part2.qmd                  # Part 2 class page you teach from; participants follow along (instructor notes in collapsed boxes)
+part2.qmd                  # Part 2 class page you teach from; participants follow along
 part2-slides.qmd           # Part 2 slides (press S for speaker notes)
 cheatsheet.qmd             # Claude Code cheat sheet (Part 2)
 about.qmd                  # owner, features last-checked date, corrections log, AI-use disclosure, license
@@ -54,7 +54,7 @@ Then replace the `[placeholder]` values in `_quarto.yml` (`site-url`, `repo-url`
 
 - Check every `[bracketed placeholder]` (sign-up and HIPAA-version request links, policy links, contacts, enabled connectors).
 - Check the Claude and Claude Code features against both Yale workspaces (standard enterprise and HIPAA-supported), since they change often.
-- Follow the instructor prep checklist: Part 1 in `instructor/README.md`, Part 2 at the top of `part2.qmd`.
+- Follow the instructor prep checklist: both parts are in `instructor/README.md`.
 - After any content change, update the last-checked date and corrections log in `about.qmd`.
 
 All class data and kit files are **synthetic**, apart from the open-access article in Kit A, which keeps its own license. See `instructor/README.md`.

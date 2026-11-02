@@ -111,7 +111,7 @@ Answer these once you've done the dry run.
 
 - [ ] The slides follow the same order and content as `part2.qmd`.
 - [ ] Commands and keys on `cheatsheet.qmd` work in the current extension version.
-- [ ] Instructor-only callouts (prep checklist, run of show, backup plans) are complete.
+- [ ] The Part 2 prep checklist, run of show, segment notes, and backup plans in `instructor/README.md` are complete and match the page.
 
 ## 5. Accuracy and policy (both parts)
 

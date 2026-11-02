@@ -4,7 +4,7 @@ Everything here is for the instructor: the dataset spec, the script that generat
 
 | Path | What it is |
 |---|---|
-| `README.md` | This file: Part 1 instructor prep (checklist, workspace check, private run-of-show details, segment notes, kit answer keys, backup plans, 90-minute add-backs), dataset spec, Part 2 answer keys, extra project files, real-dataset ideas, and how to regenerate the data |
+| `README.md` | This file: Part 1 instructor prep (checklist, workspace check, private run-of-show details, segment notes, kit answer keys, backup plans, 90-minute add-backs), Part 2 instructor prep (checklist, run of show, demo reset, segment notes, backup plans), dataset spec, Part 2 answer keys, extra project files, real-dataset ideas, and how to regenerate the data |
 | `make_data.R` | Generates the class cohort and the Part 2 REDCap exports (seeded, so the output is the same every time) |
 | `solutions/R/`, `solutions/python/` | Answer key and demo fallback for the Part 2 build segment: `01_clean` … `04_figure` and `report.qmd` |
 | `part2-answer-key/` | Part 2 answer key: example `.claude/` folder (settings, command, skill, subagent, hooks), tests, and `CLAUDE.md` additions |
@@ -326,6 +326,119 @@ Add these back in order, up to 30 minutes in total. Update the agenda table, the
 1. A participant skill hands-on: the Word handout, or uploading a custom skill (if skills, code execution and file creation are enabled).
 2. A longer phone segment: everyone opens their Project on the phone app and tries dictation.
 3. The Research or PubMed connector demo (if enabled).
+
+## Part 2: instructor prep
+
+Claude Code changes almost weekly. This page was checked against code.claude.com/docs in **October 2026** (Claude Code v2.1.28x). The week before class, update the extension and re-check the items marked **check before class**, especially in Positron, which installs the extension from Open VSX and isn't the editor the docs describe. Items marked **(if enabled)** depend on enterprise admin settings. Replace every `[bracketed placeholder]`.
+
+**Instructor files (repo only):** this file (dataset spec, planted problems, answer key), `instructor/solutions/R/` and `instructor/solutions/python/` (finished scripts and report: your fallback), and `instructor/part2-answer-key/` (the finished `.claude/` folder, tests, and `CLAUDE.md` additions; R only).
+
+**Prep checklist**
+
+- [ ] Send participants this page and the [setup steps](https://cwml.github.io/getting-started-with-claude/index.html#setup-part2) 3–5 days ahead.
+- [ ] Update the Claude Code extension in Positron. Note the version shown by `/status` in the panel.
+- [ ] **Build the demo project with git tags** so you can reset, or jump ahead if a demo stalls. Run from anywhere, adjusting the two paths:
+  ```bash
+  DEMO=~/Documents/hypertension-cohort        # unzipped participant zip
+  REPO=~/Documents/GitHub/claude-code         # this repo
+  cd "$DEMO"
+  printf '.claude/settings.local.json\n.claude/worktrees/\nCLAUDE.local.md\n.Rhistory\n' > .gitignore
+  git init && git add -A && git commit -m "Part 2 start" && git tag part2-start
+  cp "$REPO"/instructor/solutions/R/*.R R/
+  cp "$REPO"/instructor/solutions/R/report.qmd reports/
+  cp -R "$REPO"/instructor/part2-answer-key/.claude "$REPO"/instructor/part2-answer-key/tests .
+  chmod +x .claude/hooks/*.sh
+  for s in R/0*.R; do Rscript "$s"; done && quarto render reports/report.qmd
+  Rscript tests/run_checks.R
+  git add -A && git commit -m "Part 2 complete" && git tag part2-complete
+  git reset --hard part2-start && git clean -fd
+  ```
+  "Pull in" below means `git checkout part2-complete -- <path>`. Paste `CLAUDE-additions.md` into `CLAUDE.md` on the complete tag if you want to show the `@docs/SAP.md` import.
+- [ ] In the panel, set the mode indicator to **Manual**. The extension ignores a project's `permissions.defaultMode`, so to pin it, set `claudeCode.initialPermissionMode` to `manual` in Positron's *user* settings.
+- [ ] **Check before class (Positron):** the Spark icon and the status-bar entry; which commands appear when you type `/`; that `/plan`, `/compact`, `/status`, `/usage`, `/sandbox`, `/rc`, and `/btw` work; the model picker's **Effort** row and **Ultracode** switch; the hover **rewind** button; side-by-side diffs; `Option/Alt+K` @-mentions; and the `/` menu's **Customize** entries (Permissions, Hooks, Memory, Instructions).
+- [ ] **Check before class (admin):** Which workspace are participants in: the standard enterprise one or the HIPAA-supported one (where Remote Control is off)? Is auto mode available? Are dynamic workflows (ultracode, `/deep-research`), fast mode, and Remote Control turned on for your org? Do claude.ai skills sync into Claude Code? Which connectors appear in `/mcp`? Does your role have an effort cap? `[Record results here]`
+- [ ] Install `jq`, `styler`, and `lintr` on the demo laptop. The answer-key `settings.json` registers both hooks and turns the sandbox on, so pre-install all R packages.
+- [ ] Rehearse Exercise 1 end to end on the start tag, and compare your numbers with the answer key in `instructor/README.md` (n = 451; −11.01 mmHg, 95% CI −12.80 to −9.22). Keep `instructor/solutions/R/` open in a second Positron window as the fallback.
+- [ ] Record backup screenshots or video of each demo. Enlarge Positron's zoom and the panel font. Check the [slides](https://cwml.github.io/getting-started-with-claude/part2-slides.html)' speaker notes (press **S**).
+
+**Run of show.** Two windows: the slides (presenter view) and Positron with the demo project on `part2-start`, the Claude panel docked on the right.
+
+| Time | On screen | Instructor does |
+|---|---|---|
+| −0:15 | Slides: title | Demo reset (below). Open the panel, check `/status`, enlarge fonts. |
+| 0:00 | Slides → Positron | **1** Welcome. Everyone opens the project and the panel. |
+| 0:05 | Slides → Positron | **2a** data rules · **2b** `CLAUDE.md` and memory · **2c** Manual mode, deny rule, git |
+| 0:17 | Positron | **3a** plan mode on the SAP · **3b** `R/01_clean.R` · **3c** Data Explorer check |
+| 0:33 | Positron | **3d** Table 1, model, report · **3e** rewind and commit. Circulate. |
+| 0:42 | Slides: break | Help people who are behind. Pull in `R/` from `part2-complete` on your screen if needed. |
+| 0:47 | Slides → Positron | **4a** context · **4b** model and effort · **4c** ultracode · **4d** `/rc` |
+| 0:57 | Slides → Positron | **5a** talk · **5b** pull in two skills, agent, hook · **5c** Exercise 2 |
+| 1:12 | Positron | **6** REDCap and legacy code (cut first if late) |
+| 1:20 | Positron → slides | **7** tests, reviewer, "why cleaning matters," discussion |
+| 1:27 | Slides: takeaways | **8** Try at home, feedback link, Q&A until 1:30. Then run the demo reset. |
+
+**Demo reset** (before class and after each run):
+
+```bash
+cd ~/Documents/hypertension-cohort
+git reset --hard part2-start && git clean -fd
+rm -f .claude/settings.local.json            # local approvals
+rm -rf ~/.claude/skills/redcap-clean         # if you built it in a demo
+```
+
+Then, in the panel: run `/rc` to disconnect Remote Control if it's on, turn ultracode off, clear rehearsal notes in **Customize → Memory**, and archive old sessions in Session history.
+
+**Segment notes**
+
+Teaching notes for each part of the Part 2 class page, in order. They used to appear on the page as collapsed Instructor notes boxes.
+
+*1. Welcome and setup check (0:00 – 0:05)*
+
+Give everyone 2 minutes. Managed settings can override the demo; if so, show `/status` and the Permissions dialog as a lesson in enforcement. If the extension won't install or sign in in Positron, try **Developer: Reload Window**, then fall back to VS Code or to `claude` in the Terminal (if they installed the CLI). No Claude Code seat: pair with a neighbor. The panel and the CLI share settings, `CLAUDE.md`, and conversation history (`claude --resume` in the terminal picks up a panel conversation).
+
+*2. Data rules and project setup (0:05 – 0:17)*
+
+Read the local policy aloud once the placeholder is filled in: `[Insert local policy]`. Don't say the standard enterprise account covers PHI or any data classification. The HIPAA-supported version exists by request, but it doesn't approve any project, and the extension panel used today isn't covered by Anthropic's HIPAA agreement (code.claude.com/docs, HIPAA setup page; **check before class** and confirm with ITS). Ask: "Think of one dataset you work with. Which pattern would you need?" Take one answer.
+
+*2. Data rules and project setup (0:05 – 0:17)*
+
+About 4 minutes for 2c. Participants do steps 1–4. If Customize → Permissions isn't in Positron's panel (**check before class**), have everyone use the JSON file. If time allows, demo the gap (1 minute): "Write an R script that prints the first 3 rows of data/restricted/visit_notes.csv, then run it." Approve it once to show it works, then turn on `/sandbox` and retry; it should fail. Don't let participants keep this script. Transition: "Now the project is set up the way you'd set up a real one. Let's use it."
+
+*3. Plan, build, verify (0:17 – 0:42)*
+
+Narrate the write → run → error → fix loop the first time it happens; it's the core value. During 3a, ask the room how many problems Claude found (six were planted; see `instructor/README.md`). At 3c, demo the Data Explorer check on your screen. At 0:39, move to 3e even if people are still in 3d. If the live demo stalls, run `git checkout part2-complete -- R reports output` and walk through the finished files. **Check before class:** that Positron's panel opens the plan as a commentable document, the exact wording of the plan-approval options (which one keeps manual approval), and that the hover rewind button shows all three options.
+
+*4. Working well (0:47 – 0:57)*
+
+Ten minutes, mostly talk with short demos. **4a:** point at the context indicator, run `/compact` with a focus. **4b:** open the model picker and show the Effort row; switch to `opusplan` and enter plan mode. Run the `ultrathink` prompt (it's a good lead-in to Segment 7). **4c:** show the Ultracode switch; run the `ultracode` prompt only if workflows are enabled and you have usage headroom, otherwise show the slide. Don't run `/deep-research` live unless rehearsed; it takes minutes. **4d:** start a deliberately slow task (such as rendering the report), run `/rc`, open the session on your mirrored phone (iPhone Mirroring or QuickTime, tested on the room projector), and approve a permission prompt from it. From the phone you can also send `/model sonnet` or `/effort high`. **Check before class (Positron):** that typed `/model` and `/effort` work in the panel or only the picker does, that the Ultracode switch appears (v2.1.284+, workflows enabled), that the `ultracode` keyword highlights, how a workflow's progress shows in the panel (the `/workflows` view is documented for the CLI), and that `/rc` and the Remote Control indicator work in your workspace (it's off in the HIPAA configuration).
+
+*5. Extending Claude Code (0:57 – 1:12)*
+
+Pull in one piece at a time: `git checkout part2-complete -- .claude/skills/check-data`, then `.claude/skills/table1`, then `.claude/agents`, then `.claude/settings.json .claude/hooks`. Start a new conversation after each pull-in so the new files load (or try `/reload-skills`, which is needed when the `skills/` folder didn't exist when the session started; **check before class** in the panel). Open each file and point out the frontmatter: `description`, `disable-model-invocation`, `argument-hint`, `allowed-tools`, `tools`. If someone asks how the reviewer was made: ask Claude to create a subagent, or write the file in `.claude/agents/`; don't demo `/agents`, which no longer opens a menu. A reviewer told to find problems will usually find some. It's told to report only validity and SAP issues, and *you* still decide. The hook needs `jq`; show it under `/` → **Customize → Hooks**. The answer key also has an `Edit(./data/raw/**)` deny rule, so point to the hook's own message ("Write derived data to output/ instead") as proof that the hook blocked the edit. If you see a plain permission-denied message instead, the deny rule caught it; remove that rule from the demo copy and retry. The answer-key `settings.json` also registers a styler/lintr hook and turns the sandbox on, so mention both without demoing them. If a demo stalls, show the file and move on.
+
+*5. Extending Claude Code (0:57 – 1:12)*
+
+Circulate. Common problems: the `.claude` folder created inside `R/` or `data/`; a file saved as `SKILL.md.txt`, or put directly in `.claude/skills/` instead of its own `check-data/` folder; a misspelled frontmatter field (Claude Code silently ignores fields it doesn't recognize); or a skill that doesn't appear until a new conversation starts or `/reload-skills` runs. Positron's Explorer may hide dot-folders, depending on its `files.exclude` setting (**check before class**). If it does, have participants ask Claude to create the file with the exact text. At 1:09, call time for "make it yours," even if some people are still testing. Spend the last minute on the debrief: what did people change to make it theirs, and who got automatic loading to work?
+
+*6. Messy real-world sources (1:12 – 1:20)*
+
+Pick one of 6a or 6b; do both only if you're early. Answer keys are in `instructor/README.md` under "Part 2 extras." **REDCap:** site A uses `record_id` and visit-named BP columns (`sbp_baseline` … `sbp_12m`); site B codes arm `1`/`2` and sex `1`/`2`, and exports blank labs as `-99`; site C uses `MM/DD/YYYY` dates, `smoking_status`, and an extra `redcap_data_access_group` column. **SAS bugs:** only `-99` is recoded, and only for `sbp_v0` and `ldl_mgdl`; the sex recode misses `f` and `2`; `if age < 65` puts missing age in `<65`; `nodupkey` drops duplicates silently. **Stata bugs:** `drop if missing(sbp_v3)` runs before Table 1; BP columns with `NA` import as strings, so the `-99` recode fails, and `999` is never recoded; `duplicates drop ..., force` keeps an arbitrary row. Score how many bugs Claude found.
+
+*7. Verification and research integrity (1:20 – 1:27)*
+
+Run the test-first prompt live (3 min). If it stalls, run `git checkout part2-complete -- tests`, then ask Claude to run `Rscript tests/run_checks.R`. Show the "why cleaning matters" numbers on the slide; to make them live, ask: "Fit the SAP's primary model to data/raw/class_cohort.csv without any cleaning and put the result next to the cleaned result. Don't save anything." Tie each point to something that happened in class, such as the Data Explorer check or a mistake Claude made.
+
+**Backup plans**
+
+| Problem | Fallback |
+|---|---|
+| Wi-Fi or Claude outage | Play the recorded demos; walk through `instructor/solutions/R/` and the answer key on screen |
+| Extension won't install or sign in, or a panel feature is missing | Reload the window; try VS Code; or run `claude` in the Terminal if the CLI is installed |
+| No Claude Code seat | Pair with a neighbor; the `.claude/` files are plain text anyone can write |
+| Live Exercise 1 goes off track | `git checkout part2-complete -- R reports output` and walk through the finished files |
+| Claude's numbers differ from the answer key | Compare the n's at each step; it's a verification teaching moment, not a failure |
+| Workflows, fast mode, or Remote Control not enabled | Show the slide and the docs; skip the live demo |
+| Running long | Cut Segment 6, then shorten 4c–4d to the slide, then shorten Exercise 2 to Option A. **Keep Segment 7 intact.** |
 
 ## Dataset spec
 
