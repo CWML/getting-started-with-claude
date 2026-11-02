@@ -67,8 +67,6 @@ Take a synthetic clinical trial from raw data to a report with Claude Code in Po
 
 ::: {.callout-tip title="Prefer slides?"}
 Part 1 is taught from its class page. Part 2 also has a slide deck: [Part 2 slides](part2-slides.qmd). In the deck, press **F** for full screen and **Esc** for an overview of all slides.
-
-On the Part 2 class page, the collapsed **Instructor notes** boxes hold the instructor's notes. Open them if you're curious, or skip them.
 :::
 
 []{#setup}
