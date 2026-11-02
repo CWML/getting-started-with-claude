@@ -1,0 +1,981 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About this site",
+    "section": "",
+    "text": "Skip to main content\nThese pages hold the materials for two Cushing/Whitney Medical Library classes: Part 1: Getting started with Claude and Part 2: Analyzing research data with Claude Code.",
+    "crumbs": [
+      "About",
+      "About this site"
+    ]
+  },
+  {
+    "objectID": "about.html#owner",
+    "href": "about.html#owner",
+    "title": "About this site",
+    "section": "Who maintains it",
+    "text": "Who maintains it\n\nOwner: [name], Cushing/Whitney Medical Library\nContact: justin.demayo@yale.edu\nFeatures last checked: 2026-10-30\nNext review due: [date]",
+    "crumbs": [
+      "About",
+      "About this site"
+    ]
+  },
+  {
+    "objectID": "about.html#review",
+    "href": "about.html#review",
+    "title": "About this site",
+    "section": "How we keep it current",
+    "text": "How we keep it current\nClaude and Claude Code change often. Menus get renamed, and features move or depend on your admin’s settings.\n\nWe review the site within 30 days of a major Claude change, and at least every 6 months.\nWe check feature claims against the Claude Help Center and the Claude Code docs.\nFeatures that depend on Yale’s admin settings are marked (if enabled). Local details, such as links, contacts, and approvals, appear in [square brackets] until they’re confirmed.\nIf a page doesn’t match what you see in Claude, trust what you see, and tell us.",
+    "crumbs": [
+      "About",
+      "About this site"
+    ]
+  },
+  {
+    "objectID": "about.html#corrections",
+    "href": "about.html#corrections",
+    "title": "About this site",
+    "section": "Corrections log",
+    "text": "Corrections log\n\n\n\n\n\n\n\nDate\nChange\n\n\n\n\n2026-11-02\nSite setup: feedback link in the navbar and footer (justin.demayo@yale.edu); readable code blocks, tabs, and page links in dark mode; Part 2 slides can be downloaded as one HTML file. Part 1 is now taught from the class page: the Part 1 slide deck and the Instructor tips on the page are gone. The Part 2 page no longer has instructor boxes either. Both parts’ teaching notes, prep checklists and backup plans moved to the instructor guide. Home page recommended links: added AI at Yale and Yale data classification links; removed the library AI services placeholder. Filled in the site and repository links, including “Open an issue” below\n\n\n2026-10-31\nPart 2 cheat sheet: Esc and the Stop button now interrupt Claude in the panel too (v2.1.286 or later); /config doesn’t open in the panel. Site navigation: each section has its own sidebar, so the navbar highlights the right page\n\n\n2026-10-30\nPart 1 rebuilt as a hands-on Project workshop; class page and slides now come from one source; CWML style applied",
+    "crumbs": [
+      "About",
+      "About this site"
+    ]
+  },
+  {
+    "objectID": "about.html#ai-use",
+    "href": "about.html#ai-use",
+    "title": "About this site",
+    "section": "How this site was made",
+    "text": "How this site was made\nAI use: Drafted with Claude and Claude Code; reviewed by [instructor]. Every feature claim was checked against official documentation on the date above.\nData: The class files are synthetic (made up) or public. No real patient data is used anywhere on this site. The Kit A article is an open-access paper reused under its Creative Commons license: Hickey MD et al., PLoS Medicine 2025, doi:10.1371/journal.pmed.1004632. It was reformatted as text for teaching.\nStyle: The look follows the Cushing/Whitney Medical Library web style (CWML web style draft 0.1), applied through a Quarto adapter. Dark mode is a local extension and isn’t part of the CWML style. The site’s layout borrows from the library’s [All of Us workshop site link].\nBuilt with: Quarto, published on GitHub Pages.",
+    "crumbs": [
+      "About",
+      "About this site"
+    ]
+  },
+  {
+    "objectID": "about.html#license",
+    "href": "about.html#license",
+    "title": "About this site",
+    "section": "License",
+    "text": "License\n[Content: CC BY 4.0. Code: MIT. Confirm before publishing, including that the footer's 'All Rights Reserved' wording fits with this license.]\nThe copyright line in the site footer is the standard Yale web footer. The class content and code on this site are shared under the licenses above.\nThe article in Kit A keeps its original license and attribution.",
+    "crumbs": [
+      "About",
+      "About this site"
+    ]
+  },
+  {
+    "objectID": "about.html#report",
+    "href": "about.html#report",
+    "title": "About this site",
+    "section": "Report a problem",
+    "text": "Report a problem\nFound a mistake, a broken link, or a feature that no longer works the way a page says?\n\nOpen an issue: GitHub issues\nOr email: justin.demayo@yale.edu\n\nPlease include the page, what you expected, and what you saw. Leave out any patient or other sensitive information.",
+    "crumbs": [
+      "About",
+      "About this site"
+    ]
+  },
+  {
+    "objectID": "part2-slides.html#analyzing-research-data-with-claude-code",
+    "href": "part2-slides.html#analyzing-research-data-with-claude-code",
+    "title": "Claude & Claude Code at the School of Medicine",
+    "section": "Analyzing Research Data with Claude Code",
+    "text": "Analyzing Research Data with Claude Code\nPart 2: a 90-minute hands-on class\n[Instructor name], [Library name]\nOpen the class page: https://cwml.github.io/getting-started-with-claude/part2.html\nDownload: hypertension-cohort.zip, then open the folder in Positron\n\nBefore 0:00: demo reset done (see “Part 2: instructor prep” in instructor/README.md). Positron open on the demo project at part2-start, the Claude panel docked on the right in Manual mode, /status checked, fonts enlarged. Put this slide up as people arrive.\n0:00. Welcome. Introduce yourself and the library’s role in data services. Every prompt today is on the class page, ready to copy. All data is synthetic.",
+    "crumbs": [
+      "Part 2: Claude Code",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "part2-slides.html#by-the-end-of-today-youll-be-able-to",
+    "href": "part2-slides.html#by-the-end-of-today-youll-be-able-to",
+    "title": "Claude & Claude Code at the School of Medicine",
+    "section": "By the end of today, you’ll be able to…",
+    "text": "By the end of today, you’ll be able to…\n\nConfigure a Claude Code project that protects raw and restricted data.\nImplement a plan-first workflow to clean and analyze study data.\nEvaluate AI-generated code and results against the analysis plan.\nBuild a reusable command, skill, or hook for a research data task.\n\n\n~0:01 (1 min). Read the four verbs: configure, implement, evaluate, build. Two hands-on exercises: Exercise 1 (Segment 3) and Exercise 2 (Segment 5). Light R or Python is enough; Claude writes the code, and you check it.",
+    "crumbs": [
+      "Part 2: Claude Code",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "part2-slides.html#today",
+    "href": "part2-slides.html#today",
+    "title": "Claude & Claude Code at the School of Medicine",
+    "section": "Today",
+    "text": "Today\n\n\n\nTime\nSegment\n\n\n\n\n0:00\nWelcome and setup check\n\n\n0:05\nData rules and project setup\n\n\n0:17\nHands-on: plan, build, verify (Exercise 1)\n\n\n0:42\nBreak\n\n\n0:47\nWorking well: context, models, effort, ultracode, /rc\n\n\n0:57\nHands-on: extending Claude Code (Exercise 2)\n\n\n1:12\nMessy real-world sources\n\n\n1:20\nVerification and research integrity\n\n\n1:27\nWrap-up\n\n\n\n\n~0:02. Quick walk-through. Messy sources at 1:12 is the first thing cut if we run late. Verification at 1:20 is never cut.",
+    "crumbs": [
+      "Part 2: Claude Code",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "part2-slides.html#setup-check-panel-or-terminal",
+    "href": "part2-slides.html#setup-check-panel-or-terminal",
+    "title": "Claude & Claude Code at the School of Medicine",
+    "section": "Setup check: panel or terminal?",
+    "text": "Setup check: panel or terminal?\n\nOpen hypertension-cohort in Positron\nOpen the Claude Code panel (Spark icon, or ✻ Claude Code in the status bar)\nType /status\n\n\n\n\n\nExtension panel (today)\nTerminal CLI\n\n\n\n\nCommands\nA subset: type /\nAll\n\n\nReview edits\nSide-by-side diffs\nTerminal, or /ide\n\n\nUndo\nHover a message → rewind\nEsc Esc / /rewind\n\n\n! prefix, tab completion\nNo\nYes\n\n\n\n\n~0:03 (2 min). Everyone does steps 1–3 now. Pair up anyone stuck.\nExtension won’t install or sign in in Positron: Developer: Reload Window, then VS Code, then claude in the Terminal if they installed the CLI. No Claude Code seat: pair with a neighbor.\nSay: “We’ll use the panel all day. When something only works in the CLI, I’ll say so.” Check before class: Positron gets the extension from Open VSX; confirm the version and which commands appear when you type /.",
+    "crumbs": [
+      "Part 2: Claude Code",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "part2-slides.html#claude-code-sends-what-it-reads",
+    "href": "part2-slides.html#claude-code-sends-what-it-reads",
+    "title": "Claude & Claude Code at the School of Medicine",
+    "section": "Claude Code sends what it reads",
+    "text": "Claude Code sends what it reads\nFiles it opens, commands it runs, their output, and text you select in the editor all go to the model.\n\n“Claude writes the code, you run it on the real data” in an approved environment\n“Synthetic first”: build and debug on synthetic or public data\nKeep “print at most 10 rows” in CLAUDE.md. Check data in the Data Explorer, not the chat.\nHIPAA-supported Claude (by request) doesn’t approve your project, and the extension may not be covered [confirm with ITS]\n\nPolicy first: [Yale data classification / policy link]\n\n0:05 (Segment 2a, 4 min). Same rules as uploading a file to the Claude app. In the extension, Claude also sees selected text and the name of the open file, so don’t open restricted files in the editor during a session.\nRead the local policy aloud once filled in. Don’t say the standard enterprise account covers PHI or any data classification. A HIPAA-supported version of Claude is available by request ([request link]), but being HIPAA-supported doesn’t approve a project, every feature, or every data set. Anthropic’s HIPAA setup page says the VS Code extension (which Positron uses) isn’t covered by the BAA, and Remote Control and cloud sessions are off in the HIPAA configuration: [confirm with ITS which Claude Code surfaces are covered]. Questions: [HSIT / HIPAA Privacy Office contact].\n~0:07: “Think of one dataset you work with. Which pattern would you need?” Take one answer.",
+    "crumbs": [
+      "Part 2: Claude Code",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "part2-slides.html#where-instructions-live",
+    "href": "part2-slides.html#where-instructions-live",
+    "title": "Claude & Claude Code at the School of Medicine",
+    "section": "Where instructions live",
+    "text": "Where instructions live\n\n\n\nScope\nFile\nShared with\n\n\n\n\nManaged policy\nSet by IT\nEveryone [if deployed]\n\n\nUser\n~/.claude/CLAUDE.md\nJust you, every project\n\n\nProject\n./CLAUDE.md\nYour team, via git\n\n\nLocal\n./CLAUDE.local.md\nJust you (gitignored)\n\n\nAuto memory\n/ → Customize → Memory\nJust you, this machine\n\n\n\nAll load together. Keep each file under 200 lines. CLAUDE.md is advice, not enforcement.\n\n0:09 (Segment 2b, 4 min). Switch to Positron and open the project’s CLAUDE.md: raw data is read-only, never read data/restricted/, numbered scripts, log every change, ask before missing-data or outlier decisions, at most 10 rows.\nBridge for Part 1 alumni: the Project’s instructions become CLAUDE.md, and its files become documents in the folder, like docs/SAP.md.\nIn the panel: / → Customize → Instructions opens CLAUDE.md files; Memory shows auto memory. CLI: /memory. Imports like @docs/SAP.md load every session: fine for a 2-page SAP, not a 40-page protocol.\nTransition: “Advice isn’t enforcement. Let’s add enforcement.”",
+    "crumbs": [
+      "Part 2: Claude Code",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "part2-slides.html#switch-to-positron-protect-the-data",
+    "href": "part2-slides.html#switch-to-positron-protect-the-data",
+    "title": "Claude & Claude Code at the School of Medicine",
+    "section": "Switch to Positron: protect the data",
+    "text": "Switch to Positron: protect the data\nManual mode → deny Read(./data/restricted/**) → test it → git init\n\n0:13 (Segment 2c, 4 min). Participants follow the four steps on the class page.\n\nMode indicator → Manual. Recent versions (v2.1.283+) start in Auto unless the org turns it off, and the extension ignores the project’s defaultMode. To pin it: claudeCode.initialPermissionMode in user settings.\n/ → Customize → Permissions → Deny → project settings (check before class in Positron), or the .claude/settings.json file on the page.\nNew conversation, then the test prompt. Look for a permission-denied message (enforcement), not a polite refusal (advice).\nAsk Claude to git init, add a .gitignore, and commit.\n\nThe gap: deny rules don’t cover an R script that opens the file itself. The sandbox (/sandbox) closes it at the OS level. Demo only if ahead of time.",
+    "crumbs": [
+      "Part 2: Claude Code",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "part2-slides.html#plan-build-verify",
+    "href": "part2-slides.html#plan-build-verify",
+    "title": "Claude & Claude Code at the School of Medicine",
+    "section": "Plan, build, verify",
+    "text": "Plan, build, verify\nExercise 1 (25 min): prompts are on the class page\n\nPlan against the SAP (plan mode)\nBuild R/01_clean.R with a cleaning log\nCheck it yourself in the Data Explorer\nAnalyze: Table 1, the primary model, a Quarto report\nSave: rewind, then commit\n\nBehind? Finish steps 1–3. I’ll show the rest.\n\n0:17 (Segment 3). Framing: you’re the investigator, Claude is the analyst who writes and runs code. Python users swapped in CLAUDE.python.md; the prompts on the page have Python versions. Sub-timings: plan 0:17, clean 0:22, check 0:30, analyze 0:33, save 0:39.",
+    "crumbs": [
+      "Part 2: Claude Code",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "part2-slides.html#switch-to-positron-plan-mode-on-the-sap",
+    "href": "part2-slides.html#switch-to-positron-plan-mode-on-the-sap",
+    "title": "Claude & Claude Code at the School of Medicine",
+    "section": "Switch to Positron: plan mode on the SAP",
+    "text": "Switch to Positron: plan mode on the SAP\nMode indicator → Plan (or /plan)\n“Read the SAP and the data dictionary… List every data problem you find, and every decision you need from me. Don’t write code yet.”\n\n0:17 – 0:22 (3a, 5 min). Paste the plan prompt from the class page. The plan opens as a document: add an inline comment to show you can edit it before approving (check before class in Positron). At approval, pick the option that keeps manual approval of edits, not one that accepts edits automatically (check the exact wording in Positron).\nAsk the room: how many problems did Claude find? Six were planted (implausible values, sex coding, -99/999, duplicates, mixed dates, cuff_size). Point to the collapsed “When Claude asks” table for today’s decisions. Integrity point: decide the analysis before you see results.",
+    "crumbs": [
+      "Part 2: Claude Code",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "part2-slides.html#build-the-cleaning-script",
+    "href": "part2-slides.html#build-the-cleaning-script",
+    "title": "Claude & Claude Code at the School of Medicine",
+    "section": "Build: the cleaning script",
+    "text": "Build: the cleaning script\nBack to Manual, then: “write R/01_clean.R… write output/cohort_clean.csv and output/cleaning_log.csv… print the row count before and after each step. Run it and fix any errors.”\n\n\n\nClaude asks about\nToday’s answer (per SAP)\n\n\n\n\nImplausible values\nSet to missing and log; don’t guess\n\n\n-99, 999, blank, NA\nMissing\n\n\nSex 1 / 2\n1 = M, 2 = F; log as a data-manager question\n\n\nDuplicates\nRemove exact duplicates; confirm unique IDs\n\n\ncuff_size\nKeep, don’t use, log it\n\n\n\n\n0:22 – 0:30 (3b, 8 min). Review each diff: accept, reject, or redirect. Approve Rscript when asked. Narrate the first write → run → error → fix loop out loud; that loop is the core value.\nIf Claude doesn’t ask about a decision, that’s a teaching moment: CLAUDE.md said to ask. If the live demo stalls: git checkout part2-complete -- R output.",
+    "crumbs": [
+      "Part 2: Claude Code",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "part2-slides.html#check-it-yourself",
+    "href": "part2-slides.html#check-it-yourself",
+    "title": "Claude & Claude Code at the School of Medicine",
+    "section": "Check it yourself",
+    "text": "Check it yourself\nIn the R Console: clean &lt;- readr::read_csv(\"output/cohort_clean.csv\")\nThen open it in the Data Explorer:\n\nRow count after de-duplication?\nSort sbp_v1 high to low: any 1200? Sort sbp_v0: any -99?\nsex: only F, M, missing?\nPick one row of cleaning_log.csv and find that patient\n\n\n0:30 – 0:33 (3c, 3 min). Demo on your screen while they do it. “Trace every change”: the script is the record, the log shows each change, and you checked both. Data Explorer is Positron’s, not Claude’s; checking here doesn’t add the data to the conversation.\nExpected: 505 raw rows, 500 after removing 5 duplicates.",
+    "crumbs": [
+      "Part 2: Claude Code",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "part2-slides.html#analyze-then-save",
+    "href": "part2-slides.html#analyze-then-save",
+    "title": "Claude & Claude Code at the School of Medicine",
+    "section": "Analyze, then save",
+    "text": "Analyze, then save\n\nR/02_table1.R, R/03_primary_model.R, then reports/report.qmd, rendered to HTML\nCheck against the SAP: sbp_change ~ arm + sbp_v0 + site, Standard as reference, complete case, no Table 1 p-values\nExpected: n = 451, −11.0 mmHg (95% CI −12.8 to −9.2). Different? Compare the n’s first.\n\n\n\n\n\n\n\n\n\nSafety net\nCovers\nDoesn’t cover\n\n\n\n\nCheckpoints (hover → rewind)\nClaude’s file edits this session\nFiles your scripts write (output/), shell changes\n\n\ngit\nEverything you commit\nNothing you didn’t commit\n\n\n\n\n0:33 – 0:39 (3d, 6 min). Paste the two prompts. While the report renders, everyone checks the scripts against the SAP with the checklist on the class page; anything that doesn’t match is a finding to send back to Claude. Open reports/report.html in the Viewer next to its source. Fallback: git checkout part2-complete -- R reports output.\n0:39 – 0:42 (3e, 3 min). Demo rewind: ask Claude to rename every variable to upper case, accept, then hover → Rewind code to here. Then ask Claude to commit and show git log --oneline. Checkpoints are quick undo; git is the record.",
+    "crumbs": [
+      "Part 2: Claude Code",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "part2-slides.html#break",
+    "href": "part2-slides.html#break",
+    "title": "Claude & Claude Code at the School of Medicine",
+    "section": "Break",
+    "text": "Break\n5 minutes. Finish Exercise 1, or at least commit R/01_clean.R.\n\n0:42 – 0:47. Walk the room; help anyone stuck commit what they have. Back at 0:47.",
+    "crumbs": [
+      "Part 2: Claude Code",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "part2-slides.html#context-is-the-budget",
+    "href": "part2-slides.html#context-is-the-budget",
+    "title": "Claude & Claude Code at the School of Medicine",
+    "section": "Context is the budget",
+    "text": "Context is the budget\nEverything Claude reads fills the context window, and quality drops as it fills. Watch the context indicator in the prompt box.\n\n\n\n\n\n\n\nWhen…\nDo this\n\n\n\n\nLong session, same task\n/compact keep the cleaning decisions and n's\n\n\nUnrelated task\nNew conversation (CLI: /clear)\n\n\nWhat’s using space?\nCLI: /context\n\n\nQuick side question\n/btw &lt;question&gt;\n\n\n\nCorrected Claude twice on the same thing? Start fresh with a better prompt.\n\n0:47 (Segment 4a, 2 min). Point at the context indicator in the panel. Run /compact with a focus. Printing a whole data frame fills context and sends the data: “at most 10 rows” is a context rule and a privacy rule.",
+    "crumbs": [
+      "Part 2: Claude Code",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "part2-slides.html#model-effort-ultrathink-ultracode",
+    "href": "part2-slides.html#model-effort-ultrathink-ultracode",
+    "title": "Claude & Claude Code at the School of Medicine",
+    "section": "Model, effort, ultrathink, ultracode",
+    "text": "Model, effort, ultrathink, ultracode\n\n\n\n\n\n\n\n\n\nControl\nWhat it changes\nLasts\nIn the panel\n\n\n\n\n/model\nModel alias; opusplan = Opus plans, Sonnet builds\nSaved\nClick the model name\n\n\n/effort\nReasoning, low → max; default medium\nSaved (max: session)\nEffort row\n\n\nultrathink\nDeeper reasoning\nOne turn\nType it in a prompt\n\n\nultracode\nOne task as a dynamic workflow\nOne task\nType it in a prompt\n\n\n/effort ultracode\nWorkflows for every task\nSession\nUltracode switch\n\n\n/fast\nFaster Opus, pricier tokens\nSaved\nToggle fast mode\n\n\n\n\n0:49 (Segment 4b, 3 min). Open the model picker and show the Effort row. Switch to opusplan and enter plan mode: Opus plans, Sonnet carries it out. Part 1 alumni: this is the app’s model and effort menu next to Send. Effort: Opus 5.5, Sonnet 5.5, and Haiku 5.5 default to medium (most other models: high); higher tests more edge cases but costs more tokens and time; max is session-only; your org may cap levels. Run the ultrathink prompt from the class page (complete case vs. older patients lost to follow-up).\n0:52 (4c, 3 min). Ultracode is a setting, not an effort level. ultracode: in a prompt = one task; /effort ultracode or the switch = every task until /effort ultracode off. The keyword doesn’t trigger in claude -p. /deep-research is the bundled workflow (needs web search). /fast is optional: Opus only, usage credits on subscription plans, Owner must enable.\nCheck before class (Positron): typed /model and /effort vs. the picker only; the Ultracode switch (v2.1.284+); keyword highlighting; where workflow progress appears (/workflows is documented for the CLI).",
+    "crumbs": [
+      "Part 2: Claude Code",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "part2-slides.html#workflows-power-with-a-bill",
+    "href": "part2-slides.html#workflows-power-with-a-bill",
+    "title": "Claude & Claude Code at the School of Medicine",
+    "section": "Workflows: power, with a bill",
+    "text": "Workflows: power, with a bill\nultracode: review every script in R/ against docs/SAP.md, one reviewer\nper script, then adversarially check each finding and report only the\nones that survive. Don't change any files.\n/deep-research &lt;question&gt;: searches, cross-checks sources, and returns a cited report\n\nCan use meaningfully more tokens, and counts toward your usage limits\nTry a small slice first, and turn ultracode off for routine work\nIf enabled: your organization can turn workflows off entirely\nVerify every citation. Keep study data out of research questions.\n\n\n~0:53. Run the ultracode prompt only if workflows are enabled and you have usage headroom; otherwise stay on this slide. Don’t run /deep-research live unless rehearsed; it takes minutes. Integrity tie-in: an adversarial check is still not a human statistician.",
+    "crumbs": [
+      "Part 2: Claude Code",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "part2-slides.html#check-in-from-your-phone-rc",
+    "href": "part2-slides.html#check-in-from-your-phone-rc",
+    "title": "Claude & Claude Code at the School of Medicine",
+    "section": "Check in from your phone: /rc",
+    "text": "Check in from your phone: /rc\nType /rc in the panel → Claude app → Code → pick the session\n\nStart a long render, then check progress and approve permission prompts from your phone\nClaude keeps running on your computer: it must stay on, and the session must keep running\nRemote Control ≠ Claude Code on the web. /rc = your local session, viewed from phone or browser. On the web = cloud sessions on a GitHub repo (if enabled)\nWhile connected, the transcript is stored on Anthropic servers: don’t print data values\nIf enabled: an Owner turns it on. Off in the HIPAA configuration, under ZDR, and on Bedrock, Google Cloud, Foundry, or a gateway\n\n\n0:55 (Segment 4d, 2 min). Part 1 alumni: this is what the phone app’s Code tab is for. Demo: start a deliberately slow task (render the report), type /rc in the panel (confirm Enable Remote Control the first time), point at the Remote Control indicator in the footer, open the session on your mirrored phone (Claude app → Code; computer icon, green dot), and approve a permission prompt from it. Run /rc again to disconnect. The same session also shows in a browser, in the Code section of the Claude web app. Panel: no name, no QR code; CLI: claude --remote-control \"name\", and /mobile shows the app QR code. Custom roles need the Remote Control permission, and the org may require trusted devices. Admins can disable it with disableRemoteControl. Check before class: that /rc and the indicator work in Positron’s panel and that your org (and workspace) has it turned on.",
+    "crumbs": [
+      "Part 2: Claude Code",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "part2-slides.html#where-does-each-instruction-belong",
+    "href": "part2-slides.html#where-does-each-instruction-belong",
+    "title": "Claude & Claude Code at the School of Medicine",
+    "section": "Where does each instruction belong?",
+    "text": "Where does each instruction belong?\n\n\n\n\n\n\n\n\nPut it in…\nWhen it’s…\nExample\n\n\n\n\nCLAUDE.md\nA rule for every session\n“data/raw/ is read-only”\n\n\nA skill you run by name\nA prompt you start yourself\n/check-data &lt;file&gt;\n\n\nA skill Claude loads\nA procedure Claude uses when relevant\ntable1\n\n\nA subagent\nWork in a separate context\nbiostat-reviewer\n\n\nA hook\nSomething that must happen every time\nBlock edits to data/raw/\n\n\nA deny rule\nSomething that must never happen\nRead data/restricted/\n\n\n\n\n0:57 (Segment 5a, 2 min). The organizing idea for the rest of class. Skills: .claude/skills/&lt;name&gt;/SKILL.md becomes /&lt;name&gt;, text after the name fills $ARGUMENTS; only the description loads until used, so write it in the words people type. disable-model-invocation: true = runs only when you type it. Custom commands (.claude/commands/&lt;name&gt;.md) have been merged into skills: old files still work, but skills are the recommended form. Part 1 alumni: an app skill is the same SKILL.md format, and claude.ai skills can sync into Claude Code (if enabled). Subagents start fresh and can have read-only tools; to make one, ask Claude or write a file in .claude/agents/ (/agents no longer opens a menu). Hooks run whatever Claude decides.",
+    "crumbs": [
+      "Part 2: Claude Code",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "part2-slides.html#switch-to-positron-two-skills-a-reviewer-a-hook",
+    "href": "part2-slides.html#switch-to-positron-two-skills-a-reviewer-a-hook",
+    "title": "Claude & Claude Code at the School of Medicine",
+    "section": "Switch to Positron: two skills, a reviewer, a hook",
+    "text": "Switch to Positron: two skills, a reviewer, a hook\n/check-data data/raw/redcap/redcap_export_site_A.csv\n“Make a baseline characteristics table by treatment arm.”\n“Use the biostat-reviewer agent to review R/03_primary_model.R against the SAP.”\n“Change sex from Female to F in data/raw/class_cohort.csv.” → blocked\n\n0:59 (Segment 5b, 5 min). Pull in one at a time with git checkout part2-complete -- .claude/skills/check-data (then .claude/skills/table1, .claude/agents, .claude/settings.json .claude/hooks). Start a new conversation after each so the files load (/reload-skills: check before class in the panel).\nShow frontmatter: description, disable-model-invocation: true, argument-hint, allowed-tools, tools: Read, Grep, Glob. Skill rules encode judgment: no baseline p-values in an RCT (CONSORT), a Missing row. A reviewer told to find problems will find some; you decide. The hook needs jq; view it under / → Customize → Hooks. Point to the hook’s own message (“Write derived data to output/ instead”) as proof the hook blocked it; a plain permission-denied means the Edit(./data/raw/**) deny rule caught it first. The answer-key settings also turn on the sandbox and a styler/lintr hook.",
+    "crumbs": [
+      "Part 2: Claude Code",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "part2-slides.html#exercise-2-build-one",
+    "href": "part2-slides.html#exercise-2-build-one",
+    "title": "Claude & Claude Code at the School of Medicine",
+    "section": "Exercise 2: build one",
+    "text": "Exercise 2: build one\n8 minutes. Text and prompts are on the class page.\n\nOption A (everyone): create .claude/skills/check-data/SKILL.md, start a new conversation, then run /check-data data/raw/redcap/redcap_export_site_B.csv\nOption B: ask Claude to draft a Table 1 skill in .claude/skills/table1/, then test it with a plain request and /table1 site\nThen make it yours: change one rule to fit a data task you do, and run it again\n\nDoesn’t appear? Check the folder, then start a new conversation. Doesn’t auto-load? Make the description more specific.\n\n1:04 – 1:12 (5c). Circulate. Common problems: .claude created inside R/ or data/; a file saved as SKILL.md.txt or not in its own check-data/ folder; a misspelled frontmatter field (silently ignored); the skill doesn’t show until a new conversation (or /reload-skills). If Positron’s Explorer hides the dot-folder, have them ask Claude to create the file with the exact text.\n1:09: make it yours (2 min). Call time even if some are still testing. Examples on the class page: a date-order or ID-format check in /check-data, or a journal’s rounding rules in the skill. Steer people away from rules that contradict the SAP, such as median (IQR) instead of mean (SD).\nDebrief (1 min): what did people change to make it theirs, and who got automatic loading to work?",
+    "crumbs": [
+      "Part 2: Claude Code",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "part2-slides.html#messy-real-world-sources",
+    "href": "part2-slides.html#messy-real-world-sources",
+    "title": "Claude & Claude Code at the School of Medicine",
+    "section": "Messy real-world sources",
+    "text": "Messy real-world sources\nREDCap exports: three sites, three export styles\n“Use a subagent to compare the three REDCap exports… Return one comparison table. Don’t change any files.”\nLegacy code: legacy/baseline_table.sas and .do\n“Explain what this does, step by step… list anything that looks like a bug.”\nCut first if running late. It’s a good try-at-home exercise.\n\n1:12 – 1:20 (Segment 6, 8 min). Pick one. Answer keys are in instructor/README.md.\nREDCap: A uses record_id and visit-named BP columns; B codes arm and sex 1/2 and exports blank labs as -99; C uses MM/DD/YYYY, smoking_status, and an extra redcap_data_access_group column.\nSAS bugs: only some -99s recoded; sex misses f/2; missing age lands in &lt;65; nodupkey drops silently. Stata bugs: completers-only Table 1; NA makes BP strings so the recode fails, and 999 is never recoded; duplicates drop, force keeps an arbitrary row. Score how many Claude found.",
+    "crumbs": [
+      "Part 2: Claude Code",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "part2-slides.html#give-claude-a-check-it-can-run",
+    "href": "part2-slides.html#give-claude-a-check-it-can-run",
+    "title": "Claude & Claude Code at the School of Medicine",
+    "section": "Give Claude a check it can run",
+    "text": "Give Claude a check it can run\nWithout a check, “looks done” is the only signal, and you become the only verifier.\n\nWrite tests from the dictionary and SAP, and show they fail on the raw file\nShow they pass on the cleaned file. Don’t edit the tests.\nRead the diff of tests/ as carefully as the code\n\nIndependent review: biostat-reviewer, /code-review, and a human statistician (required)\n\n1:20 (Segment 7, 7 min). Don’t cut this segment. Switch to Positron and paste the test-first prompt (~3 min). If it stalls: git checkout part2-complete -- tests, then ask Claude to run Rscript tests/run_checks.R. Python: pytest.\nWatch for Claude editing the tests instead of the code, or “fixing” failures by dropping rows.",
+    "crumbs": [
+      "Part 2: Claude Code",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "part2-slides.html#why-cleaning-matters",
+    "href": "part2-slides.html#why-cleaning-matters",
+    "title": "Claude & Claude Code at the School of Medicine",
+    "section": "Why cleaning matters",
+    "text": "Why cleaning matters\n\n\n\n\nn\nIntensive − Standard\n95% CI\n\n\n\n\nRaw file, no cleaning\n462\n−8.4 mmHg\n−19.6 to 2.9\n\n\nAfter 01_clean\n451\n−11.0 mmHg\n−12.8 to −9.2\n\n\n\nA few -99 and 999 codes hide a 10 mmHg treatment effect.\n\n~1:23 (1 min). Same model, same file. Without cleaning, sentinel codes are read as real blood pressures and duplicates are kept. To make it live, ask: “Fit the SAP’s primary model to the raw file without any cleaning and put it next to the cleaned result. Don’t save anything.”",
+    "crumbs": [
+      "Part 2: Claude Code",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "part2-slides.html#forking-paths-and-disclosure",
+    "href": "part2-slides.html#forking-paths-and-disclosure",
+    "title": "Claude & Claude Code at the School of Medicine",
+    "section": "Forking paths and disclosure",
+    "text": "Forking paths and disclosure\n\nGarden of forking paths: Claude makes “one more model” cheap. Pre-specify in the SAP, and label sensitivity and post hoc analyses.\nScope creep: watch for Claude changing a decision the SAP fixed\nAudit trail: commit .claude/ with the analysis; /export key sessions; record the version and model\nDisclose specifically: “Code drafted with Claude Code (version, model); reviewed, tested against pre-specified checks, and rerun from raw data by the authors.”\n\nDiscuss: what would you need to see to trust an AI-assisted analysis you were reviewing?\n\n~1:24 (3 min including discussion). Tie each point to something from today: the plan was the pre-specification, the Data Explorer check was a spot-check, the log is the audit trail. Journal and funder policies: [link to library guidance on AI disclosure]. Take two answers to the discussion question.",
+    "crumbs": [
+      "Part 2: Claude Code",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "part2-slides.html#three-takeaways",
+    "href": "part2-slides.html#three-takeaways",
+    "title": "Claude & Claude Code at the School of Medicine",
+    "section": "Three takeaways",
+    "text": "Three takeaways\n\nProtect first. CLAUDE.md, a deny rule, Manual mode, and git before Claude touches the data\nPlan, build, verify. Plan against the SAP, let Claude run the code, check it yourself, and commit\nEncode your judgment once. Skills, subagents, and hooks become shared team tools\n\nTry at home: worktrees (CLI), claude -p (CLI), the sandbox, MCP (if enabled), and today’s workflow on NHANES blood-pressure files\n\n1:27 (Segment 8, 3 min). Say the three takeaways. Try at home: claude --worktree sensitivity-mi for the multiple-imputation sensitivity analysis; claude -p for batch explanations of legacy code; the sandbox test with an R script; /mcp to see approved connectors; NHANES (remember the survey weights). Avoid controlled-access data (MIMIC, dbGaP, UK Biobank).",
+    "crumbs": [
+      "Part 2: Claude Code",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "part2-slides.html#keep-going",
+    "href": "part2-slides.html#keep-going",
+    "title": "Claude & Claude Code at the School of Medicine",
+    "section": "Keep going",
+    "text": "Keep going\n\nClass page: every prompt from today\nCheat sheet: panel vs. CLI, models and effort, key files\nDocs: code.claude.com/docs (“Use Claude Code in VS Code” also applies to Positron)\nFree courses: academy.claude.com (Claude Academy)\nLibrary help: [data services consults, office hours]\nFeedback: [link to short evaluation form]\n\nQuestions?\n\n~1:29. Share the feedback link; take questions until 1:30. Possible follow-ups: “Build a lab skills library,” “Translating SAS/Stata to R, with tests.” After class: run the demo reset, and disconnect Remote Control.",
+    "crumbs": [
+      "Part 2: Claude Code",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "part1-reference.html",
+    "href": "part1-reference.html",
+    "title": "Part 1 quick reference",
+    "section": "",
+    "text": "Skip to main content\nThis page goes with the Part 1 class page. Each section below expands on one part of the class.",
+    "crumbs": [
+      "Part 1: Claude",
+      "Quick reference"
+    ]
+  },
+  {
+    "objectID": "part1-reference.html#tool-data",
+    "href": "part1-reference.html#tool-data",
+    "title": "Part 1 quick reference",
+    "section": "Which tool for which data",
+    "text": "Which tool for which data\nPick the tool by the data, not by which tool you like best. Ask: what kind of data is this, which tools are approved for it, and does my project (IRB, data use agreement, course policy) allow it?\n\nThe tools\n\n\n\n\n\n\n\n\n\nTool\nWho can use it\nApproved for (Yale data classification)\nCheck here\n\n\n\n\nClarity [one-line description from ITS]\n[eligibility; confirm whether YNHHS-primary appointees can use it]\n[approved data: , confirmed by  on DATE]\n[Yale AI Tool Registry]\n\n\nMicrosoft Copilot, free ([product name — check]; sign in with your Yale account)\n[eligibility]\n[approved data: , confirmed by  on DATE]\n[Yale AI Tool Registry]\n\n\nMicrosoft 365 Copilot, paid license\n[who has a license / how to request]\n[approved data: , confirmed by  on DATE]\n[Yale AI Tool Registry]\n\n\nClaude Enterprise, standard seat\n[eligibility / sign-up link]\n[approved data: , confirmed by  on DATE]\n[Yale AI Tool Registry]\n\n\nClaude Enterprise, premium seat\n[eligibility / how to request]\n[approved data: , confirmed by  on DATE]\n[Yale AI Tool Registry]\n\n\nHIPAA-supported version of Claude (by request: [request link])\n[eligibility]\n[approved data: , confirmed by  on DATE]\n[Yale AI Tool Registry] · [HSARG]\n\n\nYNHHS work or YNHHS data (or a primary YNHHS appointment)\nFollow YNHHS rules\n[YNHHS-approved chat AI, e.g. Microsoft Copilot: link, confirmed by ___ on DATE]\n[YNHHS AI governance]\n\n\n\n\nData classification: [Yale data classification names, e.g., Low / Moderate / High risk — confirm] and [Yale data classification / policy link].\nNew AI use in health sciences research or education? Start with [HSARG].\nStandard vs. premium seats. Anthropic now calls these legacy seat types and is moving Enterprise to a single seat type at renewal. What each includes at Yale (for example Claude Code, or the Fable model) is [confirm with ITS].\nYNHHS. Don’t put YNHHS patient data or YNHHS work into Claude or Clarity unless YNHHS has approved it.\n\n\n\nThe HIPAA-supported version of Claude\nA HIPAA-supported version of Claude is available by request: [request link].\n\nBeing HIPAA-supported describes a contract and safeguards. It doesn’t approve your project, every feature, or every data set.\nBefore you use protected health information (PHI) there, check that: you’re in that version (not your standard account), the feature you’re using is covered, your IRB protocol and any data use agreement allow it, and you use the minimum necessary.\nFollow [Yale data classification / policy link]. Questions go to [HSIT / HIPAA Privacy Office contact].\nThe standard Claude Enterprise account is not for PHI.\nFeatures differ in the HIPAA-supported version. Some are off, and it keeps the older layout (no combined chat-and-Cowork experience). Check with [ITS] for what Yale’s version includes.\n\nWhat Anthropic’s Help Center lists for organizations using its HIPAA configuration (as of 2026-10-30; Yale’s setup may differ, so [confirm with ITS]):\n\n\n\n\n\n\n\nStatus\nFeatures\n\n\n\n\nCovered by Anthropic’s agreement\nChat; Projects in chat; web search; Research; creating files and running code (no network access); artifacts inside chat (not published pages); voice mode\n\n\nAvailable but not covered, even if turned on\nSkills (off by default once the configuration is applied); connectors, including PubMed; Claude in Chrome; beta and research-preview features; the Claude Code extension for VS Code and Positron\n\n\nOff\nCowork in the cloud; Remote Control (/rc); Claude Code on mobile; Claude Code cloud sessions\n\n\nNot stated\nMemory, chat search, incognito\n\n\n\n“Covered by Anthropic’s agreement” is about the vendor contract. It is not Yale approval. Sources: Help Center: HIPAA configuration, Help Center: business associate agreements, and Anthropic’s Trust Center HIPAA Implementation Guide (the authoritative version).\n\n\nCan I share this?\nThe class scenarios, with full answers. “OK” still means: use the right tool, and check what comes out.\n\n\n\n\n\n\n\n\nScenario\nAnswer\nWhy\n\n\n\n\nA published, open-access article you want explained\nOK\nPublic and openly licensed. Use the open-access copy, not a library-subscription PDF.\n\n\nYour own draft lecture slides\nOK\nYour own work. Take out student information, patient images and figures copied from subscription sources first.\n\n\nA clinic note with the patient’s name removed\nNo (in the standard account)\nRemoving a name isn’t de-identification: dates, ZIP codes, record numbers and rare details can still identify someone. PHI belongs only in the HIPAA-supported version, and only if your project and data are approved for it. YNHHS notes follow YNHHS rules.\n\n\nAn NIH application you’re reviewing\nNo\nNIH prohibits peer reviewers from using generative AI on applications (NOT-OD-23-149). The same goes for journal manuscripts you review in confidence, unless the journal says otherwise.\n\n\nA YNHHS discharge-instruction template you’re revising\nCheck first\nIt’s YNHHS material, so YNHHS rules apply: use [Copilot] per [YNHHS AI governance]. Patient-facing text needs clinical review under YNHHS processes.\n\n\nA PDF from a library subscription\nCheck first\nMany library licenses don’t allow uploading to AI tools. Use the open-access version, or check [library license guidance].\n\n\nNotes from a curriculum committee meeting\nCheck first\nUsually fine if nothing is confidential. Look for student records, personnel matters and appeals, and take them out.\n\n\n\n\n\n“Not here” is a valid answer\nDon’t use an AI tool for:\n\nConfidential peer review: grant applications and manuscripts you’ve been asked to review.\nFinal clinical decisions or doses. A clinician decides, using authoritative sources.\nAssessed work where course policy forbids AI. Check the syllabus or ask the course director.\nRestricted data whose data use agreement, IRB protocol or consent doesn’t allow third-party AI processing, even when de-identified. Read the agreement.\nPersonnel matters and student records unless the tool is approved for them.\nAnything you can’t verify, such as a fact you have no way to check.\nTasks where checking takes longer than doing them yourself.\n\n\n\nLicensed content\nArticles, e-books and database content from library subscriptions often come with licenses that don’t allow uploading them to AI tools. Use open-access versions (for example from PubMed Central, checking the license), your own writing, or public documents. When in doubt, check [library license guidance] or ask a librarian. This is why the class uses an open-access article published under a Creative Commons license.",
+    "crumbs": [
+      "Part 1: Claude",
+      "Quick reference"
+    ]
+  },
+  {
+    "objectID": "part1-reference.html#settings",
+    "href": "part1-reference.html#settings",
+    "title": "Part 1 quick reference",
+    "section": "Settings and privacy",
+    "text": "Settings and privacy\nLock your settings before you upload anything. Some settings may be greyed out or missing if your admin controls them.\n[Screenshot: Settings &gt; Your Claude in the combined Enterprise layout]\n[Screenshot: the same settings in the HIPAA-supported version (older layout)]\n\nMemory\nWhere: Settings &gt; Your Claude (older layout: Settings &gt; Memory). On Enterprise, memory stays off for each person until they turn it on, so yours may already be off.\n\n\n\n\n\n\n\n\nSetting\nWhat it does\nFor sensitive work\n\n\n\n\nMemory from chats (older name: Generate memory from chats)\nClaude saves context from your chats to use later\nLeave off, or review what’s saved now and then\n\n\nSearch and reference chats\nClaude can search your past chats when you ask\nTurn off if old chats hold things you don’t want to resurface\n\n\nInclude sensitive topics in memory\nLets memory keep topics such as health, religion or politics\nConfirm it’s off (it’s off by default)\n\n\nPause memory\nStops using and saving memory for now\nUse while you work on something you don’t want remembered\n\n\nReset memory\nDeletes all saved memory, including Project memories\nUse if something was saved by mistake\n\n\n+ &gt; Memory (in a chat)\nTurns memory off for one chat\nDo it before your first message; it can’t change once the chat starts. Works inside Projects too.\n\n\n\n\nDeleting a chat doesn’t delete memories made from it. Review or reset memory separately.\nProject memory: each Project has its own memory. To keep a Project separate from the rest of your account, open the Project page and turn off Use account memory under Memory (check the label).\nIf your admin turns off memory for the whole organization, all memory is deleted.\n\n\n\nIncognito chats\n\nClick the ghost icon in the upper right of a new chat. It isn’t available inside Projects.\nIncognito chats aren’t saved to your history or used for memory, but they are still retained ([Yale retention period; 30 days by default]) and are included in your organization’s data exports and compliance tools.\nIn the combined chat-and-Cowork experience, incognito chats open in the previous chat layout, so Claude can’t create files or run code in them (so document skills won’t work).\nIncognito changes what Claude remembers, not what data is allowed.\n\n\n\nInstructions for Claude\n\nWhere: Settings &gt; Your Claude (older layout: Account &gt; Instructions for Claude; formerly called “profile preferences”).\nWhat: your role, tone and format, used in every chat. Keep it general and put nothing sensitive in it.\nExample: “Write in plain language. I’m a research coordinator, not a statistician. Use short paragraphs and bullet points.”\nStyles are being folded into skills. For tone and format, use Instructions for Claude or a skill.\n\n\n\nRetention, training and sharing\n\nRetention: [how long Yale keeps Claude chats; confirm with ITS].\nTraining: [whether Yale’s agreement allows chats to be used to train models; confirm with ITS and link the summary].\nSharing a Project (if enabled): Share &gt; Can view or Can edit, within Yale. Owners can turn sharing off.\nSharing a chat (if enabled): Share at the top right makes a read-only snapshot for people in your organization.\nArtifacts stay inside the organization unless your admin allows external links.\nBefore you share anything, check what’s in it, including the files in a Project.\n\n\n\nSettings checklist\n\nSettings &gt; Your Claude: Include sensitive topics in memory is off\nDecide on Memory from chats and Search and reference chats\nEach Project: turn off Use account memory unless you want it to use your account memory\nKnow where the ghost icon is (incognito) and what it doesn’t do\nInstructions for Claude: role, tone, format; nothing sensitive\nSettings &gt; Capabilities: Create and edit files (older name: Code execution and file creation) (if enabled)\nKnow which version you’re in: standard account or HIPAA-supported version",
+    "crumbs": [
+      "Part 1: Claude",
+      "Quick reference"
+    ]
+  },
+  {
+    "objectID": "part1-reference.html#projects-skills",
+    "href": "part1-reference.html#projects-skills",
+    "title": "Part 1 quick reference",
+    "section": "Projects and skills",
+    "text": "Projects and skills\n\nCreate a Project\nCreate Projects on a laptop or desktop. You can open them on your phone afterward.\n\nProjects &gt; + New Project &gt; give it a name (for example “Article Explainer”).\nSet project instructions &gt; paste your instructions &gt; change at least one line to fit your work.\nOn the Project page, under Memory, turn Use account memory off (you can turn it back on later).\n+ &gt; add your files (knowledge).\nStart a new chat inside the Project and test it:\n\nIn 3 bullets: what files do you have, what will you do for me, and\nwhat will you refuse to do?\nIf a file won’t upload: paste its text into the project instructions, or use the instructor’s shared Project (Can view, if sharing is enabled).\nClass files: Kit A, Article Explainer (download Kit A: style guide, article copy). Kit B, Committee Assistant (download Kit B: committee pack). See the kits README for licenses.\n\n\nKeep using it after class\n\nSwap the article. Remove the old article file and add the next open-access paper. Keep the instructions and style guide. A text or Markdown copy works better than a PDF for finding quotes with Ctrl/Cmd+F.\nAdapt the style guide. Edit the Audiences section for your course, clinic or newsletter. Add a rule each time you catch a mistake.\nKit B becomes a reusable meeting-to-minutes tool for committees that don’t handle confidential matters.\nShare it with your team (if enabled), after checking what’s in it.\nBig Projects: when a Project holds a lot of files, Claude searches them rather than reading everything at once, so keep asking it to quote its source.\n\n\n\nWhat to put in a Project\n\n\n\n\n\n\n\n\nProject idea\nKnowledge to add\nLeave out\n\n\n\n\nA course you teach\nSyllabus, learning objectives, a public reading list\nStudent names, grades and records; licensed PDFs from library databases\n\n\nA committee you staff\nCharter, past agendas, public policies\nPersonnel matters, confidential minutes, student appeals\n\n\nA grant you’re writing\nThe funding announcement, your own aims, public background papers\nOthers’ unpublished data; applications you’re reviewing\n\n\nArticle explainers (Kit A)\nOpen-access articles, your style guide\nLibrary-subscription PDFs, patient information\n\n\n\n\n\nProject, skill, or Instructions for Claude?\n\n\n\n\n\n\n\n\nUse\nWhen\nExample\n\n\n\n\nInstructions for Claude\nPreferences for every chat\n“Plain language; I’m not a statistician.”\n\n\nProject\nA workspace for one ongoing piece of work, with its own files, instructions and memory\nArticle Explainer; a course; a committee\n\n\nSkill (if enabled)\nA how-to Claude can use in any chat, when it’s relevant\n“Format any handout to our clinic’s template”\n\n\n\nOne-liner: a Project is a workspace for one piece of work; a skill is a how-to Claude can use in any chat.\n\n\nBuilt-in document skills (if enabled)\n\nClaude has built-in skills for Word, Excel, PowerPoint and PDF files. They need Create and edit files turned on (Settings &gt; Capabilities) and skills enabled by your admin.\nClaude uses a relevant skill on its own. Turn skills on or off in Customize &gt; Skills.\nTry it in your Kit A Project:\n\nUsing the style guide, turn the plain-language version into a\none-page Word handout.\n\n\nUpload your own skill (if enabled)\n\nA skill is a folder with a SKILL.md file: a short name and description at the top, then plain-language instructions. You can add example files. Zip the folder.\nCustomize &gt; Skills &gt; + &gt; + Create skill &gt; Upload a skill (ZIP).\nYour skill is private until you share it (view-only; it updates automatically when you edit it) or publish it to your organization’s library (if enabled).\n\nCaveats:\n\nSkills don’t run in incognito chats, which can’t create files or run code.\nIn the HIPAA-supported version, skills are off by default and aren’t covered by Anthropic’s agreement if turned back on [confirm with ITS].\nCustom styles are being moved into skills (starting disabled). A migrated style may appear in the “/” menu as /name-style (check before relying on it).\nSkills you make in the Claude app can sync into Claude Code when you sign in there with the same account (Part 2).",
+    "crumbs": [
+      "Part 1: Claude",
+      "Quick reference"
+    ]
+  },
+  {
+    "objectID": "part1-reference.html#model-effort-commands",
+    "href": "part1-reference.html#model-effort-commands",
+    "title": "Part 1 quick reference",
+    "section": "Model, effort and the app’s menus",
+    "text": "Model, effort and the app’s menus\n\nModel and effort\nOpen the model menu next to Send.\n\nModels: the current family is Fable 5.1, Opus 5.5, Sonnet 5.5 and Haiku 5.5, with older models under More models. Check which appear in your menu; your admin may hide some.\nEffort: Low, Medium, High, Extra high and Max. Each model marks its recommended level Default.\nThinking is always on for the current models, so effort is the main dial.\nFable may need usage credits on a standard seat, and is included (within limits) on premium seats [confirm Yale seat tiers].\nResearch needs an Opus model enabled for your role.\n\nUse the smallest model and lowest effort that does the job. Bigger models, higher effort and Research use more compute: more time, more of your usage limit, and more energy. Start with the default; go smaller for simple tasks like reformatting or a glossary, and go bigger only when the answer isn’t good enough. [Dated source on AI energy use, chosen by a librarian.]\n\n\nThe “+” menu and the “/” menu\n\n“+” in the lower left of the chat box opens a menu. Depending on what your admin has enabled, it can include: add files or photos, Memory (off for this chat), web search, Research, connectors (such as PubMed), and skills.\nType “/” in the chat box to open the same menu from the keyboard. What appears (skills, connectors, migrated styles as /name-style) varies by workspace, so check yours.\nCustomize &gt; Skills and Customize &gt; Connectors are where you manage skills and connectors (if enabled).\n\n\n\nPreview: the same dials in Claude Code (Part 2)\nPart 1 doesn’t teach Claude Code. This table shows what each app control becomes in Part 2 (if your seat includes Claude Code).\n\n\n\n\n\n\n\n\nIn the Claude app\nIn Claude Code\nWhat it does\n\n\n\n\nModel menu next to Send\n/model\nChoose the model\n\n\nEffort, in the same menu\n/effort\nChoose how hard it thinks\n\n\n“+” or “/” menu in the chat box\n“/” menu in the Positron or VS Code panel\nCommands, skills and settings\n\n\nProject instructions\nCLAUDE.md\nStanding instructions for every session\n\n\nProject files\nFiles in the project folder (such as docs/)\nReference material Claude reads\n\n\nA skill (Customize &gt; Skills)\n.claude/skills/&lt;name&gt;/SKILL.md\nA reusable how-to; app skills can sync into Claude Code\n\n\nMemory\nAuto memory (/memory)\nWhat Claude remembers between sessions\n\n\nThe phone app’s Code tab\n/rc (Remote Control)\nSee and steer a Claude Code session running on your laptop from your phone (if enabled). Claude app chat has no equivalent: the Code tab only shows Claude Code sessions.\n\n\n\nRemote Control is your own laptop’s session viewed from your phone or the web. It’s different from Claude Code on the web, which runs sessions in the cloud on a GitHub repository. Remote Control is off in the HIPAA configuration.",
+    "crumbs": [
+      "Part 1: Claude",
+      "Quick reference"
+    ]
+  },
+  {
+    "objectID": "part1-reference.html#mobile",
+    "href": "part1-reference.html#mobile",
+    "title": "Part 1 quick reference",
+    "section": "The phone app",
+    "text": "The phone app\nThe phone app is optional. Not everyone wants a work account on a personal phone; check [mobile device policy] first.\n\nSet it up\n\nInstall Claude (by Anthropic) from the App Store or Google Play.\nSign in with your Yale account [sign-in steps / SSO note].\nYour chats, Projects, memory and skills are tied to your account, so they should appear on the phone. Opening a Project on the phone should work; create Projects on a laptop (creating one on the phone is unconfirmed — check).\nHIPAA-supported version: whether the phone app is available and what it may be used for is [confirm with ITS].\n\n\n\nTalk instead of typing\n\nDictation: tap the microphone to turn speech into text, then edit before you send. Try it in your Project.\n\nKit A:\nIn two sentences, what's the main limitation of this study?\nKit B:\nIn two sentences, what's the most urgent action item from these notes, and who owns it?\n\nVoice mode (beta): tap the sound-wave icon next to the microphone for a spoken conversation. Set the spoken language in Settings &gt; Capabilities &gt; Voice. It counts toward your usage limits.\n\n\n\nCamera cautions\nAnything you photograph is uploaded. Never photograph patient lists, charts, screens, whiteboards from clinical areas, badges or IDs. Public material (a conference poster, a published handout) is fine. Follow [mobile device policy].\n\n\nOther things to know\n\nResearch on the phone (if enabled) searches only the web and silently skips connectors (if enabled) such as PubMed. Use a laptop when you need a connector.\nThe Code tab reaches Claude Code sessions. In Part 2, /rc connects it to a Claude Code session on your laptop (if enabled; not in the HIPAA configuration). If you don’t see a Code tab, your plan or organization may not include it.",
+    "crumbs": [
+      "Part 1: Claude",
+      "Quick reference"
+    ]
+  },
+  {
+    "objectID": "part1-reference.html#prompt-library",
+    "href": "part1-reference.html#prompt-library",
+    "title": "Part 1 quick reference",
+    "section": "Prompt library",
+    "text": "Prompt library\nEvery prompt has a copy button. Fill in the [brackets]. Use these only with public, made-up, or your own non-sensitive material, in a tool approved for that data.\n\nResearchTeaching & clinical educationAdministrative\n\n\n\nKit A: Article Explainer\nProject instructions (paste into Set project instructions, then change one line):\nYou help me turn research articles into accurate, plain-language\nexplainers for medical-school audiences.\n\nSources\n- Use only the files in this Project unless I say otherwise. The\n  article is the source of truth; the style guide sets format and tone.\n- Never invent numbers or quotes. If the article doesn't say it,\n  write \"NOT IN ARTICLE.\"\n- Label anything from outside the article as [general knowledge].\n- Don't add references unless I ask. If I ask, mark each one\n  UNVERIFIED and give its PMID or DOI so I can check it.\n\nHow to work\n- Before a new explainer, ask me up to 3 questions about my audience\n  and purpose, then wait for my answers.\n- Report results with the actual numbers: both groups, the\n  difference, and the 95% confidence interval.\n- Use cautious language: \"was associated with,\" not \"caused,\" and\n  \"early evidence\" for pilot or small studies.\n- Flag anything that needs a clinician's or librarian's review\n  before I share it.\n\nPrivacy\n- I won't share patient information here. If I paste anything that\n  looks like a name, MRN, date of birth, or other identifier, stop\n  and remind me not to.\nThe privacy line is advice to Claude, not a safeguard. It’s still your job not to paste identifiers.\nTurn 1: the explainer (in a new chat inside the Project)\nI'm a [your role, e.g., second-year medical student / clinic nurse\neducator / research coordinator / library staff].\nI need an explainer of the article in this Project for\n[audience, e.g., my journal club / adults in a blood-pressure clinic /\nour department newsletter].\n\nBefore you write anything, ask me up to 3 questions about my audience\nand purpose. Wait for my answers.\n\nThen, following the style guide in this Project, give me:\n1. Study at a glance: question, design, who was studied, where, and\n   how many.\n2. The main result with the actual numbers (both groups, the\n   difference, 95% CI), and the main limitation the authors state.\n3. A plain-language version for my audience, 150 words or fewer.\n4. Three questions a careful reader should ask about the methods or\n   conclusions.\n5. A \"Where this came from\" table: for every number or claim in\n   parts 1-3, the exact sentence from the article and its section,\n   or [general knowledge]. If you can't find support, write\n   NOT IN ARTICLE.\n\nRules: use only the article; don't add references; if the article\nis unclear or inconsistent on something, say so.\nFast answers, if you’re stuck on Claude’s questions:\nBusy readers with no stats background; goal is a 2-minute read; tone\nfriendly but accurate.\nTurn 2: push back (critique and bias)\nNow act as a skeptical reviewer of your own explainer.\n- Flag any sentence that overstates the result (causal language,\n  \"proves,\" or ignoring that this was a pilot).\n- Check the plain-language version against every rule in the style\n  guide and tell me which rule each problem breaks.\n- Check for assumptions about culture, literacy, language, gender,\n  or race, for race-based clinical claims, and for who these\n  results might not apply to.\n- List each problem with a fix, then give me the revised\n  plain-language version.\nTurn 3: citation check\nSuggest three other published studies on this topic a reader could\nlook at next. For each, give authors, year, journal, and PMID, and\nmark each UNVERIFIED.\nThen look up at least one PMID (see Verify and disclose). If Claude declines, that’s the behavior you want; check anything it does give you.\nTune it (switch to a smaller model or Low effort first):\nMake a 6-term glossary for my audience from the article.\n\n\nBuild a literature search strategy\nNo connector needed. Refine the result with a librarian.\nHelp me build a PubMed search string for [topic], using MeSH terms\nand keywords. Explain each block, and tell me what the search might\nmiss.\nPubMed connector (if enabled; not covered in the HIPAA-supported version):\nSearch PubMed for randomized trials since 2020 on interventions to\nreduce burnout in medical residents. Return a table with PMID, first\nauthor, year, sample size, intervention, and main outcome.\nSystematic or scoping review? Follow RAISE and talk to a librarian first: [library evidence synthesis service].\n\n\n\n\nPatient handout, with a bias check\nWrite a one-page patient handout explaining what a hemoglobin A1c test\nis, why it's done, and what the results mean. Write at a 6th-grade\nreading level for adults with no medical background. Use short\nsentences, no jargon, and end with three questions patients could ask\ntheir clinician. Before you write, ask me any questions you need.\nThen:\nNow review this handout for assumptions about culture, literacy,\nlanguage, gender, or race, and for any race-based clinical claims.\nList each with a fix.\nClaude’s reading-level estimate is approximate: check it with a readability tool. Anything patient-facing needs clinical review before use (under YNHHS processes for YNHHS patients).\n\n\nExplain a methods concept\nExplain the difference between intention-to-treat and per-protocol\nanalysis to a first-year medical student. Use one concrete example\nfrom a made-up drug trial. Then give me two quiz questions to check\nmy understanding, with answers hidden at the end.\nFollow up with an iteration, for example: “Make the example about a vaccine trial instead.”\n\n\nProject instructions for a course\nYou're helping me prepare small-group teaching materials for\nsecond-year medical students in renal physiology.\n- Match the learning objectives in the syllabus I've uploaded.\n- Use plain language first, then the technical term.\n- When you make a quiz question, include the answer and a one-line\n  explanation of why the other options are wrong.\n- Ask me before adding topics that aren't in the syllabus.\nKit A works for teaching too: set the audience to your journal club or learners.\n\n\n\n\nKit B: Committee Assistant\nProject instructions:\nYou help me staff a curriculum committee.\n\nSources\n- Use only the files in this Project. If the notes don't say it,\n  write \"NOT IN NOTES.\"\n- Label anything not from the files [general knowledge].\n\nHow to work\n- Ask me up to 3 questions before drafting, then wait for my answers.\n- Refer to people by role, never by name.\n- Every action item needs an owner (role), a due date, and the line\n  from the notes it came from.\n- Flag anything that looks confidential (personnel, student records,\n  appeals) and leave it out of drafts.\n\nPrivacy\n- I won't share patient information here. If I paste anything that\n  looks like a name, MRN, date of birth, or other identifier, stop\n  and remind me not to.\nTurn 1: summary, action items and agenda\nI staff the [committee name]. Before you start, ask me up to 3\nquestions about the audience or what has already been sent. Wait.\n\nThen, using only the files in this Project:\n1. A summary email to the committee, under 200 words.\n2. An action-item table: action | owner (role) | due date | exact\n   line from the notes. Use NOT IN NOTES if the notes don't say.\n3. Next month's agenda that fits in 60 minutes, each item tied to\n   one of the charter's duties.\n4. Anything that should NOT go into a wider email, and why.\nRoles only, no names; don't invent owners, dates, or decisions.\nTurn 2: push back, and rewrite for the full faculty list\nNow act as a careful committee chair reviewing your drafts.\n- Check every action item: is the owner, due date, and quoted line\n  really in the notes? Mark anything you can't trace NOT IN NOTES.\n- Check the agenda against the charter's duties and the 60-minute\n  limit.\n- Flag anything confidential (personnel, student records, appeals)\n  that slipped into a draft.\n- Then rewrite the summary email for the full faculty list, leaving\n  out anything that should stay within the committee.\nTurn 3: check the rules and dates\nWhen do this meeting's action items have to go out, and when is the\nnext meeting? For each rule you use, quote the charter line and show\nyour date math. If the files don't say, write NOT IN NOTES.\nThen open the committee pack and check each quoted charter line yourself.\nCheck: trace 2 action items back to lines in the notes; confirm the confidential item was left out; check that the charter’s deadline for sending action items was applied.\nTune it (switch to a smaller model or Low effort first):\nMake a 6-term glossary for a new committee member from the charter.\nMake a document (if file creation and skills are enabled):\nTurn next month's agenda into a one-page Word document.\n\n\nMeeting notes to email and agenda\nHere are rough notes from a committee meeting. Turn them into\n(1) a short summary email to the committee with action items, owners,\nand due dates, and (2) a draft agenda for next month's meeting.\n\nNotes: curriculum cmte mtg. chair out, vice chair ran it. new\npharm module needs 2 more faculty reviewers by end of month - VC\nasking around. student survey results late, admin coordinator\nfollowing up w/ office. debate re: moving exam week, no decision,\nrevisit next mtg w/ data from registrar. library offering AI\nworkshop, someone should forward to faculty list.\nFor real notes, use roles instead of names and check for anything confidential first.\n\n\n\n\n\nFor everyone: draft my AI-use disclosure\nHelp me write a short AI-use disclosure for [a journal article /\na grant application / a course assignment / a newsletter piece].\nHere's what I did: [tool and model, dates, what I used it for, and\nhow I checked the output].\nDraft (1) one or two sentences for the Acknowledgments or Methods,\nfollowing ICMJE guidance, and (2) a one-line version for a slide or\nhandout. Don't overstate or understate what the AI did, and remind\nme to check the journal's or funder's own policy.\n\n\nFor everyone: follow-ups that work on anything\nBefore you start, ask me up to five questions about what I need.\nShorter. Cut the jargon. Turn the second paragraph into a bulleted list.\nNow act as a skeptical reviewer. What's weak or missing?\n\n\nSix prompting patterns\n\n\n\n\n\n\n\nPattern\nWhat it sounds like\n\n\n\n\nGive context\n“I’m a second-year resident preparing a 10-minute teaching talk on…”\n\n\nSay who it’s for\n“Write this for patients with no medical background, at a 6th-grade reading level.”\n\n\nShow an example\n“Here’s an email I wrote last month. Match its tone and length.”\n\n\nAsk for questions first\n“Before you start, ask me up to five questions about what I need.”\n\n\nIterate\n“Shorter. Cut the jargon. Turn the second paragraph into a bulleted list.”\n\n\nAsk for critique\n“Now act as a skeptical reviewer. What’s weak or missing?”\n\n\n\nTreat the first answer as a draft. Most of the value comes from the second and third turns.\nWhat makes the Kit A Turn 1 prompt more than a basic prompt: it combines a role, a named audience, ask-first with an explicit stop, numbered output, and clear limits (a word cap, the article only, no references). The Project carries the context, so the prompt stays short and reusable. The “Where this came from” table, with NOT IN ARTICLE as an escape hatch, turns checking into a 2-minute Ctrl/Cmd+F task.",
+    "crumbs": [
+      "Part 1: Claude",
+      "Quick reference"
+    ]
+  },
+  {
+    "objectID": "part1-reference.html#verify-disclose",
+    "href": "part1-reference.html#verify-disclose",
+    "title": "Part 1 quick reference",
+    "section": "Verify and disclose",
+    "text": "Verify and disclose\nYou’re responsible for what you use. Check against the source, not against Claude.\n\nQuote check\n\nPick 2 rows from Claude’s “Where this came from” table.\nOpen the source (a text or Markdown copy is easiest) and press Ctrl+F (Windows) or Cmd+F (Mac).\nSearch for 5–8 distinctive words from the quote.\nMark each one: exact, paraphrased, or not there. Check that numbers match and that the section is right.\nWatch for numbers that don’t add up, such as counts that differ between sections. A good explainer points these out instead of smoothing them over.\n\n\n\nCitation (PMID) check\n\nGo to pubmed.ncbi.nlm.nih.gov/&lt;PMID&gt; (for a DOI, doi.org/&lt;DOI&gt;).\nDoes the record exist? Do the title, authors, year and journal match what Claude said?\nDoes the abstract actually support the claim? Is there a retraction notice?\nIf anything doesn’t match, treat the whole reference as made up. A refusal or an honest “UNVERIFIED” label is good behavior; check anyway.\n\n\n\nRed flags\n\n\n\n\n\n\n\nProblem\nWhat it looks like\n\n\n\n\nFabrication\nReferences that don’t exist; a PMID that points to a different paper; quotes not in the source; precise numbers with no source\n\n\nOverstatement\n“Proves,” “breakthrough,” “cure”; causal language for an association; ignoring that a study was a small pilot; applying results to people who weren’t studied\n\n\nBias\nAssumptions about culture, literacy, language, gender or race; race-based clinical claims; not saying who the results might not apply to\n\n\nAgreeing too readily\nClaude goes along with a wrong premise. Ask it to argue the other side.\n\n\nOut of date\nGuidelines and drug information change. Check the current source.\n\n\n\n\n\n\n\n\n\nTipWhat the evidence says\n\n\n\n[2–3 peer-reviewed studies on AI accuracy and citation fabrication, chosen and summarized by a librarian, with the date reviewed.]\n\n\n\n\nDisclose your use\n\nJournals: most follow ICMJE and COPE guidance. AI tools can’t be authors. Disclose how you used them: writing help in the Acknowledgments; data collection, analysis or figures in the Methods. Check each journal’s own policy.\nNIH peer review: NIH prohibits reviewers from using generative AI to analyze or write critiques of applications (NOT-OD-23-149, June 23, 2023).\nNIH applications: NIH won’t consider applications that are substantially developed by AI, or that contain sections substantially developed by AI, to be the applicants’ original ideas (NOT-OD-25-132, July 17, 2025; effective for the September 25, 2025 receipt date onward).\nOther funders: [links to other funder notices].\nKeep a record: save key prompts and outputs, and note the date and model you used. The “Draft my AI-use disclosure” prompt in the prompt library can help.\n\n\n\nSystematic and scoping reviews\nAI use in evidence synthesis should follow the RAISE recommendations (Responsible use of AI in Evidence SynthEsis), which Cochrane, the Campbell Collaboration, JBI and the Collaboration for Environmental Evidence support in a joint position statement (2025). In short: you stay accountable, AI supports reviewers rather than replacing them, and you report its use. Claude’s Research feature is a first scan, not a systematic review. Talk to a librarian first: [library evidence synthesis service].",
+    "crumbs": [
+      "Part 1: Claude",
+      "Quick reference"
+    ]
+  },
+  {
+    "objectID": "part1-reference.html#cowork",
+    "href": "part1-reference.html#cowork",
+    "title": "Part 1 quick reference",
+    "section": "Cowork and Claude in Chrome",
+    "text": "Cowork and Claude in Chrome\nCowork (if enabled) lets Claude carry out multi-step tasks: working with files, creating documents, and acting in a browser. Since October 23, 2026 it has been built into the Claude Enterprise chat experience, if your admin has turned it on, and tasks run in a cloud sandbox.\nClaude in Chrome (if enabled) is Cowork in a side panel of your Chrome browser. It can read pages and take actions on websites. On Enterprise your admin decides whether it’s on and can limit which sites it can use.\n\nNot for high-risk data. Cowork acts, not just answers: it can read, change, send and delete things.\nPrompt injection: web pages and documents can hide instructions that try to make Claude do something you didn’t ask for. Anthropic’s own guidance advises against using Cowork with sensitive information such as healthcare portals and sensitive files.\nHIPAA-supported version: it stays on the older layout. Cowork in the cloud is off, and Claude in Chrome isn’t covered by Anthropic’s agreement. Check with [ITS] what’s available there.\nSafer habits: give it only public or made-up files, watch what it does, review anything before it’s sent, changed or deleted, and never point it at patient portals or electronic health records.\n\nSource: Use Claude Cowork safely.",
+    "crumbs": [
+      "Part 1: Claude",
+      "Quick reference"
+    ]
+  },
+  {
+    "objectID": "part1-reference.html#copilot",
+    "href": "part1-reference.html#copilot",
+    "title": "Part 1 quick reference",
+    "section": "Do it in Copilot or Clarity",
+    "text": "Do it in Copilot or Clarity\nThe habits from class carry over to other tools: give context, name the audience, ask for questions first, push back, and verify. Use this path if you have no Claude account, if your primary appointment is with YNHHS, or if your data belongs in a different tool (see Which tool for which data). Feature names change often, so every name below is [check before use].\n\n\n\n\n\n\n\n\nIn class (Claude)\nMicrosoft Copilot\nClarity\n\n\n\n\nA Project with instructions and files\n[Copilot Notebook or Agent — check the name]\n[Clarity equivalent — check]\n\n\nSet project instructions\n[Notebook or agent instructions — check]\n[check]\n\n\nUpload the kit files\nAdd the files to the notebook or chat [check limits]\n[check]\n\n\nTurn 1, Turn 2, Turn 3 prompts\nSame prompts; replace “this Project” with “these files”\nSame prompts\n\n\nModel and effort menu\n[Copilot model or “think deeper” option — check]\n[model picker — check]\n\n\nMemory and incognito\n[Copilot memory and personalization settings — check]\n[check]\n\n\nQuote check and PMID check\nSame steps\nSame steps\n\n\nPhone app\n[Microsoft 365 Copilot app — check]\n[check]\n\n\n\nNo Project-like feature? Paste the project instructions at the top of a new chat, attach the files, then run the same turns. Save the instructions somewhere you can copy from next time.",
+    "crumbs": [
+      "Part 1: Claude",
+      "Quick reference"
+    ]
+  },
+  {
+    "objectID": "part1-reference.html#next",
+    "href": "part1-reference.html#next",
+    "title": "Part 1 quick reference",
+    "section": "Where to go next",
+    "text": "Where to go next\n\nLibrary help: [literature search consults], [library evidence synthesis service], [office hours and follow-up workshops].\nPart 2: Analyzing research data with Claude Code (Track C Computational Research · Intermediate). Part 1 is recommended, not required.\nClaude Academy: free courses from Anthropic, at https://academy.claude.com.\nClaude Help Center: https://support.claude.com.\nYale AI help: [HSIT / ITS AI help].\nTeaching with AI: [Poorvu Center / ETI AI teaching guidance].\nResearch integrity: [Office of Research Integrity].\nNew AI use in health sciences: [HSARG]. YNHHS: [YNHHS AI governance].\nAIR SIG: [AIR SIG offerings, Tracks B–F]. Share prompts that worked, and mistakes you caught, in [AIR SIG channel / Teams].\nFeedback and corrections: [link to short evaluation form] · About and corrections log.",
+    "crumbs": [
+      "Part 1: Claude",
+      "Quick reference"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Claude & Claude Code at the School of Medicine",
+    "section": "",
+    "text": "Skip to main content\nTwo in-person classes from the Cushing/Whitney Medical Library. Part 1 shows anyone at the School of Medicine how to use the Claude app well and safely. Part 2 teaches researchers to analyze study data with Claude Code. Both classes use only fictional (synthetic) or public files.",
+    "crumbs": [
+      "Home & setup",
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#classes",
+    "href": "index.html#classes",
+    "title": "Claude & Claude Code at the School of Medicine",
+    "section": "The two classes",
+    "text": "The two classes\n\n\nPart 1: Getting started with Claude\nBuild a Claude Project you’ll keep using, then learn to prompt it well and check what it gives you.\nFor: anyone at the School of Medicine. No programming needed. Time: 60 minutes · in person, SHM L 111 · up to 18 people AIR track: Track A Foundations · Beginner\nBy the end of class, you’ll be able to:\n\nIdentify the right tool and settings for your data.\nApply prompting patterns to a real task.\nEvaluate Claude’s answers and citations before you use them.\nCreate a Project you can reuse for your own work.\n\nClass page · Quick reference · Setup\n\n\nPart 2: Analyzing research data with Claude Code\nTake a synthetic clinical trial from raw data to a report with Claude Code in Positron, checking every step yourself.\nFor: researchers, coordinators, analysts, and clinicians who can read a little R or Python. Part 1 helps but isn’t required. Time: 90 minutes · in person, SHM L 111 · up to 18 people AIR track: Track C Computational Research · Intermediate\nBy the end of class, you’ll be able to:\n\nConfigure a Claude Code project that protects raw and restricted data.\nImplement a plan-first workflow to clean and analyze study data.\nEvaluate AI-generated code and results against the analysis plan.\nBuild a reusable command, skill, or hook for a research data task.\n\nClass page · Slides · Cheat sheet · Setup\n\n\nRegister: [registration link] (registration required for both classes).",
+    "crumbs": [
+      "Home & setup",
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#start",
+    "href": "index.html#start",
+    "title": "Claude & Claude Code at the School of Medicine",
+    "section": "Start here",
+    "text": "Start here\n\nPick a class above and register.\nDo the setup before class: Part 1 takes about 10 minutes, Part 2 about 30.\nRead the data rule at the top of this page.\nOn class day, bring your laptop and open the class page. Every prompt has a copy button.\nAfter class, keep the quick reference or cheat sheet handy, and try the recommended links.\n\n\n\n\n\n\n\nTipPrefer slides?\n\n\n\nPart 1 is taught from its class page. Part 2 also has a slide deck: Part 2 slides. In the deck, press F for full screen and Esc for an overview of all slides.",
+    "crumbs": [
+      "Home & setup",
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#setup-part1",
+    "href": "index.html#setup-part1",
+    "title": "Claude & Claude Code at the School of Medicine",
+    "section": "Setup for Part 1",
+    "text": "Setup for Part 1\nAbout 10 minutes. No programming needed.\n\n1. Sign in to Claude\n\nGet your Yale Claude account: [sign-up link]. Do this a few days before class, not on the day.\nIn a web browser, go to claude.ai, sign in with your Yale account, and send a test message such as “Hello.”\nCheck which version you have. If you’re on the HIPAA-supported version, some screens may look different (an older layout) and some features may be off. That’s fine for class. Ask [ITS contact] if you’re not sure.\n\n\n\n2. Choose your practice kit\nIn class you’ll build a Claude Project: a workspace with your own instructions and files. Pick one kit. Both use the same steps.\n\n\n\nKit\nWho it’s for\nWhat’s in it\nDownload\n\n\n\n\nKit A: Article Explainer (default)\nAnyone who reads or explains research articles\nA style guide (fictional) and a text copy of an open-access article (Hickey et al., PLoS Medicine 2025, CC BY)\npart1-kit-a.zip\n\n\nKit B: Committee Assistant\nAdministrative staff who run meetings and committees\nA made-up committee charter and meeting notes\npart1-kit-b.zip\n\n\n\n\nDownload your kit’s zip file and unzip it somewhere easy to find, such as Documents. On Windows, right-click the zip and choose Extract All.\nDon’t upload anything yet. In class, we’ll check your settings first, then build the Project together.\n\n\n\n\n\n\n\nNoteIndividual files, and the Windows .md.txt problem\n\n\n\n\n\nIndividual files (if you’d rather not use a zip):\n\nKit A: explainer-style-guide.md · hickey-2025-telehealth-htn.md\nKit B: committee-pack-synthetic.md\nAbout the kits: README.md\n\nTo save a single file, right-click the link and choose Save link as (or Download linked file). If you just click it, the file may open as text in your browser.\nWindows: your file may save as name.md.txt. That’s fine; Claude can read it. To fix the name, open File Explorer, choose View &gt; Show &gt; File name extensions, and delete .txt from the end.\n\n\n\n\n\n3. Optional: the Claude phone app\nNear the end of Part 1 we’ll open your Project on a phone. This step is optional; you can do everything on your laptop.\n\nInstall Claude from the App Store (iPhone) or Google Play (Android). Check that the publisher is Anthropic.\nSign in with the same Yale account.\nFollow [mobile device policy]. Never photograph patient lists, charts, screens, or whiteboards. If you use the HIPAA-supported version, check with [ITS contact] before using the phone app.",
+    "crumbs": [
+      "Home & setup",
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#setup-part2",
+    "href": "index.html#setup-part2",
+    "title": "Claude & Claude Code at the School of Medicine",
+    "section": "Setup for Part 2",
+    "text": "Setup for Part 2\nAbout 30 minutes. Do the steps in order. You need a Yale Claude account whose seat includes Claude Code: [how to check / who to ask].\n\n1. Positron and R (or Python)\nPositron is a free data science editor from Posit, the makers of RStudio. It works with R and Python and includes Quarto. VS Code (version 1.94 or later) works too, but class is taught in Positron.\n\nInstall Positron: https://positron.posit.co/download.html\nInstall R or Python and the class packages:\n\n\nR (recommended)Python\n\n\nInstall R from https://cloud.r-project.org. Positron finds it automatically. Then, in Positron’s R Console, run:\ninstall.packages(c(\"tidyverse\", \"here\", \"gtsummary\", \"gt\", \"broom\", \"janitor\", \"testthat\"))\n\n\nInstall Python 3.10 or later from https://www.python.org/downloads/. Then, in Positron’s Terminal, run:\npython3 -m pip install pandas numpy statsmodels matplotlib jupyter pytest\nIn class, you’ll swap the project’s CLAUDE.md for the Python version (the project’s README.md explains how).\n\n\n\n\n\n2. git (required)\nIn class, git saves checkpoints of your work so you can undo mistakes.\n\nmacOS: open Terminal and run xcode-select --install. This installs Apple’s Command Line Tools, which include git. If it says they’re already installed, you’re done.\nWindows: install Git for Windows from https://git-scm.com/downloads. Accept the default options.\nSet your name and email. In Positron, open the Terminal tab and run:\n\ngit config --global user.name \"Your Name\"\ngit config --global user.email \"you@yale.edu\"\n\n\n3. The Claude Code extension\n\nIn Positron, open the Extensions view (the four-squares icon in the left sidebar).\nSearch for Claude Code and install the extension published by Anthropic. (Positron gets extensions from the Open VSX registry; VS Code uses its own marketplace.)\nOpen the Claude Code panel and sign in with your Yale Claude account.\n\n\n\n4. The practice project\n\nDownload hypertension-cohort.zip. It holds a synthetic blood-pressure trial, a data dictionary, an analysis plan, REDCap-style exports, and legacy SAS/Stata code.\nUnzip it somewhere easy to find, such as Documents.\nIn Positron, choose File &gt; Open Folder and select the hypertension-cohort folder.\n\n\n\n5. Check that it works\n\nIn the Claude Code panel, send this prompt:\n\nRead the README and CLAUDE.md, then tell me in three sentences what this project is.\n\nType /status in the panel. Check that it shows your Yale account. Note the version number.\n\nIf Claude describes a synthetic hypertension trial, you’re ready.\n\n\nOptional extras\n\n\n\nExtra\nWhy\nHow\n\n\n\n\nStandalone Claude Code CLI\nA few things in class only work in the terminal version. You can also just watch those parts. The extension doesn’t add claude to your Terminal.\n[link to current install instructions] (see the Claude Code docs)\n\n\njq\nTo try the hook example yourself\nmacOS: brew install jq · Linux: sudo apt-get install jq · Windows: [local guidance for Windows users] (the sandbox needs WSL2)\n\n\nClaude phone app\nTo watch and approve your laptop’s Claude Code session from your phone with /rc (Remote Control), if enabled. Remote Control is off in the HIPAA-supported version.\nInstall Claude by Anthropic from the App Store or Google Play and sign in. Follow [mobile device policy].\n\n\n\n\nRead the institutional AI and data policy: [link to institutional AI and data policy].\n\n\n\nTrouble?\n\n\n\n\n\n\n\nProblem\nTry this\n\n\n\n\nCan’t sign in to Claude\nConfirm your sign-up went through: [ITS / help contact]\n\n\nThe Claude Code extension doesn’t show up in Positron’s Extensions view\nSearch for “Claude Code” by Anthropic, update Positron, or try VS Code. In class, pair with a neighbor or watch the instructor’s screen. (Claude Code on the web, at claude.ai/code, is a different product that runs cloud sessions on GitHub repos. It isn’t a stand-in for this class.)\n\n\n“Claude Code isn’t included in your plan”\nYour seat may not include Claude Code: [who to ask]. In class, pair with a neighbor or watch the instructor’s screen.\n\n\ngit isn’t found\nFinish the git step above, then close and reopen Positron.\n\n\nR or Python packages won’t install\nBring the error to class, or come early: [office hours link]",
+    "crumbs": [
+      "Home & setup",
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#access",
+    "href": "index.html#access",
+    "title": "Claude & Claude Code at the School of Medicine",
+    "section": "Access and alternatives",
+    "text": "Access and alternatives\n\n\n\nIf…\nDo this\n\n\n\n\nYou don’t have a working Claude account\nRequest one at [sign-up link] before class. In class, pair up with someone who has one. Don’t create a personal Claude account for anything except the public class files.\n\n\nYour primary appointment is with YNHHS\nUse the chat AI that YNHHS approves: [approved tool, e.g. Microsoft Copilot: link, confirmed by ___ on DATE]. Yale’s Clarity may not be available to you [confirm]. In Part 1, follow the Copilot path with the same kits.\n\n\nYou use the HIPAA-supported version of Claude\nYour screens may look different and some features (such as skills, Cowork, and /rc) may be off. Check with [ITS contact].\n\n\nYou don’t have a smartphone\nNo problem. The phone step in Part 1 is optional, and you’ll do the same work on your laptop.\n\n\nYour Claude seat doesn’t include Claude Code (Part 2)\nPair with a neighbor or watch the instructor’s screen. Ask [who to ask] about access.\n\n\nYou need an accessibility accommodation\nContact [accessibility contact] before class.",
+    "crumbs": [
+      "Home & setup",
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#links",
+    "href": "index.html#links",
+    "title": "Claude & Claude Code at the School of Medicine",
+    "section": "Recommended links",
+    "text": "Recommended links\n\n\n\nLink\nWhat it’s for\n\n\n\n\nClaude Academy\nFree courses from Anthropic\n\n\nClaude Help Center\nHow the Claude app’s features work\n\n\nClaude Code docs\nOfficial Claude Code documentation\n\n\nPositron\nThe editor used in Part 2\n\n\nAI at Yale\nYale’s AI tools and guidance\n\n\nYale data classification\nWhich data can go where\n\n\n\nQuestions? Email justin.demayo@yale.edu or book a consult: [library consult link]. See About for who maintains this site and how to report a problem.",
+    "crumbs": [
+      "Home & setup",
+      "Home"
+    ]
+  },
+  {
+    "objectID": "part1.html",
+    "href": "part1.html",
+    "title": "Part 1: Getting started with Claude",
+    "section": "",
+    "text": "Skip to main content\nA 60-minute, hands-on class in the Claude app. You’ll build a Project (a Claude workspace with its own instructions and files), use it on a real task, check what it gives you, and leave with a tool you can reuse. No programming needed.\nQuick reference · Track A Foundations · Beginner\nGround rule: no patient information or other sensitive data today. Every file in class is public or made up.",
+    "crumbs": [
+      "Part 1: Claude",
+      "Class page"
+    ]
+  },
+  {
+    "objectID": "part1.html#welcome",
+    "href": "part1.html#welcome",
+    "title": "Part 1: Getting started with Claude",
+    "section": "1. Welcome and sign in (0:00 – 0:03)",
+    "text": "1. Welcome and sign in (0:00 – 0:03)\nSign in to Claude in a browser tab now. Open this page: https://cwml.github.io/getting-started-with-claude/part1.html [QR code]\nGreen card up = a new chat is open. Track A Foundations · Beginner\n\nBy the end of this class, you’ll be able to\n\nIdentify the right tool and settings for your data.\nApply prompting patterns to a real task.\nEvaluate Claude’s answers and citations before you use them.\nCreate a Project you can reuse for your own work.\n\n\n\nToday\n\n\n\n\n\n\n\n\nTime\nSegment\nWhat you’ll do\n\n\n\n\n0:00 – 0:03\n1. Welcome and sign in\nSign in; open this page\n\n\n0:03 – 0:05\n2. Why we check\nWatch a reference get checked\n\n\n0:05 – 0:11\n3. Which tool for which data\nDecide what you can share\n\n\n0:11 – 0:15\n4. Lock your settings\nSet memory before uploading anything\n\n\n0:15 – 0:17\n5. Watch: build a Project\nWatch the steps once\n\n\n0:17 – 0:26\n6. Your turn: build your Project\nBuild it from your kit\n\n\n0:26 – 0:28\n7. Watch: anatomy of a strong prompt\nSee what each part does\n\n\n0:28 – 0:37\n8. Your turn: run it, then push back\nRun two prompts; compare\n\n\n0:37 – 0:46\n9. Verify before you use it\nCheck quotes, rules, and a citation\n\n\n0:46 – 0:51\n10. Tune it: model, effort and skills\nTry a smaller dial; see a skill\n\n\n0:51 – 0:55\n11. Take it with you: the phone app\nOpen your Project on a phone (optional)\n\n\n0:55 – 0:57\n12. Cowork and the bridge to Part 2\nHear what comes next\n\n\n0:57 – 1:00\n13. Exit ticket and close\nAnswer four quick questions\n\n\n\n\n\nNo working account?\n\nPair up: be the navigator for a neighbor who has one.\nMain appointment at YNHHS? Follow the [Copilot] path on the class site.\nPersonal Claude account? Only for today’s public class files.\n\nDetails: Access and alternatives · Do it in Copilot or Clarity",
+    "crumbs": [
+      "Part 1: Claude",
+      "Class page"
+    ]
+  },
+  {
+    "objectID": "part1.html#why-check",
+    "href": "part1.html#why-check",
+    "title": "Part 1: Getting started with Claude",
+    "section": "2. Why we check (0:03 – 0:05)",
+    "text": "2. Why we check (0:03 – 0:05)\nEvidence before enthusiasm.\n\nWatch: does this reference exist?\nClaude gave this reference in a chat before class: [pre-run citation]\n\nCopy the PMID.\nPaste it into pubmed.ncbi.nlm.nih.gov.\nDoes the paper exist? Do the title, authors, and year match?\n\nThis is why the last hands-on step today is verification.",
+    "crumbs": [
+      "Part 1: Claude",
+      "Class page"
+    ]
+  },
+  {
+    "objectID": "part1.html#which-tool",
+    "href": "part1.html#which-tool",
+    "title": "Part 1: Getting started with Claude",
+    "section": "3. Which tool for which data (0:05 – 0:11)",
+    "text": "3. Which tool for which data (0:05 – 0:11)\nPick the tool that’s approved for your data before you open any tool.\n\nWhich tool for which data?\n\n\n\n\n\n\n\n\nTool\nWho can use it\nData allowed\n\n\n\n\n[Microsoft Copilot]\n[Yale and YNHHS]\n[classification, confirmed by HSIT on DATE]\n\n\n[Clarity]\n[Yale]\n[classification, confirmed by HSIT on DATE]\n\n\nClaude, standard account\nDepartmental sign-up (today’s class)\n[classification, confirmed by HSIT on DATE]\n\n\nClaude, HIPAA-supported version\nBy request: [request link]\n[classification, confirmed by HSIT on DATE]\n\n\nYNHHS work or data\n[Copilot] is the chat AI approved at YNHHS\n[YNHHS AI governance link, confirmed DATE]\n\n\n\nNo tool is automatically approved for patient information. HIPAA-supported describes a contract and safeguards. It doesn’t approve your project, every feature, or every data set.\nBefore you use any tool for sensitive work:\n\nFollow [Yale data classification / policy link]. Questions go to [HSIT / HIPAA Privacy Office contact].\nA HIPAA-supported version of Claude is available by request: [request link]. Some features in it may be off or look different (it keeps an older layout); check with [ITS].\nRemoving a name isn’t de-identification. Dates, ZIP codes, record numbers, and rare details can identify someone.\nYour IRB protocol and any data use agreement may forbid sending data to outside AI services, even de-identified data.\n\nMore detail, including which features the HIPAA-supported version covers: Quick reference: which tool for which data.\n\n\nCan I share this?\nOK, check first, or no? Show of hands.\n\nAn open-access article\nYour own draft lecture slides\nA clinic note with the patient’s name removed\nAn NIH application you’re reviewing\nA YNHHS discharge-instruction template\nA PDF from a library subscription\n\n\n\n“Not here” is a valid answer\n\nConfidential peer review\nFinal clinical decisions or doses\nAssessed work where course policy forbids AI\nAnything you can’t verify\nTasks where checking takes longer than doing it yourself\n\nSafer habits: describe the situation instead of pasting the record, use made-up examples, and share structure (a template or blank form) rather than content.",
+    "crumbs": [
+      "Part 1: Claude",
+      "Class page"
+    ]
+  },
+  {
+    "objectID": "part1.html#settings",
+    "href": "part1.html#settings",
+    "title": "Part 1: Getting started with Claude",
+    "section": "4. Lock your settings (0:11 – 0:15)",
+    "text": "4. Lock your settings (0:11 – 0:15)\nSet memory before you upload anything.\n\nWatch, then do: memory settings\n\nYour turn. Click your name or initials (lower left) &gt; Settings &gt; Your Claude (older layout: Settings &gt; Memory).\n\nConfirm Include sensitive topics in memory is off.\nFind Memory from chats: keep it on or off?\nFind Search and reference chats: keep it on or off?\n\n\nTo turn memory off for one chat: + &gt; Memory, before your first message.\n\n\nIncognito: what it does and doesn’t do\nThe ghost icon in a new chat starts an incognito chat. It isn’t saved to your history or memory, but:\n\nIt isn’t available inside Projects.\nChats are still kept [30 days by default, or Yale’s setting] and appear in your organization’s exports.\nIn the new combined layout, it can’t create files or run code.\n\nIncognito changes what Claude remembers, not what data is allowed.",
+    "crumbs": [
+      "Part 1: Claude",
+      "Class page"
+    ]
+  },
+  {
+    "objectID": "part1.html#watch-project",
+    "href": "part1.html#watch-project",
+    "title": "Part 1: Getting started with Claude",
+    "section": "5. Watch: build a Project (0:15 – 0:17)",
+    "text": "5. Watch: build a Project (0:15 – 0:17)\nA Project is a workspace for one ongoing piece of work: its own instructions, files, and memory.\n\nFive steps\n\nProjects &gt; + New Project &gt; name it “Article Explainer” (Kit B: “Committee Assistant”).\nSet project instructions &gt; paste the instructions &gt; change one line to fit your work.\nOn the Project page, under Memory, turn Use account memory off.\n+ &gt; add your kit’s files.\nStart a new chat in the Project and send the test prompt.",
+    "crumbs": [
+      "Part 1: Claude",
+      "Class page"
+    ]
+  },
+  {
+    "objectID": "part1.html#build-project",
+    "href": "part1.html#build-project",
+    "title": "Part 1: Getting started with Claude",
+    "section": "6. Your turn: build your Project (0:17 – 0:26)",
+    "text": "6. Your turn: build your Project (0:17 – 0:26)\nUse the kit you chose: Kit A, Article Explainer (default) or Kit B, Committee Assistant (for administrative staff).\n\nYour turn: build it\n\n\nDownload your kit’s files (links below).\nProjects &gt; + New Project, then name it.\nSet project instructions: paste them and change one line to fit your work.\nUnder Memory, turn Use account memory off.\n+ &gt; add your kit’s files.\nStart a new chat in the Project and send the test prompt:\n\nIn 3 bullets: what files do you have, what will you do for me, and\nwhat will you refuse to do?\n\nGreen card when Claude names your files and quotes one of your rules.\n\n\nYour kit\n\nKit A: Article ExplainerKit B: Committee Assistant\n\n\nFor anyone who reads research articles: turn an article into an accurate, plain-language explainer for your audience.\nFiles (or download both: part1-kit-a.zip)\n\nexplainer-style-guide.md: a made-up, one-page style guide with rules Claude must follow.\nhickey-2025-telehealth-htn.md: a text copy of an open-access trial, Hickey MD et al., PLoS Med 2025;22(6):e1004632 (original article), reformatted for teaching under its Creative Commons license. It’s a text file so that searching with Ctrl/Cmd+F works in segment 9.\n\nProject name: Article Explainer\nProject instructions: copy, paste, then change one line (for example, swap “medical-school audiences” for your own audience).\nYou help me turn research articles into accurate, plain-language\nexplainers for medical-school audiences.\n\nSources\n- Use only the files in this Project unless I say otherwise. The\n  article is the source of truth; the style guide sets format and tone.\n- Never invent numbers or quotes. If the article doesn't say it,\n  write \"NOT IN ARTICLE.\"\n- Label anything from outside the article as [general knowledge].\n- Don't add references unless I ask. If I ask, mark each one\n  UNVERIFIED and give its PMID or DOI so I can check it.\n\nHow to work\n- Before a new explainer, ask me up to 3 questions about my audience\n  and purpose, then wait for my answers.\n- Report results with the actual numbers: both groups, the\n  difference, and the 95% confidence interval.\n- Use cautious language: \"was associated with,\" not \"caused,\" and\n  \"early evidence\" for pilot or small studies.\n- Flag anything that needs a clinician's or librarian's review\n  before I share it.\n\nPrivacy\n- I won't share patient information here. If I paste anything that\n  looks like a name, MRN, date of birth, or other identifier, stop\n  and remind me not to.\n\n\nFor administrative staff: turn rough meeting notes into a summary email, an action-item table, and next month’s agenda.\nFile (or download: part1-kit-b.zip)\n\ncommittee-pack-synthetic.md: a made-up committee charter plus rough meeting notes that use roles, not names.\n\nProject name: Committee Assistant\nProject instructions: copy, paste, then change one line (for example, name the kind of committee you staff).\nYou help me staff a curriculum committee.\n\nSources\n- Use only the files in this Project. If the notes don't say it,\n  write \"NOT IN NOTES.\"\n- Label anything not from the files [general knowledge].\n\nHow to work\n- Ask me up to 3 questions before drafting, then wait for my answers.\n- Refer to people by role, never by name.\n- Every action item needs an owner (role), a due date, and the line\n  from the notes it came from.\n- Flag anything that looks confidential (personnel, student records,\n  appeals) and leave it out of drafts.\n\nPrivacy\n- I won't share patient information here. If I paste anything that\n  looks like a name, MRN, date of birth, or other identifier, stop\n  and remind me not to.\n\n\n\nWhy it’s worth keeping: swap in the next open-access article and keep the instructions and style guide, or edit the style guide’s Audiences section for your course, clinic, or newsletter. Kit B becomes a reusable notes-to-minutes tool for non-confidential committees. Library-licensed PDFs may not allow upload: use open-access articles or check [library license guidance]. More: Quick reference: Projects and skills.\nThe privacy line is advice, not enforcement: Claude will usually follow it, but nothing stops you from pasting something you shouldn’t.",
+    "crumbs": [
+      "Part 1: Claude",
+      "Class page"
+    ]
+  },
+  {
+    "objectID": "part1.html#strong-prompt",
+    "href": "part1.html#strong-prompt",
+    "title": "Part 1: Getting started with Claude",
+    "section": "7. Watch: anatomy of a strong prompt (0:26 – 0:28)",
+    "text": "7. Watch: anatomy of a strong prompt (0:26 – 0:28)\nThe Project carries the context, so the prompt can stay short and reusable.\n\nWhat each part does\n\n\n\nPart of Turn 1\nPattern\n\n\n\n\n“I’m a [role]… for [audience]”\nGive context; say who it’s for\n\n\n“Ask me up to 3 questions… Wait.”\nAsk first, with a clear stop\n\n\n“Give me: 1. … 5.”\nNumbered output\n\n\n“150 words or fewer… use only the article”\nConstraints\n\n\n“Where this came from” table\nEvery claim traced to a quote",
+    "crumbs": [
+      "Part 1: Claude",
+      "Class page"
+    ]
+  },
+  {
+    "objectID": "part1.html#run-prompt",
+    "href": "part1.html#run-prompt",
+    "title": "Part 1: Getting started with Claude",
+    "section": "8. Your turn: run it, then push back (0:28 – 0:37)",
+    "text": "8. Your turn: run it, then push back (0:28 – 0:37)\nStart a new chat inside your Project. Use the default model and effort.\n\nYour turn: Turn 1\n\nCopy Turn 1 for your kit below. Fill in the two brackets, send, then answer Claude’s questions.\n\nKit A: Turn 1\nI'm a [your role, e.g., second-year medical student / clinic nurse\neducator / research coordinator / library staff].\nI need an explainer of the article in this Project for\n[audience, e.g., my journal club / adults in a blood-pressure clinic /\nour department newsletter].\n\nBefore you write anything, ask me up to 3 questions about my audience\nand purpose. Wait for my answers.\n\nThen, following the style guide in this Project, give me:\n1. Study at a glance: question, design, who was studied, where, and\n   how many.\n2. The main result with the actual numbers (both groups, the\n   difference, 95% CI), and the main limitation the authors state.\n3. A plain-language version for my audience, 150 words or fewer.\n4. Three questions a careful reader should ask about the methods or\n   conclusions.\n5. A \"Where this came from\" table: for every number or claim in\n   parts 1-3, the exact sentence from the article and its section,\n   or [general knowledge]. If you can't find support, write\n   NOT IN ARTICLE.\n\nRules: use only the article; don't add references; if the article\nis unclear or inconsistent on something, say so.\nStuck on Claude’s questions? Fast answers:\nBusy readers with no stats background; goal is a 2-minute read; tone\nfriendly but accurate.\nKit B: Turn 1\nI staff the [committee name]. Before you start, ask me up to 3\nquestions about the audience or what has already been sent. Wait.\n\nThen, using only the files in this Project:\n1. A summary email to the committee, under 200 words.\n2. An action-item table: action | owner (role) | due date | exact\n   line from the notes. Use NOT IN NOTES if the notes don't say.\n3. Next month's agenda that fits in 60 minutes, each item tied to\n   one of the charter's duties.\n4. Anything that should NOT go into a wider email, and why.\nRoles only, no names; don't invent owners, dates, or decisions.\n\n\nYour turn: push back (Turn 2)\n\nIn the same chat, send Turn 2. Kit B: use the Kit B version below.\n\nKit A: Turn 2\nNow act as a skeptical reviewer of your own explainer.\n- Flag any sentence that overstates the result (causal language,\n  \"proves,\" or ignoring that this was a pilot).\n- Check the plain-language version against every rule in the style\n  guide and tell me which rule each problem breaks.\n- Check for assumptions about culture, literacy, language, gender,\n  or race, for race-based clinical claims, and for who these\n  results might not apply to.\n- List each problem with a fix, then give me the revised\n  plain-language version.\nWith a neighbor: what did the second turn change?\nKit B: Turn 2\nNow act as a careful committee chair reviewing your drafts.\n- Check every action item: is the owner, due date, and quoted line\n  really in the notes? Mark anything you can't trace NOT IN NOTES.\n- Check the agenda against the charter's duties and the 60-minute\n  limit.\n- Flag anything confidential (personnel, student records, appeals)\n  that slipped into a draft.\n- Then rewrite the summary email for the full faculty list, leaving\n  out anything that should stay within the committee.",
+    "crumbs": [
+      "Part 1: Claude",
+      "Class page"
+    ]
+  },
+  {
+    "objectID": "part1.html#verify",
+    "href": "part1.html#verify",
+    "title": "Part 1: Getting started with Claude",
+    "section": "9. Verify before you use it (0:37 – 0:46)",
+    "text": "9. Verify before you use it (0:37 – 0:46)\nCheck against the source, not against Claude. Don’t cut: this segment stays even when class runs late.\n\nYour turn: check quotes and rules\n\nQuote check (2 min). Pick 2 rows of your “Where this came from” table. Open the article in a new browser tab, then search for each quote with Ctrl/Cmd+F. Mark it: exact, paraphrased, or not there.\nRule check (1 min). Is the plain-language version 150 words or fewer? If it’s for patients, does it end with “Talk with your care team”? Does it avoid “proves” and “breakthrough”?\n\nBonus: does the article agree with itself about how many people were in each group?\nKit B: what to check\n\nOpen the committee pack in a new browser tab. Trace 2 action items to the exact line in the notes with Ctrl/Cmd+F. Exact, paraphrased, or not there?\nWas the confidential student appeal left out of the drafts?\nDid Claude invent an owner or due date for the survey follow-up, or write NOT IN NOTES?\nDid it apply the charter’s “action items go out within 3 business days” rule?\n\n\n\nYour turn: check a citation (Turn 3)\n\nSend this, then look up one PMID at pubmed.ncbi.nlm.nih.gov (your phone works). Kit B: your Turn 3 is below.\n\nKit A: Turn 3\nSuggest three other published studies on this topic a reader could\nlook at next. For each, give authors, year, journal, and PMID, and\nmark each UNVERIFIED.\nDoes it exist? Do the title, authors, and year match? If Claude declines or labels it UNVERIFIED, that’s good behavior. Check anyway.\nKit B: Turn 3\nWhen do this meeting's action items have to go out, and when is the\nnext meeting? For each rule you use, quote the charter line and show\nyour date math. If the files don't say, write NOT IN NOTES.\nThen open the committee pack and check each quoted charter line yourself. If you have time, watch someone at your table do the PubMed check: that’s the same skill.\n\n\nYour turn: add one rule\n\nOpen your Project instructions. Add one line based on what you caught today.\n\nFor example:\nQuote the exact sentence for every number, and flag any place the\narticle contradicts itself.\nShow of hands: how many quotes were exact? Any citation that didn’t match?\n\n\nYou’re accountable for what you use\n\nCheck against the source, not against Claude.\nWatch for bias and overstatement: who might this not apply to?\nDisclose your AI use. Follow journal policy (ICMJE, COPE); a template is on the site.\nNIH: applications substantially developed by AI aren’t considered original (NOT-OD-25-132), and generative AI is prohibited in peer review (NOT-OD-23-149).\nSystematic or scoping review? Follow RAISE and talk to a librarian.",
+    "crumbs": [
+      "Part 1: Claude",
+      "Class page"
+    ]
+  },
+  {
+    "objectID": "part1.html#tune",
+    "href": "part1.html#tune",
+    "title": "Part 1: Getting started with Claude",
+    "section": "10. Tune it: model, effort and skills (0:46 – 0:51)",
+    "text": "10. Tune it: model, effort and skills (0:46 – 0:51)\nUse the smallest model and lowest effort that does the job.\n\nWatch: the model menu\nThe model menu next to Send sets the model and the effort.\n\nOn the current models, thinking is always on, so effort is the main dial.\nMore effort costs more time, usage, and energy.\nYour admin may hide some models or effort levels.\n\n\n\nYour turn: same task, smaller dial\n\nIn your Project, switch to a smaller model or Low effort, then send (Kit B: see below):\nMake a 6-term glossary for my audience from the article.\nGood enough? Compare it with what you’d expect from the bigger setting.\n\nKit B:\nMake a 6-term glossary for a new committee member from the charter.\n\n\nThe + and / menus\nIn the chat box, click + or type / to open the menu.\nWhat you’ll see depends on your workspace: things like Memory for this chat, web search, connectors, and skills.\n\nType / in your chat box and look at the list (10 seconds). Don’t pick anything yet.\n\n\n\nWatch: a skill makes a Word handout\nUsing the style guide, turn the plain-language version into a\none-page Word handout.\n\nBuilt-in skills make Word, Excel, PowerPoint, and PDF files (if enabled).\nSee and turn on skills in Customize &gt; Skills.\nA Project is a workspace for one piece of work. A skill is a how-to Claude can use in any chat.\n\nKit B:\nTurn next month's agenda into a one-page Word document.",
+    "crumbs": [
+      "Part 1: Claude",
+      "Class page"
+    ]
+  },
+  {
+    "objectID": "part1.html#phone",
+    "href": "part1.html#phone",
+    "title": "Part 1: Getting started with Claude",
+    "section": "11. Take it with you: the phone app (0:51 – 0:55)",
+    "text": "11. Take it with you: the phone app (0:51 – 0:55)\nYour Project should sync to the Claude phone app. Optional.\n\nWatch, then try: your Project on your phone\n\nOptional. If you installed the app: open Claude &gt; Projects &gt; your Project and ask, by voice or typing:\nIn two sentences, what's the main limitation of this study?\n\nKit B:\nIn two sentences, what's the most urgent action item from these notes, and who owns it?\nCreate Projects on your laptop; they should open on your phone too. No phone? Keep verifying on the laptop.\n\n\nPhone rules\n\nNo photos of patient lists, charts, screens, or whiteboards.\nFollow [mobile device policy].\nThe Code tab is where Part 2’s /rc shows up (if enabled; not available in the HIPAA-supported version). If you don’t see it, your plan or organization may not include it.\n\nResearch (if enabled) on the phone searches only the web and skips connectors (if enabled) such as PubMed, without warning. More: Quick reference: mobile.",
+    "crumbs": [
+      "Part 1: Claude",
+      "Class page"
+    ]
+  },
+  {
+    "objectID": "part1.html#cowork-bridge",
+    "href": "part1.html#cowork-bridge",
+    "title": "Part 1: Getting started with Claude",
+    "section": "12. Cowork and the bridge to Part 2 (0:55 – 0:57)",
+    "text": "12. Cowork and the bridge to Part 2 (0:55 – 0:57)\nFrom chat to tasks, and from the app to Claude Code.\n\nCowork in 30 seconds\n\nSince Oct 23, 2026, Cowork is part of the Enterprise chat experience (if your admin turned it on). It carries out multi-step tasks, not just answers.\nNot for high-risk data. Web pages and files can hide instructions that steer it (“prompt injection”).\nThe HIPAA-supported version keeps the older layout; Cowork may be off or limited there. Check with [ITS].\n\n\n\nFrom today to Part 2\n\n\n\n\n\n\n\nWhat you built today\nWhat it becomes in Part 2 (Claude Code)\n\n\n\n\nProject instructions\nA CLAUDE.md file in your project folder\n\n\nProject files\nFiles in the project folder (for example, docs/)\n\n\nA skill (Word handout)\nA SKILL.md file (your app skills can sync in)\n\n\nMemory settings\nClaude Code’s memory, reviewed with /memory\n\n\nModel menu, effort, phone Code tab\n/model, /effort, /rc (if enabled)\n\n\n+ or / in the chat box\n/ in the Claude Code panel: commands and skills\n\n\n\nPart 2: Analyzing research data with Claude Code (90 min). Class page",
+    "crumbs": [
+      "Part 1: Claude",
+      "Class page"
+    ]
+  },
+  {
+    "objectID": "part1.html#exit",
+    "href": "part1.html#exit",
+    "title": "Part 1: Getting started with Claude",
+    "section": "13. Exit ticket and close (0:57 – 1:00)",
+    "text": "13. Exit ticket and close (0:57 – 1:00)\nFour questions, one per objective. Show of hands or [exit-ticket form link].\n\nExit ticket\n\nA spreadsheet of clinic no-shows with MRNs: which tool? And which setting did you lock today before uploading?\nName one pattern from your prompt that changed the output.\nClaude gives you a PMID. What do you do first?\nOne low-risk recurring task you’ll use your Project for this week.\n\nFeedback: [feedback form link]",
+    "crumbs": [
+      "Part 1: Claude",
+      "Class page"
+    ]
+  },
+  {
+    "objectID": "part1.html#next",
+    "href": "part1.html#next",
+    "title": "Part 1: Getting started with Claude",
+    "section": "Where to go next",
+    "text": "Where to go next\n\nQuick reference: settings, prompts, verification, and more\nClaude Academy: free courses from Anthropic\nPart 2: Analyzing research data with Claude Code\nLibrary help: [literature search consults, evidence synthesis service, office hours]\nQuestions about tools and data: [HSIT / ITS AI help]\n\nOn the Quick reference page:\n\nWhich tool for which data\nSettings and privacy\nProjects and skills how-to\nModel, effort and the Claude Code commands\nThe phone app\nPrompt library\nVerify and disclose\nCowork in brief\nDo it in Copilot or Clarity\nMore places to learn\n\nAlso useful: Claude Help Center · [teaching-center AI guidance] · [Office of Research Integrity] · [HSARG] · [AIR Tracks B–F offerings]",
+    "crumbs": [
+      "Part 1: Claude",
+      "Class page"
+    ]
+  },
+  {
+    "objectID": "part2.html",
+    "href": "part2.html",
+    "title": "Part 2: Analyzing Research Data with Claude Code",
+    "section": "",
+    "text": "Skip to main content\nIn this class you’ll use Claude Code inside Positron (or VS Code) to take a synthetic clinical trial from raw CSV to a Quarto report. You’ll plan first, let Claude write and run the code, check every step yourself, and finish by building a reusable tool for your own research data. Bring a laptop. This page has every prompt, ready to copy. Slides · Cheat sheet\nFor: faculty, postdocs, students, research coordinators, analysts, and clinicians who can read a little R or Python. Part 1 (the Claude app) is helpful but not required.\nBy the end of class, you’ll be able to:",
+    "crumbs": [
+      "Part 2: Claude Code",
+      "Class page"
+    ]
+  },
+  {
+    "objectID": "part2.html#before-class",
+    "href": "part2.html#before-class",
+    "title": "Part 2: Analyzing Research Data with Claude Code",
+    "section": "Before class",
+    "text": "Before class\n\n\n\n\n\n\nImportantSetup (about 30 minutes)\n\n\n\nDo the Part 2 setup steps before class. In short: an enterprise Claude account whose seat includes Claude Code ([how to check / who to ask]), Positron (or VS Code) with the Claude Code extension, the R or Python packages, and git with your name and email set. The Claude mobile app and the standalone CLI are optional.\n\n\n\n\n\n\n\n\nTipUsing Python instead of R?\n\n\n\n\n\nInstall the Python packages listed in the setup steps instead of the R ones. In class, delete CLAUDE.md from the project, rename CLAUDE.python.md to CLAUDE.md, and start a new Claude conversation. Claude will then put scripts in python/. Every exercise below has a Python tab.",
+    "crumbs": [
+      "Part 2: Claude Code",
+      "Class page"
+    ]
+  },
+  {
+    "objectID": "part2.html#download",
+    "href": "part2.html#download",
+    "title": "Part 2: Analyzing Research Data with Claude Code",
+    "section": "Download",
+    "text": "Download\nView slides ⬇ Download slides (HTML)\nIn the slides, press F for full screen and Esc for an overview. To save a PDF, add ?print-pdf to the slides’ web address and print to PDF (works best in Chrome).\nhypertension-cohort.zip is the class project. It contains synthetic data from a fictional two-arm blood-pressure trial at three sites, the data dictionary, a one-page statistical analysis plan (docs/SAP.md), per-site “REDCap exports,” legacy SAS and Stata code, a stand-in data/restricted/ folder, and CLAUDE.md. The R/, output/, and reports/ folders are empty, because you’ll fill them in class.\nUnzip it somewhere easy to find, such as Documents/, and open the hypertension-cohort folder in Positron (File → Open Folder).\n\n\n\n\n\n\nImportantData rule for today\n\n\n\nEvery file in the project is synthetic, including data/restricted/visit_notes.csv, which only stands in for data Claude must never read. Don’t add real patient data to this project. Guardrails like deny rules are safety nets. They don’t make it OK to keep PHI or DUA-restricted data in a folder Claude Code works in. Policy comes first: [Yale data classification / policy link].",
+    "crumbs": [
+      "Part 2: Claude Code",
+      "Class page"
+    ]
+  },
+  {
+    "objectID": "part2.html#agenda",
+    "href": "part2.html#agenda",
+    "title": "Part 2: Analyzing Research Data with Claude Code",
+    "section": "Agenda",
+    "text": "Agenda\n\n\n\n\n\n\n\n\nTime\nSegment\nWhat you’ll do\n\n\n\n\n0:00 – 0:05\n1. Welcome and setup check\nOpen the project and the Claude panel\n\n\n0:05 – 0:17\n2. Data rules and project setup\nCLAUDE.md, a deny rule, git\n\n\n0:17 – 0:42\n3. Plan, build, verify\nHands-on: Exercise 1\n\n\n0:42 – 0:47\nBreak / catch-up\nFinish Exercise 1\n\n\n0:47 – 0:57\n4. Working well\nContext, models, effort, ultracode, Remote Control\n\n\n0:57 – 1:12\n5. Extending Claude Code\nDemo + hands-on: Exercise 2\n\n\n1:12 – 1:20\n6. Messy real-world sources (cut first if late)\nREDCap exports, legacy SAS/Stata\n\n\n1:20 – 1:27\n7. Verification and research integrity\nDemo + discussion\n\n\n1:27 – 1:30\n8. Wrap-up\nTry at home, Q&A",
+    "crumbs": [
+      "Part 2: Claude Code",
+      "Class page"
+    ]
+  },
+  {
+    "objectID": "part2.html#welcome-and-setup-check-000-005",
+    "href": "part2.html#welcome-and-setup-check-000-005",
+    "title": "Part 2: Analyzing Research Data with Claude Code",
+    "section": "1. Welcome and setup check (0:00 – 0:05)",
+    "text": "1. Welcome and setup check (0:00 – 0:05)\n\nOpen the hypertension-cohort folder in Positron.\nOpen the Claude Code panel: click the Spark icon in the editor toolbar (open any file first), or click ✻ Claude Code in the status bar.\nType /status in the panel’s prompt box to confirm your account, version, and model.\n\nPanel or terminal? Today we use the extension panel. It shows Claude’s edits as side-by-side diffs, opens plans as documents you can comment on, and lets you rewind from any message. A few things only work in the terminal CLI (claude in Positron’s Terminal tab). When we use one, we’ll say so.\n\n\n\n\n\n\n\n\n\nExtension panel\nTerminal CLI\n\n\n\n\nCommands\nA subset: type / to see yours\nAll commands\n\n\nReview edits\nSide-by-side diffs; accept or reject each change\nIn the terminal, or in Positron with /ide\n\n\nUndo\nHover a message → rewind button\nEsc Esc or /rewind\n\n\n! shell prefix, tab completion\nNo\nYes",
+    "crumbs": [
+      "Part 2: Claude Code",
+      "Class page"
+    ]
+  },
+  {
+    "objectID": "part2.html#data-rules-and-project-setup-005-017",
+    "href": "part2.html#data-rules-and-project-setup-005-017",
+    "title": "Part 2: Analyzing Research Data with Claude Code",
+    "section": "2. Data rules and project setup (0:05 – 0:17)",
+    "text": "2. Data rules and project setup (0:05 – 0:17)\n\n2a. Claude Code sends what it reads (4 min)\nWhen Claude Code opens a file, runs a command, or sees its output, that content goes to the model. The same rules apply as for uploading a file to the Claude app. In the extension, Claude also sees text you select in the editor and the name of the file you have open.\nTwo patterns that keep sensitive data out:\n\n“Claude writes the code, you run it on the real data.” Give Claude the data dictionary, the SAP, and a few synthetic rows. It writes and tests the pipeline. You run the finished script yourself, in an approved environment that Claude never sees.\n“Synthetic first.” Build and debug everything on synthetic or public data, like today’s cohort. Switch to real data only after the code is reviewed, and only where policy allows.\n\nHabits that help: keep the “print at most 10 rows” rule in CLAUDE.md. Check data in Positron’s Data Explorer rather than asking Claude to print it. Don’t open restricted files in the editor while Claude is running.\nWhat about the HIPAA-supported version? A HIPAA-supported version of Claude is available by request: [request link]. Being HIPAA-supported doesn’t approve your project, every feature, or every data set, and Claude Code may not be covered even there. Anthropic’s documentation says the VS Code extension (the one Positron uses) isn’t covered by its HIPAA agreement, and that Remote Control and cloud sessions are turned off in the HIPAA configuration. [confirm with ITS which Claude Code surfaces are covered]. Follow [Yale data classification / policy link], and send questions to [HSIT / HIPAA Privacy Office contact]. Today’s class uses synthetic data only.\n\n\n2b. CLAUDE.md and the memory hierarchy (4 min)\nOpen CLAUDE.md in the project. Claude reads it at the start of every conversation. It sets the study rules: data/raw/ is read-only, never read data/restricted/, write numbered scripts in R/, log every cleaning change, ask before deciding about missing data or outliers, and print at most 10 rows.\nClaude Code loads instructions from several places. They’re all combined, and none overrides another:\n\n\n\n\n\n\n\n\n\nScope\nLocation\nShared with\nUse for\n\n\n\n\nManaged policy\nSet by IT\nEveryone in the org\nInstitutional rules [if your org deploys one]\n\n\nUser\n~/.claude/CLAUDE.md\nJust you, every project\n“I prefer tidyverse and here::here()”\n\n\nProject\n./CLAUDE.md\nYour team, via git\nToday’s study rules\n\n\nLocal\n./CLAUDE.local.md (gitignored)\nJust you, this project\nPersonal paths and preferences\n\n\nAuto memory\nPanel: / → Customize → Memory\nJust you, this machine\nNotes Claude saves from your corrections\n\n\n\n\nKeep it short: the docs suggest under 200 lines per file. An import line like @docs/SAP.md loads another file every session: fine for a 2-page SAP, not for a 40-page protocol.\nAdvice, not enforcement: CLAUDE.md shapes what Claude tries to do. It doesn’t limit what Claude can do. That’s what permission rules are for (next).\nIf you took Part 1: a Claude Code project folder plays the role of your Claude app Project. The Project’s instructions become CLAUDE.md, and its files become documents in the folder, such as docs/SAP.md.\nIn the panel: / → Customize → Instructions opens your CLAUDE.md files, and Memory turns auto memory on or off and shows what it saved. In the CLI, use /memory. For your own projects, /init drafts a CLAUDE.md. If it isn’t in your panel’s / menu, run it in the CLI.\n\n\n\n2c. Protect the data: Manual mode, a deny rule, and git (4 min)\n1. Choose Manual mode. Click the mode indicator at the bottom of the prompt box and choose Manual, so Claude asks before every edit and most commands. Recent versions (v2.1.283 and later) start in Auto unless your organization turns it off. The extension ignores a project’s default-mode setting, so pick Manual yourself today.\n2. Add a deny rule for data/restricted/. In the panel, type / and choose Customize → Permissions, add a Deny rule, and save it to project settings:\nRead(./data/restricted/**)\nOr create .claude/settings.json in Positron’s Explorer with:\n{\n  \"permissions\": {\n    \"deny\": [\"Read(./data/restricted/**)\"]\n  }\n}\n3. Test it. Start a new conversation, so the new settings are loaded, and send:\nThis is a test of a permission rule. Try to read\ndata/restricted/visit_notes.csv with your Read tool and tell me the\nexact message you get. Don't try any other way to open it.\nYou want a permission-denied message from Claude Code, not just a polite refusal. A refusal means Claude followed CLAUDE.md (advice). A denial means Claude Code blocked the tool (enforcement).\n4. Start version control. Ask Claude, and approve the commands:\nInitialize a git repository here, add a .gitignore that excludes\n.claude/settings.local.json and CLAUDE.local.md, and commit everything\nwith the message \"Part 2 start\".\n\n\n\n\n\n\nWarning\n\n\n\nKnow the gap. Read deny rules cover Claude’s own file tools and shell commands it recognizes, such as cat and head. They don’t cover a program that opens the file itself, like an R script that Claude writes and runs. The sandbox closes that gap at the operating-system level (/sandbox; macOS, Linux, or WSL2). That’s one more reason the real rule is “don’t put restricted data in the project.”",
+    "crumbs": [
+      "Part 2: Claude Code",
+      "Class page"
+    ]
+  },
+  {
+    "objectID": "part2.html#exercise-1",
+    "href": "part2.html#exercise-1",
+    "title": "Part 2: Analyzing Research Data with Claude Code",
+    "section": "3. Plan, build, verify (0:17 – 0:42)",
+    "text": "3. Plan, build, verify (0:17 – 0:42)\nExercise 1 (hands-on, about 25 minutes). You’ll direct Claude through the SAP: plan, clean, check, analyze, report, and commit. Work at your own pace. If you fall behind, finish the cleaning script and the Data Explorer check. The instructor will show the rest on screen.\n\n3a. Plan mode on the SAP (5 min)\nSwitch to plan mode: click the mode indicator and choose Plan, or type /plan in the prompt box. In plan mode, Claude reads and proposes, and doesn’t change files.\nRead docs/SAP.md and data/data_dictionary.csv. Then inspect\ndata/raw/class_cohort.csv: column names, types, value counts, and\nranges, printing no more than 10 rows. Propose a step-by-step plan to\nclean the data and run the primary analysis. List every data problem\nyou find, and every decision you need from me. Don't write code yet.\nThe prompt doesn’t name a language, because CLAUDE.md (or CLAUDE.python.md, renamed) already does.\nThe plan opens as a document. Read it before you approve. You can add inline comments to change anything you disagree with. When you approve, pick the option that keeps you approving each edit, not one that accepts edits automatically, so you still review every change in 3b. How many data problems did Claude find? Planning first protects research integrity: you decide the analysis before you see results.\n\n\n\n\n\n\nTipWhen Claude asks how to handle a problem\n\n\n\n\n\nCLAUDE.md tells Claude to ask you before handling missing data or outliers. For today, follow the SAP:\n\n\n\n\n\n\n\nClaude asks about\nYour answer for today\n\n\n\n\nImplausible values (outside the dictionary’s range)\nSet them to missing and log them. Don’t guess the intended value.\n\n\n-99, 999, blanks, NA\nAll are missing (see the dictionary’s missing_codes column).\n\n\nSex coded Female, Male, f, 1, 2\nRecode to F/M. Assume 1 = M and 2 = F, and log it as a question for the data manager.\n\n\nDuplicate rows\nRemove exact duplicates, then confirm that every patient_id is unique.\n\n\nMixed date formats\nParse each format with its own rule, and stop if any date fails to parse.\n\n\ncuff_size (not in the dictionary)\nKeep it, don’t use it, and log it as a question for the data manager.\n\n\n\n\n\n\n\n\n3b. Claude writes and runs the cleaning script (8 min)\nSwitch back to Manual. Then send:\n\nRPython\n\n\nFollowing the approved plan, write R/01_clean.R. It should read\ndata/raw/class_cohort.csv, fix each problem we agreed on, and write\noutput/cohort_clean.csv and output/cleaning_log.csv, with one row per\nchange: step, variable, patient_id, old value, new value, reason.\nPrint the row count before and after each step. Run it with Rscript\nand fix any errors.\n\n\nFollowing the approved plan, write python/01_clean.py. It should read\ndata/raw/class_cohort.csv, fix each problem we agreed on, and write\noutput/cohort_clean.csv and output/cleaning_log.csv, with one row per\nchange: step, variable, patient_id, old value, new value, reason.\nPrint the row count before and after each step. Run it and fix any\nerrors.\n\n\n\nReview each change. In Manual mode, every edit opens as a side-by-side diff. Accept or reject each change, or tell Claude what to do instead. Approve the Rscript command when Claude asks. Watch the loop: write, run, read the error, fix, rerun.\n\n\n3c. Check it yourself in Positron (3 min)\nDon’t take Claude’s summary on trust. In Positron’s R Console, run:\nclean &lt;- readr::read_csv(\"output/cohort_clean.csv\")\nlog   &lt;- readr::read_csv(\"output/cleaning_log.csv\")\nPython: import pandas as pd; clean = pd.read_csv(\"output/cohort_clean.csv\")\nOpen clean from the Variables pane in the Data Explorer, and check:\n\nThe row count is what you expect after removing duplicates.\nSorting sbp_v1 from high to low shows no 1200. Sorting sbp_v0 from low to high shows no -99.\nsex has only F, M, and missing values.\nEvery fix in log names the patient IDs it changed. Pick one row of the log and find that patient in clean.\n\nThis is what “trace every change” means: the script is the record, the log shows each change, and you’ve checked both.\n\n\n3d. Table 1, the primary model, and a Quarto report (6 min)\nWrite R/02_table1.R (baseline characteristics by arm, as the SAP\ndescribes) and R/03_primary_model.R (the SAP's primary analysis,\nreporting n by arm and the adjusted difference with its 95% CI). Read\noutput/cohort_clean.csv, save results to output/, and run both.\nWrite reports/report.qmd, a Quarto report that presents Table 1, the\nanalysis population, and the primary result. Read every number from\nthe files in output/; don't type numbers into the text. Render it to\nHTML.\nPython: change the script names to python/02_table1.py and python/03_primary_model.py. The report uses Quarto’s Jupyter engine.\nOpen reports/report.html in Positron’s Viewer, next to its source.\nCheck it against the SAP. While the report renders, open R/03_primary_model.R (or python/03_primary_model.py) and R/02_table1.R next to docs/SAP.md, and check:\n\nThe model is sbp_change ~ arm + sbp_v0 + site, with Standard as the reference arm.\nThe analysis population is complete case: patients with both sbp_v0 and sbp_v3.\nThe result is the adjusted difference, Intensive − Standard, with its 95% CI and p-value.\nTable 1 shows missing counts and has no p-values.\n\nAnything that doesn’t match is a finding. Tell Claude what the SAP says, and have it fix the script.\n\n\n\n\n\n\nTipCheck your numbers\n\n\n\n\n\nAfter cleaning: 500 patients (250 per arm). Analyzed (complete case): n = 451 (Standard 222, Intensive 229). Adjusted difference, Intensive − Standard: −11.0 mmHg (95% CI −12.8 to −9.2). If yours differ, compare the n’s first. Most differences come from cleaning choices, such as how the 1/2 sex codes or implausible values were handled, and only choices that affect sbp_v0, sbp_v3, arm, site, or duplicates change the primary result.\n\n\n\n\n\n3e. Safety nets: checkpoints, rewind, and git (3 min)\nCheckpoints let you undo Claude’s file edits within a session. Hover over any of your messages and click the rewind button. Then choose Fork conversation from here, Rewind code to here, or both. Try it on a deliberate mistake:\nIn R/01_clean.R, rename every variable to upper case.\nAccept the change, then hover over that message and choose Rewind code to here.\nCheckpoints have limits. They track only edits made by Claude’s file-editing tools. Files written by your scripts (everything in output/ and reports/report.html) and changes from shell commands aren’t captured. Git is your real safety net:\nCommit the scripts, the outputs, and the report with a descriptive\nmessage. Show me git log --oneline afterward.",
+    "crumbs": [
+      "Part 2: Claude Code",
+      "Class page"
+    ]
+  },
+  {
+    "objectID": "part2.html#break-catch-up-042-047",
+    "href": "part2.html#break-catch-up-042-047",
+    "title": "Part 2: Analyzing Research Data with Claude Code",
+    "section": "Break / catch-up (0:42 – 0:47)",
+    "text": "Break / catch-up (0:42 – 0:47)\nFinish Exercise 1, or at least get R/01_clean.R working and committed. Segment 5 uses it.",
+    "crumbs": [
+      "Part 2: Claude Code",
+      "Class page"
+    ]
+  },
+  {
+    "objectID": "part2.html#working-well-047-057",
+    "href": "part2.html#working-well-047-057",
+    "title": "Part 2: Analyzing Research Data with Claude Code",
+    "section": "4. Working well (0:47 – 0:57)",
+    "text": "4. Working well (0:47 – 0:57)\n\n4a. Context is the budget (2 min)\nEverything Claude reads fills its context window: your messages, CLAUDE.md, every file it opens, and every line of output. As it fills, quality drops. The prompt box has a context indicator that shows how full it is.\n\n\n\n\n\n\n\nWhen…\nDo this\n\n\n\n\nThe session is long, but you’re on the same task\n/compact keep the cleaning decisions and the n at each step\n\n\nYou’re switching to an unrelated task\nStart a new conversation (new tab or New Conversation); CLI: /clear\n\n\nYou want to see what’s using space\nCLI: /context (the panel shows the indicator)\n\n\nYou have a quick side question\n/btw &lt;question&gt;: answered beside the chat, not added to it\n\n\n\nRule of thumb from the docs: if you’ve corrected Claude more than twice on the same issue, start a fresh conversation with a better prompt that includes what you learned.\n\n\n4b. /model and /effort (3 min)\nIn the panel, click the model name at the bottom of the prompt box, or choose Switch model… from the / menu. The picker has an Effort row. In the CLI, use /model and /effort. If you took Part 1, these are the same two dials as the model and effort menu next to Send in the Claude app.\n\n\n\n\n\n\n\nModel alias\nWhat it uses\n\n\n\n\ndefault\nYour account’s default (Opus 5.5 on Enterprise, unless your admin set an organization default)\n\n\nopus / sonnet / haiku\nLatest Opus (hardest reasoning) / Sonnet (everyday work) / Haiku (fast, simple tasks)\n\n\nopusplan\nOpus in plan mode, then Sonnet to carry out the plan. A good fit for today’s plan-first workflow\n\n\nfable / best\nFable, the most capable model, for long, hard tasks (if available; may bill to usage credits)\n\n\n\nEffort controls how much Claude reasons on each step: low, medium, high, xhigh, or max. Opus 5.5, Sonnet 5.5, and Haiku 5.5 default to medium. Higher effort tests more edge cases and verifies more, but uses more tokens and time. max applies to the current session only, and your organization may cap the levels you can choose.\nultrathink, for one turn. Put the word ultrathink anywhere in a prompt to ask for deeper reasoning on that turn only, without changing your effort setting:\nultrathink: The SAP's primary analysis is complete case, and loss to\nfollow-up is higher in older patients. What could that do to the\nestimate, and which planned sensitivity analysis addresses it? Don't\nwrite code.\n\n\n4c. Ultracode and dynamic workflows (if enabled) (3 min)\nA dynamic workflow is a script Claude writes that runs many subagents in the background. Each one checks part of the job, and you get one report at the end.\n\nOne task: start a prompt with the keyword ultracode. The docs say this works when you type it in the IDE extension panel. It doesn’t trigger in claude -p.\nA whole session: /effort ultracode (CLI), or the Ultracode switch under the Effort row in the panel’s model picker. Ultracode is a setting, not an effort level. Claude then plans a workflow for every substantive task until you turn it off (/effort ultracode off).\nBuilt in: /deep-research &lt;question&gt; searches the web from several angles, cross-checks sources, and returns a cited report. It needs web search to be available.\n\nultracode: review every script in R/ against docs/SAP.md, one reviewer\nper script, then adversarially check each finding and report only the\nones that survive. Don't change any files.\n/deep-research What do recent methods papers recommend for missing\n12-month outcomes in hypertension RCTs: complete case, multiple\nimputation, or mixed models?\n\n\n\n\n\n\nWarning\n\n\n\nCost and usage. A workflow can use meaningfully more tokens than the same task in conversation, and it counts toward your plan’s usage limits. With ultracode on, every request costs more and takes longer. Try a small slice first, and turn ultracode off for routine work. Your organization can turn workflows off entirely. Verify every citation /deep-research returns, and keep study data out of research questions.\n\n\n\n\n4d. Check in from your phone: /rc (if enabled) (2 min)\nRemote Control lets you check on your current local session from the Claude mobile app (iOS and Android) or a browser. Start a long render or model run, then check progress or approve permission prompts from another device. If you took Part 1, this is what the phone app’s Code tab is for.\n\nIn the panel, type /rc (or /remote-control). The first time, confirm Enable Remote Control. A Remote Control indicator appears in the prompt box footer. In the panel, the command takes no name and shows no QR code.\nOn your phone, open the Claude app, tap Code, and pick the session (a computer icon with a green dot means it’s online). In a browser, the same session also shows in the Code section of the Claude web app.\nType /rc again to disconnect.\n\n\nClaude keeps running on your computer. Code execution and file access stay local, so your computer has to stay on and the session has to keep running.\nNot the same as Claude Code on the web. Remote Control is your local session, viewed from your phone or a browser. Claude Code on the web runs separate cloud sessions on a GitHub repository (if enabled). It can’t see Positron or today’s project folder, so it isn’t a substitute for this class.\nGovernance: while connected, the session transcript (messages, responses, and tool activity) is stored on Anthropic servers. That’s another reason not to print data values into the session. It requires a claude.ai login, and on Enterprise an Owner must turn it on; custom roles also need the Remote Control permission, and your organization may require enrolled (“trusted”) devices. It isn’t available when your organization has the HIPAA configuration applied, under Zero Data Retention, through Amazon Bedrock, Google Cloud’s Agent Platform, or Microsoft Foundry, or through a custom gateway. Admins can disable it with disableRemoteControl.\nCLI only: claude --remote-control \"name\" starts a session with it on, claude remote-control runs server mode with a QR code, and /mobile shows a QR code for getting the Claude app.\n\nOptional: /fast. Fast mode makes Opus responses up to about 2.5× faster, at a higher price per token. On subscription plans it’s billed to usage credits, and on Enterprise an Owner must enable it. In the panel, use the Toggle fast mode command when your model supports it.",
+    "crumbs": [
+      "Part 2: Claude Code",
+      "Class page"
+    ]
+  },
+  {
+    "objectID": "part2.html#extending-claude-code-057-112",
+    "href": "part2.html#extending-claude-code-057-112",
+    "title": "Part 2: Analyzing Research Data with Claude Code",
+    "section": "5. Extending Claude Code (0:57 – 1:12)",
+    "text": "5. Extending Claude Code (0:57 – 1:12)\n\n5a. Where does each instruction belong? (2 min)\n\n\n\n\n\n\n\n\nPut it in…\nWhen it’s…\nExample in the answer key\n\n\n\n\nCLAUDE.md\nA rule for every session\n“data/raw/ is read-only”\n\n\nA skill you run by name\nA prompt you start yourself\n/check-data &lt;file&gt;\n\n\nA skill Claude loads when relevant\nA procedure Claude should follow whenever it fits\ntable1: journal-ready Table 1\n\n\nA subagent\nWork in a separate context, such as an independent review\nbiostat-reviewer\n\n\nA hook\nSomething that must happen every time\nBlock edits to data/raw/\n\n\nA deny rule\nSomething that must never happen\nRead data/restricted/\n\n\n\n\nSkills are folders with a SKILL.md file: .claude/skills/check-data/SKILL.md becomes /check-data, and text after the name fills $ARGUMENTS. Only a skill’s short description loads at first, and Claude reads the rest when your request matches. Add disable-model-invocation: true to the frontmatter, and the skill runs only when you type its name.\nCustom commands are now skills. Claude Code merged them: an older .claude/commands/check-data.md file still works the same way, but a skill folder is the recommended form.\nIf you took Part 1: a skill you use in the Claude app is the same SKILL.md format. Skills from claude.ai can sync into Claude Code (read-only, if enabled).\nSubagents (.claude/agents/*.md) have their own instructions and tools, and start fresh. To make one, ask Claude to create it, or write the file yourself. (The /agents command now only prints that reminder.) Hooks are scripts Claude Code runs at set points, whatever Claude decides.\n\n\n\n5b. Demo: two skills, a reviewer, and a hook (5 min)\n/check-data. This skill, which runs only when you type it, checks a file against the data dictionary by writing and running a script, so results are computed, not guessed. You’ll build it yourself in Exercise 2, so the demo runs it on redcap_export_site_A.csv.\nThe Table 1 skill. Claude loads this one on its own when your request matches. It encodes your judgment: no p-values for baseline characteristics in an RCT (CONSORT), missing values shown as their own row, and labels from the dictionary. A plain request should load it:\nMake a baseline characteristics table by treatment arm.\nThe skeptical biostatistician. It has read-only tools (Read, Grep, Glob), so it can’t change files:\nUse the biostat-reviewer agent to review R/01_clean.R and\nR/03_primary_model.R against docs/SAP.md.\nPython: review python/01_clean.py and python/03_primary_model.py.\nA hook that protects data/raw/. A PreToolUse hook runs before every edit. If the target is in data/raw/, it blocks the edit and tells Claude to write to output/ instead:\nChange sex from Female to F in data/raw/class_cohort.csv.\n\n\n5c. Exercise 2: build one skill (8 min)\nChoose A or B.\nOption A (everyone): the /check-data skill. In Positron’s Explorer, create the folder .claude/skills/check-data/ and a new file in it named SKILL.md (capital letters). Paste in this text and save:\n---\nname: check-data\ndescription: Data-quality check of a CSV against the data dictionary. Run it yourself with /check-data &lt;path-to-csv&gt;.\ndisable-model-invocation: true\nargument-hint: [path-to-csv]\nallowed-tools: Bash(git status *)\n---\n\n## Current repository state\n!`git status --short`\n\n## Task\nCheck the data file $ARGUMENTS against data/data_dictionary.csv.\n\n1. Write a script in the project's language (see CLAUDE.md), saved in\n   checks/, that reads the file and reports, for each variable: type\n   vs. dictionary, missingness (including the codes in the dictionary's\n   missing_codes column), values outside allowed_values or the plausible\n   range, inconsistent category codes, and duplicate patient_id values.\n2. Run it. Fix errors and rerun.\n3. Summarize problems in a table: variable, issue, n affected, example\n   value. Print at most 10 rows of data.\n4. List variables in the file that are missing from the dictionary, and\n   the reverse.\n5. Don't modify the data file. Ask me before deciding how to fix anything.\nStart a new conversation (or run /reload-skills), type /check-data, and run it on a REDCap export:\n/check-data data/raw/redcap/redcap_export_site_B.csv\nThe !`git status --short` line runs before Claude sees the prompt, and allowed-tools pre-approves it. disable-model-invocation: true means Claude never starts this skill on its own; it runs only when you type /check-data. The skill says “the project’s language,” so it works unchanged for Python. (Older guides put the same text in .claude/commands/check-data.md. That still works, but skills are now the recommended form.)\nOption B: a Table 1 skill. This needs output/cohort_clean.csv from Exercise 1.\nCreate a project skill in .claude/skills/table1/SKILL.md that builds a\njournal-ready Table 1 with gtsummary from output/cohort_clean.csv,\nstratified by the argument I give (default: arm). Rules: use only the\nbaseline variables the SAP lists, no p-values for baseline\ncharacteristics, a separate Missing row, and labels from\ndata/data_dictionary.csv. Report n per group as evidence. Write a\ndescription that makes you load it when I ask for a \"Table 1\" or\n\"baseline characteristics.\" Show me the file before saving.\nPython: replace “with gtsummary” with “with pandas”.\nStart a new conversation and test both ways: a plain request (“Make a Table 1 by site”) and /table1 site.\nIf it doesn’t show up, check that the file is in the right folder, then start a new conversation. If a skill doesn’t load automatically, the description is usually too vague. Put the main use case first, in the words people actually type.\nThen make it yours (2 min). Change one rule so your skill fits a data task you actually do. For example, add a check your own data needs to /check-data (visit dates out of order, IDs that don’t match your study’s format), or add a rule to the Table 1 skill (your target journal’s rounding rules, or a footnote that defines each abbreviation). Save, start a new conversation, and run it again.",
+    "crumbs": [
+      "Part 2: Claude Code",
+      "Class page"
+    ]
+  },
+  {
+    "objectID": "part2.html#messy-sources",
+    "href": "part2.html#messy-sources",
+    "title": "Part 2: Analyzing Research Data with Claude Code",
+    "section": "6. Messy real-world sources (1:12 – 1:20)",
+    "text": "6. Messy real-world sources (1:12 – 1:20)\nCut this segment first if you’re running late. It’s also a good “try at home” exercise.\n\n6a. Harmonize the REDCap exports\ndata/raw/redcap/ has one export per site, and each site exported a little differently. First investigate, without changing anything:\nUse a subagent to compare the three REDCap exports in data/raw/redcap/\nwith each other and with data/data_dictionary.csv: column names, codes\nfor arm and sex, date formats, extra columns, and missing-data codes.\nReturn one comparison table. Don't change any files.\nThen plan and build:\nPlan first: write R/05_harmonize_redcap.R that maps each site's export\nto the dictionary's names and codes, stacks the three sites, and logs\nevery rename and recode to output/harmonize_log.csv. Then compare the\nresult with data/raw/class_cohort.csv by patient_id and report every\ndifference instead of hiding it.\nPython: use python/05_harmonize_redcap.py. For 6b, translate to python/legacy_baseline_table.py with pandas.\n\n\n6b. Explain or translate legacy SAS and Stata code\nExplain what legacy/baseline_table.sas does, step by step, for someone\nwho doesn't know SAS. Then list anything that looks like a bug, or\nthat would give a different answer from the SAP. Don't run or change\nanything.\nTranslate legacy/baseline_table.do into R/legacy_baseline_table.R with\nthe tidyverse, keeping its logic, bugs included. Run it, compare its\nnumbers with the Table 1 from Exercise 1, and explain each difference.",
+    "crumbs": [
+      "Part 2: Claude Code",
+      "Class page"
+    ]
+  },
+  {
+    "objectID": "part2.html#verification",
+    "href": "part2.html#verification",
+    "title": "Part 2: Analyzing Research Data with Claude Code",
+    "section": "7. Verification and research integrity (1:20 – 1:27)",
+    "text": "7. Verification and research integrity (1:20 – 1:27)\nDon’t cut this segment. Claude is a fast collaborator that can be confidently wrong. These checks are how you find out.\n\nGive Claude a check it can run\nThe docs’ first best practice is to give Claude a way to verify its work. Without a check, “looks done” is the only signal, and you’re the only verifier.\n\nRPython\n\n\nUsing the data dictionary and SAP, write testthat tests in\ntests/testthat/test-cleaning.R for output/cohort_clean.csv: unique\npatient_id, 500 rows, no -99 or 999 codes, sbp_v0 to sbp_v3 within\n80-220, and sex coded F/M only. Add tests/run_checks.R to run them.\nShow that the tests FAIL on the raw file, then that they pass on the\ncleaned file. Don't edit the tests to make them pass. Show me the\ntest output as evidence.\n\n\nUsing the data dictionary and SAP, write pytest tests in\ntests/test_cleaning.py for output/cohort_clean.csv: unique patient_id,\n500 rows, no -99 or 999 codes, sbp_v0 to sbp_v3 within 80-220, and sex\ncoded F/M only. Show that the tests FAIL on the raw file, then that\nthey pass on the cleaned file. Don't edit the tests to make them pass.\nShow me the test output as evidence.\n\n\n\nWatch for Claude editing the tests instead of the code, or “fixing” a failure by dropping rows. Read the diff of tests/ as carefully as the diff of your code.\nGet an independent review: the biostat-reviewer subagent against the SAP (Segment 5), /code-review on the current diff (a bundled skill; type / to check it’s in your panel), and a human statistician or co-author, which is required, not optional.\n\n\nWhy cleaning matters\nSame model, same data file, with and without the cleaning script:\n\n\n\n\n\n\n\n\n\n\nn analyzed\nIntensive − Standard (mmHg)\n95% CI\n\n\n\n\nRaw file, no cleaning (sentinel codes read as real BP; duplicates kept)\n462\n−8.4\n−19.6 to 2.9 (not significant)\n\n\nAfter 01_clean\n451\n−11.0\n−12.8 to −9.2\n\n\n\nA few -99 and 999 codes are enough to hide a 10 mmHg treatment effect. Fast code is only as good as the checks around it.\n\n\nGarden of forking paths\nClaude makes it cheap to run “one more model.” If you try 20 specifications and report the one that’s significant, the p-value no longer means what it says. Pre-specify analyses in the SAP, label sensitivity and post hoc analyses as such, and use plan mode to fix decisions before you see results. Watch for scope creep too: Claude “helpfully” changing a decision the SAP already fixed.\n\n\nDisclosure and the audit trail\n\nKeep the record: commit .claude/ (settings, skills, agents, hooks) with the analysis. Keep settings.local.json and CLAUDE.local.md out of git. Save key sessions with /export, and note the Claude Code version and model (/status).\nDisclose specifically, for example: “Analysis code was drafted with Claude Code (version, model). All code was reviewed by the authors, tested against pre-specified checks, and rerun from raw data.” Follow each journal’s and funder’s policy: [link to library guidance on AI disclosure].\n\nDiscuss (2 min): What would you need to see before you trusted an AI-assisted analysis in a paper you were reviewing?",
+    "crumbs": [
+      "Part 2: Claude Code",
+      "Class page"
+    ]
+  },
+  {
+    "objectID": "part2.html#wrap-up-127-130",
+    "href": "part2.html#wrap-up-127-130",
+    "title": "Part 2: Analyzing Research Data with Claude Code",
+    "section": "8. Wrap-up (1:27 – 1:30)",
+    "text": "8. Wrap-up (1:27 – 1:30)\n\nProtect first. Set up CLAUDE.md, a deny rule, Manual mode, and git before Claude touches the data. Remember: Claude Code sends what it reads.\nPlan, build, verify. Plan against the SAP. Let Claude write and run the code. Check it yourself, and commit.\nEncode your judgment once. Skills, subagents, and hooks turn good prompts into shared, versioned team tools.\n\n\nTry at home\n\nWorktrees (CLI): claude --worktree sensitivity-mi starts a separate git checkout, so you can build the SAP’s multiple-imputation sensitivity analysis without touching the main analysis.\nHeadless runs (CLI): claude -p \"Explain legacy/baseline_table.sas and list likely bugs\" --allowedTools \"Read\" runs once and prints the result, for scripts and batch jobs. Script deterministic steps (Rscript, quarto render) without AI.\nThe sandbox: turn on /sandbox (macOS, Linux, or WSL2) and repeat the restricted-data test with an R script.\nMCP servers and connectors (if enabled): run /mcp to see what your organization has connected, such as PubMed. Use only approved servers: [contact / policy link].\nA real public dataset: repeat today’s workflow on NHANES blood-pressure files (for example, the blood pressure and demographics files from one cycle). Plan first, write a CLAUDE.md, and note that NHANES needs its survey weights. Avoid controlled-access data (MIMIC, dbGaP, UK Biobank), whose DUAs restrict external AI services.",
+    "crumbs": [
+      "Part 2: Claude Code",
+      "Class page"
+    ]
+  },
+  {
+    "objectID": "part2.html#finished-files",
+    "href": "part2.html#finished-files",
+    "title": "Part 2: Analyzing Research Data with Claude Code",
+    "section": "Finished files",
+    "text": "Finished files\n\nExercise 1 answer key and fallback: instructor/solutions/R/ and instructor/solutions/python/ (01_clean … 04_figure and report.qmd). The expected results and every planted problem are in instructor/README.md (in the repo, not on the site).\nSegment 5 answer key: instructor/part2-answer-key/: .claude/settings.json, skills/check-data/, skills/table1/, agents/biostat-reviewer.md, hooks/, rules/, the tests/, and CLAUDE-additions.md. These files are R only. For Python, ask Claude to convert them, for example: “Convert .claude/skills/table1/SKILL.md and tests/ to Python with pandas and pytest.”",
+    "crumbs": [
+      "Part 2: Claude Code",
+      "Class page"
+    ]
+  },
+  {
+    "objectID": "part2.html#resources",
+    "href": "part2.html#resources",
+    "title": "Part 2: Analyzing Research Data with Claude Code",
+    "section": "Resources",
+    "text": "Resources\n\nClaude Code docs: https://code.claude.com/docs. Start with Use Claude Code in VS Code (it also applies to Positron), Best practices, Model configuration, Skills, Subagents, Hooks, and Permissions.\nCheat sheet: what works in the panel vs. the CLI, models and effort, key files\nPositron documentation: https://positron.posit.co\nClaude Academy (free courses from Anthropic): https://academy.claude.com\nInstitutional AI and data policy: [link]\nLibrary services: [data services consults, office hours, follow-up workshops]\nFeedback on today’s class: [link to short evaluation form]",
+    "crumbs": [
+      "Part 2: Claude Code",
+      "Class page"
+    ]
+  },
+  {
+    "objectID": "cheatsheet.html",
+    "href": "cheatsheet.html",
+    "title": "Claude Code Cheat Sheet",
+    "section": "",
+    "text": "Skip to main content\nFor Part 2. Last checked against the docs (code.claude.com/docs): October 2026, Claude Code v2.1.28x. Claude Code changes often, so type / in the panel to see what your version has.\nWhere column: Both = the extension panel and the terminal CLI. Panel: … = how to do it in the panel when the typed command is CLI-only. CLI = terminal only (run claude in Positron’s Terminal; this needs the standalone CLI, because the extension doesn’t put claude on your PATH). † = varies by version or platform; check in Positron before relying on it. (if enabled) = depends on your organization’s admin settings.",
+    "crumbs": [
+      "Part 2: Claude Code",
+      "Cheat sheet"
+    ]
+  },
+  {
+    "objectID": "cheatsheet.html#open-claude-code",
+    "href": "cheatsheet.html#open-claude-code",
+    "title": "Claude Code Cheat Sheet",
+    "section": "Open Claude Code",
+    "text": "Open Claude Code\n\n\n\n\n\n\n\n\n\nExtension panel (main way in class)\nTerminal CLI\n\n\n\n\nStart\nSpark icon in the editor toolbar, or ✻ Claude Code in the status bar\nclaude in the Terminal tab\n\n\nInstall\nExtensions view → “Claude Code” by Anthropic (Positron: Open VSX †)\nStandalone CLI install\n\n\nCommands\nA subset: type / to see yours\nAll\n\n\nEdits\nSide-by-side diff; accept or reject each change\nIn the terminal, or a Positron diff via /ide",
+    "crumbs": [
+      "Part 2: Claude Code",
+      "Cheat sheet"
+    ]
+  },
+  {
+    "objectID": "cheatsheet.html#keys-and-prefixes",
+    "href": "cheatsheet.html#keys-and-prefixes",
+    "title": "Claude Code Cheat Sheet",
+    "section": "Keys and prefixes",
+    "text": "Keys and prefixes\n\n\n\n\n\n\n\n\nKey\nWhat it does\nWhere\n\n\n\n\n/\nCommand menu: built-in commands, skills, Customize (Permissions, Hooks, Memory, Instructions)\nBoth (menu: panel)\n\n\n@file or @folder/\nPoint Claude at a file or folder (fuzzy match)\nBoth\n\n\nOption+K / Alt+K\nInsert an @-mention of the selected lines, e.g. @R/01_clean.R#5-10\nPanel\n\n\nMode indicator / Shift+Tab\nSwitch permission modes: Manual, Edit automatically, Plan, Auto (if enabled)\nPanel / CLI\n\n\nHover a message → rewind\nFork the conversation, rewind code, or both\nPanel (CLI: Esc Esc)\n\n\nEsc or Stop\nStop Claude’s current turn; work so far is kept. Background agents keep running\nBoth (panel: v2.1.286 or later)\n\n\nShift+Enter\nNew line in the prompt\nBoth\n\n\n! at start\nRun a shell command yourself; output goes into context\nCLI\n\n\nTab\nTab completion\nCLI",
+    "crumbs": [
+      "Part 2: Claude Code",
+      "Cheat sheet"
+    ]
+  },
+  {
+    "objectID": "cheatsheet.html#commands-youll-use-most",
+    "href": "cheatsheet.html#commands-youll-use-most",
+    "title": "Claude Code Cheat Sheet",
+    "section": "Commands you’ll use most",
+    "text": "Commands you’ll use most\n\n\n\n\n\n\n\n\nCommand\nWhat it does\nWhere\n\n\n\n\n/status\nVersion, account, model\nBoth\n\n\n/plan [task]\nPlan mode: read and propose, no edits\nBoth (panel: also the mode indicator)\n\n\n/compact [focus]\nSummarize the conversation to free space\nBoth\n\n\n/clear\nStart fresh; CLAUDE.md still loads\nCLI. Panel: new conversation/tab\n\n\n/context\nSee what’s filling the context window\nCLI. Panel: context indicator\n\n\n/rewind\nRoll back code and/or conversation\nCLI. Panel: hover → rewind\n\n\n/btw &lt;question&gt;\nSide question that isn’t added to the conversation\nBoth\n\n\n/memory\nEdit CLAUDE.md; review auto memory\nCLI. Panel: / → Customize → Instructions / Memory\n\n\n/permissions\nView and edit allow/ask/deny rules\nCLI. Panel: / → Customize → Permissions\n\n\n/hooks\nView configured hooks\nCLI. Panel: / → Customize → Hooks\n\n\n/sandbox\nOS-level limits on shell commands (macOS, Linux, WSL2)\nBoth\n\n\n/skills, /reload-skills\nList skills / pick up skills added mid-session (needed if .claude/skills/ didn’t exist when the session started)\nBoth / †\n\n\n/agents\nOnly prints a reminder now. To make a subagent, ask Claude to create one, or add a file to .claude/agents/\n†\n\n\n/tasks, /mcp\nBackground work and subagents / connected servers (if enabled)\nBoth\n\n\n/usage\nPlan usage and limits\nBoth\n\n\n/export [file]\nSave the conversation as text\nBoth\n\n\n/init\nDraft a CLAUDE.md for a project\n† (CLI if not in your panel)\n\n\n/doctor\nSetup checkup: diagnoses install, settings, extension, and CLAUDE.md problems and proposes fixes (alias /checkup; a bundled skill)\n†\n\n\n/config\nSettings: theme, model, output style, and more. /config key=value sets one directly\nCLI. The panel doesn’t open it: type / and pick General config…, or edit a settings file\n\n\n/diff, /code-review\nReview uncommitted changes / review the diff for bugs\n†\n\n\n/resume\nPick up an earlier conversation\nCLI. Panel: Session history button\n\n\n/remote-control, /rc\nView and steer this local session from the Claude app’s Code tab or a browser (if enabled; off in the HIPAA configuration). Not the same as Claude Code on the web, which runs cloud sessions on a GitHub repo. CLI /mobile shows a QR code for the app\nBoth (panel: no name, no QR code)",
+    "crumbs": [
+      "Part 2: Claude Code",
+      "Cheat sheet"
+    ]
+  },
+  {
+    "objectID": "cheatsheet.html#models-effort-and-workflows",
+    "href": "cheatsheet.html#models-effort-and-workflows",
+    "title": "Claude Code Cheat Sheet",
+    "section": "Models, effort, and workflows",
+    "text": "Models, effort, and workflows\n\n\n\n\n\n\n\n\nControl\nWhat it does\nWhere\n\n\n\n\n/model &lt;alias&gt;\ndefault, opus, sonnet, haiku, fable / best (if available). Saved as your default\nCLI. Panel: click the model name at the bottom of the prompt box\n\n\nopusplan\nOpus in plan mode, then Sonnet for execution\nBoth (pick it as the model)\n\n\n/effort &lt;level&gt;\nlow, medium, high, xhigh, max. Opus 5.5, Sonnet 5.5, and Haiku 5.5 default to medium. max is session-only, and your org may cap levels\nCLI. Panel: Effort row in the model picker\n\n\nultrathink\nType it in a prompt for deeper reasoning on that turn only\nBoth †\n\n\nultracode\nType it in a prompt to run that task as a dynamic workflow (if enabled). Doesn’t trigger in claude -p\nBoth\n\n\n/effort ultracode\nWorkflows for every substantive task this session; /effort ultracode off to stop (if enabled)\nCLI. Panel: Ultracode switch under Effort †\n\n\n/deep-research &lt;question&gt;\nBundled workflow: web search, cross-checked sources, cited report (if enabled)\nBoth †\n\n\n/workflows\nWatch, pause, or stop workflow runs\nCLI †\n\n\n/fast\nFaster Opus at a higher price per token; usage credits on subscription plans (if enabled)\nCLI. Panel: Toggle fast mode\n\n\n\nWorkflows and ultracode can use meaningfully more tokens and count toward your usage limits. Try a small slice first. Remote Control stores the session transcript on Anthropic servers while connected, so don’t print data values into the session.",
+    "crumbs": [
+      "Part 2: Claude Code",
+      "Cheat sheet"
+    ]
+  },
+  {
+    "objectID": "cheatsheet.html#key-files",
+    "href": "cheatsheet.html#key-files",
+    "title": "Claude Code Cheat Sheet",
+    "section": "Key files",
+    "text": "Key files\n\n\n\n\n\n\n\n\nFile\nWhat it’s for\nShared?\n\n\n\n\nCLAUDE.md\nProject rules Claude reads every session. Keep it under ~200 lines.\nTeam (commit it)\n\n\nCLAUDE.local.md / ~/.claude/CLAUDE.md\nYour notes for this project / for every project\nJust you\n\n\n.claude/settings.json\nPermissions, sandbox, hooks\nTeam (commit it)\n\n\n.claude/settings.local.json\nYour approvals and overrides\nJust you (gitignored)\n\n\n.claude/skills/&lt;name&gt;/SKILL.md\nSkill → /&lt;name&gt;, or loaded when the description matches. Add disable-model-invocation: true to run it only when you type it\nTeam (~/.claude/skills/: just you)\n\n\n.claude/commands/&lt;name&gt;.md\nOlder form of a skill (custom commands were merged into skills). Still works; use skills/ for new ones\nTeam\n\n\n.claude/agents/&lt;name&gt;.md\nSubagent with its own instructions and tools\nTeam (~/.claude/agents/: just you)\n\n\n.mcp.json\nProject MCP servers, only if approved (if enabled)\nTeam\n\n\n\nA deny rule at any level wins, and managed settings from your organization override everything. The panel’s starting permission mode comes from your user settings (claudeCode.initialPermissionMode), not the project’s .claude/settings.json.",
+    "crumbs": [
+      "Part 2: Claude Code",
+      "Cheat sheet"
+    ]
+  },
+  {
+    "objectID": "cheatsheet.html#cli-only",
+    "href": "cheatsheet.html#cli-only",
+    "title": "Claude Code Cheat Sheet",
+    "section": "CLI only",
+    "text": "CLI only\n\n\n\n\n\n\n\nCommand\nWhat it does\n\n\n\n\nclaude -c / claude --resume\nContinue the last conversation / pick one, including panel conversations\n\n\nclaude --model &lt;alias&gt; / --effort &lt;level&gt;\nChoose the model or effort for this session (--effort ultracode also sets xhigh)\n\n\nclaude -p \"task\" --allowedTools \"Read\"\nRun once without the interactive interface, pre-approving only listed tools\n\n\nclaude --worktree &lt;name&gt;\nStart in a separate git checkout\n\n\nclaude --remote-control \"name\" / claude remote-control\nStart with Remote Control on / server mode with a QR code (if enabled)\n\n\nclaude update / claude -v\nUpdate / print the version (record it in your lab notebook)",
+    "crumbs": [
+      "Part 2: Claude Code",
+      "Cheat sheet"
+    ]
+  },
+  {
+    "objectID": "cheatsheet.html#which-feature-should-i-use",
+    "href": "cheatsheet.html#which-feature-should-i-use",
+    "title": "Claude Code Cheat Sheet",
+    "section": "Which feature should I use?",
+    "text": "Which feature should I use?\n\n\n\n\n\n\n\n\nWhen this happens…\nAdd…\nExample\n\n\n\n\nClaude gets a convention wrong twice\nA line in CLAUDE.md\n“Use here::here() for paths”\n\n\nYou keep typing the same starting prompt\nA skill you run by name (disable-model-invocation: true)\n/check-data\n\n\nYou paste the same multi-step procedure again\nA skill Claude loads when relevant\ntable1\n\n\nYou want an independent second opinion\nA subagent (ask Claude to create one)\nbiostat-reviewer\n\n\nSomething must happen every time\nA hook\nBlock edits to data/raw/\n\n\nClaude must never do something\nA deny rule (+ the sandbox)\nDeny reads of data/restricted/\n\n\nA hard problem needs more thought\nultrathink, or a higher /effort\nMissing-data assumptions\n\n\nA big task needs many independent checks\nultracode (if enabled)\nReview every script against the SAP\n\n\n\nRemember: CLAUDE.md and skills are advice. Permissions, the sandbox, and hooks are enforced. Claude Code sends what it reads, so never put real patient data in a project folder because a guardrail is on. A HIPAA-supported version of Claude is available by request ([request link]), but that doesn’t approve your project, and the Positron/VS Code extension may not be covered [confirm with ITS which Claude Code surfaces are covered]. Follow [Yale data classification / policy link].",
+    "crumbs": [
+      "Part 2: Claude Code",
+      "Cheat sheet"
+    ]
+  }
+]

@@ -223,4 +223,4 @@ If Claude describes a synthetic hypertension trial, you're ready.
 | [AI at Yale](https://ai.yale.edu) | Yale's AI tools and guidance |
 | [Yale data classification](https://cybersecurity.yale.edu/data-classification) | Which data can go where |
 
-**Questions?** Email `[owner email]` or book a consult: `[library consult link]`. See [About](about.qmd) for who maintains this site and how to report a problem.
+**Questions?** Email [justin.demayo@yale.edu](mailto:justin.demayo@yale.edu?subject=Claude%20classes%20feedback) or book a consult: `[library consult link]`. See [About](about.qmd) for who maintains this site and how to report a problem.

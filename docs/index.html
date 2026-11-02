@@ -1,0 +1,1252 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Claude &amp; Claude Code at the School of Medicine</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./index.html#setup-part1" rel="next">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ac0a192a280d01e3ff19409a8090d491.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-bb70dbc775e3eaf74af9c6cd576cde24.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ac0a192a280d01e3ff19409a8090d491.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-b415a55bb24f02d078fdecd4dbf90cdc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-e302654dfcd61cd30f39cb9489bea35f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-b415a55bb24f02d078fdecd4dbf90cdc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const queryPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkModeDefault = queryPrefersDark.matches;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    queryPrefersDark.addEventListener("change", e => {
+      if(window.localStorage.getItem("quarto-color-scheme") !== null)
+        return;
+      const alternate = e.matches
+      toggleColorMode(alternate);
+      localAlternateSentinel = e.matches ? 'alternate' : 'default'; // this is used alongside local storage!
+      toggleGiscusIfUsed(alternate, darkModeDefault);
+    });
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-xl " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Claude &amp; Claude Code at the School of Medicine</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://library.medicine.yale.edu/"> 
+<span class="menu-text">Cushing/Whitney Medical Library</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./index.html" aria-current="page"> 
+<span class="menu-text">Home &amp; setup</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./part1.html"> 
+<span class="menu-text">Part 1: Claude</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./part2.html"> 
+<span class="menu-text">Part 2: Claude Code</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="mailto:justin.demayo@yale.edu?subject=Claude%20classes%20feedback"> <i class="bi bi-envelope" role="img">
+</i> 
+<span class="menu-text">Feedback</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/CWML/getting-started-with-claude"> <i class="bi bi-github" role="img" aria-label="Course materials on GitHub">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Home</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Home</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html#setup-part1" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Setup for Part 1</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html#setup-part2" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Setup for Part 2</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html#access" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Access and alternatives</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html#links" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Recommended links</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#classes" id="toc-classes" class="nav-link active" data-scroll-target="#classes">The two classes</a></li>
+  <li><a href="#start" id="toc-start" class="nav-link" data-scroll-target="#start">Start here</a></li>
+  <li><a href="#setup-part1" id="toc-setup-part1" class="nav-link" data-scroll-target="#setup-part1">Setup for Part 1</a>
+  <ul class="collapse">
+  <li><a href="#sign-in-to-claude" id="toc-sign-in-to-claude" class="nav-link" data-scroll-target="#sign-in-to-claude">1. Sign in to Claude</a></li>
+  <li><a href="#choose-your-practice-kit" id="toc-choose-your-practice-kit" class="nav-link" data-scroll-target="#choose-your-practice-kit">2. Choose your practice kit</a></li>
+  <li><a href="#optional-the-claude-phone-app" id="toc-optional-the-claude-phone-app" class="nav-link" data-scroll-target="#optional-the-claude-phone-app">3. Optional: the Claude phone app</a></li>
+  </ul></li>
+  <li><a href="#setup-part2" id="toc-setup-part2" class="nav-link" data-scroll-target="#setup-part2">Setup for Part 2</a>
+  <ul class="collapse">
+  <li><a href="#positron-and-r-or-python" id="toc-positron-and-r-or-python" class="nav-link" data-scroll-target="#positron-and-r-or-python">1. Positron and R (or Python)</a></li>
+  <li><a href="#git-required" id="toc-git-required" class="nav-link" data-scroll-target="#git-required">2. git (required)</a></li>
+  <li><a href="#the-claude-code-extension" id="toc-the-claude-code-extension" class="nav-link" data-scroll-target="#the-claude-code-extension">3. The Claude Code extension</a></li>
+  <li><a href="#the-practice-project" id="toc-the-practice-project" class="nav-link" data-scroll-target="#the-practice-project">4. The practice project</a></li>
+  <li><a href="#check-that-it-works" id="toc-check-that-it-works" class="nav-link" data-scroll-target="#check-that-it-works">5. Check that it works</a></li>
+  <li><a href="#optional-extras" id="toc-optional-extras" class="nav-link" data-scroll-target="#optional-extras">Optional extras</a></li>
+  <li><a href="#trouble" id="toc-trouble" class="nav-link" data-scroll-target="#trouble">Trouble?</a></li>
+  </ul></li>
+  <li><a href="#access" id="toc-access" class="nav-link" data-scroll-target="#access">Access and alternatives</a></li>
+  <li><a href="#links" id="toc-links" class="nav-link" data-scroll-target="#links">Recommended links</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/CWML/getting-started-with-claude/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<a class="cwml-skip-link" href="#quarto-document-content">Skip to main content</a>
+<script>document.body.prepend(document.querySelector(".cwml-skip-link"));</script>
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Claude &amp; Claude Code at the School of Medicine</h1>
+<p class="subtitle lead">Hands-on library classes for researchers, clinicians, staff, and students</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Two in-person classes from the Cushing/Whitney Medical Library. <strong>Part 1</strong> shows anyone at the School of Medicine how to use the Claude app well and safely. <strong>Part 2</strong> teaches researchers to analyze study data with Claude Code. Both classes use only fictional (synthetic) or public files.</p>
+<div class="callout callout-style-default callout-important callout-titled" title="Data rule: no patient data, ever">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Data rule: no patient data, ever
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>In class, use <strong>only the class files and public information</strong>. Never use patient data or other sensitive information in either class.</li>
+<li><strong>A HIPAA-supported version of Claude is available by request:</strong> <code>[request link]</code>. Being HIPAA-supported doesn’t approve your project, every feature, or every data set.</li>
+<li>Before you use Claude with real work data, follow <code>[Yale data classification / policy link]</code>. Questions go to <code>[HSIT / HIPAA Privacy Office contact]</code>.</li>
+</ul>
+</div>
+</div>
+<section id="classes" class="level2">
+<h2 class="anchored" data-anchor-id="classes">The two classes</h2>
+<div class="grid">
+<section id="part-1-getting-started-with-claude" class="level3 g-col-12 g-col-md-6 card card-body">
+<h3 class="anchored" data-anchor-id="part-1-getting-started-with-claude">Part 1: Getting started with Claude</h3>
+<p>Build a Claude Project you’ll keep using, then learn to prompt it well and check what it gives you.</p>
+<p><strong>For:</strong> anyone at the School of Medicine. No programming needed.<br> <strong>Time:</strong> 60 minutes · in person, SHM L 111 · up to 18 people<br> <strong>AIR track:</strong> Track A Foundations · Beginner</p>
+<p><strong>By the end of class, you’ll be able to:</strong></p>
+<ol type="1">
+<li>Identify the right tool and settings for your data.</li>
+<li>Apply prompting patterns to a real task.</li>
+<li>Evaluate Claude’s answers and citations before you use them.</li>
+<li>Create a Project you can reuse for your own work.</li>
+</ol>
+<p><a href="./part1.html">Class page</a> · <a href="./part1-reference.html">Quick reference</a> · <a href="#setup-part1">Setup</a></p>
+</section>
+<section id="part-2-analyzing-research-data-with-claude-code" class="level3 g-col-12 g-col-md-6 card card-body">
+<h3 class="anchored" data-anchor-id="part-2-analyzing-research-data-with-claude-code">Part 2: Analyzing research data with Claude Code</h3>
+<p>Take a synthetic clinical trial from raw data to a report with Claude Code in Positron, checking every step yourself.</p>
+<p><strong>For:</strong> researchers, coordinators, analysts, and clinicians who can read a little R or Python. Part 1 helps but isn’t required.<br> <strong>Time:</strong> 90 minutes · in person, SHM L 111 · up to 18 people<br> <strong>AIR track:</strong> Track C Computational Research · Intermediate</p>
+<p><strong>By the end of class, you’ll be able to:</strong></p>
+<ol type="1">
+<li><strong>Configure</strong> a Claude Code project that protects raw and restricted data.</li>
+<li><strong>Implement</strong> a plan-first workflow to clean and analyze study data.</li>
+<li><strong>Evaluate</strong> AI-generated code and results against the analysis plan.</li>
+<li><strong>Build</strong> a reusable command, skill, or hook for a research data task.</li>
+</ol>
+<p><a href="./part2.html">Class page</a> · <a href="./part2-slides.html">Slides</a> · <a href="./cheatsheet.html">Cheat sheet</a> · <a href="#setup-part2">Setup</a></p>
+</section>
+</div>
+<p><strong>Register:</strong> <code>[registration link]</code> (registration required for both classes).</p>
+</section>
+<section id="start" class="level2">
+<h2 class="anchored" data-anchor-id="start">Start here</h2>
+<ol type="1">
+<li><strong>Pick a class</strong> above and register.</li>
+<li><strong>Do the setup</strong> before class: <a href="#setup-part1">Part 1</a> takes about 10 minutes, <a href="#setup-part2">Part 2</a> about 30.</li>
+<li><strong>Read the data rule</strong> at the top of this page.</li>
+<li><strong>On class day,</strong> bring your laptop and open the class page. Every prompt has a copy button.</li>
+<li><strong>After class,</strong> keep the quick reference or cheat sheet handy, and try the <a href="#links">recommended links</a>.</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled" title="Prefer slides?">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Prefer slides?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Part 1 is taught from its class page. Part 2 also has a slide deck: <a href="./part2-slides.html">Part 2 slides</a>. In the deck, press <strong>F</strong> for full screen and <strong>Esc</strong> for an overview of all slides.</p>
+</div>
+</div>
+<p><span id="setup"></span></p>
+</section>
+<section id="setup-part1" class="level2">
+<h2 class="anchored" data-anchor-id="setup-part1">Setup for Part 1</h2>
+<p>About 10 minutes. No programming needed.</p>
+<section id="sign-in-to-claude" class="level3">
+<h3 class="anchored" data-anchor-id="sign-in-to-claude">1. Sign in to Claude</h3>
+<ul class="task-list">
+<li><label><input type="checkbox">Get your Yale Claude account: <code>[sign-up link]</code>. Do this a few days before class, not on the day.</label></li>
+<li><label><input type="checkbox">In a web browser, go to <strong>claude.ai</strong>, sign in with your Yale account, and send a test message such as “Hello.”</label></li>
+<li><label><input type="checkbox">Check which version you have. If you’re on the <strong>HIPAA-supported version</strong>, some screens may look different (an older layout) and some features may be off. That’s fine for class. Ask <code>[ITS contact]</code> if you’re not sure.</label></li>
+</ul>
+</section>
+<section id="choose-your-practice-kit" class="level3">
+<h3 class="anchored" data-anchor-id="choose-your-practice-kit">2. Choose your practice kit</h3>
+<p>In class you’ll build a Claude <strong>Project</strong>: a workspace with your own instructions and files. Pick one kit. Both use the same steps.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Kit</th>
+<th>Who it’s for</th>
+<th>What’s in it</th>
+<th>Download</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Kit A: Article Explainer</strong> (default)</td>
+<td>Anyone who reads or explains research articles</td>
+<td>A style guide (fictional) and a text copy of an open-access article (Hickey et al., <em>PLoS Medicine</em> 2025, CC BY)</td>
+<td><a href="downloads/part1-kit-a.zip">part1-kit-a.zip</a></td>
+</tr>
+<tr class="even">
+<td><strong>Kit B: Committee Assistant</strong></td>
+<td>Administrative staff who run meetings and committees</td>
+<td>A made-up committee charter and meeting notes</td>
+<td><a href="downloads/part1-kit-b.zip">part1-kit-b.zip</a></td>
+</tr>
+</tbody>
+</table>
+<ul class="task-list">
+<li><label><input type="checkbox">Download your kit’s zip file and unzip it somewhere easy to find, such as <code>Documents</code>. On Windows, right-click the zip and choose <strong>Extract All</strong>.</label></li>
+<li><label><input type="checkbox"><strong>Don’t upload anything yet.</strong> In class, we’ll check your settings first, then build the Project together.</label></li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled" title="Individual files, and the Windows .md.txt problem">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Individual files, and the Windows .md.txt problem
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Individual files</strong> (if you’d rather not use a zip):</p>
+<ul>
+<li>Kit A: <a href="materials/part1-kits/kit-a/explainer-style-guide.md">explainer-style-guide.md</a> · <a href="materials/part1-kits/kit-a/hickey-2025-telehealth-htn.md">hickey-2025-telehealth-htn.md</a></li>
+<li>Kit B: <a href="materials/part1-kits/kit-b/committee-pack-synthetic.md">committee-pack-synthetic.md</a></li>
+<li>About the kits: <a href="materials/part1-kits/README.md">README.md</a></li>
+</ul>
+<p>To save a single file, right-click the link and choose <strong>Save link as</strong> (or <strong>Download linked file</strong>). If you just click it, the file may open as text in your browser.</p>
+<p><strong>Windows:</strong> your file may save as <code>name.md.txt</code>. That’s fine; Claude can read it. To fix the name, open File Explorer, choose <strong>View &gt; Show &gt; File name extensions</strong>, and delete <code>.txt</code> from the end.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="optional-the-claude-phone-app" class="level3">
+<h3 class="anchored" data-anchor-id="optional-the-claude-phone-app">3. Optional: the Claude phone app</h3>
+<p>Near the end of Part 1 we’ll open your Project on a phone. This step is optional; you can do everything on your laptop.</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Install <strong>Claude</strong> from the App Store (iPhone) or Google Play (Android). Check that the publisher is <strong>Anthropic</strong>.</label></li>
+<li><label><input type="checkbox">Sign in with the same Yale account.</label></li>
+<li><label><input type="checkbox">Follow <code>[mobile device policy]</code>. Never photograph patient lists, charts, screens, or whiteboards. If you use the HIPAA-supported version, check with <code>[ITS contact]</code> before using the phone app.</label></li>
+</ul>
+</section>
+</section>
+<section id="setup-part2" class="level2">
+<h2 class="anchored" data-anchor-id="setup-part2">Setup for Part 2</h2>
+<p>About 30 minutes. Do the steps in order. You need a Yale Claude account whose seat includes <strong>Claude Code</strong>: <code>[how to check / who to ask]</code>.</p>
+<section id="positron-and-r-or-python" class="level3">
+<h3 class="anchored" data-anchor-id="positron-and-r-or-python">1. Positron and R (or Python)</h3>
+<p><a href="https://positron.posit.co">Positron</a> is a free data science editor from Posit, the makers of RStudio. It works with R and Python and includes Quarto. VS Code (version 1.94 or later) works too, but class is taught in Positron.</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Install Positron: <a href="https://positron.posit.co/download.html" class="uri">https://positron.posit.co/download.html</a></label></li>
+<li><label><input type="checkbox">Install R or Python and the class packages:</label></li>
+</ul>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">R (recommended)</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Python</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>Install <strong>R</strong> from <a href="https://cloud.r-project.org" class="uri">https://cloud.r-project.org</a>. Positron finds it automatically. Then, in Positron’s <strong>R Console</strong>, run:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"tidyverse"</span>, <span class="st">"here"</span>, <span class="st">"gtsummary"</span>, <span class="st">"gt"</span>, <span class="st">"broom"</span>, <span class="st">"janitor"</span>, <span class="st">"testthat"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p>Install <strong>Python 3.10 or later</strong> from <a href="https://www.python.org/downloads/" class="uri">https://www.python.org/downloads/</a>. Then, in Positron’s <strong>Terminal</strong>, run:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> pip install pandas numpy statsmodels matplotlib jupyter pytest</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>In class, you’ll swap the project’s <code>CLAUDE.md</code> for the Python version (the project’s <code>README.md</code> explains how).</p>
+</div>
+</div>
+</div>
+</section>
+<section id="git-required" class="level3">
+<h3 class="anchored" data-anchor-id="git-required">2. git (required)</h3>
+<p>In class, git saves checkpoints of your work so you can undo mistakes.</p>
+<ul class="task-list">
+<li><label><input type="checkbox"><strong>macOS:</strong> open <strong>Terminal</strong> and run <code>xcode-select --install</code>. This installs Apple’s Command Line Tools, which include git. If it says they’re already installed, you’re done.</label></li>
+<li><label><input type="checkbox"><strong>Windows:</strong> install <strong>Git for Windows</strong> from <a href="https://git-scm.com/downloads" class="uri">https://git-scm.com/downloads</a>. Accept the default options.</label></li>
+<li><label><input type="checkbox">Set your name and email. In Positron, open the <strong>Terminal</strong> tab and run:</label></li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"Your Name"</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">"you@yale.edu"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="the-claude-code-extension" class="level3">
+<h3 class="anchored" data-anchor-id="the-claude-code-extension">3. The Claude Code extension</h3>
+<ul class="task-list">
+<li><label><input type="checkbox">In Positron, open the <strong>Extensions</strong> view (the four-squares icon in the left sidebar).</label></li>
+<li><label><input type="checkbox">Search for <strong>Claude Code</strong> and install the extension published by <strong>Anthropic</strong>. (Positron gets extensions from the Open VSX registry; VS Code uses its own marketplace.)</label></li>
+<li><label><input type="checkbox">Open the Claude Code panel and sign in with your Yale Claude account.</label></li>
+</ul>
+</section>
+<section id="the-practice-project" class="level3">
+<h3 class="anchored" data-anchor-id="the-practice-project">4. The practice project</h3>
+<ul class="task-list">
+<li><label><input type="checkbox">Download <a href="downloads/hypertension-cohort.zip">hypertension-cohort.zip</a>. It holds a synthetic blood-pressure trial, a data dictionary, an analysis plan, REDCap-style exports, and legacy SAS/Stata code.</label></li>
+<li><label><input type="checkbox">Unzip it somewhere easy to find, such as <code>Documents</code>.</label></li>
+<li><label><input type="checkbox">In Positron, choose <strong>File &gt; Open Folder</strong> and select the <code>hypertension-cohort</code> folder.</label></li>
+</ul>
+</section>
+<section id="check-that-it-works" class="level3">
+<h3 class="anchored" data-anchor-id="check-that-it-works">5. Check that it works</h3>
+<ul class="task-list">
+<li><label><input type="checkbox">In the Claude Code panel, send this prompt:</label></li>
+</ul>
+<pre class="text"><code>Read the README and CLAUDE.md, then tell me in three sentences what this project is.</code></pre>
+<ul class="task-list">
+<li><label><input type="checkbox">Type <code>/status</code> in the panel. Check that it shows your Yale account. Note the version number.</label></li>
+</ul>
+<p>If Claude describes a synthetic hypertension trial, you’re ready.</p>
+</section>
+<section id="optional-extras" class="level3">
+<h3 class="anchored" data-anchor-id="optional-extras">Optional extras</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Extra</th>
+<th>Why</th>
+<th>How</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Standalone Claude Code CLI</strong></td>
+<td>A few things in class only work in the terminal version. You can also just watch those parts. The extension doesn’t add <code>claude</code> to your Terminal.</td>
+<td><code>[link to current install instructions]</code> (see the <a href="https://code.claude.com/docs">Claude Code docs</a>)</td>
+</tr>
+<tr class="even">
+<td><strong>jq</strong></td>
+<td>To try the hook example yourself</td>
+<td>macOS: <code>brew install jq</code> · Linux: <code>sudo apt-get install jq</code> · Windows: <code>[local guidance for Windows users]</code> (the sandbox needs WSL2)</td>
+</tr>
+<tr class="odd">
+<td><strong>Claude phone app</strong></td>
+<td>To watch and approve your laptop’s Claude Code session from your phone with <code>/rc</code> (Remote Control), if enabled. Remote Control is off in the HIPAA-supported version.</td>
+<td>Install <strong>Claude</strong> by Anthropic from the App Store or Google Play and sign in. Follow <code>[mobile device policy]</code>.</td>
+</tr>
+</tbody>
+</table>
+<ul class="task-list">
+<li><label><input type="checkbox">Read the institutional AI and data policy: <code>[link to institutional AI and data policy]</code>.</label></li>
+</ul>
+</section>
+<section id="trouble" class="level3">
+<h3 class="anchored" data-anchor-id="trouble">Trouble?</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Problem</th>
+<th>Try this</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Can’t sign in to Claude</td>
+<td>Confirm your sign-up went through: <code>[ITS / help contact]</code></td>
+</tr>
+<tr class="even">
+<td>The Claude Code extension doesn’t show up in Positron’s Extensions view</td>
+<td>Search for “Claude Code” by Anthropic, update Positron, or try VS Code. In class, pair with a neighbor or watch the instructor’s screen. (Claude Code on the web, at claude.ai/code, is a different product that runs cloud sessions on GitHub repos. It isn’t a stand-in for this class.)</td>
+</tr>
+<tr class="odd">
+<td>“Claude Code isn’t included in your plan”</td>
+<td>Your seat may not include Claude Code: <code>[who to ask]</code>. In class, pair with a neighbor or watch the instructor’s screen.</td>
+</tr>
+<tr class="even">
+<td><code>git</code> isn’t found</td>
+<td>Finish the git step above, then close and reopen Positron.</td>
+</tr>
+<tr class="odd">
+<td>R or Python packages won’t install</td>
+<td>Bring the error to class, or come early: <code>[office hours link]</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="access" class="level2">
+<h2 class="anchored" data-anchor-id="access">Access and alternatives</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>If…</th>
+<th>Do this</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>You don’t have a working Claude account</strong></td>
+<td>Request one at <code>[sign-up link]</code> before class. In class, pair up with someone who has one. Don’t create a personal Claude account for anything except the public class files.</td>
+</tr>
+<tr class="even">
+<td><strong>Your primary appointment is with YNHHS</strong></td>
+<td>Use the chat AI that YNHHS approves: <code>[approved tool, e.g. Microsoft Copilot: link, confirmed by ___ on DATE]</code>. Yale’s Clarity may not be available to you <code>[confirm]</code>. In Part 1, follow the <a href="./part1-reference.html#copilot">Copilot path</a> with the same kits.</td>
+</tr>
+<tr class="odd">
+<td><strong>You use the HIPAA-supported version of Claude</strong></td>
+<td>Your screens may look different and some features (such as skills, Cowork, and <code>/rc</code>) may be off. Check with <code>[ITS contact]</code>.</td>
+</tr>
+<tr class="even">
+<td><strong>You don’t have a smartphone</strong></td>
+<td>No problem. The phone step in Part 1 is optional, and you’ll do the same work on your laptop.</td>
+</tr>
+<tr class="odd">
+<td><strong>Your Claude seat doesn’t include Claude Code</strong> (Part 2)</td>
+<td>Pair with a neighbor or watch the instructor’s screen. Ask <code>[who to ask]</code> about access.</td>
+</tr>
+<tr class="even">
+<td><strong>You need an accessibility accommodation</strong></td>
+<td>Contact <code>[accessibility contact]</code> before class.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="links" class="level2">
+<h2 class="anchored" data-anchor-id="links">Recommended links</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Link</th>
+<th>What it’s for</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://academy.claude.com">Claude Academy</a></td>
+<td>Free courses from Anthropic</td>
+</tr>
+<tr class="even">
+<td><a href="https://support.claude.com">Claude Help Center</a></td>
+<td>How the Claude app’s features work</td>
+</tr>
+<tr class="odd">
+<td><a href="https://code.claude.com/docs">Claude Code docs</a></td>
+<td>Official Claude Code documentation</td>
+</tr>
+<tr class="even">
+<td><a href="https://positron.posit.co">Positron</a></td>
+<td>The editor used in Part 2</td>
+</tr>
+<tr class="odd">
+<td><a href="https://ai.yale.edu">AI at Yale</a></td>
+<td>Yale’s AI tools and guidance</td>
+</tr>
+<tr class="even">
+<td><a href="https://cybersecurity.yale.edu/data-classification">Yale data classification</a></td>
+<td>Which data can go where</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Questions?</strong> Email <a href="mailto:justin.demayo@yale.edu?subject=Claude%20classes%20feedback">justin.demayo@yale.edu</a> or book a consult: <code>[library consult link]</code>. See <a href="./about.html">About</a> for who maintains this site and how to report a problem.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/cwml\.github\.io\/getting-started-with-claude\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./index.html#setup-part1" class="pagination-link" aria-label="Setup for Part 1">
+        <span class="nav-page-text">Setup for Part 1</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Cushing/Whitney Medical Library · Yale School of Medicine</p>
+</div>   
+    <div class="nav-footer-center">
+<p>Questions or feedback? Email <a href="mailto:justin.demayo@yale.edu?subject=Claude%20classes%20feedback">justin.demayo@yale.edu</a> · Copyright © 2026 Yale University · All Rights Reserved · <a href="https://usability.yale.edu/digital-accessibility/accessibility-at-yale">Accessibility at Yale</a> · <a href="https://privacy.yale.edu/resources/privacy-statement">Privacy Policy</a></p>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/CWML/getting-started-with-claude/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>Built with <a href="https://quarto.org">Quarto</a></p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

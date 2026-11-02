@@ -30,7 +30,7 @@ scripts/build_downloads.py # post-render step that builds the zip downloads
 
 ```bash
 quarto preview        # live preview while editing
-quarto render         # build the site into _site/
+quarto render         # build the site into docs/ (stop quarto preview first)
 ```
 
 The site pages contain no executable code, so rendering doesn't need R or Python packages (just Python 3 for the post-render zip step).
@@ -43,12 +43,13 @@ What the render does:
 
 ## Publish to GitHub Pages
 
-1. Push this repo to GitHub.
-2. Run `quarto publish gh-pages` once locally.
-3. In **Settings → Pages**, set the source to the `gh-pages` branch.
-4. After that, `.github/workflows/publish.yml` republishes the site on every push to `main`.
+The live site is <https://cwml.github.io/getting-started-with-claude/>. GitHub Pages serves the `docs/` folder on `main` (**Settings → Pages → Deploy from a branch → `main` / `/docs`**).
 
-Then replace the `[placeholder]` values in `_quarto.yml` (`site-url`, `repo-url`) and across the pages.
+1. Stop `quarto preview`, then run `quarto render`.
+2. Commit the source changes and `docs/` together, and push to `main`.
+3. Wait a minute or two, then hard-refresh the site (Cmd + Shift + R).
+
+`docs/` is generated: never edit it by hand.
 
 ## Before each class
 
