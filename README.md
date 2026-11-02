@@ -11,7 +11,7 @@ The repo is a [Quarto](https://quarto.org) website. Participants use the publish
 
 ```
 index.qmd                  # home page, participant setup, access and alternatives, recommended links
-part1.qmd                  # Part 1 single source: renders to part1.html (class page) and part1-slides.html (deck)
+part1.qmd                  # Part 1 class page, taught from directly (no deck)
 part1-reference.qmd        # Part 1 quick reference page
 part2.qmd                  # Part 2 class page you teach from; participants follow along (instructor notes in collapsed boxes)
 part2-slides.qmd           # Part 2 slides (press S for speaker notes)
@@ -21,7 +21,7 @@ part1-description.md       # Part 1 entry for the library's training request for
 part2-description.md       # Part 2 entry for the library's training request form (not rendered)
 materials/part1-kits/      # Part 1 Project kits: Kit A (Article Explainer), Kit B (Committee Assistant)
 materials/hypertension-cohort/  # the Part 2 practice project (zipped at build time)
-theme/                     # CWML web style adapter: cwml.scss, cwml-dark.scss, cwml-reveal.scss, notes-to-tips.lua, skip-link.html
+theme/                     # CWML web style adapter: cwml.scss, cwml-dark.scss, cwml-reveal.scss (Part 2 deck), skip-link.html
 instructor/                # not rendered: README (Part 1 prep and answer keys, data spec, Part 2 answer keys), make_data.R, solutions, Part 2 answer key, review-outline.md (checklist for reviewing the materials)
 scripts/build_downloads.py # post-render step that builds the zip downloads
 ```
@@ -37,7 +37,7 @@ The site pages contain no executable code, so rendering doesn't need R or Python
 
 What the render does:
 
-- **`part1.qmd` renders twice:** once as the class page (`part1.html`) and once as the reveal.js deck (`part1-slides.html`). Speaker notes show on the page as collapsed "Instructor tip" boxes, so they're public; `{.notes .private}` notes appear only in the deck's presenter view.
+- **Part 1 has no deck:** instructors teach from the class page, `part1.html`. The page is public, so the teaching notes live in `instructor/README.md`.
 - **Zip downloads:** `scripts/build_downloads.py` builds `downloads/hypertension-cohort.zip` (Part 2) and `downloads/part1-kit-a.zip` and `downloads/part1-kit-b.zip` (Part 1). The kit files are also copied to the site as single files.
 - **Theme:** pages and decks use the CWML web style (draft 0.1) through the Quarto adapter in `theme/`. Dark mode (`cwml-dark.scss`) is a local extension that isn't part of CWML 0.1; the site follows the reader's system setting and has a light/dark toggle.
 
