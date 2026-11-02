@@ -4,31 +4,14 @@ subtitle: "Build a Project you'll keep using"
 format:
   html:
     toc: true
-  revealjs:
-    output-file: part1-slides.html
-    theme: [default, theme/cwml-reveal.scss]
-    slide-level: 3
-    slide-number: true
-    transition: none
-    width: 1280
-    height: 720
-    code-copy: true
-    code-line-numbers: false
-    footer: "https://cwml.github.io/getting-started-with-claude/part1.html"
-# Single source for the Part 1 class page (part1.html) and deck (part1-slides.html).
-#   ## = timed segment (divider slide); ### = one slide.
-#   Page-only:  ::: {.content-visible unless-format="revealjs"}
-#   Deck-only:  ::: {.content-visible when-format="revealjs"}
-#   ::: notes            -> public "Instructor tip" on the page
-#   Nothing private here: deck notes are public in the slides' HTML. Private details live in instructor/README.md.
+# The Part 1 class page, taught from directly. ## = timed segment; ### = sub-segment.
 # The agenda table and the ## headings must match exactly and sum to 60 minutes.
-# Long prompts are page-only; the deck shows a short outline and points to the class page.
+# This page is public: instructor notes and private details live in instructor/README.md.
 ---
 
-::: {.content-visible unless-format="revealjs"}
 A 60-minute, hands-on class in the Claude app. You'll build a **Project** (a Claude workspace with its own instructions and files), use it on a real task, check what it gives you, and leave with a tool you can reuse. No programming needed.
 
-[Open the slides](part1-slides.html) · [Quick reference](part1-reference.qmd) · Track A Foundations · Beginner
+[Quick reference](part1-reference.qmd) · Track A Foundations · Beginner
 
 ::: {.callout-note title="Before class"}
 Sign in to Claude, pick your kit, and (optionally) install the Claude phone app: see [Setup for Part 1](index.qmd#setup-part1).
@@ -39,26 +22,12 @@ You can still take part. In class, pair with a neighbor who has an account. To d
 :::
 
 **Ground rule:** no patient information or other sensitive data today. Every file in class is public or made up.
-:::
 
 ## 1. Welcome and sign in (0:00 – 0:03) {#welcome}
 
 **Sign in to Claude in a browser tab now.** Open this page: `https://cwml.github.io/getting-started-with-claude/part1.html` `[QR code]`
 
 Green card up = a new chat is open. Track A Foundations · Beginner
-
-::: notes
-**0:00 (3 min).** Put this slide up as people arrive. Watch for green cards. Anyone without a working account pairs as navigator with someone who has one, or follows the [Copilot] path on the site. Personal accounts are fine for the public class files only, and nobody signs up during class.
-
-**Cut order if you run late** (verification is never cut, and it starts before anything that can be cut):
-
-1. Phone tryout becomes a 1-minute instructor demo (saves 3 min).
-2. Cowork moves onto the exit-ticket slide (saves 1–2).
-3. The skill demo becomes a screenshot (saves 1).
-4. The PubMed opening moves into segment 9 (saves 2).
-5. The / menu becomes an instructor show (saves ~0.5).
-:::
-
 
 ### By the end of this class, you'll be able to
 
@@ -67,13 +36,7 @@ Green card up = a new chat is open. Track A Foundations · Beginner
 3. Evaluate Claude's answers and citations before you use them.
 4. Create a Project you can reuse for your own work.
 
-::: notes
-Don't read the list. Say it as one sentence: "Pick the right tool, build a Project, prompt it well, check what comes out."
-
-Disclose your own AI use in 15 seconds: "These materials were drafted with Claude and Claude Code, and checked by me." That models the disclosure habit we cover in segment 9.
-:::
-
-### Today {.smaller .scrollable}
+### Today
 
 | Time | Segment | What you'll do |
 |---|---|---|
@@ -91,10 +54,6 @@ Disclose your own AI use in 15 seconds: "These materials were drafted with Claud
 | 0:55 – 0:57 | 12. Cowork and the bridge to Part 2 | Hear what comes next |
 | 0:57 – 1:00 | 13. Exit ticket and close | Answer four quick questions |
 
-::: notes
-About half the class is hands-on. Point out the pattern: you watch once, then you do it yourself.
-:::
-
 ### No working account?
 
 - **Pair up:** be the navigator for a neighbor who has one.
@@ -103,17 +62,9 @@ About half the class is hands-on. Point out the pattern: you watch once, then yo
 
 Details: [Access and alternatives](index.qmd#access) · [Do it in Copilot or Clarity](part1-reference.qmd#copilot)
 
-::: notes
-Keep this to 20 seconds. Nobody signs up for anything during class. Point YNHHS-primary people to the [Copilot] tab on the reference page; the kit files and prompts work there too.
-:::
-
 ## 2. Why we check (0:03 – 0:05) {#why-check}
 
 Evidence before enthusiasm.
-
-::: notes
-**0:03 (2 min).** Cut option: if you're late, move this demo into segment 9 (saves 2 min).
-:::
 
 ### Watch: does this reference exist?
 
@@ -125,19 +76,11 @@ Claude gave this reference in a chat before class: `[pre-run citation]`
 
 **This is why the last hands-on step today is verification.**
 
-::: notes
-Open the pre-run chat and do the lookup live. If the network fails, show the screenshot. The point: a reference can look perfect and still be wrong. This also guarantees segment 9 has at least one fabricated example, even if everyone's Claude behaves well today.
-:::
-
 ## 3. Which tool for which data (0:05 – 0:11) {#which-tool}
 
 Pick the tool that's approved for your data before you open any tool.
 
-::: notes
-**0:05 (6 min):** 2 min on the decision slide, 3 min on "Can I share this?", 1 min on "Not here."
-:::
-
-### Which tool for which data? {.smaller}
+### Which tool for which data?
 
 | Tool | Who can use it | Data allowed |
 |---|---|---|
@@ -149,13 +92,6 @@ Pick the tool that's approved for your data before you open any tool.
 
 **No tool is automatically approved for patient information.** HIPAA-supported describes a contract and safeguards. It doesn't approve your project, every feature, or every data set.
 
-::: notes
-Say plainly: "A HIPAA-supported version of Claude is available by request." Then the caveats: it doesn't approve your project, every feature, or every data set. Follow [Yale data classification / policy link]. Questions go to [HSIT / HIPAA Privacy Office contact]. Never suggest that the standard account covers PHI.
-
-Features in the HIPAA-supported version may differ: some are off, and it keeps an older layout. Check with [ITS]. Full table and dated feature list: the [Quick reference](part1-reference.qmd#tool-data).
-:::
-
-::: {.content-visible unless-format="revealjs"}
 **Before you use any tool for sensitive work:**
 
 - Follow [Yale data classification / policy link]. Questions go to [HSIT / HIPAA Privacy Office contact].
@@ -164,7 +100,6 @@ Features in the HIPAA-supported version may differ: some are off, and it keeps a
 - Your IRB protocol and any data use agreement may forbid sending data to outside AI services, even de-identified data.
 
 More detail, including which features the HIPAA-supported version covers: [Quick reference: which tool for which data](part1-reference.qmd#tool-data).
-:::
 
 ### Can I share this?
 
@@ -177,19 +112,6 @@ More detail, including which features the HIPAA-supported version covers: [Quick
 5. A YNHHS discharge-instruction template
 6. A PDF from a library subscription
 
-::: notes
-**0:07 (3 min).** Take hands for each, one or two comments, move on.
-
-1. **OK.** Public and openly licensed.
-2. **OK.** Your own work, as long as it has no student names or records.
-3. **No** (or check first). Removing a name isn't de-identification. Only in a tool approved for PHI, and only if your project is approved.
-4. **No.** Reviewers must keep applications confidential, and NIH prohibits generative AI in peer review (NOT-OD-23-149).
-5. **Check first.** It belongs to YNHHS, so YNHHS rules apply. Use [Copilot] for YNHHS work unless YNHHS has approved otherwise.
-6. **Check first.** The license may not allow uploading to AI tools. Use the open-access version or check [library license guidance].
-
-Full answers: [Quick reference](part1-reference.qmd#tool-data).
-:::
-
 ### "Not here" is a valid answer
 
 - Confidential peer review
@@ -198,21 +120,11 @@ Full answers: [Quick reference](part1-reference.qmd#tool-data).
 - Anything you can't verify
 - Tasks where checking takes longer than doing it yourself
 
-::: notes
-**0:10 (1 min).** "Choosing not to use AI is a skill too."
-:::
-
-::: {.content-visible unless-format="revealjs"}
 **Safer habits:** describe the situation instead of pasting the record, use made-up examples, and share structure (a template or blank form) rather than content.
-:::
 
 ## 4. Lock your settings (0:11 – 0:15) {#settings}
 
 Set memory *before* you upload anything.
-
-::: notes
-**0:11 (4 min):** 1 min watch, 3 min do.
-:::
 
 ### Watch, then do: memory settings
 
@@ -226,14 +138,6 @@ Set memory *before* you upload anything.
 
 To turn memory off for one chat: **+ > Memory**, before your first message.
 
-::: notes
-Show it once on your screen, then let people do it. Have screenshots of both layouts ready: the combined chat-and-Cowork layout, and the older layout that the HIPAA-supported version keeps.
-
-"Include sensitive topics" is off by default, so this is a check, not a change. On Enterprise accounts, memory is off for each person until they turn it on, so many people will find it already off. The older layout calls it "Generate memory from chats."
-
-Worth one sentence: deleting a chat doesn't delete memories made from it.
-:::
-
 ### Incognito: what it does and doesn't do
 
 The ghost icon in a new chat starts an incognito chat. It isn't saved to your history or memory, but:
@@ -243,12 +147,6 @@ The ghost icon in a new chat starts an incognito chat. It isn't saved to your hi
 - In the new combined layout, it can't create files or run code.
 
 **Incognito changes what Claude remembers, not what data is allowed.**
-
-::: notes
-**20-second poll:** "A sensitive HR email: Project, incognito, or neither?" Answer: neither. Use the tool approved for that data. Incognito doesn't make anything allowed.
-
-Details for the page: [Quick reference: settings and privacy](part1-reference.qmd#settings).
-:::
 
 ## 5. Watch: build a Project (0:15 – 0:17) {#watch-project}
 
@@ -262,24 +160,14 @@ A Project is a workspace for one ongoing piece of work: its own instructions, fi
 4. **+** > add your kit's files.
 5. Start a new chat in the Project and send the test prompt.
 
-::: notes
-**0:15 (2 min).** Do it once at normal speed on the demo account. Point out the **Share** button (Can view / Can edit, if enabled), but don't stop on it.
-
-"Use account memory" keeps this Project's memory separate from the rest of your chats. Check the label before class.
-:::
-
 ## 6. Your turn: build your Project (0:17 – 0:26) {#build-project}
 
 Use the kit you chose: **Kit A, Article Explainer** (default) or **Kit B, Committee Assistant** (for administrative staff).
 
-::: notes
-**0:17 (9 min):** 8 min build, 1 min checkpoint. At 0:25, ask for green cards. Move on at 0:26 regardless; anyone still building catches up during Turn 1.
-:::
-
-### Your turn: build it {.smaller}
+### Your turn: build it
 
 ::: {.do-now}
-1. Download your kit's files (links on the class page).
+1. Download your kit's files (links below).
 2. **Projects > + New Project**, then name it.
 3. **Set project instructions:** paste them and **change one line** to fit your work.
 4. Under **Memory**, turn **Use account memory** off.
@@ -294,31 +182,6 @@ what will you refuse to do?
 
 **Green card** when Claude names your files and quotes one of your rules.
 
-::: notes
-Walk the room. Most common problems: the file landed in a regular chat instead of the Project, or the instructions weren't saved.
-
-If an upload fails: paste the style guide's text at the end of the project instructions, and paste the article (Kit A) or committee pack (Kit B) into the first message of the Project chat. Or open the instructor's shared Project (Can view, if sharing is enabled). Check before class whether the Project has an "add text" option.
-
-Windows users who get `.md.txt` files: the fix is on the setup page.
-:::
-
-::: {.content-visible when-format="revealjs"}
-### What's in your Project instructions
-
-**Copy them from the class page** (https://cwml.github.io/getting-started-with-claude/part1.html#build-project), paste into **Set project instructions**, then change one line.
-
-- **Sources:** use only the Project files; never invent numbers or quotes; label outside knowledge.
-- **How to work:** ask me up to 3 questions first; give real numbers; use cautious language.
-- **Privacy:** stop me if I paste anything that looks like an identifier.
-
-::: notes
-Say out loud: the privacy line is advice, not enforcement. Claude will usually follow it, but nothing stops a paste. Part 2 shows tools that actually block things.
-
-The full Kit A and Kit B instructions are in the tabset on the class page, too long to read from the projector.
-:::
-:::
-
-::: {.content-visible unless-format="revealjs"}
 ### Your kit
 
 ::: {.panel-tabset}
@@ -404,7 +267,6 @@ Privacy
 **Why it's worth keeping:** swap in the next open-access article and keep the instructions and style guide, or edit the style guide's Audiences section for your course, clinic, or newsletter. Kit B becomes a reusable notes-to-minutes tool for non-confidential committees. Library-licensed PDFs may not allow upload: use open-access articles or check [library license guidance]. More: [Quick reference: Projects and skills](part1-reference.qmd#projects-skills).
 
 The privacy line is advice, not enforcement: Claude will usually follow it, but nothing stops you from pasting something you shouldn't.
-:::
 
 ## 7. Watch: anatomy of a strong prompt (0:26 – 0:28) {#strong-prompt}
 
@@ -420,37 +282,16 @@ The Project carries the context, so the prompt can stay short and reusable.
 | "150 words or fewer... use only the article" | Constraints |
 | "Where this came from" table | Every claim traced to a quote |
 
-::: notes
-**0:26 (2 min).** Show the pre-run Turn 1 chat (a live ask-first round trip won't fit in 2 minutes). Point to Claude's questions, then to the "Where this came from" table: it turns checking into a 2-minute Ctrl-F job.
-
-All six prompting patterns, with examples: [Quick reference: prompt library](part1-reference.qmd#prompt-library).
-:::
-
 ## 8. Your turn: run it, then push back (0:28 – 0:37) {#run-prompt}
 
 Start a **new chat inside your Project**. Use the default model and effort.
 
-::: notes
-**0:28 (9 min):** 8 min hands-on, 1 min pair debrief. Default model and effort avoid usage limits.
-:::
-
 ### Your turn: Turn 1
 
 ::: {.do-now}
-Copy **Turn 1** for your kit from the class page (https://cwml.github.io/getting-started-with-claude/part1.html#run-prompt). Fill in the two brackets, send, then answer Claude's questions.
+Copy **Turn 1** for your kit below. Fill in the two brackets, send, then answer Claude's questions.
 :::
 
-::: {.content-visible when-format="revealjs"}
-What Turn 1 asks for:
-
-1. Ask me up to 3 questions first, then **wait**.
-2. The study at a glance, and the main result with real numbers.
-3. A plain-language version, **150 words or fewer**.
-4. Three questions a careful reader should ask.
-5. A **"Where this came from"** table: the exact sentence behind every claim, or NOT IN ARTICLE.
-:::
-
-::: {.content-visible unless-format="revealjs"}
 **Kit A: Turn 1**
 
 ```text
@@ -479,22 +320,14 @@ Then, following the style guide in this Project, give me:
 Rules: use only the article; don't add references; if the article
 is unclear or inconsistent on something, say so.
 ```
-:::
 
-::: {.content-visible unless-format="revealjs"}
 **Stuck on Claude's questions?** Fast answers:
 
 ```text
 Busy readers with no stats background; goal is a 2-minute read; tone
 friendly but accurate.
 ```
-:::
 
-::: notes
-Anyone stuck on Claude's questions can use the fast answers on the class page. Walk the room. If someone's Claude skips the questions, that's a teaching moment: point to the "Wait" line and have them reply "Please ask your questions first."
-:::
-
-::: {.content-visible unless-format="revealjs"}
 **Kit B: Turn 1**
 
 ```text
@@ -510,17 +343,14 @@ Then, using only the files in this Project:
 4. Anything that should NOT go into a wider email, and why.
 Roles only, no names; don't invent owners, dates, or decisions.
 ```
-:::
 
 ### Your turn: push back (Turn 2)
 
 ::: {.do-now}
-In the same chat, send Turn 2. **Kit B:** use the Kit B version on the class page.
+In the same chat, send Turn 2. **Kit B:** use the Kit B version below.
 :::
 
-::: {.content-visible unless-format="revealjs"}
 **Kit A: Turn 2**
-:::
 
 ```text
 Now act as a skeptical reviewer of your own explainer.
@@ -537,11 +367,6 @@ Now act as a skeptical reviewer of your own explainer.
 
 **With a neighbor:** what did the second turn change?
 
-::: notes
-**0:36 (1 min).** Pair debrief, then take one answer from the room. Key message: treat the first answer as a draft; much of the value comes from the second turn.
-:::
-
-::: {.content-visible unless-format="revealjs"}
 **Kit B: Turn 2**
 
 ```text
@@ -555,15 +380,10 @@ Now act as a careful committee chair reviewing your drafts.
 - Then rewrite the summary email for the full faculty list, leaving
   out anything that should stay within the committee.
 ```
-:::
 
 ## 9. Verify before you use it (0:37 – 0:46) {#verify}
 
 Check against the source, not against Claude. **Don't cut:** this segment stays even when class runs late.
-
-::: notes
-**0:37 (9 min). Don't cut this segment.** 1 min demo, 6 min hands-on, 2 min talk. It starts before every segment that can be cut.
-:::
 
 ### Your turn: check quotes and rules
 
@@ -575,36 +395,20 @@ Check against the source, not against Claude. **Don't cut:** this segment stays 
 
 Bonus: does the article agree with itself about how many people were in each group?
 
-::: {.content-visible when-format="revealjs"}
-**Kit B:** your checks are on the class page.
-:::
-
-::: notes
-Demo one quote check on your screen first (1 min), then let people go.
-
-The bonus: the abstract says 98 people enrolled in the telehealth arm, then reports week-24 blood pressure for "96/99 intervention." Ask: "Did anyone's Claude repeat 99 without noticing that 98 were enrolled? Did anyone's Claude flag it?" Either answer is a good discussion.
-
-The article has two more inconsistencies: the week-48 confidence interval (abstract: 95% CI [30%, 53%]; Results: [14%, 38%], which repeats the week-24 interval) and the share of women (abstract 67%, Results 70%, 139/200). A quote can be "exact" and still be wrong. If someone's explainer cites the week-48 CI, ask which section it came from.
-:::
-
-::: {.content-visible unless-format="revealjs"}
 **Kit B: what to check**
 
 - Open [the committee pack](materials/part1-kits/kit-b/committee-pack-synthetic.md) in a new browser tab. Trace 2 action items to the exact line in the notes with **Ctrl/Cmd+F**. Exact, paraphrased, or not there?
 - Was the confidential student appeal left out of the drafts?
 - Did Claude invent an owner or due date for the survey follow-up, or write NOT IN NOTES?
 - Did it apply the charter's "action items go out within 3 business days" rule?
-:::
 
 ### Your turn: check a citation (Turn 3)
 
 ::: {.do-now}
-Send this, then look up **one** PMID at [pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov) (your phone works). **Kit B:** your Turn 3 is on the class page.
+Send this, then look up **one** PMID at [pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov) (your phone works). **Kit B:** your Turn 3 is below.
 :::
 
-::: {.content-visible unless-format="revealjs"}
 **Kit A: Turn 3**
-:::
 
 ```text
 Suggest three other published studies on this topic a reader could
@@ -614,11 +418,6 @@ mark each UNVERIFIED.
 
 Does it exist? Do the title, authors, and year match? If Claude declines or labels it UNVERIFIED, that's good behavior. **Check anyway.**
 
-::: notes
-If web search is on, Claude may return real studies. Frame it as: "Declining or labeling is the behavior you want, and you still check." The pre-run example from segment 2 guarantees the room has seen at least one fabricated reference.
-:::
-
-::: {.content-visible unless-format="revealjs"}
 **Kit B: Turn 3**
 
 ```text
@@ -628,7 +427,6 @@ your date math. If the files don't say, write NOT IN NOTES.
 ```
 
 Then open [the committee pack](materials/part1-kits/kit-b/committee-pack-synthetic.md) and check each quoted charter line yourself. If you have time, watch someone at your table do the PubMed check: that's the same skill.
-:::
 
 ### Your turn: add one rule
 
@@ -645,10 +443,6 @@ article contradicts itself.
 
 **Show of hands:** how many quotes were exact? Any citation that didn't match?
 
-::: notes
-**0:43.** This is the second Create moment: their Project now has their own verification rule in it.
-:::
-
 ### You're accountable for what you use
 
 - **Check against the source**, not against Claude.
@@ -657,19 +451,9 @@ article contradicts itself.
 - **NIH:** applications substantially developed by AI aren't considered original (NOT-OD-25-132), and generative AI is prohibited in peer review (NOT-OD-23-149).
 - **Systematic or scoping review?** Follow RAISE and talk to a librarian.
 
-::: notes
-**0:44 (2 min).** Talk only. If anything went wrong in the room today, use it as the example.
-
-Disclosure template, notice dates, and red flags for fabrication and bias: [Quick reference: verify and disclose](part1-reference.qmd#verify-disclose). Library evidence synthesis service: [link].
-:::
-
 ## 10. Tune it: model, effort and skills (0:46 – 0:51) {#tune}
 
 Use the smallest model and lowest effort that does the job.
-
-::: notes
-**0:46 (5 min):** 1.5 min demo, 3.5 min hands-on. Cut options: show the skill as a screenshot instead of live (saves 1 min); the / menu becomes an instructor show (saves ~0.5 min).
-:::
 
 ### Watch: the model menu
 
@@ -679,16 +463,10 @@ The **model menu next to Send** sets the **model** and the **effort**.
 - More effort costs more time, usage, and energy.
 - Your admin may hide some models or effort levels.
 
-::: notes
-Open the menu on screen. Current models (check the menu before class): Fable 5.1, Opus 5.5, Sonnet 5.5, Haiku 5.5, with older ones under "More models." Effort levels: Low, Medium, High, Extra high, Max; each model marks its recommended level "Default."
-
-Fable may need usage credits on a standard seat [confirm Yale seat tiers]. More: [Quick reference: model, effort and commands](part1-reference.qmd#model-effort-commands).
-:::
-
 ### Your turn: same task, smaller dial
 
 ::: {.do-now}
-In your Project, switch to a **smaller model** or **Low** effort, then send (Kit B: see the class page):
+In your Project, switch to a **smaller model** or **Low** effort, then send (Kit B: see below):
 
 ```text
 Make a 6-term glossary for my audience from the article.
@@ -697,17 +475,11 @@ Make a 6-term glossary for my audience from the article.
 Good enough? Compare it with what you'd expect from the bigger setting.
 :::
 
-::: {.content-visible unless-format="revealjs"}
 **Kit B:**
 
 ```text
 Make a 6-term glossary for a new committee member from the charter.
 ```
-:::
-
-::: notes
-Switch back to the default afterward if you plan to keep working.
-:::
 
 ### The **+** and **/** menus
 
@@ -717,10 +489,6 @@ What you'll see depends on your workspace: things like **Memory** for this chat,
 
 ::: {.do-now}
 Type **/** in your chat box and look at the list (10 seconds). Don't pick anything yet.
-:::
-
-::: notes
-Before class, type "/" in a new chat in both Yale workspaces and screenshot what appears (skills, connectors, styles). Show only what exists there. Styles are being folded into skills; a migrated style may show up as `/name-style`. Mention that only if someone asks.
 :::
 
 ### Watch: a skill makes a Word handout
@@ -734,27 +502,15 @@ one-page Word handout.
 - See and turn on skills in **Customize > Skills**.
 - **A Project is a workspace for one piece of work. A skill is a how-to Claude can use in any chat.**
 
-::: notes
-Run it on the demo account, then open Customize > Skills. Participants can try it as a stretch goal if their workspace allows it.
-
-Caveats: skills need **Create and edit files** (Settings > Capabilities; older label "Code execution and file creation"). They don't work in incognito chats. In the HIPAA-supported version, skills are off by default and not covered if re-enabled [confirm with ITS]. Uploading your own skill: [Quick reference: Projects and skills](part1-reference.qmd#projects-skills).
-:::
-
-::: {.content-visible unless-format="revealjs"}
 **Kit B:**
 
 ```text
 Turn next month's agenda into a one-page Word document.
 ```
-:::
 
 ## 11. Take it with you: the phone app (0:51 – 0:55) {#phone}
 
 Your Project should sync to the Claude phone app. Optional.
-
-::: notes
-**0:51 (4 min):** 2 min demo, 2 min optional tryout. Cut option: make this a 1-minute demo with no tryout (saves 3 min).
-:::
 
 ### Watch, then try: your Project on your phone
 
@@ -766,20 +522,13 @@ In two sentences, what's the main limitation of this study?
 ```
 :::
 
-::: {.content-visible unless-format="revealjs"}
 **Kit B:**
 
 ```text
 In two sentences, what's the most urgent action item from these notes, and who owns it?
 ```
-:::
 
 Create Projects on your laptop; they should open on your phone too. No phone? Keep verifying on the laptop.
-
-::: notes
-Mirror the phone (iPhone Mirroring or QuickTime). Use the dictation mic for the question. Point out voice mode (beta, the sound-wave icon next to the mic) without running it. Check before class that Projects appear in the phone app for both workspaces.
-:::
-
 
 ### Phone rules
 
@@ -787,21 +536,11 @@ Mirror the phone (iPhone Mirroring or QuickTime). Use the dictation mic for the 
 - Follow [mobile device policy].
 - The **Code** tab is where Part 2's `/rc` shows up (if enabled; not available in the HIPAA-supported version). If you don't see it, your plan or organization may not include it.
 
-::: {.content-visible unless-format="revealjs"}
 Research (if enabled) on the phone searches only the web and skips connectors (if enabled) such as PubMed, without warning. More: [Quick reference: mobile](part1-reference.qmd#mobile).
-:::
-
-::: notes
-Bridge sentence: "This app has a Code tab. In Part 2, /rc connects it to a Claude Code session on your laptop (if your organization has turned on Remote Control)."
-:::
 
 ## 12. Cowork and the bridge to Part 2 (0:55 – 0:57) {#cowork-bridge}
 
 From chat to tasks, and from the app to Claude Code.
-
-::: notes
-**0:55 (2 min). Talk only.** Cut option: move Cowork onto the exit-ticket slide as one line (saves 1–2 min).
-:::
 
 ### Cowork in 30 seconds
 
@@ -809,11 +548,7 @@ From chat to tasks, and from the app to Claude Code.
 - **Not for high-risk data.** Web pages and files can hide instructions that steer it ("prompt injection").
 - The HIPAA-supported version keeps the older layout; Cowork may be off or limited there. Check with [ITS].
 
-::: notes
-Don't demo. Claude in Chrome (if enabled) is Cowork in your browser: same cautions. More: [Quick reference: Cowork](part1-reference.qmd#cowork).
-:::
-
-### From today to Part 2 {.smaller}
+### From today to Part 2
 
 | What you built today | What it becomes in Part 2 (Claude Code) |
 |---|---|
@@ -825,10 +560,6 @@ Don't demo. Claude in Chrome (if enabled) is Cowork in your browser: same cautio
 | **+** or **/** in the chat box | **/** in the Claude Code panel: commands and skills |
 
 **Part 2: Analyzing research data with Claude Code** (90 min). [Class page](part2.qmd)
-
-::: notes
-One sentence: "Everything you did today has a twin in Part 2, but there it works on files and code on your own computer." Part 1 is recommended, not required, for Part 2.
-:::
 
 ## 13. Exit ticket and close (0:57 – 1:00) {#exit}
 
@@ -843,11 +574,6 @@ Four questions, one per objective. Show of hands or [exit-ticket form link].
 
 **Feedback:** [feedback form link]
 
-::: notes
-**0:57 (3 min).** Take one answer per question, then show "Where to go next" and the feedback link. End on time.
-:::
-
-
 ## Where to go next {#next}
 
 - [Quick reference](part1-reference.qmd): settings, prompts, verification, and more
@@ -856,7 +582,6 @@ Four questions, one per objective. Show of hands or [exit-ticket form link].
 - Library help: [literature search consults, evidence synthesis service, office hours]
 - Questions about tools and data: [HSIT / ITS AI help]
 
-::: {.content-visible unless-format="revealjs"}
 **On the Quick reference page:**
 
 - [Which tool for which data](part1-reference.qmd#tool-data)
@@ -871,8 +596,4 @@ Four questions, one per objective. Show of hands or [exit-ticket form link].
 - [More places to learn](part1-reference.qmd#next)
 
 **Also useful:** [Claude Help Center](https://support.claude.com) · [teaching-center AI guidance] · [Office of Research Integrity] · [HSARG] · [AIR Tracks B–F offerings]
-:::
 
-::: notes
-Leave this slide up while people pack up.
-:::

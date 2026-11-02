@@ -11,7 +11,7 @@ format:
 **Last checked: 2026-10-30 against the Claude Help Center; features change often.** Menu names, models and admin settings may look different in your workspace. Anything marked *(if enabled)* depends on your admin. Spot an error? See the corrections log on the [About](about.qmd) page.
 :::
 
-This page goes with the [Part 1 class page](part1.qmd) and [slides](part1-slides.html). Each section below expands on one part of the class.
+This page goes with the [Part 1 class page](part1.qmd). Each section below expands on one part of the class.
 
 ## Which tool for which data {#tool-data}
 

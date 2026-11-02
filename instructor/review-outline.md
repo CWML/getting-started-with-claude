@@ -20,7 +20,7 @@ A working document for `[Reviewer 1]` and `[Reviewer 2]` to review both classes 
 
 | Area | Lead | Second look |
 |---|---|---|
-| Part 1: `part1.qmd` (page and slides), `part1-reference.qmd`, Part 1 kits | `[name]` | `[name]` |
+| Part 1: `part1.qmd` (class page), `part1-reference.qmd`, Part 1 kits | `[name]` | `[name]` |
 | Part 2: `part2.qmd`, `part2-slides.qmd`, `cheatsheet.qmd`, hypertension project | `[name]` | `[name]` |
 | Shared pages: `index.qmd`, `about.qmd`, both `*-description.md` files | `[name]` | `[name]` |
 | Instructor materials: `instructor/README.md`, answer keys, solutions | `[name]` | `[name]` |
@@ -69,11 +69,11 @@ Answer these once you've done the dry run.
 | 12 | Cowork and the bridge to Part 2 | 0:55 – 0:57 | | |
 | 13 | Exit ticket and close | 0:57 – 1:00 | | |
 
-### Slides (`part1-slides.html`)
+### Teaching from the page
 
-- [ ] About 8 lines of body text or fewer per slide; nothing cut off.
-- [ ] Long prompts point to the class page instead of appearing on the slide.
-- [ ] Speaker notes read well as public Instructor tips on the page (nothing private in them).
+- [ ] Each section reads well on the projector from the back of the room; nothing important needs scrolling mid-explanation.
+- [ ] The segment notes in `instructor/README.md` match the page, in order, with the right timings.
+- [ ] Nothing on the page is meant for instructors only.
 
 ### Reference page (`part1-reference.qmd`)
 
@@ -118,7 +118,7 @@ Answer these once you've done the dry run.
 - [ ] **No real patient data** anywhere: only the synthetic cohort, the synthetic kits, or public de-identified data.
 - [ ] **No institutional approval claims.** The HIPAA-supported version is mentioned only with a `[request link]`, and nothing says the standard account covers PHI.
 - [ ] Admin-dependent features are marked **(if enabled)**: connectors, code execution, skills, Research, Cowork, Remote Control, Claude Code seats.
-- [ ] Uncertain menu labels are marked "(check before class)" on pages and Instructor tips.
+- [ ] Uncertain menu labels are marked "(check before class)" on pages and in instructor notes.
 - [ ] Feature claims match the [Claude Help Center](https://support.claude.com) and the [Claude Code docs](https://code.claude.com/docs) as of the review date.
 - [ ] All links work, and Claude Academy is in each recommended links list.
 - [ ] Learning objectives match word for word across files (Part 1: `part1.qmd`, `part1-description.md`, `index.qmd`; Part 2: `part2.qmd`, `part2-slides.qmd`, `part2-description.md`, `index.qmd`).

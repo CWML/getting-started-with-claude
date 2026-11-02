@@ -52,8 +52,6 @@ website:
       contents:
         - href: part1.qmd
           text: Class page
-        - href: part1-slides.html
-          text: Slides
         - href: part1-reference.qmd
           text: Quick reference
         - href: index.html#setup-part1
@@ -102,6 +100,3 @@ format:
     toc: true
     code-copy: true
     include-before-body: theme/skip-link.html
-
-filters:
-  - theme/notes-to-tips.lua

@@ -31,7 +31,7 @@ Build a Claude Project you'll keep using, then learn to prompt it well and check
 3. Evaluate Claude's answers and citations before you use them.
 4. Create a Project you can reuse for your own work.
 
-[Class page](part1.qmd) · [Slides](part1-slides.html) · [Quick reference](part1-reference.qmd) · [Setup](#setup-part1)
+[Class page](part1.qmd) · [Quick reference](part1-reference.qmd) · [Setup](#setup-part1)
 :::
 
 ::: {.g-col-12 .g-col-md-6 .card .card-body}
@@ -66,9 +66,9 @@ Take a synthetic clinical trial from raw data to a report with Claude Code in Po
 5. **After class,** keep the quick reference or cheat sheet handy, and try the [recommended links](#links).
 
 ::: {.callout-tip title="Prefer slides?"}
-Each class also has a slide deck: [Part 1 slides](part1-slides.html) · [Part 2 slides](part2-slides.qmd). In a deck, press **F** for full screen and **Esc** for an overview of all slides.
+Part 1 is taught from its class page. Part 2 also has a slide deck: [Part 2 slides](part2-slides.qmd). In the deck, press **F** for full screen and **Esc** for an overview of all slides.
 
-On the class pages, the collapsed **Instructor tip** boxes hold the instructor's notes. Open them if you're curious, or skip them.
+On the Part 2 class page, the collapsed **Instructor notes** boxes hold the instructor's notes. Open them if you're curious, or skip them.
 :::
 
 []{#setup}
