@@ -79,7 +79,7 @@
   {
     "objectID": "part2-slides.html#analyzing-research-data-with-claude-code",
     "href": "part2-slides.html#analyzing-research-data-with-claude-code",
-    "title": "Claude & Claude Code at the School of Medicine",
+    "title": "Getting Started with Claude",
     "section": "Analyzing Research Data with Claude Code",
     "text": "Analyzing Research Data with Claude Code\nPart 2: a 90-minute hands-on class\n[Instructor name], [Library name]\nOpen the class page: https://cwml.github.io/getting-started-with-claude/part2.html\nDownload: hypertension-cohort.zip, then open the folder in Positron\n\nBefore 0:00: demo reset done (see “Part 2: instructor prep” in instructor/README.md). Positron open on the demo project at part2-start, the Claude panel docked on the right in Manual mode, /status checked, fonts enlarged. Put this slide up as people arrive.\n0:00. Welcome. Introduce yourself and the library’s role in data services. Every prompt today is on the class page, ready to copy. All data is synthetic.",
     "crumbs": [
@@ -90,7 +90,7 @@
   {
     "objectID": "part2-slides.html#by-the-end-of-today-youll-be-able-to",
     "href": "part2-slides.html#by-the-end-of-today-youll-be-able-to",
-    "title": "Claude & Claude Code at the School of Medicine",
+    "title": "Getting Started with Claude",
     "section": "By the end of today, you’ll be able to…",
     "text": "By the end of today, you’ll be able to…\n\nConfigure a Claude Code project that protects raw and restricted data.\nImplement a plan-first workflow to clean and analyze study data.\nEvaluate AI-generated code and results against the analysis plan.\nBuild a reusable command, skill, or hook for a research data task.\n\n\n~0:01 (1 min). Read the four verbs: configure, implement, evaluate, build. Two hands-on exercises: Exercise 1 (Segment 3) and Exercise 2 (Segment 5). Light R or Python is enough; Claude writes the code, and you check it.",
     "crumbs": [
@@ -101,7 +101,7 @@
   {
     "objectID": "part2-slides.html#today",
     "href": "part2-slides.html#today",
-    "title": "Claude & Claude Code at the School of Medicine",
+    "title": "Getting Started with Claude",
     "section": "Today",
     "text": "Today\n\n\n\nTime\nSegment\n\n\n\n\n0:00\nWelcome and setup check\n\n\n0:05\nData rules and project setup\n\n\n0:17\nHands-on: plan, build, verify (Exercise 1)\n\n\n0:42\nBreak\n\n\n0:47\nWorking well: context, models, effort, ultracode, /rc\n\n\n0:57\nHands-on: extending Claude Code (Exercise 2)\n\n\n1:12\nMessy real-world sources\n\n\n1:20\nVerification and research integrity\n\n\n1:27\nWrap-up\n\n\n\n\n~0:02. Quick walk-through. Messy sources at 1:12 is the first thing cut if we run late. Verification at 1:20 is never cut.",
     "crumbs": [
@@ -112,7 +112,7 @@
   {
     "objectID": "part2-slides.html#setup-check-panel-or-terminal",
     "href": "part2-slides.html#setup-check-panel-or-terminal",
-    "title": "Claude & Claude Code at the School of Medicine",
+    "title": "Getting Started with Claude",
     "section": "Setup check: panel or terminal?",
     "text": "Setup check: panel or terminal?\n\nOpen hypertension-cohort in Positron\nOpen the Claude Code panel (Spark icon, or ✻ Claude Code in the status bar)\nType /status\n\n\n\n\n\nExtension panel (today)\nTerminal CLI\n\n\n\n\nCommands\nA subset: type /\nAll\n\n\nReview edits\nSide-by-side diffs\nTerminal, or /ide\n\n\nUndo\nHover a message → rewind\nEsc Esc / /rewind\n\n\n! prefix, tab completion\nNo\nYes\n\n\n\n\n~0:03 (2 min). Everyone does steps 1–3 now. Pair up anyone stuck.\nExtension won’t install or sign in in Positron: Developer: Reload Window, then VS Code, then claude in the Terminal if they installed the CLI. No Claude Code seat: pair with a neighbor.\nSay: “We’ll use the panel all day. When something only works in the CLI, I’ll say so.” Check before class: Positron gets the extension from Open VSX; confirm the version and which commands appear when you type /.",
     "crumbs": [
@@ -123,7 +123,7 @@
   {
     "objectID": "part2-slides.html#claude-code-sends-what-it-reads",
     "href": "part2-slides.html#claude-code-sends-what-it-reads",
-    "title": "Claude & Claude Code at the School of Medicine",
+    "title": "Getting Started with Claude",
     "section": "Claude Code sends what it reads",
     "text": "Claude Code sends what it reads\nFiles it opens, commands it runs, their output, and text you select in the editor all go to the model.\n\n“Claude writes the code, you run it on the real data” in an approved environment\n“Synthetic first”: build and debug on synthetic or public data\nKeep “print at most 10 rows” in CLAUDE.md. Check data in the Data Explorer, not the chat.\nHIPAA-supported Claude (by request) doesn’t approve your project, and the extension may not be covered [confirm with ITS]\n\nPolicy first: [Yale data classification / policy link]\n\n0:05 (Segment 2a, 4 min). Same rules as uploading a file to the Claude app. In the extension, Claude also sees selected text and the name of the open file, so don’t open restricted files in the editor during a session.\nRead the local policy aloud once filled in. Don’t say the standard enterprise account covers PHI or any data classification. A HIPAA-supported version of Claude is available by request ([request link]), but being HIPAA-supported doesn’t approve a project, every feature, or every data set. Anthropic’s HIPAA setup page says the VS Code extension (which Positron uses) isn’t covered by the BAA, and Remote Control and cloud sessions are off in the HIPAA configuration: [confirm with ITS which Claude Code surfaces are covered]. Questions: [HSIT / HIPAA Privacy Office contact].\n~0:07: “Think of one dataset you work with. Which pattern would you need?” Take one answer.",
     "crumbs": [
@@ -134,7 +134,7 @@
   {
     "objectID": "part2-slides.html#where-instructions-live",
     "href": "part2-slides.html#where-instructions-live",
-    "title": "Claude & Claude Code at the School of Medicine",
+    "title": "Getting Started with Claude",
     "section": "Where instructions live",
     "text": "Where instructions live\n\n\n\nScope\nFile\nShared with\n\n\n\n\nManaged policy\nSet by IT\nEveryone [if deployed]\n\n\nUser\n~/.claude/CLAUDE.md\nJust you, every project\n\n\nProject\n./CLAUDE.md\nYour team, via git\n\n\nLocal\n./CLAUDE.local.md\nJust you (gitignored)\n\n\nAuto memory\n/ → Customize → Memory\nJust you, this machine\n\n\n\nAll load together. Keep each file under 200 lines. CLAUDE.md is advice, not enforcement.\n\n0:09 (Segment 2b, 4 min). Switch to Positron and open the project’s CLAUDE.md: raw data is read-only, never read data/restricted/, numbered scripts, log every change, ask before missing-data or outlier decisions, at most 10 rows.\nBridge for Part 1 alumni: the Project’s instructions become CLAUDE.md, and its files become documents in the folder, like docs/SAP.md.\nIn the panel: / → Customize → Instructions opens CLAUDE.md files; Memory shows auto memory. CLI: /memory. Imports like @docs/SAP.md load every session: fine for a 2-page SAP, not a 40-page protocol.\nTransition: “Advice isn’t enforcement. Let’s add enforcement.”",
     "crumbs": [
@@ -145,7 +145,7 @@
   {
     "objectID": "part2-slides.html#switch-to-positron-protect-the-data",
     "href": "part2-slides.html#switch-to-positron-protect-the-data",
-    "title": "Claude & Claude Code at the School of Medicine",
+    "title": "Getting Started with Claude",
     "section": "Switch to Positron: protect the data",
     "text": "Switch to Positron: protect the data\nManual mode → deny Read(./data/restricted/**) → test it → git init\n\n0:13 (Segment 2c, 4 min). Participants follow the four steps on the class page.\n\nMode indicator → Manual. Recent versions (v2.1.283+) start in Auto unless the org turns it off, and the extension ignores the project’s defaultMode. To pin it: claudeCode.initialPermissionMode in user settings.\n/ → Customize → Permissions → Deny → project settings (check before class in Positron), or the .claude/settings.json file on the page.\nNew conversation, then the test prompt. Look for a permission-denied message (enforcement), not a polite refusal (advice).\nAsk Claude to git init, add a .gitignore, and commit.\n\nThe gap: deny rules don’t cover an R script that opens the file itself. The sandbox (/sandbox) closes it at the OS level. Demo only if ahead of time.",
     "crumbs": [
@@ -156,7 +156,7 @@
   {
     "objectID": "part2-slides.html#plan-build-verify",
     "href": "part2-slides.html#plan-build-verify",
-    "title": "Claude & Claude Code at the School of Medicine",
+    "title": "Getting Started with Claude",
     "section": "Plan, build, verify",
     "text": "Plan, build, verify\nExercise 1 (25 min): prompts are on the class page\n\nPlan against the SAP (plan mode)\nBuild R/01_clean.R with a cleaning log\nCheck it yourself in the Data Explorer\nAnalyze: Table 1, the primary model, a Quarto report\nSave: rewind, then commit\n\nBehind? Finish steps 1–3. I’ll show the rest.\n\n0:17 (Segment 3). Framing: you’re the investigator, Claude is the analyst who writes and runs code. Python users swapped in CLAUDE.python.md; the prompts on the page have Python versions. Sub-timings: plan 0:17, clean 0:22, check 0:30, analyze 0:33, save 0:39.",
     "crumbs": [
@@ -167,7 +167,7 @@
   {
     "objectID": "part2-slides.html#switch-to-positron-plan-mode-on-the-sap",
     "href": "part2-slides.html#switch-to-positron-plan-mode-on-the-sap",
-    "title": "Claude & Claude Code at the School of Medicine",
+    "title": "Getting Started with Claude",
     "section": "Switch to Positron: plan mode on the SAP",
     "text": "Switch to Positron: plan mode on the SAP\nMode indicator → Plan (or /plan)\n“Read the SAP and the data dictionary… List every data problem you find, and every decision you need from me. Don’t write code yet.”\n\n0:17 – 0:22 (3a, 5 min). Paste the plan prompt from the class page. The plan opens as a document: add an inline comment to show you can edit it before approving (check before class in Positron). At approval, pick the option that keeps manual approval of edits, not one that accepts edits automatically (check the exact wording in Positron).\nAsk the room: how many problems did Claude find? Six were planted (implausible values, sex coding, -99/999, duplicates, mixed dates, cuff_size). Point to the collapsed “When Claude asks” table for today’s decisions. Integrity point: decide the analysis before you see results.",
     "crumbs": [
@@ -178,7 +178,7 @@
   {
     "objectID": "part2-slides.html#build-the-cleaning-script",
     "href": "part2-slides.html#build-the-cleaning-script",
-    "title": "Claude & Claude Code at the School of Medicine",
+    "title": "Getting Started with Claude",
     "section": "Build: the cleaning script",
     "text": "Build: the cleaning script\nBack to Manual, then: “write R/01_clean.R… write output/cohort_clean.csv and output/cleaning_log.csv… print the row count before and after each step. Run it and fix any errors.”\n\n\n\nClaude asks about\nToday’s answer (per SAP)\n\n\n\n\nImplausible values\nSet to missing and log; don’t guess\n\n\n-99, 999, blank, NA\nMissing\n\n\nSex 1 / 2\n1 = M, 2 = F; log as a data-manager question\n\n\nDuplicates\nRemove exact duplicates; confirm unique IDs\n\n\ncuff_size\nKeep, don’t use, log it\n\n\n\n\n0:22 – 0:30 (3b, 8 min). Review each diff: accept, reject, or redirect. Approve Rscript when asked. Narrate the first write → run → error → fix loop out loud; that loop is the core value.\nIf Claude doesn’t ask about a decision, that’s a teaching moment: CLAUDE.md said to ask. If the live demo stalls: git checkout part2-complete -- R output.",
     "crumbs": [
@@ -189,7 +189,7 @@
   {
     "objectID": "part2-slides.html#check-it-yourself",
     "href": "part2-slides.html#check-it-yourself",
-    "title": "Claude & Claude Code at the School of Medicine",
+    "title": "Getting Started with Claude",
     "section": "Check it yourself",
     "text": "Check it yourself\nIn the R Console: clean &lt;- readr::read_csv(\"output/cohort_clean.csv\")\nThen open it in the Data Explorer:\n\nRow count after de-duplication?\nSort sbp_v1 high to low: any 1200? Sort sbp_v0: any -99?\nsex: only F, M, missing?\nPick one row of cleaning_log.csv and find that patient\n\n\n0:30 – 0:33 (3c, 3 min). Demo on your screen while they do it. “Trace every change”: the script is the record, the log shows each change, and you checked both. Data Explorer is Positron’s, not Claude’s; checking here doesn’t add the data to the conversation.\nExpected: 505 raw rows, 500 after removing 5 duplicates.",
     "crumbs": [
@@ -200,7 +200,7 @@
   {
     "objectID": "part2-slides.html#analyze-then-save",
     "href": "part2-slides.html#analyze-then-save",
-    "title": "Claude & Claude Code at the School of Medicine",
+    "title": "Getting Started with Claude",
     "section": "Analyze, then save",
     "text": "Analyze, then save\n\nR/02_table1.R, R/03_primary_model.R, then reports/report.qmd, rendered to HTML\nCheck against the SAP: sbp_change ~ arm + sbp_v0 + site, Standard as reference, complete case, no Table 1 p-values\nExpected: n = 451, −11.0 mmHg (95% CI −12.8 to −9.2). Different? Compare the n’s first.\n\n\n\n\n\n\n\n\n\nSafety net\nCovers\nDoesn’t cover\n\n\n\n\nCheckpoints (hover → rewind)\nClaude’s file edits this session\nFiles your scripts write (output/), shell changes\n\n\ngit\nEverything you commit\nNothing you didn’t commit\n\n\n\n\n0:33 – 0:39 (3d, 6 min). Paste the two prompts. While the report renders, everyone checks the scripts against the SAP with the checklist on the class page; anything that doesn’t match is a finding to send back to Claude. Open reports/report.html in the Viewer next to its source. Fallback: git checkout part2-complete -- R reports output.\n0:39 – 0:42 (3e, 3 min). Demo rewind: ask Claude to rename every variable to upper case, accept, then hover → Rewind code to here. Then ask Claude to commit and show git log --oneline. Checkpoints are quick undo; git is the record.",
     "crumbs": [
@@ -211,7 +211,7 @@
   {
     "objectID": "part2-slides.html#break",
     "href": "part2-slides.html#break",
-    "title": "Claude & Claude Code at the School of Medicine",
+    "title": "Getting Started with Claude",
     "section": "Break",
     "text": "Break\n5 minutes. Finish Exercise 1, or at least commit R/01_clean.R.\n\n0:42 – 0:47. Walk the room; help anyone stuck commit what they have. Back at 0:47.",
     "crumbs": [
@@ -222,7 +222,7 @@
   {
     "objectID": "part2-slides.html#context-is-the-budget",
     "href": "part2-slides.html#context-is-the-budget",
-    "title": "Claude & Claude Code at the School of Medicine",
+    "title": "Getting Started with Claude",
     "section": "Context is the budget",
     "text": "Context is the budget\nEverything Claude reads fills the context window, and quality drops as it fills. Watch the context indicator in the prompt box.\n\n\n\n\n\n\n\nWhen…\nDo this\n\n\n\n\nLong session, same task\n/compact keep the cleaning decisions and n's\n\n\nUnrelated task\nNew conversation (CLI: /clear)\n\n\nWhat’s using space?\nCLI: /context\n\n\nQuick side question\n/btw &lt;question&gt;\n\n\n\nCorrected Claude twice on the same thing? Start fresh with a better prompt.\n\n0:47 (Segment 4a, 2 min). Point at the context indicator in the panel. Run /compact with a focus. Printing a whole data frame fills context and sends the data: “at most 10 rows” is a context rule and a privacy rule.",
     "crumbs": [
@@ -233,7 +233,7 @@
   {
     "objectID": "part2-slides.html#model-effort-ultrathink-ultracode",
     "href": "part2-slides.html#model-effort-ultrathink-ultracode",
-    "title": "Claude & Claude Code at the School of Medicine",
+    "title": "Getting Started with Claude",
     "section": "Model, effort, ultrathink, ultracode",
     "text": "Model, effort, ultrathink, ultracode\n\n\n\n\n\n\n\n\n\nControl\nWhat it changes\nLasts\nIn the panel\n\n\n\n\n/model\nModel alias; opusplan = Opus plans, Sonnet builds\nSaved\nClick the model name\n\n\n/effort\nReasoning, low → max; default medium\nSaved (max: session)\nEffort row\n\n\nultrathink\nDeeper reasoning\nOne turn\nType it in a prompt\n\n\nultracode\nOne task as a dynamic workflow\nOne task\nType it in a prompt\n\n\n/effort ultracode\nWorkflows for every task\nSession\nUltracode switch\n\n\n/fast\nFaster Opus, pricier tokens\nSaved\nToggle fast mode\n\n\n\n\n0:49 (Segment 4b, 3 min). Open the model picker and show the Effort row. Switch to opusplan and enter plan mode: Opus plans, Sonnet carries it out. Part 1 alumni: this is the app’s model and effort menu next to Send. Effort: Opus 5.5, Sonnet 5.5, and Haiku 5.5 default to medium (most other models: high); higher tests more edge cases but costs more tokens and time; max is session-only; your org may cap levels. Run the ultrathink prompt from the class page (complete case vs. older patients lost to follow-up).\n0:52 (4c, 3 min). Ultracode is a setting, not an effort level. ultracode: in a prompt = one task; /effort ultracode or the switch = every task until /effort ultracode off. The keyword doesn’t trigger in claude -p. /deep-research is the bundled workflow (needs web search). /fast is optional: Opus only, usage credits on subscription plans, Owner must enable.\nCheck before class (Positron): typed /model and /effort vs. the picker only; the Ultracode switch (v2.1.284+); keyword highlighting; where workflow progress appears (/workflows is documented for the CLI).",
     "crumbs": [
@@ -244,7 +244,7 @@
   {
     "objectID": "part2-slides.html#workflows-power-with-a-bill",
     "href": "part2-slides.html#workflows-power-with-a-bill",
-    "title": "Claude & Claude Code at the School of Medicine",
+    "title": "Getting Started with Claude",
     "section": "Workflows: power, with a bill",
     "text": "Workflows: power, with a bill\nultracode: review every script in R/ against docs/SAP.md, one reviewer\nper script, then adversarially check each finding and report only the\nones that survive. Don't change any files.\n/deep-research &lt;question&gt;: searches, cross-checks sources, and returns a cited report\n\nCan use meaningfully more tokens, and counts toward your usage limits\nTry a small slice first, and turn ultracode off for routine work\nIf enabled: your organization can turn workflows off entirely\nVerify every citation. Keep study data out of research questions.\n\n\n~0:53. Run the ultracode prompt only if workflows are enabled and you have usage headroom; otherwise stay on this slide. Don’t run /deep-research live unless rehearsed; it takes minutes. Integrity tie-in: an adversarial check is still not a human statistician.",
     "crumbs": [
@@ -255,7 +255,7 @@
   {
     "objectID": "part2-slides.html#check-in-from-your-phone-rc",
     "href": "part2-slides.html#check-in-from-your-phone-rc",
-    "title": "Claude & Claude Code at the School of Medicine",
+    "title": "Getting Started with Claude",
     "section": "Check in from your phone: /rc",
     "text": "Check in from your phone: /rc\nType /rc in the panel → Claude app → Code → pick the session\n\nStart a long render, then check progress and approve permission prompts from your phone\nClaude keeps running on your computer: it must stay on, and the session must keep running\nRemote Control ≠ Claude Code on the web. /rc = your local session, viewed from phone or browser. On the web = cloud sessions on a GitHub repo (if enabled)\nWhile connected, the transcript is stored on Anthropic servers: don’t print data values\nIf enabled: an Owner turns it on. Off in the HIPAA configuration, under ZDR, and on Bedrock, Google Cloud, Foundry, or a gateway\n\n\n0:55 (Segment 4d, 2 min). Part 1 alumni: this is what the phone app’s Code tab is for. Demo: start a deliberately slow task (render the report), type /rc in the panel (confirm Enable Remote Control the first time), point at the Remote Control indicator in the footer, open the session on your mirrored phone (Claude app → Code; computer icon, green dot), and approve a permission prompt from it. Run /rc again to disconnect. The same session also shows in a browser, in the Code section of the Claude web app. Panel: no name, no QR code; CLI: claude --remote-control \"name\", and /mobile shows the app QR code. Custom roles need the Remote Control permission, and the org may require trusted devices. Admins can disable it with disableRemoteControl. Check before class: that /rc and the indicator work in Positron’s panel and that your org (and workspace) has it turned on.",
     "crumbs": [
@@ -266,7 +266,7 @@
   {
     "objectID": "part2-slides.html#where-does-each-instruction-belong",
     "href": "part2-slides.html#where-does-each-instruction-belong",
-    "title": "Claude & Claude Code at the School of Medicine",
+    "title": "Getting Started with Claude",
     "section": "Where does each instruction belong?",
     "text": "Where does each instruction belong?\n\n\n\n\n\n\n\n\nPut it in…\nWhen it’s…\nExample\n\n\n\n\nCLAUDE.md\nA rule for every session\n“data/raw/ is read-only”\n\n\nA skill you run by name\nA prompt you start yourself\n/check-data &lt;file&gt;\n\n\nA skill Claude loads\nA procedure Claude uses when relevant\ntable1\n\n\nA subagent\nWork in a separate context\nbiostat-reviewer\n\n\nA hook\nSomething that must happen every time\nBlock edits to data/raw/\n\n\nA deny rule\nSomething that must never happen\nRead data/restricted/\n\n\n\n\n0:57 (Segment 5a, 2 min). The organizing idea for the rest of class. Skills: .claude/skills/&lt;name&gt;/SKILL.md becomes /&lt;name&gt;, text after the name fills $ARGUMENTS; only the description loads until used, so write it in the words people type. disable-model-invocation: true = runs only when you type it. Custom commands (.claude/commands/&lt;name&gt;.md) have been merged into skills: old files still work, but skills are the recommended form. Part 1 alumni: an app skill is the same SKILL.md format, and claude.ai skills can sync into Claude Code (if enabled). Subagents start fresh and can have read-only tools; to make one, ask Claude or write a file in .claude/agents/ (/agents no longer opens a menu). Hooks run whatever Claude decides.",
     "crumbs": [
@@ -277,7 +277,7 @@
   {
     "objectID": "part2-slides.html#switch-to-positron-two-skills-a-reviewer-a-hook",
     "href": "part2-slides.html#switch-to-positron-two-skills-a-reviewer-a-hook",
-    "title": "Claude & Claude Code at the School of Medicine",
+    "title": "Getting Started with Claude",
     "section": "Switch to Positron: two skills, a reviewer, a hook",
     "text": "Switch to Positron: two skills, a reviewer, a hook\n/check-data data/raw/redcap/redcap_export_site_A.csv\n“Make a baseline characteristics table by treatment arm.”\n“Use the biostat-reviewer agent to review R/03_primary_model.R against the SAP.”\n“Change sex from Female to F in data/raw/class_cohort.csv.” → blocked\n\n0:59 (Segment 5b, 5 min). Pull in one at a time with git checkout part2-complete -- .claude/skills/check-data (then .claude/skills/table1, .claude/agents, .claude/settings.json .claude/hooks). Start a new conversation after each so the files load (/reload-skills: check before class in the panel).\nShow frontmatter: description, disable-model-invocation: true, argument-hint, allowed-tools, tools: Read, Grep, Glob. Skill rules encode judgment: no baseline p-values in an RCT (CONSORT), a Missing row. A reviewer told to find problems will find some; you decide. The hook needs jq; view it under / → Customize → Hooks. Point to the hook’s own message (“Write derived data to output/ instead”) as proof the hook blocked it; a plain permission-denied means the Edit(./data/raw/**) deny rule caught it first. The answer-key settings also turn on the sandbox and a styler/lintr hook.",
     "crumbs": [
@@ -288,7 +288,7 @@
   {
     "objectID": "part2-slides.html#exercise-2-build-one",
     "href": "part2-slides.html#exercise-2-build-one",
-    "title": "Claude & Claude Code at the School of Medicine",
+    "title": "Getting Started with Claude",
     "section": "Exercise 2: build one",
     "text": "Exercise 2: build one\n8 minutes. Text and prompts are on the class page.\n\nOption A (everyone): create .claude/skills/check-data/SKILL.md, start a new conversation, then run /check-data data/raw/redcap/redcap_export_site_B.csv\nOption B: ask Claude to draft a Table 1 skill in .claude/skills/table1/, then test it with a plain request and /table1 site\nThen make it yours: change one rule to fit a data task you do, and run it again\n\nDoesn’t appear? Check the folder, then start a new conversation. Doesn’t auto-load? Make the description more specific.\n\n1:04 – 1:12 (5c). Circulate. Common problems: .claude created inside R/ or data/; a file saved as SKILL.md.txt or not in its own check-data/ folder; a misspelled frontmatter field (silently ignored); the skill doesn’t show until a new conversation (or /reload-skills). If Positron’s Explorer hides the dot-folder, have them ask Claude to create the file with the exact text.\n1:09: make it yours (2 min). Call time even if some are still testing. Examples on the class page: a date-order or ID-format check in /check-data, or a journal’s rounding rules in the skill. Steer people away from rules that contradict the SAP, such as median (IQR) instead of mean (SD).\nDebrief (1 min): what did people change to make it theirs, and who got automatic loading to work?",
     "crumbs": [
@@ -299,7 +299,7 @@
   {
     "objectID": "part2-slides.html#messy-real-world-sources",
     "href": "part2-slides.html#messy-real-world-sources",
-    "title": "Claude & Claude Code at the School of Medicine",
+    "title": "Getting Started with Claude",
     "section": "Messy real-world sources",
     "text": "Messy real-world sources\nREDCap exports: three sites, three export styles\n“Use a subagent to compare the three REDCap exports… Return one comparison table. Don’t change any files.”\nLegacy code: legacy/baseline_table.sas and .do\n“Explain what this does, step by step… list anything that looks like a bug.”\nCut first if running late. It’s a good try-at-home exercise.\n\n1:12 – 1:20 (Segment 6, 8 min). Pick one. Answer keys are in instructor/README.md.\nREDCap: A uses record_id and visit-named BP columns; B codes arm and sex 1/2 and exports blank labs as -99; C uses MM/DD/YYYY, smoking_status, and an extra redcap_data_access_group column.\nSAS bugs: only some -99s recoded; sex misses f/2; missing age lands in &lt;65; nodupkey drops silently. Stata bugs: completers-only Table 1; NA makes BP strings so the recode fails, and 999 is never recoded; duplicates drop, force keeps an arbitrary row. Score how many Claude found.",
     "crumbs": [
@@ -310,7 +310,7 @@
   {
     "objectID": "part2-slides.html#give-claude-a-check-it-can-run",
     "href": "part2-slides.html#give-claude-a-check-it-can-run",
-    "title": "Claude & Claude Code at the School of Medicine",
+    "title": "Getting Started with Claude",
     "section": "Give Claude a check it can run",
     "text": "Give Claude a check it can run\nWithout a check, “looks done” is the only signal, and you become the only verifier.\n\nWrite tests from the dictionary and SAP, and show they fail on the raw file\nShow they pass on the cleaned file. Don’t edit the tests.\nRead the diff of tests/ as carefully as the code\n\nIndependent review: biostat-reviewer, /code-review, and a human statistician (required)\n\n1:20 (Segment 7, 7 min). Don’t cut this segment. Switch to Positron and paste the test-first prompt (~3 min). If it stalls: git checkout part2-complete -- tests, then ask Claude to run Rscript tests/run_checks.R. Python: pytest.\nWatch for Claude editing the tests instead of the code, or “fixing” failures by dropping rows.",
     "crumbs": [
@@ -321,7 +321,7 @@
   {
     "objectID": "part2-slides.html#why-cleaning-matters",
     "href": "part2-slides.html#why-cleaning-matters",
-    "title": "Claude & Claude Code at the School of Medicine",
+    "title": "Getting Started with Claude",
     "section": "Why cleaning matters",
     "text": "Why cleaning matters\n\n\n\n\nn\nIntensive − Standard\n95% CI\n\n\n\n\nRaw file, no cleaning\n462\n−8.4 mmHg\n−19.6 to 2.9\n\n\nAfter 01_clean\n451\n−11.0 mmHg\n−12.8 to −9.2\n\n\n\nA few -99 and 999 codes hide a 10 mmHg treatment effect.\n\n~1:23 (1 min). Same model, same file. Without cleaning, sentinel codes are read as real blood pressures and duplicates are kept. To make it live, ask: “Fit the SAP’s primary model to the raw file without any cleaning and put it next to the cleaned result. Don’t save anything.”",
     "crumbs": [
@@ -332,7 +332,7 @@
   {
     "objectID": "part2-slides.html#forking-paths-and-disclosure",
     "href": "part2-slides.html#forking-paths-and-disclosure",
-    "title": "Claude & Claude Code at the School of Medicine",
+    "title": "Getting Started with Claude",
     "section": "Forking paths and disclosure",
     "text": "Forking paths and disclosure\n\nGarden of forking paths: Claude makes “one more model” cheap. Pre-specify in the SAP, and label sensitivity and post hoc analyses.\nScope creep: watch for Claude changing a decision the SAP fixed\nAudit trail: commit .claude/ with the analysis; /export key sessions; record the version and model\nDisclose specifically: “Code drafted with Claude Code (version, model); reviewed, tested against pre-specified checks, and rerun from raw data by the authors.”\n\nDiscuss: what would you need to see to trust an AI-assisted analysis you were reviewing?\n\n~1:24 (3 min including discussion). Tie each point to something from today: the plan was the pre-specification, the Data Explorer check was a spot-check, the log is the audit trail. Journal and funder policies: [link to library guidance on AI disclosure]. Take two answers to the discussion question.",
     "crumbs": [
@@ -343,7 +343,7 @@
   {
     "objectID": "part2-slides.html#three-takeaways",
     "href": "part2-slides.html#three-takeaways",
-    "title": "Claude & Claude Code at the School of Medicine",
+    "title": "Getting Started with Claude",
     "section": "Three takeaways",
     "text": "Three takeaways\n\nProtect first. CLAUDE.md, a deny rule, Manual mode, and git before Claude touches the data\nPlan, build, verify. Plan against the SAP, let Claude run the code, check it yourself, and commit\nEncode your judgment once. Skills, subagents, and hooks become shared team tools\n\nTry at home: worktrees (CLI), claude -p (CLI), the sandbox, MCP (if enabled), and today’s workflow on NHANES blood-pressure files\n\n1:27 (Segment 8, 3 min). Say the three takeaways. Try at home: claude --worktree sensitivity-mi for the multiple-imputation sensitivity analysis; claude -p for batch explanations of legacy code; the sandbox test with an R script; /mcp to see approved connectors; NHANES (remember the survey weights). Avoid controlled-access data (MIMIC, dbGaP, UK Biobank).",
     "crumbs": [
@@ -354,7 +354,7 @@
   {
     "objectID": "part2-slides.html#keep-going",
     "href": "part2-slides.html#keep-going",
-    "title": "Claude & Claude Code at the School of Medicine",
+    "title": "Getting Started with Claude",
     "section": "Keep going",
     "text": "Keep going\n\nClass page: every prompt from today\nCheat sheet: panel vs. CLI, models and effort, key files\nDocs: code.claude.com/docs (“Use Claude Code in VS Code” also applies to Positron)\nFree courses: academy.claude.com (Claude Academy)\nLibrary help: [data services consults, office hours]\nFeedback: [link to short evaluation form]\n\nQuestions?\n\n~1:29. Share the feedback link; take questions until 1:30. Possible follow-ups: “Build a lab skills library,” “Translating SAS/Stata to R, with tests.” After class: run the demo reset, and disconnect Remote Control.",
     "crumbs": [
