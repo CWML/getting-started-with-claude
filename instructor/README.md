@@ -4,16 +4,16 @@ Everything here is for the instructor: the dataset spec, the script that generat
 
 | Path | What it is |
 |---|---|
-| `README.md` | This file: Part 1 instructor prep (checklist, workspace check, private run-of-show details, exit-ticket answers, kit answer keys, backup plans, 90-minute add-backs), dataset spec, Part 2 answer keys, extra project files, real-dataset ideas, and how to regenerate the data |
+| `README.md` | This file: Part 1 instructor prep (checklist, workspace check, private run-of-show details, kit answer keys, backup plans, 90-minute add-backs), dataset spec, Part 2 answer keys, extra project files, real-dataset ideas, and how to regenerate the data |
 | `make_data.R` | Generates the class cohort and the Part 2 REDCap exports (seeded, so the output is the same every time) |
 | `solutions/R/`, `solutions/python/` | Answer key and demo fallback for the Part 2 build segment: `01_clean` … `04_figure` and `report.qmd` |
 | `part2-answer-key/` | Part 2 answer key: example `.claude/` folder (settings, command, skill, subagent, hooks), tests, and `CLAUDE.md` additions |
 
 ## Part 1: instructor prep
 
-Teach from the deck, `[site URL]/part1-slides.html`. Press `S` for presenter view: it shows the speaker notes (the same text participants see as Instructor tips on the class page). Participants follow the class page, `[site URL]/part1.html` (QR code on the title slide), where they copy prompts, download the kits, and find the take-home material. The reference page, `part1-reference.html`, holds the detail that doesn't fit in class. Both outputs come from one file, `part1.qmd`.
+Teach from the deck, `https://cwml.github.io/getting-started-with-claude/part1-slides.html`. Press `S` for presenter view: it shows the speaker notes (the same text participants see as Instructor tips on the class page). Participants follow the class page, `https://cwml.github.io/getting-started-with-claude/part1.html` (QR code on the title slide), where they copy prompts, download the kits, and find the take-home material. The reference page, `part1-reference.html`, holds the detail that doesn't fit in class. Both outputs come from one file, `part1.qmd`.
 
-Speaker notes appear on the public class page as "Instructor tip" boxes. Keep demo account details, room logistics and exit-ticket answers in this file only. Deck speaker notes are in the published slides' HTML (and presenter view), so nothing private goes in `part1.qmd`.
+Speaker notes appear on the public class page as "Instructor tip" boxes. Keep demo account details in this file only. Deck speaker notes are in the published slides' HTML (and presenter view), so nothing private goes in `part1.qmd`.
 
 Claude's features, menu names and admin settings change often. The feature descriptions were checked against the Claude Help Center (support.claude.com) and the Claude Code docs on October 30, 2026. When you re-check them, update the date and the corrections log in `about.qmd`.
 
@@ -40,10 +40,10 @@ Prompt slots such as `[audience]`, `[role]`, `[topic]`, `[committee name]` and `
 
 | Who | Placeholders | Where |
 |---|---|---|
-| You / the library | Site URL and repo URL (`[site URL]`, `[https://cwml.github.io/your-repo]`); owner `[name]`, `[owner email]`, footer `[contact]`, features-checked `[date]`, `[instructor]`, `[Instructor name]`, `[Library name]`; `[QR code]` on the title slide | `_quarto.yml`, `part1.qmd`, `part2-slides.qmd`, `about.qmd`, `index.qmd`, kits `README.md` |
+| You / the library | Owner `[name]`, `[owner email]`, footer `[contact]`, features-checked `[date]`, `[instructor]`, `[Instructor name]`, `[Library name]`; `[QR code]` on the title slide | `_quarto.yml`, `part1.qmd`, `part2-slides.qmd`, `about.qmd`, `index.qmd`, kits `README.md` |
 | You / the library | Forms: `[registration link]`, `[exit-ticket form link]`, `[feedback form link]`, `[link to short evaluation form]` | `index.qmd`, `part1.qmd`, `part1-reference.qmd`, `part2.qmd`, `part2-slides.qmd` |
 | You / the library | Services: `[office hours link]`, `[library consult link]`, `[literature search consults…]`, `[library evidence synthesis service]`, `[data services consults…]`, `[AIR Tracks B–F offerings]`, `[AIR SIG channel / Teams]` | `index.qmd`, `part1.qmd`, `part1-reference.qmd`, `part2.qmd`, `part2-slides.qmd` |
-| You / the library | Guidance: `[library license guidance]`, `[link to library guidance on AI disclosure]`, `[Dated source on AI energy use, chosen by a librarian.]`, `[All of Us workshop site link]`, `[repo issues link]`, `[add category]` (Part 2 form) | `part1.qmd`, `part1-reference.qmd`, kits `README.md`, `part2.qmd`, `about.qmd`, `part2-description.md` |
+| You / the library | Guidance: `[library license guidance]`, `[link to library guidance on AI disclosure]`, `[Dated source on AI energy use, chosen by a librarian.]`, `[All of Us workshop site link]`, `[add category]` (Part 2 form) | `part1.qmd`, `part1-reference.qmd`, kits `README.md`, `part2.qmd`, `about.qmd`, `part2-description.md` |
 | ITS | `[sign-up link]`, `[eligibility…]`, `[who has a license / how to request]`, `[sign-in steps / SSO note]`, `[confirm Yale seat tiers]` (Fable on standard seats), `[Yale retention period…]`, `[whether Yale's agreement allows chats to be used to train models…]`, `[one-line description from ITS]`, `[product name — check]`, `[confirm with ITS which Claude Code surfaces are covered]`, `[ITS contact]`, `[ITS / help contact]`, `[HSIT / ITS AI help]`, `[link to current install instructions]`, `[local guidance for Windows users]`, `[mobile device policy]`, `[how to check / who to ask]` | `index.qmd`, `part1.qmd`, `part1-reference.qmd`, `part2.qmd`, `cheatsheet.qmd` |
 | HSIT / HIPAA Privacy Office | `[request link]` (HIPAA-supported version), `[HSIT / HIPAA Privacy Office contact]`, `[Yale data classification / policy link]`, `[Yale data classification names…]`, the six `[approved data: ___, confirmed by ___ on DATE]` cells and four `[classification, confirmed by HSIT on DATE]` cells, `[Yale AI Tool Registry]`, `[link to institutional AI and data policy]`, `[Insert local policy]` | `index.qmd`, `part1.qmd`, `part1-reference.qmd`, `part2.qmd`, `part2-slides.qmd`, `cheatsheet.qmd` |
 | YNHHS | `[approved tool, e.g. Microsoft Copilot: link, confirmed by ___ on DATE]`, `[YNHHS-approved chat AI…]`, `[YNHHS AI governance link, confirmed DATE]`, whether YNHHS-primary appointees can use Clarity (`[confirm]`) | `index.qmd`, `part1.qmd`, `part1-reference.qmd` |
@@ -70,20 +70,9 @@ Prompt slots such as `[audience]`, `[role]`, `[topic]`, `[committee name]` and `
 **Run of show: private details**
 
 - **Demo account:** `[demo account name]`, signed in on the presenter laptop (second browser tab, finished Article Explainer Project open) and the demo phone. Two pre-run chats ready: a plausible-looking fabricated reference (segment 2, with a screenshot as backup) and Turn 1 with Claude's questions answered (segment 7). Don't teach from a personal account.
-- **Phone mirroring in SHM L 111:** `[tested method and cable/adapter]`.
-- **Room:** SHM L 111. Arrive 20 minutes early: projector, `[Wi-Fi network]`, phone mirroring, and the title slide (QR code to `part1.html`) on screen as people arrive.
 - **Green cards:** one per seat. Up at 0:03 = signed in with a new chat open. Up at the 0:25 checkpoint = Claude named your kit's files (both for Kit A, the one for Kit B) and quoted one rule. The co-facilitator goes to anyone without a green card. Move on at 0:26 regardless; people catch up during Turn 1.
 - **Timing anchors:** build starts 0:17; checkpoint 0:25; verification starts 0:37 and is never cut.
 - **Cut order if running late:** the phone tryout becomes a 1-minute demo (saves 3); Cowork moves onto the exit slide (saves 1–2); the skill becomes a screenshot (saves 1); the PubMed opening moves into segment 9 (saves 2); the / menu becomes an instructor show (saves ~0.5).
-
-**Exit-ticket answers**
-
-| Question | Good answer |
-|---|---|
-| 1. Spreadsheet of clinic no-shows with MRNs: which tool? And which setting did you lock today before uploading? | Not the standard Claude account, and not incognito: MRNs make it patient information. Use only a tool approved for that data [Yale data classification link], and ask [HSIT / HIPAA Privacy Office] first. The HIPAA-supported version is available by request, but being HIPAA-supported doesn't approve your project. "Don't use AI for this" is also a good answer. Setting: memory (sensitive topics off; Memory from chats and Search and reference chats decided), or the Project's Use account memory off. |
-| 2. Name one pattern from your prompt that changed the output. | Any of: role, named audience, ask-first with a stop, numbered output, constraints (word cap, source only, no references), the "Where this came from" table, the push-back turn. The best answers say *what* changed. |
-| 3. Claude gives you a PMID. What do you do first? | Look it up at `pubmed.ncbi.nlm.nih.gov/<PMID>` and check that the title, authors and year match. Don't ask Claude to confirm it. |
-| 4. One recurring task you'll use your Project for this week. | Any low-risk task with non-sensitive files. Redirect anything with patient information, confidential peer review, or personnel matters. |
 
 **Kit A answer key (Article Explainer)**
 
