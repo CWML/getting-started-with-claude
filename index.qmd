@@ -222,8 +222,7 @@ If Claude describes a synthetic hypertension trial, you're ready.
 | [Claude Help Center](https://support.claude.com) | How the Claude app's features work |
 | [Claude Code docs](https://code.claude.com/docs) | Official Claude Code documentation |
 | [Positron](https://positron.posit.co) | The editor used in Part 2 |
-| `[Yale AI at Yale page]` | Yale's AI tools and guidance |
-| `[Yale data classification]` | Which data can go where |
-| `[Library AI services / AIR]` | Library consults, more AIR classes, and help with your project |
+| [AI at Yale](https://ai.yale.edu) | Yale's AI tools and guidance |
+| [Yale data classification](https://cybersecurity.yale.edu/data-classification) | Which data can go where |
 
 **Questions?** Email `[owner email]` or book a consult: `[library consult link]`. See [About](about.qmd) for who maintains this site and how to report a problem.
