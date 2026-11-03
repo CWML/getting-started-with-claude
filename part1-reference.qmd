@@ -1,5 +1,5 @@
 ---
-title: "Part 1 quick reference"
+title: "Quick reference: Getting started with Claude"
 subtitle: "Data rules, settings, prompts and checklists to keep after class"
 format:
   html:
@@ -8,10 +8,10 @@ format:
 ---
 
 ::: {.callout-note appearance="simple"}
-**Last checked: 2026-10-30 against the Claude Help Center; features change often.** Menu names, models and admin settings may look different in your workspace. Anything marked *(if enabled)* depends on your admin. Spot an error? See the corrections log on the [About](about.qmd) page.
+**Last checked: 2026-10-30 against the Claude Help Center; features change often.** Menu names, models and admin settings may look different in your workspace. Anything marked *(if enabled)* depends on your admin. Spot an error? Email [justin.demayo@yale.edu](mailto:justin.demayo@yale.edu?subject=Claude%20classes%20feedback).
 :::
 
-This page goes with the [Part 1 class page](part1.qmd). Each section below expands on one part of the class.
+This page goes with the [Getting started with Claude](part1.qmd) class page. Each section below expands on one part of the class.
 
 ## Which tool for which data {#tool-data}
 
@@ -225,7 +225,7 @@ one-page Word handout.
 - Skills don't run in incognito chats, which can't create files or run code.
 - In the HIPAA-supported version, skills are off by default and aren't covered by Anthropic's agreement if turned back on [confirm with ITS].
 - Custom styles are being moved into skills (starting disabled). A migrated style may appear in the "/" menu as `/name-style` (*check before relying on it*).
-- Skills you make in the Claude app can sync into Claude Code when you sign in there with the same account (Part 2).
+- Skills you make in the Claude app can sync into Claude Code when you sign in there with the same account (taught in *Analyzing research data with Claude Code*).
 
 ## Model, effort and the app's menus {#model-effort-commands}
 
@@ -247,9 +247,9 @@ Open the **model menu next to Send**.
 - **Type "/"** in the chat box to open the same menu from the keyboard. What appears (skills, connectors, migrated styles as `/name-style`) varies by workspace, so *check yours*.
 - **Customize > Skills** and **Customize > Connectors** are where you manage skills and connectors *(if enabled)*.
 
-### Preview: the same dials in Claude Code (Part 2)
+### Preview: the same dials in Claude Code
 
-Part 1 doesn't teach Claude Code. This table shows what each app control becomes in [Part 2](part2.qmd) *(if your seat includes Claude Code)*.
+This class doesn't teach Claude Code. This table shows what each app control becomes in [Analyzing research data with Claude Code](part2.qmd) *(if your seat includes Claude Code)*.
 
 | In the Claude app | In Claude Code | What it does |
 |---|---|---|
@@ -302,7 +302,7 @@ Anything you photograph is uploaded. **Never photograph** patient lists, charts,
 ### Other things to know
 
 - **Research on the phone** (if enabled) searches only the web and silently skips connectors (if enabled) such as PubMed. Use a laptop when you need a connector.
-- **The Code tab** reaches Claude Code sessions. In Part 2, `/rc` connects it to a Claude Code session on your laptop *(if enabled; not in the HIPAA configuration)*. If you don't see a Code tab, your plan or organization may not include it.
+- **The Code tab** reaches Claude Code sessions. In Claude Code, `/rc` connects it to a Claude Code session on your laptop *(if enabled; not in the HIPAA configuration)*. If you don't see a Code tab, your plan or organization may not include it.
 
 ## Prompt library {#prompt-library}
 
@@ -709,7 +709,7 @@ The habits from class carry over to other tools: give context, name the audience
 ## Where to go next {#next}
 
 - **Library help:** [literature search consults], [library evidence synthesis service], [office hours and follow-up workshops].
-- **Part 2:** [Analyzing research data with Claude Code](part2.qmd) (Track C Computational Research · Intermediate). Part 1 is recommended, not required.
+- **Next class:** [Analyzing research data with Claude Code](part2.qmd) (Track C Computational Research · Intermediate). Taking this class first is recommended, not required.
 - **Claude Academy:** free courses from Anthropic, at <https://academy.claude.com>.
 - **Claude Help Center:** <https://support.claude.com>.
 - **Yale AI help:** [HSIT / ITS AI help].
@@ -717,4 +717,4 @@ The habits from class carry over to other tools: give context, name the audience
 - **Research integrity:** [Office of Research Integrity].
 - **New AI use in health sciences:** [HSARG]. **YNHHS:** [YNHHS AI governance].
 - **AIR SIG:** [AIR SIG offerings, Tracks B–F]. Share prompts that worked, and mistakes you caught, in [AIR SIG channel / Teams].
-- **Feedback and corrections:** [link to short evaluation form] · [About and corrections log](about.qmd).
+- **Feedback and corrections:** [link to short evaluation form] · [justin.demayo@yale.edu](mailto:justin.demayo@yale.edu?subject=Claude%20classes%20feedback).

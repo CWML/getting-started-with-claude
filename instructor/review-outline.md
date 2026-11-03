@@ -22,7 +22,7 @@ A working document for `[Reviewer 1]` and `[Reviewer 2]` to review both classes 
 |---|---|---|
 | Part 1: `part1.qmd` (class page), `part1-reference.qmd`, Part 1 kits | `[name]` | `[name]` |
 | Part 2: `part2.qmd`, `part2-slides.qmd`, `cheatsheet.qmd`, hypertension project | `[name]` | `[name]` |
-| Shared pages: `index.qmd`, `about.qmd`, both `*-description.md` files | `[name]` | `[name]` |
+| Shared pages: `index.qmd`, both `*-description.md` files | `[name]` | `[name]` |
 | Instructor materials: `instructor/README.md`, answer keys, solutions | `[name]` | `[name]` |
 
 ### Severity scale
@@ -66,7 +66,7 @@ Answer these once you've done the dry run.
 | 9 | Verify before you use it | 0:37 – 0:46 | | |
 | 10 | Tune it: model, effort and skills | 0:46 – 0:51 | | |
 | 11 | Take it with you: the phone app | 0:51 – 0:55 | | |
-| 12 | Cowork and the bridge to Part 2 | 0:55 – 0:57 | | |
+| 12 | Cowork and the bridge to Claude Code | 0:55 – 0:57 | | |
 | 13 | Exit ticket and close | 0:57 – 1:00 | | |
 
 ### Teaching from the page
@@ -154,6 +154,6 @@ One row per issue. Use the file and section heading so we can find it.
 ## 9. After the review
 
 - [ ] Apply the fixes, updating each class page and its slides together.
-- [ ] Update `about.qmd`: the "features last checked" date, the next review date, and a corrections log row for each fix to a fact, link, or instruction.
+- [ ] If you re-checked features, update the "Last checked" date at the top of `part1-reference.qmd` and in `instructor/README.md`.
 - [ ] Re-render the site and spot-check the changed pages.
 - [ ] Move private items (such as demo account details) into `instructor/README.md` if any turned up.

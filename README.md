@@ -16,7 +16,6 @@ part1-reference.qmd        # Part 1 quick reference page
 part2.qmd                  # Part 2 class page you teach from; participants follow along
 part2-slides.qmd           # Part 2 slides (press S for speaker notes)
 cheatsheet.qmd             # Claude Code cheat sheet (Part 2)
-about.qmd                  # owner, features last-checked date, corrections log, AI-use disclosure, license
 part1-description.md       # Part 1 entry for the library's training request form (not rendered)
 part2-description.md       # Part 2 entry for the library's training request form (not rendered)
 materials/part1-kits/      # Part 1 Project kits: Kit A (Article Explainer), Kit B (Committee Assistant)
@@ -56,6 +55,6 @@ The live site is <https://cwml.github.io/getting-started-with-claude/>. GitHub P
 - Check every `[bracketed placeholder]` (sign-up and HIPAA-version request links, policy links, contacts, enabled connectors).
 - Check the Claude and Claude Code features against both Yale workspaces (standard enterprise and HIPAA-supported), since they change often.
 - Follow the instructor prep checklist: both parts are in `instructor/README.md`.
-- After any content change, update the last-checked date and corrections log in `about.qmd`.
+- After re-checking features, update the "Last checked" date at the top of `part1-reference.qmd`.
 
 All class data and kit files are **synthetic**, apart from the open-access article in Kit A, which keeps its own license. See `instructor/README.md`.

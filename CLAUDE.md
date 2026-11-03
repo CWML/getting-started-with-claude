@@ -12,7 +12,7 @@ The repo is a Quarto website, live at https://cwml.github.io/getting-started-wit
 - `part1-reference.qmd`: the Part 1 quick reference page (tool and data, settings, Projects and skills, model/effort and commands, mobile, prompt library, verify and disclose, Cowork, Copilot, where to go next).
 - `materials/part1-kits/`: the Part 1 Project files. Kit A (Article Explainer: style guide plus an open-access article copy) and Kit B (Committee Assistant: a synthetic committee pack), plus a `README.md`. `scripts/build_downloads.py` zips each kit at render time.
 - `part2.qmd`: the single Part 2 page the instructor teaches from and participants follow. The page is public, so instructor-only content (prep checklist, run of show, segment notes, backup plans) lives in `instructor/README.md`, not on the page. `part2-slides.qmd` is its revealjs deck with speaker notes.
-- `index.qmd` (home + setup, access and alternatives, recommended links), `cheatsheet.qmd` (Part 2), and `about.qmd` (owner, features last-checked date, review cadence, corrections log, AI-use disclosure, license).
+- `index.qmd` (home + setup, access and alternatives, recommended links), and `cheatsheet.qmd` (Part 2). There is no About page.
 - `part1-description.md` and `part2-description.md`: each class's entry for the library's training request form (title, modality and location, duration, description, learning objectives, category, registration, attendee cap; not rendered). Both classes are in person in SHM L 111, registration required, cap 18.
 - `theme/`: a Quarto adapter for the CWML web style (draft 0.1): `cwml.scss`, `cwml-dark.scss` (dark mode, a local extension that isn't part of CWML 0.1), `cwml-reveal.scss` (the Part 2 deck), and `skip-link.html`.
 - `materials/hypertension-cohort/`: the Part 2 practice project, downloaded as one zip (`CLAUDE.md` for R, `CLAUDE.python.md` as the Python swap-in, REDCap exports, a `data/restricted/` stand-in, and `legacy/` code).
@@ -36,6 +36,7 @@ The agenda in `part1.qmd` / `part2.qmd` is the source of truth for timings. Part
 If you change a segment's length, update both the agenda table and the segment headings (and the slide notes).
 
 ## Content rules
+- **Name the classes by title on anything patrons see**: "Getting started with Claude" and "Analyzing research data with Claude Code," never "Part 1" or "Part 2." That covers site pages, slides, the navbar and sidebars, the description files, and the READMEs in `materials/`. "Part 1/Part 2" is fine in `instructor/`, this file, and file names and anchors (`part1.qmd`, `#setup-part1`), which stay as they are so links keep working.
 - **Never use real patient data** in examples, exercises, or demos. Use the synthetic class cohort, the synthetic kit files, or public de-identified data only (NHANES, Synthea). Don't suggest controlled-access datasets (MIMIC, dbGaP, UK Biobank) for demos.
 - **Don't claim institutional approvals.** Yale offers a HIPAA-supported version of Claude by request, and you may say so with a `[request link]`. Don't claim that it approves any project, feature, or data set, and don't state that the standard enterprise account covers PHI or any data classification. Features in the HIPAA-supported version may differ (some off, older layout): "check with [ITS]". Use `[bracketed placeholders]` for every other approval and local detail: sign-up links, policy links, ITS/HSIT contacts, enabled connectors, site URL.
 - **Product features change often.** Describe Claude app and Claude Code features in terms the instructor can check, and mark features that depend on admin settings (connectors, code execution, skills, Research, Cowork, Remote Control, Claude Code seats) as "if enabled." Mark uncertain menu labels "(check before class)" on pages and in instructor notes, not on slides.
@@ -45,7 +46,7 @@ If you change a segment's length, update both the agenda table and the segment h
 - Recommended links (home page, Part 1's "Where to go next" and reference page, and Part 2) include Claude Academy: `https://academy.claude.com` ("Claude Academy: free courses from Anthropic").
 
 ## Content lifecycle
-When you change content or re-check features, update `about.qmd`: the "features last checked" date, and a row in the corrections log for any fix to a fact, link, or instruction.
+When you re-check features, update the "Last checked" date at the top of `part1-reference.qmd` and the date in `instructor/README.md`.
 
 ## Style
 - Markdown, with `##` for segments and `###` for sub-segments . Put timing in the segment headings, e.g. `(0:20 – 0:47)`.

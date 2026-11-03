@@ -10,7 +10,6 @@ project:
     - part2.qmd
     - part2-slides.qmd
     - cheatsheet.qmd
-    - about.qmd
   resources:
     - "/.nojekyll"
     - materials/part1-kits/*
@@ -25,18 +24,16 @@ website:
   search: true
   page-navigation: true
   navbar:
-    collapse-below: xl
+    collapse-below: xxl
     left:
       - text: "Cushing/Whitney Medical Library"
         href: https://library.medicine.yale.edu/
       - href: index.qmd
         text: Home & setup
       - href: part1.qmd
-        text: "Part 1: Claude"
+        text: "Getting started with Claude"
       - href: part2.qmd
-        text: "Part 2: Claude Code"
-      - href: about.qmd
-        text: About
+        text: "Analyzing research data"
     right:
       - text: "Feedback"
         icon: envelope
@@ -44,50 +41,36 @@ website:
       - icon: github
         href: "https://github.com/CWML/getting-started-with-claude"
         aria-label: "Course materials on GitHub"
-  # One sidebar per section. Quarto highlights the first navbar item whose page
-  # is in the current sidebar, so a shared sidebar would always highlight Home.
-  # Links back to Home use an anchor (index.html#...) so they don't count.
+  # One shared sidebar on every page. Quarto marks the first navbar link whose
+  # page is anywhere in the sidebar as active, which would always be Home, so
+  # theme/nav-active.html resets the active navbar link for each page.
   sidebar:
-    - id: part1
-      title: "Part 1: Getting started with Claude"
-      style: docked
-      contents:
-        - href: part1.qmd
-          text: Class page
-        - href: part1-reference.qmd
-          text: Quick reference
-        - href: index.html#setup-part1
-          text: Setup for Part 1
-    - id: part2
-      title: "Part 2: Analyzing research data with Claude Code"
-      contents:
-        - href: part2.qmd
-          text: Class page
-        - href: part2-slides.qmd
-          text: Slides
-        - href: cheatsheet.qmd
-          text: Cheat sheet
-        - href: index.html#setup-part2
-          text: Setup for Part 2
-    - id: about
-      title: About
-      contents:
-        - about.qmd
-        - href: index.html#links
-          text: Recommended links
-    - id: home
-      title: "Home & setup"
-      contents:
-        - href: index.qmd
-          text: Home
-        - href: index.html#setup-part1
-          text: Setup for Part 1
-        - href: index.html#setup-part2
-          text: Setup for Part 2
-        - href: index.html#access
-          text: Access and alternatives
-        - href: index.html#links
-          text: Recommended links
+    style: docked
+    contents:
+      - href: index.qmd
+        text: Home
+      - section: "Getting started with Claude"
+        contents:
+          - href: part1.qmd
+            text: Class page
+          - href: part1-reference.qmd
+            text: Quick reference
+          - href: index.html#setup-part1
+            text: Setup
+      - section: "Analyzing research data with Claude Code"
+        contents:
+          - href: part2.qmd
+            text: Class page
+          - href: part2-slides.qmd
+            text: Slides
+          - href: cheatsheet.qmd
+            text: Cheat sheet
+          - href: index.html#setup-part2
+            text: Setup
+      - href: index.html#access
+        text: Access and alternatives
+      - href: index.html#links
+        text: Recommended links
   page-footer:
     left: "Cushing/Whitney Medical Library · Yale School of Medicine"
     center: "Questions or feedback? Email [justin.demayo@yale.edu](mailto:justin.demayo@yale.edu?subject=Claude%20classes%20feedback) · Copyright © 2026 Yale University · All Rights Reserved · [Accessibility at Yale](https://usability.yale.edu/digital-accessibility/accessibility-at-yale) · [Privacy Policy](https://privacy.yale.edu/resources/privacy-statement)"
@@ -104,3 +87,4 @@ format:
     code-copy: true
     code-overflow: wrap
     include-before-body: theme/skip-link.html
+    include-after-body: theme/nav-active.html

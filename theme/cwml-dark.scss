@@ -33,3 +33,5 @@ pre code, div.sourceCode pre code { color: $cwml-text; }
   color: $cwml-heading; background-color: $cwml-bg; border-color: $cwml-border-light $cwml-border-light $cwml-bg;
 }
 .page-navigation .nav-page-text { color: $cwml-text; }
+// The current-page crumb above the title keeps Bootstrap's grey (3.8:1 on dark).
+.quarto-title-breadcrumbs .breadcrumb li:last-of-type a { color: $cwml-muted; }
