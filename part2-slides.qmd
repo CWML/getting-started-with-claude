@@ -1,5 +1,5 @@
 ---
-pagetitle: "Part 2 slides: Analyzing Research Data with Claude Code"
+pagetitle: "Slides: Analyzing Research Data with Claude Code"
 format:
   revealjs:
     theme: [default, theme/cwml-reveal.scss]
@@ -14,7 +14,7 @@ format:
 
 ## Analyzing Research Data with Claude Code {.center}
 
-Part 2: a 90-minute hands-on class
+A 90-minute hands-on class
 
 [Instructor name], [Library name]
 
@@ -112,7 +112,7 @@ All load together. Keep each file **under 200 lines**. `CLAUDE.md` is **advice**
 ::: notes
 **0:09 (Segment 2b, 4 min).** Switch to Positron and open the project's `CLAUDE.md`: raw data is read-only, never read `data/restricted/`, numbered scripts, log every change, ask before missing-data or outlier decisions, at most 10 rows.
 
-Bridge for Part 1 alumni: the Project's instructions become `CLAUDE.md`, and its files become documents in the folder, like `docs/SAP.md`.
+Bridge for people who took *Getting started with Claude*: the Project's instructions become `CLAUDE.md`, and its files become documents in the folder, like `docs/SAP.md`.
 
 In the panel: `/` → Customize → **Instructions** opens `CLAUDE.md` files; **Memory** shows auto memory. CLI: `/memory`. Imports like `@docs/SAP.md` load every session: fine for a 2-page SAP, not a 40-page protocol.
 
@@ -251,7 +251,7 @@ Corrected Claude twice on the same thing? Start fresh with a better prompt.
 | `/fast` | Faster Opus, pricier tokens | Saved | **Toggle fast mode** |
 
 ::: notes
-**0:49 (Segment 4b, 3 min).** Open the model picker and show the Effort row. Switch to `opusplan` and enter plan mode: Opus plans, Sonnet carries it out. Part 1 alumni: this is the app's model and effort menu next to Send. Effort: Opus 5.5, Sonnet 5.5, and Haiku 5.5 default to `medium` (most other models: `high`); higher tests more edge cases but costs more tokens and time; `max` is session-only; your org may cap levels. Run the `ultrathink` prompt from the class page (complete case vs. older patients lost to follow-up).
+**0:49 (Segment 4b, 3 min).** Open the model picker and show the Effort row. Switch to `opusplan` and enter plan mode: Opus plans, Sonnet carries it out. If they took *Getting started with Claude*: this is the app's model and effort menu next to Send. Effort: Opus 5.5, Sonnet 5.5, and Haiku 5.5 default to `medium` (most other models: `high`); higher tests more edge cases but costs more tokens and time; `max` is session-only; your org may cap levels. Run the `ultrathink` prompt from the class page (complete case vs. older patients lost to follow-up).
 
 **0:52 (4c, 3 min).** Ultracode is a *setting*, not an effort level. `ultracode:` in a prompt = one task; `/effort ultracode` or the switch = every task until `/effort ultracode off`. The keyword doesn't trigger in `claude -p`. `/deep-research` is the bundled workflow (needs web search). `/fast` is optional: Opus only, usage credits on subscription plans, Owner must enable.
 
@@ -288,7 +288,7 @@ Type `/rc` in the panel → Claude app → **Code** → pick the session
 - **If enabled:** an Owner turns it on. Off in the HIPAA configuration, under ZDR, and on Bedrock, Google Cloud, Foundry, or a gateway
 
 ::: notes
-**0:55 (Segment 4d, 2 min).** Part 1 alumni: this is what the phone app's Code tab is for. Demo: start a deliberately slow task (render the report), type `/rc` in the panel (confirm **Enable Remote Control** the first time), point at the **Remote Control** indicator in the footer, open the session on your mirrored phone (Claude app → **Code**; computer icon, green dot), and approve a permission prompt from it. Run `/rc` again to disconnect. The same session also shows in a browser, in the Code section of the Claude web app. Panel: no name, no QR code; CLI: `claude --remote-control "name"`, and `/mobile` shows the app QR code. Custom roles need the Remote Control permission, and the org may require trusted devices. Admins can disable it with `disableRemoteControl`. **Check before class:** that `/rc` and the indicator work in Positron's panel and that your org (and workspace) has it turned on.
+**0:55 (Segment 4d, 2 min).** If they took *Getting started with Claude*: this is what the phone app's Code tab is for. Demo: start a deliberately slow task (render the report), type `/rc` in the panel (confirm **Enable Remote Control** the first time), point at the **Remote Control** indicator in the footer, open the session on your mirrored phone (Claude app → **Code**; computer icon, green dot), and approve a permission prompt from it. Run `/rc` again to disconnect. The same session also shows in a browser, in the Code section of the Claude web app. Panel: no name, no QR code; CLI: `claude --remote-control "name"`, and `/mobile` shows the app QR code. Custom roles need the Remote Control permission, and the org may require trusted devices. Admins can disable it with `disableRemoteControl`. **Check before class:** that `/rc` and the indicator work in Positron's panel and that your org (and workspace) has it turned on.
 :::
 
 ## Where does each instruction belong? {.smaller}
@@ -303,7 +303,7 @@ Type `/rc` in the panel → Claude app → **Code** → pick the session
 | A **deny rule** | Something that must *never* happen | Read `data/restricted/` |
 
 ::: notes
-**0:57 (Segment 5a, 2 min).** The organizing idea for the rest of class. Skills: `.claude/skills/<name>/SKILL.md` becomes `/<name>`, text after the name fills `$ARGUMENTS`; only the `description` loads until used, so write it in the words people type. `disable-model-invocation: true` = runs only when you type it. Custom commands (`.claude/commands/<name>.md`) have been merged into skills: old files still work, but skills are the recommended form. Part 1 alumni: an app skill is the same `SKILL.md` format, and claude.ai skills can sync into Claude Code (if enabled). Subagents start fresh and can have read-only tools; to make one, ask Claude or write a file in `.claude/agents/` (`/agents` no longer opens a menu). Hooks run whatever Claude decides.
+**0:57 (Segment 5a, 2 min).** The organizing idea for the rest of class. Skills: `.claude/skills/<name>/SKILL.md` becomes `/<name>`, text after the name fills `$ARGUMENTS`; only the `description` loads until used, so write it in the words people type. `disable-model-invocation: true` = runs only when you type it. Custom commands (`.claude/commands/<name>.md`) have been merged into skills: old files still work, but skills are the recommended form. If they took *Getting started with Claude*: an app skill is the same `SKILL.md` format, and claude.ai skills can sync into Claude Code (if enabled). Subagents start fresh and can have read-only tools; to make one, ask Claude or write a file in `.claude/agents/` (`/agents` no longer opens a menu). Hooks run whatever Claude decides.
 :::
 
 ## Switch to Positron: two skills, a reviewer, a hook {.center}

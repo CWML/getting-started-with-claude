@@ -4,7 +4,7 @@ subtitle: "The extension panel in Positron or VS Code first, plus the terminal C
 toc: false
 ---
 
-For [Part 2](part2.qmd). **Last checked against the docs (code.claude.com/docs): October 2026, Claude Code v2.1.28x.** Claude Code changes often, so type `/` in the panel to see what *your* version has.
+For the class [Analyzing Research Data with Claude Code](part2.qmd). **Last checked against the docs (code.claude.com/docs): October 2026, Claude Code v2.1.28x.** Claude Code changes often, so type `/` in the panel to see what *your* version has.
 
 **Where column:** **Both** = the extension panel and the terminal CLI. **Panel: …** = how to do it in the panel when the typed command is CLI-only. **CLI** = terminal only (run `claude` in Positron's Terminal; this needs the standalone CLI, because the extension doesn't put `claude` on your PATH). **†** = varies by version or platform; check in Positron before relying on it. *(if enabled)* = depends on your organization's admin settings.
 

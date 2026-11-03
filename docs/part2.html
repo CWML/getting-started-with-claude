@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Part 2: Analyzing Research Data with Claude Code – Getting Started with Claude</title>
+<title>Analyzing Research Data with Claude Code – Getting Started with Claude</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -69,6 +69,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./part2-slides.html" rel="next">
+<link href="./index.html#setup-part1" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -81,7 +82,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-b415a55bb24f02d078fdecd4dbf90cdc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-e302654dfcd61cd30f39cb9489bea35f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-dark-e33373163f51f8843b6f1d9b9a8c9552.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="site_libs/bootstrap/bootstrap-b415a55bb24f02d078fdecd4dbf90cdc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
@@ -289,7 +290,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-xl " data-bs-theme="dark">
+    <nav class="navbar navbar-expand-xxl " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
@@ -307,20 +308,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Cushing/Whitney Medical Library</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link active" href="./index.html" aria-current="page"> 
 <span class="menu-text">Home &amp; setup</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./part1.html"> 
-<span class="menu-text">Part 1: Claude</span></a>
+<span class="menu-text">Getting started with Claude</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./part2.html" aria-current="page"> 
-<span class="menu-text">Part 2: Claude Code</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
-<span class="menu-text">About</span></a>
+    <a class="nav-link" href="./part2.html"> 
+<span class="menu-text">Analyzing research data</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
@@ -346,7 +343,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./part2.html">Class page</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./part2.html">Analyzing research data with Claude Code</a></li><li class="breadcrumb-item"><a href="./part2.html">Class page</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -360,26 +357,84 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Home</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Getting started with Claude</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Class page</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part1-reference.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Quick reference</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html#setup-part1" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Setup</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Analyzing research data with Claude Code</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./part2.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Class page</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./part2-slides.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Slides</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./cheatsheet.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Cheat sheet</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html#setup-part2" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Setup for Part 2</span></a>
+ <span class="menu-text">Setup</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html#access" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Access and alternatives</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html#links" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Recommended links</span></a>
   </div>
 </li>
     </ul>
@@ -451,9 +506,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <a class="cwml-skip-link" href="#quarto-document-content">Skip to main content</a>
 <script>document.body.prepend(document.querySelector(".cwml-skip-link"));</script>
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./part2.html">Analyzing research data with Claude Code</a></li><li class="breadcrumb-item"><a href="./part2.html">Class page</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Part 2: Analyzing Research Data with Claude Code</h1>
+<h1 class="title">Analyzing Research Data with Claude Code</h1>
 <p class="subtitle lead">A 90-minute hands-on class for researchers with light R or Python</p>
 </div>
 
@@ -472,7 +527,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p>In this class you’ll use <strong>Claude Code inside Positron</strong> (or VS Code) to take a synthetic clinical trial from raw CSV to a Quarto report. You’ll plan first, let Claude write and run the code, check every step yourself, and finish by building a reusable tool for your own research data. Bring a laptop. This page has every prompt, ready to copy. <a href="./part2-slides.html">Slides</a> · <a href="./cheatsheet.html">Cheat sheet</a></p>
-<p><strong>For:</strong> faculty, postdocs, students, research coordinators, analysts, and clinicians who can read a little R or Python. <a href="./part1.html">Part 1</a> (the Claude app) is helpful but not required.</p>
+<p><strong>For:</strong> faculty, postdocs, students, research coordinators, analysts, and clinicians who can read a little R or Python. <a href="./part1.html">Getting started with Claude</a> (the Claude app class) is helpful but not required.</p>
 <p><strong>By the end of class, you’ll be able to:</strong></p>
 <ol type="1">
 <li><strong>Configure</strong> a Claude Code project that protects raw and restricted data.</li>
@@ -492,7 +547,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Do the <a href="./index.html#setup-part2">Part 2 setup steps</a> before class. In short: an enterprise Claude account whose seat includes Claude Code (<code>[how to check / who to ask]</code>), Positron (or VS Code) with the Claude Code extension, the R or Python packages, and git with your name and email set. The Claude mobile app and the standalone CLI are optional.</p>
+<p>Do the <a href="./index.html#setup-part2">setup steps</a> before class. In short: an enterprise Claude account whose seat includes Claude Code (<code>[how to check / who to ask]</code>), Positron (or VS Code) with the Claude Code extension, the R or Python packages, and git with your name and email set. The Claude mobile app and the standalone CLI are optional.</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled" title="Using Python instead of R?">
@@ -709,7 +764,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li><strong>Keep it short:</strong> the docs suggest under 200 lines per file. An import line like <code>@docs/SAP.md</code> loads another file every session: fine for a 2-page SAP, not for a 40-page protocol.</li>
 <li><strong>Advice, not enforcement:</strong> <code>CLAUDE.md</code> shapes what Claude <em>tries</em> to do. It doesn’t limit what Claude <em>can</em> do. That’s what permission rules are for (next).</li>
-<li><strong>If you took Part 1:</strong> a Claude Code project folder plays the role of your Claude app Project. The Project’s instructions become <code>CLAUDE.md</code>, and its files become documents in the folder, such as <code>docs/SAP.md</code>.</li>
+<li><strong>If you took <em>Getting started with Claude</em>:</strong> a Claude Code project folder plays the role of your Claude app Project. The Project’s instructions become <code>CLAUDE.md</code>, and its files become documents in the folder, such as <code>docs/SAP.md</code>.</li>
 <li><strong>In the panel:</strong> <code>/</code> → <strong>Customize → Instructions</strong> opens your <code>CLAUDE.md</code> files, and <strong>Memory</strong> turns auto memory on or off and shows what it saved. In the CLI, use <code>/memory</code>. For your own projects, <code>/init</code> drafts a <code>CLAUDE.md</code>. If it isn’t in your panel’s <code>/</code> menu, run it in the CLI.</li>
 </ul>
 </section>
@@ -732,7 +787,7 @@ exact message you get. Don't try any other way to open it.</code></pre>
 <p><strong>4. Start version control.</strong> Ask Claude, and approve the commands:</p>
 <pre class="text"><code>Initialize a git repository here, add a .gitignore that excludes
 .claude/settings.local.json and CLAUDE.local.md, and commit everything
-with the message "Part 2 start".</code></pre>
+with the message "Starting point".</code></pre>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -947,7 +1002,7 @@ message. Show me git log --oneline afterward.</code></pre>
 </section>
 <section id="b.-model-and-effort-3-min" class="level3">
 <h3 class="anchored" data-anchor-id="b.-model-and-effort-3-min">4b. <code>/model</code> and <code>/effort</code> (3 min)</h3>
-<p><strong>In the panel,</strong> click the model name at the bottom of the prompt box, or choose <strong>Switch model…</strong> from the <code>/</code> menu. The picker has an <strong>Effort</strong> row. <strong>In the CLI,</strong> use <code>/model</code> and <code>/effort</code>. If you took Part 1, these are the same two dials as the model and effort menu next to Send in the Claude app.</p>
+<p><strong>In the panel,</strong> click the model name at the bottom of the prompt box, or choose <strong>Switch model…</strong> from the <code>/</code> menu. The picker has an <strong>Effort</strong> row. <strong>In the CLI,</strong> use <code>/model</code> and <code>/effort</code>. If you took <em>Getting started with Claude</em>, these are the same two dials as the model and effort menu next to Send in the Claude app.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 50%">
@@ -1015,7 +1070,7 @@ Warning
 </section>
 <section id="d.-check-in-from-your-phone-rc-if-enabled-2-min" class="level3">
 <h3 class="anchored" data-anchor-id="d.-check-in-from-your-phone-rc-if-enabled-2-min">4d. Check in from your phone: <code>/rc</code> (if enabled) (2 min)</h3>
-<p><strong>Remote Control</strong> lets you check on your current local session from the Claude mobile app (iOS and Android) or a browser. Start a long render or model run, then check progress or approve permission prompts from another device. If you took Part 1, this is what the phone app’s <strong>Code</strong> tab is for.</p>
+<p><strong>Remote Control</strong> lets you check on your current local session from the Claude mobile app (iOS and Android) or a browser. Start a long render or model run, then check progress or approve permission prompts from another device. If you took <em>Getting started with Claude</em>, this is what the phone app’s <strong>Code</strong> tab is for.</p>
 <ol type="1">
 <li>In the panel, type <code>/rc</code> (or <code>/remote-control</code>). The first time, confirm <strong>Enable Remote Control</strong>. A <strong>Remote Control</strong> indicator appears in the prompt box footer. In the panel, the command takes no name and shows no QR code.</li>
 <li>On your phone, open the Claude app, tap <strong>Code</strong>, and pick the session (a computer icon with a green dot means it’s online). In a browser, the same session also shows in the Code section of the Claude web app.</li>
@@ -1083,7 +1138,7 @@ Warning
 <ul>
 <li><strong>Skills</strong> are folders with a <code>SKILL.md</code> file: <code>.claude/skills/check-data/SKILL.md</code> becomes <code>/check-data</code>, and text after the name fills <code>$ARGUMENTS</code>. Only a skill’s short <code>description</code> loads at first, and Claude reads the rest when your request matches. Add <code>disable-model-invocation: true</code> to the frontmatter, and the skill runs only when <em>you</em> type its name.</li>
 <li><strong>Custom commands are now skills.</strong> Claude Code merged them: an older <code>.claude/commands/check-data.md</code> file still works the same way, but a skill folder is the recommended form.</li>
-<li><strong>If you took Part 1:</strong> a skill you use in the Claude app is the same <code>SKILL.md</code> format. Skills from claude.ai can sync into Claude Code (read-only, if enabled).</li>
+<li><strong>If you took <em>Getting started with Claude</em>:</strong> a skill you use in the Claude app is the same <code>SKILL.md</code> format. Skills from claude.ai can sync into Claude Code (read-only, if enabled).</li>
 <li><strong>Subagents</strong> (<code>.claude/agents/*.md</code>) have their own instructions and tools, and start fresh. To make one, ask Claude to create it, or write the file yourself. (The <code>/agents</code> command now only prints that reminder.) <strong>Hooks</strong> are scripts Claude Code runs at set points, whatever Claude decides.</li>
 </ul>
 </section>
@@ -1295,6 +1350,23 @@ Show me the test output as evidence.</code></pre>
 </section>
 
 </main> <!-- /main -->
+<script>
+// Mark the navbar link for the current page's class as active.
+// Quarto's own choice is wrong with a shared sidebar (see _quarto.yml).
+(function () {
+  var page = location.pathname.split("/").pop() || "index.html";
+  var target = {
+    "part1.html": "part1.html", "part1-reference.html": "part1.html",
+    "part2.html": "part2.html", "part2-slides.html": "part2.html", "cheatsheet.html": "part2.html"
+  }[page] || "index.html";
+  document.querySelectorAll("#navbarCollapse a.nav-link").forEach(function (a) {
+    var href = (a.getAttribute("href") || "").split("#")[0].split("/").pop();
+    var on = href === target;
+    a.classList.toggle("active", on);
+    if (on) { a.setAttribute("aria-current", "page"); } else { a.removeAttribute("aria-current"); }
+  });
+})();
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1710,6 +1782,9 @@ Show me the test output as evidence.</code></pre>
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./index.html#setup-part1" class="pagination-link" aria-label="Setup">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Setup</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./part2-slides.html" class="pagination-link" aria-label="Slides">

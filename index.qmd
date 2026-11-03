@@ -1,85 +1,72 @@
 ---
-title: "Claude & Claude Code at the School of Medicine"
-subtitle: "Hands-on library classes for researchers, clinicians, staff, and students"
+title: "Claude at the School of Medicine"
+subtitle: "Training materials from the Yale Cushing/Whitney Medical Library"
 ---
 
-Two in-person classes from the Cushing/Whitney Medical Library. **Part 1** shows anyone at the School of Medicine how to use the Claude app well and safely. **Part 2** teaches researchers to analyze study data with Claude Code. Both classes use only fictional (synthetic) or public files.
+These pages are the class materials for two in-person classes from the Cushing/Whitney Medical Library. **Getting started with Claude** shows anyone at the School of Medicine how to use the Claude app well and safely. **Analyzing research data with Claude Code** teaches researchers to clean and analyze study data. The second class builds on the first, but you can take either one on its own. Instructors teach from these pages, so you can follow along in class or work through them on your own.
 
-::: {.callout-important title="Data rule: no patient data, ever"}
-- In class, use **only the class files and public information**. Never use patient data or other sensitive information in either class.
-- **A HIPAA-supported version of Claude is available by request:** `[request link]`. Being HIPAA-supported doesn't approve your project, every feature, or every data set.
-- Before you use Claude with real work data, follow `[Yale data classification / policy link]`. Questions go to `[HSIT / HIPAA Privacy Office contact]`.
-:::
+## What you'll learn {#learn}
 
-## The two classes {#classes}
-
-:::: {.grid}
-
-::: {.g-col-12 .g-col-md-6 .card .card-body}
-### Part 1: Getting started with Claude
-
-Build a Claude Project you'll keep using, then learn to prompt it well and check what it gives you.
-
-**For:** anyone at the School of Medicine. No programming needed.<br>
-**Time:** 60 minutes · in person, SHM L 111 · up to 18 people<br>
-**AIR track:** Track A Foundations · Beginner
-
-**By the end of class, you'll be able to:**
+### Getting started with Claude
 
 1. Identify the right tool and settings for your data.
 2. Apply prompting patterns to a real task.
 3. Evaluate Claude's answers and citations before you use them.
 4. Create a Project you can reuse for your own work.
 
-[Class page](part1.qmd) · [Quick reference](part1-reference.qmd) · [Setup](#setup-part1)
-:::
-
-::: {.g-col-12 .g-col-md-6 .card .card-body}
-### Part 2: Analyzing research data with Claude Code
-
-Take a synthetic clinical trial from raw data to a report with Claude Code in Positron, checking every step yourself.
-
-**For:** researchers, coordinators, analysts, and clinicians who can read a little R or Python. Part 1 helps but isn't required.<br>
-**Time:** 90 minutes · in person, SHM L 111 · up to 18 people<br>
-**AIR track:** Track C Computational Research · Intermediate
-
-**By the end of class, you'll be able to:**
+### Analyzing research data with Claude Code
 
 1. **Configure** a Claude Code project that protects raw and restricted data.
 2. **Implement** a plan-first workflow to clean and analyze study data.
 3. **Evaluate** AI-generated code and results against the analysis plan.
 4. **Build** a reusable command, skill, or hook for a research data task.
 
-[Class page](part2.qmd) · [Slides](part2-slides.qmd) · [Cheat sheet](cheatsheet.qmd) · [Setup](#setup-part2)
-:::
+## The two classes {#classes}
 
-::::
+| | Getting started with Claude | Analyzing research data with Claude Code |
+|---|---|---|
+| **For** | Anyone at the School of Medicine. No programming needed. | Researchers, coordinators, analysts, and clinicians who can read a little R or Python. *Getting started with Claude* helps but isn't required. |
+| **What you'll do** | Build a Claude Project you'll keep using, then prompt it well and check what it gives you. | Take a synthetic clinical trial from raw data to a report with Claude Code in Positron, checking every step yourself. |
+| **Time** | 60 minutes | 90 minutes |
+| **Where** | In person, SHM L 111, up to 18 people | In person, SHM L 111, up to 18 people |
+| **AIR track** | Track A Foundations · Beginner | Track C Computational Research · Intermediate |
 
-**Register:** `[registration link]` (registration required for both classes).
+
 
 ## Start here {#start}
 
-1. **Pick a class** above and register.
-2. **Do the setup** before class: [Part 1](#setup-part1) takes about 10 minutes, [Part 2](#setup-part2) about 30.
-3. **Read the data rule** at the top of this page.
-4. **On class day,** bring your laptop and open the class page. Every prompt has a copy button.
-5. **After class,** keep the quick reference or cheat sheet handy, and try the [recommended links](#links).
+**Getting started with Claude**
 
-::: {.callout-tip title="Prefer slides?"}
-Part 1 is taught from its class page. Part 2 also has a slide deck: [Part 2 slides](part2-slides.qmd). In the deck, press **F** for full screen and **Esc** for an overview of all slides.
+- [Setup](#setup-part1): sign in to Claude and download your practice kit (about 10 minutes)
+- [Class page](part1.qmd): the class itself, with every prompt ready to copy
+- [Quick reference](part1-reference.qmd): settings, commands, and the prompt library on one page
+
+**Analyzing research data with Claude Code**
+
+- [Setup](#setup-part2): install Positron, git, and the Claude Code extension (about 30 minutes)
+- [Class page](part2.qmd): the class itself, step by step
+- [Cheat sheet](cheatsheet.qmd): Claude Code commands and workflow at a glance
+
+
+## Data use {#data}
+
+::: {.callout-warning title="No patient data, ever"}
+- In class, use **only the class files and public information**. Never use patient data or other sensitive information in either class.
+- **A HIPAA-supported version of Claude is available by request:** `[request link]`. Being HIPAA-supported doesn't approve your project, every feature, or every data set.
+- Before you use Claude with real work data, follow `[Yale data classification / policy link]`. Questions go to `[HSIT / HIPAA Privacy Office contact]`.
 :::
+
+Both classes use only fictional (synthetic) files or public, openly licensed material. The article in *Getting started with Claude* is an open-access paper (Hickey et al., *PLoS Medicine* 2025, CC BY). The hypertension trial in *Analyzing research data with Claude Code* is made up.
 
 []{#setup}
 
-## Setup for Part 1 {#setup-part1}
+## Setup for Getting started with Claude {#setup-part1}
 
-About 10 minutes. No programming needed.
+### 1. Download Claude app
 
-### 1. Sign in to Claude
-
-- [ ] Get your Yale Claude account: `[sign-up link]`. Do this a few days before class, not on the day.
+- [ ] Download and install **Claude** desktop https://claude.ai/downloads.
 - [ ] In a web browser, go to **claude.ai**, sign in with your Yale account, and send a test message such as "Hello."
-- [ ] Check which version you have. If you're on the **HIPAA-supported version**, some screens may look different (an older layout) and some features may be off. That's fine for class. Ask `[ITS contact]` if you're not sure.
+
 
 ### 2. Choose your practice kit
 
@@ -107,13 +94,13 @@ To save a single file, right-click the link and choose **Save link as** (or **Do
 
 ### 3. Optional: the Claude phone app
 
-Near the end of Part 1 we'll open your Project on a phone. This step is optional; you can do everything on your laptop.
+Near the end of class we'll open your Project on a phone. This step is optional; you can do everything on your laptop.
 
 - [ ] Install **Claude** from the App Store (iPhone) or Google Play (Android). Check that the publisher is **Anthropic**.
 - [ ] Sign in with the same Yale account.
-- [ ] Follow `[mobile device policy]`. Never photograph patient lists, charts, screens, or whiteboards. If you use the HIPAA-supported version, check with `[ITS contact]` before using the phone app.
+- [ ] Never photograph patient lists, charts, screens, or whiteboards. If you use the HIPAA-supported version, check with `https://healthsciencesit.yale.edu/` before using the phone app.
 
-## Setup for Part 2 {#setup-part2}
+## Setup for Analyzing research data with Claude Code {#setup-part2}
 
 About 30 minutes. Do the steps in order. You need a Yale Claude account whose seat includes **Claude Code**: `[how to check / who to ask]`.
 
@@ -189,28 +176,14 @@ If Claude describes a synthetic hypertension trial, you're ready.
 | **jq** | To try the hook example yourself | macOS: `brew install jq` · Linux: `sudo apt-get install jq` · Windows: `[local guidance for Windows users]` (the sandbox needs WSL2) |
 | **Claude phone app** | To watch and approve your laptop's Claude Code session from your phone with `/rc` (Remote Control), if enabled. Remote Control is off in the HIPAA-supported version. | Install **Claude** by Anthropic from the App Store or Google Play and sign in. Follow `[mobile device policy]`. |
 
-- [ ] Read the institutional AI and data policy: `[link to institutional AI and data policy]`.
+- [ ] Read the institutional AI and data policy: https://provost.yale.edu/news/guidelines-use-generative-ai-tools.
 
-### Trouble?
-
-| Problem | Try this |
-|---|---|
-| Can't sign in to Claude | Confirm your sign-up went through: `[ITS / help contact]` |
-| The Claude Code extension doesn't show up in Positron's Extensions view | Search for "Claude Code" by Anthropic, update Positron, or try VS Code. In class, pair with a neighbor or watch the instructor's screen. (Claude Code on the web, at claude.ai/code, is a different product that runs cloud sessions on GitHub repos. It isn't a stand-in for this class.) |
-| "Claude Code isn't included in your plan" | Your seat may not include Claude Code: `[who to ask]`. In class, pair with a neighbor or watch the instructor's screen. |
-| `git` isn't found | Finish the git step above, then close and reopen Positron. |
-| R or Python packages won't install | Bring the error to class, or come early: `[office hours link]` |
 
 ## Access and alternatives {#access}
 
 | If… | Do this |
 |---|---|
-| **You don't have a working Claude account** | Request one at `[sign-up link]` before class. In class, pair up with someone who has one. Don't create a personal Claude account for anything except the public class files. |
-| **Your primary appointment is with YNHHS** | Use the chat AI that YNHHS approves: `[approved tool, e.g. Microsoft Copilot: link, confirmed by ___ on DATE]`. Yale's Clarity may not be available to you `[confirm]`. In Part 1, follow the [Copilot path](part1-reference.qmd#copilot) with the same kits. |
-| **You use the HIPAA-supported version of Claude** | Your screens may look different and some features (such as skills, Cowork, and `/rc`) may be off. Check with `[ITS contact]`. |
-| **You don't have a smartphone** | No problem. The phone step in Part 1 is optional, and you'll do the same work on your laptop. |
-| **Your Claude seat doesn't include Claude Code** (Part 2) | Pair with a neighbor or watch the instructor's screen. Ask `[who to ask]` about access. |
-| **You need an accessibility accommodation** | Contact `[accessibility contact]` before class. |
+| **You don't have a working Claude account** | Request one at `https://ai.yale.edu/yales-ai-tools-and-resources/claude` before class. In class, pair up with someone who has one. Don't create a personal Claude account for anything except the public class files. |
 
 ## Recommended links {#links}
 
@@ -219,8 +192,14 @@ If Claude describes a synthetic hypertension trial, you're ready.
 | [Claude Academy](https://academy.claude.com) | Free courses from Anthropic |
 | [Claude Help Center](https://support.claude.com) | How the Claude app's features work |
 | [Claude Code docs](https://code.claude.com/docs) | Official Claude Code documentation |
-| [Positron](https://positron.posit.co) | The editor used in Part 2 |
+| [Positron](https://positron.posit.co) | The editor used in *Analyzing research data with Claude Code* |
 | [AI at Yale](https://ai.yale.edu) | Yale's AI tools and guidance |
 | [Yale data classification](https://cybersecurity.yale.edu/data-classification) | Which data can go where |
 
-**Questions?** Email [justin.demayo@yale.edu](mailto:justin.demayo@yale.edu?subject=Claude%20classes%20feedback) or book a consult: `[library consult link]`. See [About](about.qmd) for who maintains this site and how to report a problem.
+## Contact {#contact}
+
+Justin DeMayo, Cushing/Whitney Medical Library, Yale School of Medicine
+
+Email: [justin.demayo@yale.edu](mailto:justin.demayo@yale.edu?subject=Claude%20classes%20feedback)
+
+Feedback is welcome. Found something unclear, out of date, or broken? [Send us your feedback](mailto:justin.demayo@yale.edu?subject=Claude%20classes%20feedback), or use the **Feedback** link at the top of every page.

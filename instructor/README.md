@@ -15,7 +15,7 @@ Teach from the class page, `https://cwml.github.io/getting-started-with-claude/p
 
 The class page is public, so instructor notes and demo account details live in this file only, never in `part1.qmd`.
 
-Claude's features, menu names and admin settings change often. The feature descriptions were checked against the Claude Help Center (support.claude.com) and the Claude Code docs on October 30, 2026. When you re-check them, update the date and the corrections log in `about.qmd`.
+Claude's features, menu names and admin settings change often. The feature descriptions were checked against the Claude Help Center (support.claude.com) and the Claude Code docs on October 30, 2026. When you re-check them, update this date and the "Last checked" date at the top of `part1-reference.qmd`.
 
 **Prep checklist**
 
@@ -40,10 +40,10 @@ Prompt slots such as `[audience]`, `[role]`, `[topic]`, `[committee name]` and `
 
 | Who | Placeholders | Where |
 |---|---|---|
-| You / the library | Owner `[name]`, features-checked `[date]`, `[instructor]`, `[Instructor name]`, `[Library name]`; `[QR code]` at the top of the class page | `_quarto.yml`, `part1.qmd`, `part2-slides.qmd`, `about.qmd`, `index.qmd`, kits `README.md` |
+| You / the library | `[Instructor name]`, `[Library name]`; `[QR code]` at the top of the class page | `part1.qmd`, `part2-slides.qmd` |
 | You / the library | Forms: `[registration link]`, `[exit-ticket form link]`, `[feedback form link]`, `[link to short evaluation form]` | `index.qmd`, `part1.qmd`, `part1-reference.qmd`, `part2.qmd`, `part2-slides.qmd` |
 | You / the library | Services: `[office hours link]`, `[library consult link]`, `[literature search consults…]`, `[library evidence synthesis service]`, `[data services consults…]`, `[AIR Tracks B–F offerings]`, `[AIR SIG channel / Teams]` | `index.qmd`, `part1.qmd`, `part1-reference.qmd`, `part2.qmd`, `part2-slides.qmd` |
-| You / the library | Guidance: `[library license guidance]`, `[link to library guidance on AI disclosure]`, `[Dated source on AI energy use, chosen by a librarian.]`, `[All of Us workshop site link]`, `[add category]` (Part 2 form) | `part1.qmd`, `part1-reference.qmd`, kits `README.md`, `part2.qmd`, `about.qmd`, `part2-description.md` |
+| You / the library | Guidance: `[library license guidance]`, `[link to library guidance on AI disclosure]`, `[Dated source on AI energy use, chosen by a librarian.]`, `[add category]` (Part 2 form) | `part1.qmd`, `part1-reference.qmd`, kits `README.md`, `part2.qmd`, `part2-description.md` |
 | ITS | `[sign-up link]`, `[eligibility…]`, `[who has a license / how to request]`, `[sign-in steps / SSO note]`, `[confirm Yale seat tiers]` (Fable on standard seats), `[Yale retention period…]`, `[whether Yale's agreement allows chats to be used to train models…]`, `[one-line description from ITS]`, `[product name — check]`, `[confirm with ITS which Claude Code surfaces are covered]`, `[ITS contact]`, `[ITS / help contact]`, `[HSIT / ITS AI help]`, `[link to current install instructions]`, `[local guidance for Windows users]`, `[mobile device policy]`, `[how to check / who to ask]` | `index.qmd`, `part1.qmd`, `part1-reference.qmd`, `part2.qmd`, `cheatsheet.qmd` |
 | HSIT / HIPAA Privacy Office | `[request link]` (HIPAA-supported version), `[HSIT / HIPAA Privacy Office contact]`, `[Yale data classification / policy link]`, `[Yale data classification names…]`, the six `[approved data: ___, confirmed by ___ on DATE]` cells and four `[classification, confirmed by HSIT on DATE]` cells, `[Yale AI Tool Registry]`, `[link to institutional AI and data policy]`, `[Insert local policy]` | `index.qmd`, `part1.qmd`, `part1-reference.qmd`, `part2.qmd`, `part2-slides.qmd`, `cheatsheet.qmd` |
 | YNHHS | `[approved tool, e.g. Microsoft Copilot: link, confirmed by ___ on DATE]`, `[YNHHS-approved chat AI…]`, `[YNHHS AI governance link, confirmed DATE]`, whether YNHHS-primary appointees can use Clarity (`[confirm]`) | `index.qmd`, `part1.qmd`, `part1-reference.qmd` |
@@ -259,15 +259,15 @@ Mirror the phone (iPhone Mirroring or QuickTime). Use the dictation mic for the 
 
 Bridge sentence: "This app has a Code tab. In Part 2, /rc connects it to a Claude Code session on your laptop (if your organization has turned on Remote Control)."
 
-*12. Cowork and the bridge to Part 2 (0:55 – 0:57)*
+*12. Cowork and the bridge to Claude Code (0:55 – 0:57)*
 
 **0:55 (2 min). Talk only.** Cut option: fold Cowork into the exit ticket as one line (saves 1–2 min).
 
-*12. Cowork and the bridge to Part 2 (0:55 – 0:57) › Cowork in 30 seconds*
+*12. Cowork and the bridge to Claude Code (0:55 – 0:57) › Cowork in 30 seconds*
 
 Don't demo. Claude in Chrome (if enabled) is Cowork in your browser: same cautions. More: [Quick reference: Cowork](part1-reference.qmd#cowork).
 
-*12. Cowork and the bridge to Part 2 (0:55 – 0:57) › From today to Part 2*
+*12. Cowork and the bridge to Claude Code (0:55 – 0:57) › From today to Claude Code*
 
 One sentence: "Everything you did today has a twin in Part 2, but there it works on files and code on your own computer." Part 1 is recommended, not required, for Part 2.
 
@@ -343,7 +343,7 @@ Claude Code changes almost weekly. This page was checked against code.claude.com
   REPO=~/Documents/GitHub/claude-code         # this repo
   cd "$DEMO"
   printf '.claude/settings.local.json\n.claude/worktrees/\nCLAUDE.local.md\n.Rhistory\n' > .gitignore
-  git init && git add -A && git commit -m "Part 2 start" && git tag part2-start
+  git init && git add -A && git commit -m "Starting point" && git tag part2-start
   cp "$REPO"/instructor/solutions/R/*.R R/
   cp "$REPO"/instructor/solutions/R/report.qmd reports/
   cp -R "$REPO"/instructor/part2-answer-key/.claude "$REPO"/instructor/part2-answer-key/tests .

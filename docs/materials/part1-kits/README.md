@@ -1,6 +1,6 @@
-# Part 1 class kits
+# Class kits: Getting started with Claude
 
-These files are for **Part 1: Getting started with Claude**. In class you put one kit's files into a Claude Project, then use the Project to practice prompting and checking Claude's answers. Pick **one** kit.
+These files are for the class **Getting started with Claude**. In class you put one kit's files into a Claude Project, then use the Project to practice prompting and checking Claude's answers. Pick **one** kit.
 
 | Kit | Who it's for | Project name | Files to upload |
 |---|---|---|---|

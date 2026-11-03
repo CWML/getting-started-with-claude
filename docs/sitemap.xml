@@ -1,31 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://cwml.github.io/getting-started-with-claude/about.html</loc>
-    <lastmod>2026-11-02T17:16:53.260Z</lastmod>
-  </url>
-  <url>
-    <loc>https://cwml.github.io/getting-started-with-claude/part2-slides.html</loc>
-    <lastmod>2026-11-02T17:15:34.689Z</lastmod>
-  </url>
-  <url>
-    <loc>https://cwml.github.io/getting-started-with-claude/part1-reference.html</loc>
-    <lastmod>2026-11-02T16:52:31.342Z</lastmod>
-  </url>
-  <url>
-    <loc>https://cwml.github.io/getting-started-with-claude/index.html</loc>
-    <lastmod>2026-11-02T17:15:34.689Z</lastmod>
-  </url>
-  <url>
-    <loc>https://cwml.github.io/getting-started-with-claude/part1.html</loc>
-    <lastmod>2026-11-02T16:51:55.639Z</lastmod>
+    <loc>https://cwml.github.io/getting-started-with-claude/cheatsheet.html</loc>
+    <lastmod>2026-11-03T03:04:21.960Z</lastmod>
   </url>
   <url>
     <loc>https://cwml.github.io/getting-started-with-claude/part2.html</loc>
-    <lastmod>2026-11-02T17:15:34.689Z</lastmod>
+    <lastmod>2026-11-03T03:04:21.960Z</lastmod>
   </url>
   <url>
-    <loc>https://cwml.github.io/getting-started-with-claude/cheatsheet.html</loc>
-    <lastmod>2026-10-31T15:04:44.995Z</lastmod>
+    <loc>https://cwml.github.io/getting-started-with-claude/part1.html</loc>
+    <lastmod>2026-11-03T03:04:21.959Z</lastmod>
+  </url>
+  <url>
+    <loc>https://cwml.github.io/getting-started-with-claude/index.html</loc>
+    <lastmod>2026-11-03T03:36:08.218Z</lastmod>
+  </url>
+  <url>
+    <loc>https://cwml.github.io/getting-started-with-claude/part1-reference.html</loc>
+    <lastmod>2026-11-03T03:04:21.959Z</lastmod>
+  </url>
+  <url>
+    <loc>https://cwml.github.io/getting-started-with-claude/part2-slides.html</loc>
+    <lastmod>2026-11-03T03:04:21.960Z</lastmod>
   </url>
 </urlset>

@@ -1,20 +1,20 @@
 ---
-title: "Part 1: Getting started with Claude"
+title: "Getting started with Claude"
 subtitle: "Build a Project you'll keep using"
 format:
   html:
     toc: true
-# The Part 1 class page, taught from directly. ## = timed segment; ### = sub-segment.
+# The class page, taught from directly. ## = timed segment; ### = sub-segment.
 # The agenda table and the ## headings must match exactly and sum to 60 minutes.
 # This page is public: instructor notes and private details live in instructor/README.md.
 ---
 
 A 60-minute, hands-on class in the Claude app. You'll build a **Project** (a Claude workspace with its own instructions and files), use it on a real task, check what it gives you, and leave with a tool you can reuse. No programming needed.
 
-[Quick reference](part1-reference.qmd) · Track A Foundations · Beginner
+[Quick reference](part1-reference.qmd) 
 
 ::: {.callout-note title="Before class"}
-Sign in to Claude, pick your kit, and (optionally) install the Claude phone app: see [Setup for Part 1](index.qmd#setup-part1).
+Sign in to Claude, pick your kit, and (optionally) install the Claude phone app: see [Setup for this class](index.qmd#setup-part1).
 :::
 
 ::: {.callout-important title="No working account, or your main appointment is at YNHHS?"}
@@ -27,7 +27,7 @@ You can still take part. In class, pair with a neighbor who has an account. To d
 
 **Sign in to Claude in a browser tab now.** Open this page: `https://cwml.github.io/getting-started-with-claude/part1.html` `[QR code]`
 
-Green card up = a new chat is open. Track A Foundations · Beginner
+Green card up = a new chat is open.
 
 ### By the end of this class, you'll be able to
 
@@ -51,7 +51,7 @@ Green card up = a new chat is open. Track A Foundations · Beginner
 | 0:37 – 0:46 | 9. Verify before you use it | Check quotes, rules, and a citation |
 | 0:46 – 0:51 | 10. Tune it: model, effort and skills | Try a smaller dial; see a skill |
 | 0:51 – 0:55 | 11. Take it with you: the phone app | Open your Project on a phone (optional) |
-| 0:55 – 0:57 | 12. Cowork and the bridge to Part 2 | Hear what comes next |
+| 0:55 – 0:57 | 12. Cowork and the bridge to Claude Code | Hear what comes next |
 | 0:57 – 1:00 | 13. Exit ticket and close | Answer four quick questions |
 
 ### No working account?
@@ -534,11 +534,11 @@ Create Projects on your laptop; they should open on your phone too. No phone? Ke
 
 - **No photos** of patient lists, charts, screens, or whiteboards.
 - Follow [mobile device policy].
-- The **Code** tab is where Part 2's `/rc` shows up (if enabled; not available in the HIPAA-supported version). If you don't see it, your plan or organization may not include it.
+- The **Code** tab is where Claude Code's `/rc` shows up (if enabled; not available in the HIPAA-supported version). If you don't see it, your plan or organization may not include it.
 
 Research (if enabled) on the phone searches only the web and skips connectors (if enabled) such as PubMed, without warning. More: [Quick reference: mobile](part1-reference.qmd#mobile).
 
-## 12. Cowork and the bridge to Part 2 (0:55 – 0:57) {#cowork-bridge}
+## 12. Cowork and the bridge to Claude Code (0:55 – 0:57) {#cowork-bridge}
 
 From chat to tasks, and from the app to Claude Code.
 
@@ -548,9 +548,9 @@ From chat to tasks, and from the app to Claude Code.
 - **Not for high-risk data.** Web pages and files can hide instructions that steer it ("prompt injection").
 - The HIPAA-supported version keeps the older layout; Cowork may be off or limited there. Check with [ITS].
 
-### From today to Part 2
+### From today to Claude Code
 
-| What you built today | What it becomes in Part 2 (Claude Code) |
+| What you built today | What it becomes in Claude Code |
 |---|---|
 | Project instructions | A `CLAUDE.md` file in your project folder |
 | Project files | Files in the project folder (for example, `docs/`) |
@@ -559,7 +559,7 @@ From chat to tasks, and from the app to Claude Code.
 | Model menu, effort, phone Code tab | `/model`, `/effort`, `/rc` (if enabled) |
 | **+** or **/** in the chat box | **/** in the Claude Code panel: commands and skills |
 
-**Part 2: Analyzing research data with Claude Code** (90 min). [Class page](part2.qmd)
+**Next class: Analyzing research data with Claude Code** (90 min). [Class page](part2.qmd)
 
 ## 13. Exit ticket and close (0:57 – 1:00) {#exit}
 
@@ -578,7 +578,7 @@ Four questions, one per objective. Show of hands or [exit-ticket form link].
 
 - [Quick reference](part1-reference.qmd): settings, prompts, verification, and more
 - [Claude Academy: free courses from Anthropic](https://academy.claude.com)
-- [Part 2: Analyzing research data with Claude Code](part2.qmd)
+- [Analyzing research data with Claude Code](part2.qmd): the next class
 - Library help: [literature search consults, evidence synthesis service, office hours]
 - Questions about tools and data: [HSIT / ITS AI help]
 
