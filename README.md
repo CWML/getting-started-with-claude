@@ -1,4 +1,4 @@
-# Claude & Claude Code for Biomedical Data: Workshop Materials
+# Claude & Claude Code  Workshop Materials
 
 Materials for two medical library classes:
 
