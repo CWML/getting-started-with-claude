@@ -24,7 +24,7 @@ Claude's features, menu names and admin settings change often. The feature descr
 - [ ] Line up a co-facilitator for the first 3 minutes (sign-in) and the build block (0:17 – 0:26). Strongly recommended for 18 people.
 - [ ] 2–5 days before class, send the sign-in check email: the setup page (`index.html#setup-part1`), "sign in to Claude in a browser and open a new chat," the kit choice, the optional phone app install (with the device policy note), and the "no working account?" section (`index.html#access`).
 - [ ] Run the check-in-both-workspaces list below the week before, with screenshots.
-- [ ] Take a fresh pre-run screenshot of a fabricated PMID: in a demo chat, ask for references on the Kit A topic, find one whose PMID doesn't match in PubMed, and keep the chat open for segment 2. Repeat until you get one.
+- [ ] Try the segment 2 prompt in two new incognito chats in the demo account. Screenshot the two answers side by side as the backup. If they come out nearly identical, run it again and keep a pair that differs in which studies or numbers it cites.
 - [ ] Pre-run the Kit A Turn 1 chat (with your answers to Claude's questions) for segment 7, "Anatomy of a strong prompt."
 - [ ] Build the demo Projects ("Article Explainer"; optionally "Committee Assistant") in the demo account, and share them **Can view** with participants (if sharing is enabled). This is the fallback when uploads fail.
 - [ ] Test phone mirroring on the SHM L 111 projector (iPhone Mirroring or QuickTime). Check that the demo Project has synced to the phone app.
@@ -49,7 +49,7 @@ Prompt slots such as `[audience]`, `[role]`, `[topic]`, `[committee name]` and `
 | YNHHS | `[approved tool, e.g. Microsoft Copilot: link, confirmed by ___ on DATE]`, `[YNHHS-approved chat AI…]`, `[YNHHS AI governance link, confirmed DATE]`, whether YNHHS-primary appointees can use Clarity (`[confirm]`) | `index.qmd`, `part1.qmd`, `part1-reference.qmd` |
 | Check in Copilot yourself | `[Copilot Notebook or Agent — check the name]`, `[Notebook or agent instructions — check]`, `[Copilot model or "think deeper" option — check]`, `[Copilot memory and personalization settings — check]`, `[Microsoft 365 Copilot app — check]`, `[Clarity equivalent — check]`, `[check limits]` | `part1-reference.qmd` (Copilot section) |
 | Research integrity / teaching | `[HSARG]`, `[Office of Research Integrity]`, `[Poorvu Center / ETI AI teaching guidance]`, `[teaching-center AI guidance]`, `[links to other funder notices]`, `[accessibility contact]` | `part1.qmd`, `part1-reference.qmd`, `index.qmd` |
-| Week-before workspace check | The two settings screenshots, `[pre-run citation]`, `[Record results here]` (Part 2) | `part1-reference.qmd`, `part1.qmd`, `part2.qmd` |
+| Week-before workspace check | The two settings screenshots, `[Record results here]` (Part 2) | `part1-reference.qmd`, `part1.qmd`, `part2.qmd` |
 
 **Check in both Yale workspaces (standard enterprise and HIPAA-supported) the week before, with screenshots**
 
@@ -69,7 +69,7 @@ Prompt slots such as `[audience]`, `[role]`, `[topic]`, `[committee name]` and `
 
 **Run of show: private details**
 
-- **Demo account:** `[demo account name]`, signed in on the presenter laptop (second browser tab, finished Article Explainer Project open) and the demo phone. Two pre-run chats ready: a plausible-looking fabricated reference (segment 2, with a screenshot as backup) and Turn 1 with Claude's questions answered (segment 7). Don't teach from a personal account.
+- **Demo account:** `[demo account name]`, signed in on the presenter laptop (second browser tab, finished Article Explainer Project open) and the demo phone. One pre-run chat ready: Turn 1 with Claude's questions answered (segment 7). For segment 2, the two-chat screenshot as backup. Don't teach from a personal account.
 - **Green cards:** one per seat. Up at 0:03 = signed in with a new chat open. Up at the 0:25 checkpoint = Claude named your kit's files (both for Kit A, the one for Kit B) and quoted one rule. The co-facilitator goes to anyone without a green card. Move on at 0:26 regardless; people catch up during Turn 1.
 - **Timing anchors:** build starts 0:17; checkpoint 0:25; verification starts 0:37 and is never cut.
 - **Cut order if running late:** the phone tryout becomes a 1-minute demo (saves 3); Cowork moves onto the exit slide (saves 1–2); the skill becomes a screenshot (saves 1); the PubMed opening moves into segment 9 (saves 2); the / menu becomes an instructor show (saves ~0.5).
@@ -106,11 +106,11 @@ Keep this to 20 seconds. Nobody signs up for anything during class. Point YNHHS-
 
 *2. Why we check (0:03 – 0:05)*
 
-**0:03 (2 min).** Cut option: if you're late, move this demo into segment 9 (saves 2 min).
+**0:03 (2 min).** Cut option: if you're late, show the backup screenshot instead of running it live (saves 1 min).
 
-*2. Why we check (0:03 – 0:05) › Watch: does this reference exist?*
+*2. Why we check (0:03 – 0:05) › Watch: same question, two chats*
 
-Open the pre-run chat and do the lookup live. If the network fails, show the screenshot. The point: a reference can look perfect and still be wrong. This also guarantees segment 9 has at least one fabricated example, even if everyone's Claude behaves well today.
+Open two new incognito chats in the demo account (outside any Project), paste the prompt into both, and send. Put them side by side. Point to a study, number, or claim that appears in one answer and not the other. If the answers agree, ask: "Does agreeing make them right?" Both still need checking. The point: Claude sounds equally confident whether or not it's right, so confidence tells you nothing.
 
 *3. Which tool for which data (0:05 – 0:11)*
 
@@ -211,7 +211,7 @@ The article has two more inconsistencies: the week-48 confidence interval (abstr
 
 *9. Verify before you use it (0:37 – 0:46) › Your turn: check a citation (Turn 3)*
 
-If web search is on, Claude may return real studies. Frame it as: "Declining or labeling is the behavior you want, and you still check." The pre-run example from segment 2 guarantees the room has seen at least one fabricated reference.
+If web search is on, Claude may return real studies. Frame it as: "Declining or labeling is the behavior you want, and you still check." If nobody finds a bad reference, the habit is still the lesson: you checked before you used it.
 
 *9. Verify before you use it (0:37 – 0:46) › Your turn: add one rule*
 
@@ -314,7 +314,7 @@ Also check: roles only, no names; email under 200 words; the agenda fits 60 minu
 | Uploads fail | Paste the file text into the Project instructions, or open the instructor's shared Project (Can view, if enabled). |
 | Claude outage or Wi-Fi down | Teach from your screen and the backup screenshots. Participants build their Project after class from `part1.html`. |
 | A setting or menu is missing for some people | Say it depends on the workspace or admin settings, show it on your screen, and move on. |
-| The live PubMed lookup in segment 2 fails | Show the fabricated-PMID screenshot. |
+| Claude is slow or down in segment 2 | Show the two-chat screenshot. |
 | Phone mirroring fails | Show the phone screenshots and say it in one sentence; use the cut order. |
 | Skills or file creation are off | Show the Word handout screenshot and Customize > Skills on your screen. |
 | Windows downloads the kit files as `.md.txt` | Point to the troubleshooting note on the setup page; the files still upload. |
