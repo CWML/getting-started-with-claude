@@ -64,8 +64,8 @@ Both classes use only fictional (synthetic) files or public, openly licensed mat
 
 ### 1. Download Claude app
 
-- [ ] Download and install **Claude** desktop https://claude.ai/downloads.
-- [ ] In a web browser, go to **claude.ai**, sign in with your Yale account, and send a test message such as "Hello."
+- [ ] Download and install the [**Claude** desktop app](https://claude.ai/downloads).
+- [ ] In a web browser, go to [**claude.ai**](https://claude.ai), sign in with your Yale account, and send a test message such as "Hello."
 
 
 ### 2. Choose your practice kit
@@ -98,7 +98,7 @@ Near the end of class we'll open your Project on a phone. This step is optional;
 
 - [ ] Install **Claude** from the App Store (iPhone) or Google Play (Android). Check that the publisher is **Anthropic**.
 - [ ] Sign in with the same Yale account.
-- [ ] Never photograph patient lists, charts, screens, or whiteboards. If you use the HIPAA-supported version, check with `https://healthsciencesit.yale.edu/` before using the phone app.
+- [ ] Never photograph patient lists, charts, screens, or whiteboards. If you use the HIPAA-supported version, check with [Health Sciences IT](https://healthsciencesit.yale.edu/) before using the phone app.
 
 ## Setup for Analyzing research data with Claude Code {#setup-part2}
 
@@ -176,14 +176,14 @@ If Claude describes a synthetic hypertension trial, you're ready.
 | **jq** | To try the hook example yourself | macOS: `brew install jq` · Linux: `sudo apt-get install jq` · Windows: `[local guidance for Windows users]` (the sandbox needs WSL2) |
 | **Claude phone app** | To watch and approve your laptop's Claude Code session from your phone with `/rc` (Remote Control), if enabled. Remote Control is off in the HIPAA-supported version. | Install **Claude** by Anthropic from the App Store or Google Play and sign in. Follow `[mobile device policy]`. |
 
-- [ ] Read the institutional AI and data policy: https://provost.yale.edu/news/guidelines-use-generative-ai-tools.
+- [ ] Read the [institutional AI and data policy](https://provost.yale.edu/news/guidelines-use-generative-ai-tools).
 
 
 ## Access and alternatives {#access}
 
 | If… | Do this |
 |---|---|
-| **You don't have a working Claude account** | Request one at `https://ai.yale.edu/yales-ai-tools-and-resources/claude` before class. In class, pair up with someone who has one. Don't create a personal Claude account for anything except the public class files. |
+| **You don't have a working Claude account** | [Request one](https://ai.yale.edu/yales-ai-tools-and-resources/claude) before class. In class, pair up with someone who has one. Don't create a personal Claude account for anything except the public class files. |
 
 ## Recommended links {#links}
 
