@@ -219,8 +219,6 @@ what will you refuse to do?
 ```
 :::
 
-**Green card** when Claude names your files and quotes one of your rules.
-
 ### Your kit
 
 ::: {.panel-tabset}

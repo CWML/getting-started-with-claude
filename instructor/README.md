@@ -30,7 +30,6 @@ Claude's features, menu names and admin settings change often. The feature descr
 - [ ] Clear old demo chats and set the demo account's memory the way you'll teach it, so earlier sessions don't leak into the live demo.
 - [ ] Rehearse from the class page with the segment notes below to check the timing.
 - [ ] Take backup screenshots: both settings layouts, each Project build step, the model menu, the "+" and "/" menus, Customize > Skills, the Word handout, the phone app and its Code tab.
-- [ ] Print green cards, one per seat.
 - [ ] On the published GitHub Pages site, open the kit `.md` links from segment 11 (the article and the committee pack) and check that they show as plain text in the browser and don't download. If they download, tell people to open the file in TextEdit or Notepad instead.
 
 **Placeholders by who can answer** (as of October 31, 2026; site pages only)
@@ -67,7 +66,7 @@ Prompt slots such as `[audience]`, `[role]`, `[topic]`, `[committee name]` and `
 **Run of show: private details**
 
 - **Demo account:** `[demo account name]`, signed in on the presenter laptop (second browser tab, finished Article Explainer Project open) and the demo phone. One pre-run chat ready: Turn 1 with Claude's questions answered (segment 9). Don't teach from a personal account.
-- **Green cards:** one per seat. Up at 0:03 = signed in with a new chat open. Up at the 0:32 checkpoint = Claude named your kit's files (both for Kit A, the one for Kit B) and quoted one rule. The co-facilitator goes to anyone without a green card. Move on at 0:33 regardless; people catch up during Turn 1.
+- **Checkpoint at 0:32:** ask who still needs help. The Project works when Claude names the kit's files (both for Kit A, the one for Kit B) and quotes one rule. The co-facilitator goes to anyone stuck. Move on at 0:33 regardless; people catch up during Turn 1.
 - **Timing anchors:** build starts 0:24; checkpoint 0:32; verification starts 0:44 and is never cut.
 - **Cut order if running late:** the phone demo shrinks to 1 minute (saves 1); Cowork moves onto the exit slide (saves 1–2); the skill becomes a screenshot (saves 1); the PubMed opening moves into segment 11 (saves 2); the / menu look in segment 5 becomes an instructor show (saves ~0.5).
 
@@ -77,7 +76,7 @@ Teaching notes for each part of the class page, in order. They used to appear on
 
 *1. Welcome and sign in (0:00 – 0:03)*
 
-**0:00 (3 min).** Put this section on screen as people arrive. Watch for green cards. Anyone without a working account pairs as navigator with someone who has one. Personal accounts are fine for the public class files only, and nobody signs up during class.
+**0:00 (3 min).** Put this section on screen as people arrive. Anyone without a working account pairs as navigator with someone who has one. Personal accounts are fine for the public class files only, and nobody signs up during class.
 
 **Cut order if you run late** (verification is never cut):
 
@@ -167,7 +166,7 @@ Open **Customize > Skills** on the demo account, then type "/" in a chat to show
 
 *8. Your turn: build your Project (0:24 – 0:33)*
 
-**0:24 (9 min):** 8 min build, 1 min checkpoint. At 0:32, ask for green cards. Move on at 0:33 regardless; anyone still building catches up during Turn 1.
+**0:24 (9 min):** 8 min build, 1 min checkpoint. At 0:32, ask who still needs help. Move on at 0:33 regardless; anyone still building catches up during Turn 1.
 
 *8. Your turn: build your Project (0:24 – 0:33) › Your turn: build it*
 
