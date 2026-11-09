@@ -88,6 +88,8 @@ Set memory *before* you upload anything.
 2. **Generate memory from chats** lets Claude remember things from your chats. Keep it on or off?
 :::
 
+![](images/memory-settings.png){fig-alt="Claude's Settings window with Memory selected in the left menu. The Memory page lists two switches, Search and reference chats and Generate memory from chats, both on, then an Import memory from other AI providers button and an Export memory button."}
+
 **Export memory** downloads everything Claude remembers about you, as Markdown files.
 
 To turn memory off for one chat: **+ > Memory**, before your first message.
