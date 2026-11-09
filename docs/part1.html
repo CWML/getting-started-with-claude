@@ -842,39 +842,51 @@ Privacy
 </section>
 <section id="strong-prompt" class="level2">
 <h2 class="anchored" data-anchor-id="strong-prompt">9. Watch: anatomy of a strong prompt</h2>
-<p>The Project carries the context, so the prompt can stay short and reusable.</p>
+<p>Next you’ll send your Project its first real prompt, called <strong>Turn 1</strong> (it’s in the next section). First, see what each part of it does. Your Project already holds the files and standing instructions, so the prompt only has to say what you want this time.</p>
 <section id="what-each-part-does" class="level3">
 <h3 class="anchored" data-anchor-id="what-each-part-does">What each part does</h3>
 <table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
 <thead>
 <tr class="header">
-<th>Part of Turn 1</th>
+<th>What the prompt says</th>
 <th>Pattern</th>
+<th>Why it helps</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>“I’m a [role]… for [audience]”</td>
-<td>Give context; say who it’s for</td>
+<td>Who you are and who it’s for: “I’m a clinic nurse educator… for my journal club”</td>
+<td>Give context</td>
+<td>Claude pitches the answer at the right level</td>
 </tr>
 <tr class="even">
-<td>“Ask me up to 3 questions… Wait.”</td>
-<td>Ask first, with a clear stop</td>
+<td>“Ask me up to 3 questions… Wait for my answers.”</td>
+<td>Ask first</td>
+<td>Claude fills in gaps instead of guessing</td>
 </tr>
 <tr class="odd">
-<td>“Give me: 1. … 5.”</td>
+<td>A numbered list of what you want: “1. … 5.”</td>
 <td>Numbered output</td>
+<td>You get every part, in order, and it’s easy to check</td>
 </tr>
 <tr class="even">
-<td>“150 words or fewer… use only the article”</td>
+<td>Limits: “150 words or fewer”, “use only the article”</td>
 <td>Constraints</td>
+<td>Keeps it short and stops Claude adding outside facts</td>
 </tr>
 <tr class="odd">
-<td>“Where this came from” table</td>
-<td>Every claim traced to a quote</td>
+<td>A “Where this came from” table</td>
+<td>Show the source</td>
+<td>Each claim comes with the sentence it’s based on, so you can check it</td>
 </tr>
 </tbody>
 </table>
+<p>Kit B’s prompt uses the same parts. Its action-item table has an “exact line from the notes” column instead of a separate source table.</p>
 </section>
 </section>
 <section id="run-prompt" class="level2">
