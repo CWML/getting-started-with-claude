@@ -13,28 +13,23 @@ format:
 
 This page goes with the [Getting started with Claude](part1.qmd) class page. Each section below expands on one part of the class.
 
-## Which tool for which data {#tool-data}
+## Which Claude for which data {#tool-data}
 
-Pick the tool by the **data**, not by which tool you like best. Ask: what kind of data is this, which tools are approved for it, and does my project (IRB, data use agreement, course policy) allow it?
+Pick the Claude account by the **data**. Ask: what kind of data is this, which account is approved for it, and does my project (IRB, data use agreement, course policy) allow it?
 
-### The tools
+### Yale's Claude accounts
 
-| Tool | Who can use it | Approved for (Yale data classification) | Check here |
+| Account | Who can use it | Approved for (Yale data classification) | Check here |
 |---|---|---|---|
-| **Clarity** [one-line description from ITS] | [eligibility; confirm whether YNHHS-primary appointees can use it] | [approved data: ___, confirmed by ___ on DATE] | [Yale AI Tool Registry] |
-| **Microsoft Copilot, free** ([product name — check]; sign in with your Yale account) | [eligibility] | [approved data: ___, confirmed by ___ on DATE] | [Yale AI Tool Registry] |
-| **Microsoft 365 Copilot, paid license** | [who has a license / how to request] | [approved data: ___, confirmed by ___ on DATE] | [Yale AI Tool Registry] |
 | **Claude Enterprise, standard seat** | [eligibility / sign-up link] | [approved data: ___, confirmed by ___ on DATE] | [Yale AI Tool Registry] |
 | **Claude Enterprise, premium seat** | [eligibility / how to request] | [approved data: ___, confirmed by ___ on DATE] | [Yale AI Tool Registry] |
 | **HIPAA-supported version of Claude** (by request: [request link]) | [eligibility] | [approved data: ___, confirmed by ___ on DATE] | [Yale AI Tool Registry] · [HSARG] |
-| **YNHHS work or YNHHS data** (or a primary YNHHS appointment) | Follow YNHHS rules | [YNHHS-approved chat AI, e.g. Microsoft Copilot: link, confirmed by ___ on DATE] | [YNHHS AI governance] |
 
 : {tbl-colwidths="[28,22,30,20]"}
 
 - **Data classification:** [Yale data classification names, e.g., Low / Moderate / High risk — confirm] and [Yale data classification / policy link].
 - **New AI use in health sciences research or education?** Start with [HSARG].
 - **Standard vs. premium seats.** Anthropic now calls these legacy seat types and is moving Enterprise to a single seat type at renewal. What each includes at Yale (for example Claude Code, or the Fable model) is [confirm with ITS].
-- **YNHHS.** Don't put YNHHS patient data or YNHHS work into Claude or Clarity unless YNHHS has approved it.
 
 ### The HIPAA-supported version of Claude
 
@@ -61,15 +56,14 @@ A HIPAA-supported version of Claude is available by request: [request link].
 
 ### Can I share this? {#can-i-share}
 
-The class scenarios, with full answers. "OK" still means: use the right tool, and check what comes out.
+The class scenarios, with full answers. "OK" still means: use the right account, and check what comes out.
 
 | Scenario | Answer | Why |
 |---|---|---|
 | A published, open-access article you want explained | **OK** | Public and openly licensed. Use the open-access copy, not a library-subscription PDF. |
 | Your own draft lecture slides | **OK** | Your own work. Take out student information, patient images and figures copied from subscription sources first. |
-| A clinic note with the patient's name removed | **No** (in the standard account) | Removing a name isn't de-identification: dates, ZIP codes, record numbers and rare details can still identify someone. PHI belongs only in the HIPAA-supported version, and only if your project and data are approved for it. YNHHS notes follow YNHHS rules. |
+| A clinic note with the patient's name removed | **No** (in the standard account) | Removing a name isn't de-identification: dates, ZIP codes, record numbers and rare details can still identify someone. PHI belongs only in the HIPAA-supported version, and only if your project and data are approved for it. |
 | An NIH application you're reviewing | **No** | NIH prohibits peer reviewers from using generative AI on applications ([NOT-OD-23-149](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-23-149.html)). The same goes for journal manuscripts you review in confidence, unless the journal says otherwise. |
-| A YNHHS discharge-instruction template you're revising | **Check first** | It's YNHHS material, so YNHHS rules apply: use [Copilot] per [YNHHS AI governance]. Patient-facing text needs clinical review under YNHHS processes. |
 | A PDF from a library subscription | **Check first** | Many library licenses don't allow uploading to AI tools. Use the open-access version, or check [library license guidance]. |
 | Notes from a curriculum committee meeting | **Check first** | Usually fine if nothing is confidential. Look for student records, personnel matters and appeals, and take them out. |
 
@@ -454,7 +448,7 @@ language, gender, or race, and for any race-based clinical claims.
 List each with a fix.
 ```
 
-Claude's reading-level estimate is approximate: check it with a readability tool. Anything patient-facing needs clinical review before use (under YNHHS processes for YNHHS patients).
+Claude's reading-level estimate is approximate: check it with a readability tool. Anything patient-facing needs clinical review before use.
 
 #### Explain a methods concept
 
@@ -687,25 +681,6 @@ AI use in evidence synthesis should follow the [RAISE recommendations](https://d
 
 Source: [Use Claude Cowork safely](https://support.claude.com/en/articles/13364135).
 
-## Do it in Copilot or Clarity {#copilot}
-
-The habits from class carry over to other tools: give context, name the audience, ask for questions first, push back, and verify. Use this path if you have no Claude account, if your primary appointment is with YNHHS, or if your data belongs in a different tool (see [Which tool for which data](#tool-data)). Feature names change often, so every name below is [check before use].
-
-| In class (Claude) | Microsoft Copilot | Clarity |
-|---|---|---|
-| A Project with instructions and files | [Copilot Notebook or Agent — check the name] | [Clarity equivalent — check] |
-| Set project instructions | [Notebook or agent instructions — check] | [check] |
-| Upload the kit files | Add the files to the notebook or chat [check limits] | [check] |
-| Turn 1, Turn 2, Turn 3 prompts | Same prompts; replace "this Project" with "these files" | Same prompts |
-| Model and effort menu | [Copilot model or "think deeper" option — check] | [model picker — check] |
-| Memory and incognito | [Copilot memory and personalization settings — check] | [check] |
-| Quote check and PMID check | Same steps | Same steps |
-| Phone app | [Microsoft 365 Copilot app — check] | [check] |
-
-: {tbl-colwidths="[30,40,30]"}
-
-**No Project-like feature?** Paste the project instructions at the top of a new chat, attach the files, then run the same turns. Save the instructions somewhere you can copy from next time.
-
 ## Where to go next {#next}
 
 - **Library help:** [literature search consults], [library evidence synthesis service], [office hours and follow-up workshops].
@@ -715,6 +690,6 @@ The habits from class carry over to other tools: give context, name the audience
 - **Yale AI help:** [HSIT / ITS AI help].
 - **Teaching with AI:** [Poorvu Center / ETI AI teaching guidance].
 - **Research integrity:** [Office of Research Integrity].
-- **New AI use in health sciences:** [HSARG]. **YNHHS:** [YNHHS AI governance].
+- **New AI use in health sciences:** [HSARG].
 - **AIR SIG:** [AIR SIG offerings, Tracks B–F]. Share prompts that worked, and mistakes you caught, in [AIR SIG channel / Teams].
 - **Feedback and corrections:** [link to short evaluation form] · [justin.demayo@yale.edu](mailto:justin.demayo@yale.edu?subject=Claude%20classes%20feedback).

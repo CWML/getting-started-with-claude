@@ -17,17 +17,16 @@ A 60-minute, hands-on class in the Claude app. You'll build a **Project** (a Cla
 Sign in to Claude, pick your kit, and (optionally) install the Claude phone app: see [Setup for this class](index.qmd#setup-part1).
 :::
 
-::: {.callout-important title="No working account, or your main appointment is at YNHHS?"}
-You can still take part. In class, pair with a neighbor who has an account. To do the same exercise in another tool, see [Access and alternatives](index.qmd#access) and [Do it in Copilot or Clarity](part1-reference.qmd#copilot).
+::: {.callout-important title="No working account?"}
+You can still take part. In class, pair with a neighbor who has an account, or follow along in [Clarity](https://clarity.yale.edu) where it has the same feature. See [Access and alternatives](index.qmd#access).
 :::
 
 **Ground rule:** no patient information or other sensitive data today. Every file in class is public or made up.
 
 ## 1. Welcome and sign in (0:00 – 0:03) {#welcome}
 
-**Sign in to Claude in a browser tab now.** Open this page: <https://cwml.github.io/getting-started-with-claude/part1.html> `[QR code]`
+**Sign in to Claude in a browser tab now.** Open this page: <https://cwml.github.io/getting-started-with-claude/part1.html> 
 
-Green card up = a new chat is open.
 
 ### By the end of this class, you'll be able to
 
@@ -41,8 +40,8 @@ Green card up = a new chat is open.
 | Time | Segment | What you'll do |
 |---|---|---|
 | 0:00 – 0:03 | 1. Welcome and sign in | Sign in; open this page |
-| 0:03 – 0:05 | 2. Why we check | Watch a reference get checked |
-| 0:05 – 0:11 | 3. Which tool for which data | Decide what you can share |
+| 0:03 – 0:05 | 2. Why we check | Compare two answers to one question |
+| 0:05 – 0:11 | 3. Which Claude for which data | Decide what you can share |
 | 0:11 – 0:15 | 4. Lock your settings | Set memory before uploading anything |
 | 0:15 – 0:17 | 5. Watch: build a Project | Watch the steps once |
 | 0:17 – 0:26 | 6. Your turn: build your Project | Build it from your kit |
@@ -72,30 +71,28 @@ In three sentences: what's the strongest evidence that home blood pressure monit
 
 **Claude sounds just as sure either way. That's why the last hands-on step today is verification.**
 
-## 3. Which tool for which data (0:05 – 0:11) {#which-tool}
+## 3. Which Claude for which data (0:05 – 0:11) {#which-tool}
 
-Pick the tool that's approved for your data before you open any tool.
+Yale offers two versions of Claude. Check which one your data needs before you open a chat.
 
-### Which tool for which data?
+### Standard or HIPAA-supported?
 
-| Tool | Who can use it | Data allowed |
+| | Claude, standard account | Claude, HIPAA-supported version |
 |---|---|---|
-| [Microsoft Copilot] | [Yale and YNHHS] | [classification, confirmed by HSIT on DATE] |
-| [Clarity] | [Yale] | [classification, confirmed by HSIT on DATE] |
-| Claude, standard account | Departmental sign-up (today's class) | [classification, confirmed by HSIT on DATE] |
-| Claude, HIPAA-supported version | By request: [request link] | [classification, confirmed by HSIT on DATE] |
-| YNHHS work or data | [Copilot] is the chat AI approved at YNHHS | [YNHHS AI governance link, confirmed DATE] |
+| How to get it | Departmental sign-up (today's class) | [By request](https://yale.service-now.com/it?id=nr_emp_taxonomy_topic&topic_id=9b7bac3947184b9084888aac416d4337) |
+| Data allowed | [classification, confirmed by HSIT on DATE] | [classification, confirmed by HSIT on DATE] |
+| Patient information (PHI) | No | Only if your project and data are approved for it |
+| Features | Everything in today's class (some if enabled) | Some are off or look different; check with [ITS] |
 
-**No tool is automatically approved for patient information.** HIPAA-supported describes a contract and safeguards. It doesn't approve your project, every feature, or every data set.
+**HIPAA-supported doesn't mean approved.** It describes a contract and safeguards. It doesn't approve your project, every feature, or every data set.
 
-**Before you use any tool for sensitive work:**
+**Before you use Claude for sensitive work:**
 
 - Follow [Yale's data classification](https://cybersecurity.yale.edu/data-classification). See also the [ITS service page for Claude Enterprise](https://yale.service-now.com/it?id=service_offering&sys_id=f6429096337382106bab02b19e5c7bf4).
-- A HIPAA-supported version of Claude is [available by request](https://yale.service-now.com/it?id=nr_emp_taxonomy_topic&topic_id=9b7bac3947184b9084888aac416d4337).
 - Removing a name isn't de-identification. Dates, ZIP codes, record numbers, and rare details can identify someone.
 - Your IRB protocol and any data use agreement may forbid sending data to outside AI services, even de-identified data.
 
-More detail, including which features the HIPAA-supported version covers: [Quick reference: which tool for which data](part1-reference.qmd#tool-data).
+More detail, including which features the HIPAA-supported version covers: [Quick reference: which Claude for which data](part1-reference.qmd#tool-data).
 
 ### Can I share this?
 
@@ -105,7 +102,7 @@ More detail, including which features the HIPAA-supported version covers: [Quick
 2. Your own draft lecture slides
 3. A clinic note with the patient's name removed
 4. An NIH application you're reviewing
-5. A YNHHS discharge-instruction template
+5. Notes from a curriculum committee meeting
 6. A PDF from a library subscription
 
 ### "Not here" is a valid answer
@@ -563,7 +560,7 @@ Four questions, one per objective. Show of hands or [exit-ticket form link].
 
 ### Exit ticket
 
-1. A spreadsheet of clinic no-shows with MRNs: which tool? And which setting did you lock today before uploading?
+1. A spreadsheet of clinic no-shows with MRNs: which Claude, if any? And which setting did you lock today before uploading?
 2. Name one pattern from your prompt that changed the output.
 3. Claude gives you a PMID. What do you do first?
 4. One low-risk recurring task you'll use your Project for this week.
@@ -580,7 +577,7 @@ Four questions, one per objective. Show of hands or [exit-ticket form link].
 
 **On the Quick reference page:**
 
-- [Which tool for which data](part1-reference.qmd#tool-data)
+- [Which Claude for which data](part1-reference.qmd#tool-data)
 - [Settings and privacy](part1-reference.qmd#settings)
 - [Projects and skills how-to](part1-reference.qmd#projects-skills)
 - [Model, effort and the Claude Code commands](part1-reference.qmd#model-effort-commands)
@@ -588,7 +585,6 @@ Four questions, one per objective. Show of hands or [exit-ticket form link].
 - [Prompt library](part1-reference.qmd#prompt-library)
 - [Verify and disclose](part1-reference.qmd#verify-disclose)
 - [Cowork in brief](part1-reference.qmd#cowork)
-- [Do it in Copilot or Clarity](part1-reference.qmd#copilot)
 - [More places to learn](part1-reference.qmd#next)
 
 **Also useful:** [Claude Help Center](https://support.claude.com) · [teaching-center AI guidance] · [Office of Research Integrity] · [HSARG] · [AIR Tracks B–F offerings]

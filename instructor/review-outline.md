@@ -57,7 +57,7 @@ Answer these once you've done the dry run.
 |---|---|---|---|---|
 | 1 | Welcome and sign in | 0:00 – 0:03 | | |
 | 2 | Why we check | 0:03 – 0:05 | | |
-| 3 | Which tool for which data | 0:05 – 0:11 | | |
+| 3 | Which Claude for which data | 0:05 – 0:11 | | |
 | 4 | Lock your settings | 0:11 – 0:15 | | |
 | 5 | Watch: build a Project | 0:15 – 0:17 | | |
 | 6 | Your turn: build your Project | 0:17 – 0:26 | | |
@@ -80,7 +80,7 @@ Answer these once you've done the dry run.
 - [ ] Tool and data guidance matches the class page.
 - [ ] Settings checklist matches what we see in the app today.
 - [ ] Prompt library: try at least one prompt from Research, Teaching, and Administrative.
-- [ ] Verify and disclose, Cowork, and Copilot/Clarity sections are accurate.
+- [ ] Verify and disclose and Cowork sections are accurate.
 
 ## 4. Part 2: Analyzing research data with Claude Code (90 min)
 

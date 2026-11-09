@@ -19,8 +19,8 @@ Claude's features, menu names and admin settings change often. The feature descr
 
 **Prep checklist**
 
-- [ ] Replace every `[bracketed placeholder]` in `part1.qmd`, `part1-reference.qmd`, `index.qmd` and `materials/part1-kits/` (HIPAA-version request link, policy links, HSIT/ITS contacts, Copilot names, site URL). The list below groups them by who can answer.
-- [ ] Registration form asks: kit choice (Kit A Article Explainer or Kit B Committee Assistant), Claude tier (standard, premium, HIPAA-supported) and Claude Code access, and appointment (Yale, YNHHS, or both).
+- [ ] Replace every `[bracketed placeholder]` in `part1.qmd`, `part1-reference.qmd`, `index.qmd` and `materials/part1-kits/` (HIPAA-version request link, policy links, HSIT/ITS contacts, site URL). The list below groups them by who can answer.
+- [ ] Registration form asks: kit choice (Kit A Article Explainer or Kit B Committee Assistant), Claude tier (standard, premium, HIPAA-supported) and Claude Code access.
 - [ ] Line up a co-facilitator for the first 3 minutes (sign-in) and the build block (0:17 – 0:26). Strongly recommended for 18 people.
 - [ ] 2–5 days before class, send the sign-in check email: the setup page (`index.html#setup-part1`), "sign in to Claude in a browser and open a new chat," the kit choice, the optional phone app install (with the device policy note), and the "no working account?" section (`index.html#access`).
 - [ ] Run the check-in-both-workspaces list below the week before, with screenshots.
@@ -46,8 +46,6 @@ Prompt slots such as `[audience]`, `[role]`, `[topic]`, `[committee name]` and `
 | You / the library | Guidance: `[library license guidance]`, `[link to library guidance on AI disclosure]`, `[Dated source on AI energy use, chosen by a librarian.]`, `[add category]` (Part 2 form) | `part1.qmd`, `part1-reference.qmd`, kits `README.md`, `part2.qmd`, `part2-description.md` |
 | ITS | `[sign-up link]`, `[eligibility…]`, `[who has a license / how to request]`, `[sign-in steps / SSO note]`, `[confirm Yale seat tiers]` (Fable on standard seats), `[Yale retention period…]`, `[whether Yale's agreement allows chats to be used to train models…]`, `[one-line description from ITS]`, `[product name — check]`, `[confirm with ITS which Claude Code surfaces are covered]`, `[ITS contact]`, `[ITS / help contact]`, `[HSIT / ITS AI help]`, `[link to current install instructions]`, `[local guidance for Windows users]`, `[mobile device policy]`, `[how to check / who to ask]` | `index.qmd`, `part1.qmd`, `part1-reference.qmd`, `part2.qmd`, `cheatsheet.qmd` |
 | HSIT / HIPAA Privacy Office | `[request link]` (HIPAA-supported version), `[HSIT / HIPAA Privacy Office contact]`, `[Yale data classification / policy link]`, `[Yale data classification names…]`, the six `[approved data: ___, confirmed by ___ on DATE]` cells and four `[classification, confirmed by HSIT on DATE]` cells, `[Yale AI Tool Registry]`, `[link to institutional AI and data policy]`, `[Insert local policy]` | `index.qmd`, `part1.qmd`, `part1-reference.qmd`, `part2.qmd`, `part2-slides.qmd`, `cheatsheet.qmd` |
-| YNHHS | `[approved tool, e.g. Microsoft Copilot: link, confirmed by ___ on DATE]`, `[YNHHS-approved chat AI…]`, `[YNHHS AI governance link, confirmed DATE]`, whether YNHHS-primary appointees can use Clarity (`[confirm]`) | `index.qmd`, `part1.qmd`, `part1-reference.qmd` |
-| Check in Copilot yourself | `[Copilot Notebook or Agent — check the name]`, `[Notebook or agent instructions — check]`, `[Copilot model or "think deeper" option — check]`, `[Copilot memory and personalization settings — check]`, `[Microsoft 365 Copilot app — check]`, `[Clarity equivalent — check]`, `[check limits]` | `part1-reference.qmd` (Copilot section) |
 | Research integrity / teaching | `[HSARG]`, `[Office of Research Integrity]`, `[Poorvu Center / ETI AI teaching guidance]`, `[teaching-center AI guidance]`, `[links to other funder notices]`, `[accessibility contact]` | `part1.qmd`, `part1-reference.qmd`, `index.qmd` |
 | Week-before workspace check | The two settings screenshots, `[Record results here]` (Part 2) | `part1-reference.qmd`, `part1.qmd`, `part2.qmd` |
 
@@ -63,7 +61,6 @@ Prompt slots such as `[audience]`, `[role]`, `[topic]`, `[committee name]` and `
 - [ ] Projects visible in the phone app, the mobile app in the HIPAA-supported workspace, and whether the phone app has a Code tab.
 - [ ] /rc (Remote Control) status in the HIPAA configuration (expected off).
 - [ ] The Cowork layout (built into Enterprise chat since Oct 23, 2026, if enabled; the HIPAA workspace keeps the older layout).
-- [ ] The Copilot feature names for the "Do this in Copilot" path.
 - [ ] The Hickey article: the license version on the PMC page, and whether the full text explains 98 vs 99.
 - [ ] Org usage headroom for 18 people running multi-part prompts.
 
@@ -80,7 +77,7 @@ Teaching notes for each part of the class page, in order. They used to appear on
 
 *1. Welcome and sign in (0:00 – 0:03)*
 
-**0:00 (3 min).** Put this section on screen as people arrive. Watch for green cards. Anyone without a working account pairs as navigator with someone who has one, or follows the [Copilot] path on the site. Personal accounts are fine for the public class files only, and nobody signs up during class.
+**0:00 (3 min).** Put this section on screen as people arrive. Watch for green cards. Anyone without a working account pairs as navigator with someone who has one. Personal accounts are fine for the public class files only, and nobody signs up during class.
 
 **Cut order if you run late** (verification is never cut, and it starts before anything that can be cut):
 
@@ -102,7 +99,7 @@ About half the class is hands-on. Point out the pattern: you watch once, then yo
 
 *1. Welcome and sign in (0:00 – 0:03) › No working account?*
 
-Keep this to 20 seconds. Nobody signs up for anything during class. Point YNHHS-primary people to the [Copilot] tab on the reference page; the kit files and prompts work there too.
+Keep this to 20 seconds. Nobody signs up for anything during class.
 
 *2. Why we check (0:03 – 0:05)*
 
@@ -112,17 +109,17 @@ Keep this to 20 seconds. Nobody signs up for anything during class. Point YNHHS-
 
 Open two new incognito chats in the demo account (outside any Project), paste the prompt into both, and send. Put them side by side. Point to a study, number, or claim that appears in one answer and not the other. If the answers agree, ask: "Does agreeing make them right?" Both still need checking. The point: Claude sounds equally confident whether or not it's right, so confidence tells you nothing.
 
-*3. Which tool for which data (0:05 – 0:11)*
+*3. Which Claude for which data (0:05 – 0:11)*
 
 **0:05 (6 min):** 2 min on the decision table, 3 min on "Can I share this?", 1 min on "Not here."
 
-*3. Which tool for which data (0:05 – 0:11) › Which tool for which data?*
+*3. Which Claude for which data (0:05 – 0:11) › Standard or HIPAA-supported?*
 
 Say plainly: "A HIPAA-supported version of Claude is available by request." Then the caveats: it doesn't approve your project, every feature, or every data set. Follow [Yale data classification / policy link]. Questions go to [HSIT / HIPAA Privacy Office contact]. Never suggest that the standard account covers PHI.
 
 Features in the HIPAA-supported version may differ: some are off, and it keeps an older layout. Check with [ITS]. Full table and dated feature list: the [Quick reference](part1-reference.qmd#tool-data).
 
-*3. Which tool for which data (0:05 – 0:11) › Can I share this?*
+*3. Which Claude for which data (0:05 – 0:11) › Can I share this?*
 
 **0:07 (3 min).** Take hands for each, one or two comments, move on.
 
@@ -130,12 +127,12 @@ Features in the HIPAA-supported version may differ: some are off, and it keeps a
 2. **OK.** Your own work, as long as it has no student names or records.
 3. **No** (or check first). Removing a name isn't de-identification. Only in a tool approved for PHI, and only if your project is approved.
 4. **No.** Reviewers must keep applications confidential, and NIH prohibits generative AI in peer review (NOT-OD-23-149).
-5. **Check first.** It belongs to YNHHS, so YNHHS rules apply. Use [Copilot] for YNHHS work unless YNHHS has approved otherwise.
+5. **Check first.** Usually fine if nothing is confidential. Look for student records, personnel matters and appeals, and take them out.
 6. **Check first.** The license may not allow uploading to AI tools. Use the open-access version or check [library license guidance].
 
 Full answers: [Quick reference](part1-reference.qmd#tool-data).
 
-*3. Which tool for which data (0:05 – 0:11) › "Not here" is a valid answer*
+*3. Which Claude for which data (0:05 – 0:11) › "Not here" is a valid answer*
 
 **0:10 (1 min).** "Choosing not to use AI is a skill too."
 
@@ -310,7 +307,7 @@ Also check: roles only, no names; email under 200 words; the agenda fits 60 minu
 
 | Problem | Fallback |
 |---|---|
-| A participant has no working account | Pair them as navigator with a neighbor. YNHHS-primary or no-seat participants use the "Do this in [Copilot]" path on the class page. No sign-ups during class; personal accounts are for the public class files only. |
+| A participant has no working account | Pair them as navigator with a neighbor. No sign-ups during class; personal accounts are for the public class files only. |
 | Uploads fail | Paste the file text into the Project instructions, or open the instructor's shared Project (Can view, if enabled). |
 | Claude outage or Wi-Fi down | Teach from your screen and the backup screenshots. Participants build their Project after class from `part1.html`. |
 | A setting or menu is missing for some people | Say it depends on the workspace or admin settings, show it on your screen, and move on. |
