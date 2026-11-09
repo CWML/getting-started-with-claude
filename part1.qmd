@@ -112,7 +112,7 @@ To turn memory off for one chat: **+ > Memory**, before your first message.
 
 ### Incognito: what it does and doesn't do
 
-The ghost icon in a new chat starts an incognito chat. It isn't saved to your history or memory, but:
+The ghost icon ![Ghost icon](images/incognito-icon.png){height="1.4em" style="vertical-align: middle;"} in a new chat starts an incognito chat. It isn't saved to your history or memory, but:
 
 - It isn't available inside Projects.
 - Chats are still kept [30 days by default, or Yale's setting] and appear in your organization's exports.
@@ -140,7 +140,7 @@ Give me three ways to make a long email easier to read.
 | **+** (lower left) | Add files or photos, and turn tools on or off for this chat (below). |
 | Typing **/** | Opens the same tools from the keyboard, including skills *(if enabled)*. |
 | **Model menu** (near to Send) | Choose the model and effort. More in [Models, effort and skills](#tune). |
-| **Microphone** | Dictate instead of typing *(if enabled; check before class)*. |
+| **Microphone** | Dictate instead of typing. |
 | **Ghost icon** (new chats only) | Starts an incognito chat. See [Incognito](#settings). |
 
 ### Research, web search and memory
