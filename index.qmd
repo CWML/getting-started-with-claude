@@ -29,7 +29,6 @@ These pages are the class materials for two in-person classes from the Cushing/W
 | **What you'll do** | Build a Claude Project you'll keep using, then prompt it well and check what it gives you. | Take a synthetic clinical trial from raw data to a report with Claude Code in Positron, checking every step yourself. |
 | **Time** | 60 minutes | 90 minutes |
 | **Where** | In person, SHM L 111, up to 18 people | In person, SHM L 111, up to 18 people |
-| **AIR track** | Track A Foundations · Beginner | Track C Computational Research · Intermediate |
 
 
 
