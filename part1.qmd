@@ -77,7 +77,24 @@ More detail, including which features the HIPAA-supported version covers: [Quick
 
 ## 4. Check your settings {#settings}
 
-Set memory *before* you upload anything.
+Set up your account and memory *before* you upload anything.
+
+### Account settings: your role and instructions
+
+::: {.do-now}
+**Your turn.** Click your name or initials (lower left) > **Settings > General** *(check before class)*.
+
+1. **What best describes your work?** Pick the closest role. Claude uses it to fit its answers to your field.
+2. **Personal preferences** (the box asking what Claude should consider in its responses): add a line or two about how you like answers. Claude applies them in every chat.
+:::
+
+For example:
+
+```text
+Write in plain language. Use short paragraphs and bullet points. Ask me a question if my request is unclear.
+```
+
+**Keep it general and put nothing sensitive in it.** These instructions go with every chat. Later today you'll write Project instructions, which apply to one piece of work.
 
 ### Watch, then do: memory settings
 
@@ -123,7 +140,7 @@ Give me three ways to make a long email easier to read.
 | **Type, paste or drop a file** | **Enter** sends; **Shift+Enter** starts a new line. Drag a file onto the box to attach it. |
 | **+** (lower left) | Add files or photos, and turn tools on or off for this chat (below). |
 | Typing **/** | Opens the same tools from the keyboard, including skills *(if enabled)*. |
-| **Model menu** (next to Send) | Choose the model and effort. More in [Models, effort and skills](#tune). |
+| **Model menu** (near to Send) | Choose the model and effort. More in [Models, effort and skills](#tune). |
 | **Microphone** | Dictate instead of typing *(if enabled; check before class)*. |
 | **Ghost icon** (new chats only) | Starts an incognito chat. See [Incognito](#settings). |
 

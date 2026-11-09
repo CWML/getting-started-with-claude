@@ -21,7 +21,7 @@ Claude's features, menu names and admin settings change often. The feature descr
 
 - [ ] Replace every `[bracketed placeholder]` in `part1.qmd`, `part1-reference.qmd`, `index.qmd` and `materials/part1-kits/` (HIPAA-version request link, policy links, HSIT/ITS contacts, site URL). The list below groups them by who can answer.
 - [ ] Registration form asks: kit choice (Kit A Article Explainer or Kit B Committee Assistant), Claude tier (standard, premium, HIPAA-supported) and Claude Code access.
-- [ ] Line up a co-facilitator for the first 3 minutes (sign-in) and the build block (0:22 – 0:31). Strongly recommended for 18 people.
+- [ ] Line up a co-facilitator for the first 3 minutes (sign-in) and the build block (0:24 – 0:33). Strongly recommended for 18 people.
 - [ ] 2–5 days before class, send the sign-in check email: the setup page (`index.html#setup-part1`), "sign in to Claude in a browser and open a new chat," the kit choice, the optional phone app install (with the device policy note), and the "no working account?" section (`index.html#access`).
 - [ ] Run the check-in-both-workspaces list below the week before, with screenshots.
 - [ ] Pre-run the Kit A Turn 1 chat (with your answers to Claude's questions) for segment 9, "Anatomy of a strong prompt."
@@ -50,6 +50,7 @@ Prompt slots such as `[audience]`, `[role]`, `[topic]`, `[committee name]` and `
 
 **Check in both Yale workspaces (standard enterprise and HIPAA-supported) the week before, with screenshots**
 
+- [ ] The Settings > General labels: "What best describes your work?" and the personal preferences box (older names: Instructions for Claude, profile preferences).
 - [ ] The Settings > Memory path and the labels there (as of Nov 9, 2026: Search and reference chats, Generate memory from chats, Import memory, Export memory, then a "You" section). The "Include sensitive topics in memory" toggle is gone; don't teach it. + > Memory must be set before the first message.
 - [ ] The Project's "Use account memory" label, and whether there's a way to add typed text to a Project (the "add text" fallback is unverified).
 - [ ] Model names and effort levels in the menu next to Send, and whether Fable is available on standard seats [confirm Yale tiers].
@@ -66,9 +67,9 @@ Prompt slots such as `[audience]`, `[role]`, `[topic]`, `[committee name]` and `
 **Run of show: private details**
 
 - **Demo account:** `[demo account name]`, signed in on the presenter laptop (second browser tab, finished Article Explainer Project open) and the demo phone. One pre-run chat ready: Turn 1 with Claude's questions answered (segment 9). Don't teach from a personal account.
-- **Green cards:** one per seat. Up at 0:03 = signed in with a new chat open. Up at the 0:30 checkpoint = Claude named your kit's files (both for Kit A, the one for Kit B) and quoted one rule. The co-facilitator goes to anyone without a green card. Move on at 0:31 regardless; people catch up during Turn 1.
-- **Timing anchors:** build starts 0:22; checkpoint 0:30; verification starts 0:42 and is never cut.
-- **Cut order if running late:** the phone tryout becomes a 1-minute demo (saves 3); Cowork moves onto the exit slide (saves 1–2); the skill becomes a screenshot (saves 1); the PubMed opening moves into segment 11 (saves 2); the / menu look in segment 5 becomes an instructor show (saves ~0.5).
+- **Green cards:** one per seat. Up at 0:03 = signed in with a new chat open. Up at the 0:32 checkpoint = Claude named your kit's files (both for Kit A, the one for Kit B) and quoted one rule. The co-facilitator goes to anyone without a green card. Move on at 0:33 regardless; people catch up during Turn 1.
+- **Timing anchors:** build starts 0:24; checkpoint 0:32; verification starts 0:44 and is never cut.
+- **Cut order if running late:** the phone demo shrinks to 1 minute (saves 1); Cowork moves onto the exit slide (saves 1–2); the skill becomes a screenshot (saves 1); the PubMed opening moves into segment 11 (saves 2); the / menu look in segment 5 becomes an instructor show (saves ~0.5).
 
 **Segment notes**
 
@@ -80,7 +81,7 @@ Teaching notes for each part of the class page, in order. They used to appear on
 
 **Cut order if you run late** (verification is never cut):
 
-1. Phone tryout becomes a 1-minute instructor demo (saves 3 min).
+1. The phone demo shrinks to 1 minute (saves 1 min).
 2. Cowork moves into the exit ticket (saves 1–2).
 3. The skill demo becomes a screenshot (saves 1).
 4. The PubMed opening moves into segment 11 (saves 2).
@@ -112,11 +113,15 @@ Say plainly: "A HIPAA-supported version of Claude is available by request." Then
 
 Features in the HIPAA-supported version may differ: some are off, and it keeps an older layout. Check with [ITS]. Full table and dated feature list: the [Quick reference](part1-reference.qmd#tool-data).
 
-*4. Check your settings (0:08 – 0:12)*
+*4. Check your settings (0:08 – 0:14)*
 
-**0:08 (4 min):** 1 min watch, 3 min do.
+**0:08 (6 min):** 2 min on account settings, 3 min on memory, 1 min on incognito.
 
-*4. Check your settings (0:08 – 0:12) › Watch, then do: memory settings*
+*4. Check your settings (0:08 – 0:14) › Account settings: your role and instructions*
+
+Show **Settings > General** once on your screen, then let people fill it in. The role pick is optional; the preferences line is the part that changes answers. Suggest the example as a starting point. Say plainly: these go with every chat, so nothing sensitive. Point ahead: Project instructions do the same job for one Project.
+
+*4. Check your settings (0:08 – 0:14) › Watch, then do: memory settings*
 
 Show it once on your screen, then let people do it. Have screenshots of both layouts ready: the combined chat-and-Cowork layout, and the older layout that the HIPAA-supported version keeps.
 
@@ -124,47 +129,47 @@ On Enterprise accounts, memory is off for each person until they turn it on, so 
 
 Worth one sentence: deleting a chat doesn't delete memories made from it.
 
-*4. Check your settings (0:08 – 0:12) › Incognito: what it does and doesn't do*
+*4. Check your settings (0:08 – 0:14) › Incognito: what it does and doesn't do*
 
 **20-second poll:** "A sensitive HR email: Project, incognito, or neither?" Answer: neither. Use the tool approved for that data. Incognito doesn't make anything allowed.
 
 Details for the page: [Quick reference: settings and privacy](part1-reference.qmd#settings).
 
-*5. Everyday chat (0:12 – 0:15)*
+*5. Everyday chat (0:14 – 0:17)*
 
-**0:12 (3 min):** 30 seconds to send the prompt, 1 min on the chat box table, 1.5 min on the three switches and the "/" look. The point: a plain chat is fine for everyday tasks; a Project is for work you come back to.
+**0:14 (3 min):** 30 seconds to send the prompt, 1 min on the chat box table, 1.5 min on the three switches and the "/" look. The point: a plain chat is fine for everyday tasks; a Project is for work you come back to.
 
-*5. Everyday chat (0:12 – 0:15) › Research, web search and memory*
+*5. Everyday chat (0:14 – 0:17) › Research, web search and memory*
 
 Before class, open **+** in a new chat in both Yale workspaces and screenshot it. Show only what's there: Research needs an Opus model enabled for the role, and the HIPAA-supported version may differ. Also type "/" and screenshot what appears (skills, connectors, styles). Styles are being folded into skills; a migrated style may show up as `/name-style`. Mention that only if someone asks.
 
 Tie the last line back to segment 2: web search and Research give you links, which makes checking easier, but a link isn't proof until you open it.
 
-*6. Models, effort and skills (0:15 – 0:20)*
+*6. Models, effort and skills (0:17 – 0:22)*
 
-**0:15 (5 min):** talk and show, no hands-on. 2 min on the model menu, 2 min on skills, 1 min for questions. Open each on your screen; participants just watch.
+**0:17 (5 min):** talk and show, no hands-on. 2 min on the model menu, 2 min on skills, 1 min for questions. Open each on your screen; participants just watch.
 
-*6. Models, effort and skills (0:15 – 0:20) › Models and effort*
+*6. Models, effort and skills (0:17 – 0:22) › Models and effort*
 
 Open the menu on screen. Current models (check the menu before class): Fable 5.1, Opus 5.5, Sonnet 5.5, Haiku 5.5, with older ones under "More models." Effort levels: Low, Medium, High, Extra high, Max; each model marks its recommended level "Default."
 
 Fable may need usage credits on a standard seat [confirm Yale seat tiers]. More: [Quick reference: model, effort and commands](part1-reference.qmd#model-effort-commands).
 
-*6. Models, effort and skills (0:15 – 0:20) › Skills*
+*6. Models, effort and skills (0:17 – 0:22) › Skills*
 
 Open **Customize > Skills** on the demo account, then type "/" in a chat to show the same skills there. If you want a live example, ask for a one-page Word handout of anything on screen; skip it if skills or file creation are off and show the screenshot instead.
 
-*7. Watch: build a Project (0:20 – 0:22) › Five steps*
+*7. Watch: build a Project (0:22 – 0:24) › Five steps*
 
-**0:20 (2 min).** Do it once at normal speed on the demo account. Point out the **Share** button (Can view / Can edit, if enabled), but don't stop on it.
+**0:22 (2 min).** Do it once at normal speed on the demo account. Point out the **Share** button (Can view / Can edit, if enabled), but don't stop on it.
 
 "Use account memory" keeps this Project's memory separate from the rest of your chats. Check the label before class.
 
-*8. Your turn: build your Project (0:22 – 0:31)*
+*8. Your turn: build your Project (0:24 – 0:33)*
 
-**0:22 (9 min):** 8 min build, 1 min checkpoint. At 0:30, ask for green cards. Move on at 0:31 regardless; anyone still building catches up during Turn 1.
+**0:24 (9 min):** 8 min build, 1 min checkpoint. At 0:32, ask for green cards. Move on at 0:33 regardless; anyone still building catches up during Turn 1.
 
-*8. Your turn: build your Project (0:22 – 0:31) › Your turn: build it*
+*8. Your turn: build your Project (0:24 – 0:33) › Your turn: build it*
 
 Walk the room. Most common problems: the file landed in a regular chat instead of the Project, or the instructions weren't saved.
 
@@ -172,33 +177,33 @@ If an upload fails: paste the style guide's text at the end of the project instr
 
 Windows users who get `.md.txt` files: the fix is on the setup page.
 
-*8. Your turn: build your Project (0:22 – 0:31) › Your kit*
+*8. Your turn: build your Project (0:24 – 0:33) › Your kit*
 
 Say out loud: the privacy line in the Project instructions is advice, not enforcement. Claude will usually follow it, but nothing stops a paste. Part 2 shows tools that actually block things.
 
-*9. Watch: anatomy of a strong prompt (0:31 – 0:33) › What each part does*
+*9. Watch: anatomy of a strong prompt (0:33 – 0:35) › What each part does*
 
-**0:31 (2 min).** Show the pre-run Turn 1 chat (a live ask-first round trip won't fit in 2 minutes). Point to Claude's questions, then to the "Where this came from" table: it turns checking into a 2-minute Ctrl-F job.
+**0:33 (2 min).** Show the pre-run Turn 1 chat (a live ask-first round trip won't fit in 2 minutes). Point to Claude's questions, then to the "Where this came from" table: it turns checking into a 2-minute Ctrl-F job.
 
 All six prompting patterns, with examples: [Quick reference: prompt library](part1-reference.qmd#prompt-library).
 
-*10. Your turn: run it, then push back (0:33 – 0:42)*
+*10. Your turn: run it, then push back (0:35 – 0:44)*
 
-**0:33 (9 min):** 8 min hands-on, 1 min pair debrief. Default model and effort avoid usage limits.
+**0:35 (9 min):** 8 min hands-on, 1 min pair debrief. Default model and effort avoid usage limits.
 
-*10. Your turn: run it, then push back (0:33 – 0:42) › Your turn: Turn 1*
+*10. Your turn: run it, then push back (0:35 – 0:44) › Your turn: Turn 1*
 
 Anyone stuck on Claude's questions can use the fast answers on the class page. Walk the room. If someone's Claude skips the questions, that's a teaching moment: point to the "Wait" line and have them reply "Please ask your questions first."
 
-*10. Your turn: run it, then push back (0:33 – 0:42) › Your turn: push back (Turn 2)*
+*10. Your turn: run it, then push back (0:35 – 0:44) › Your turn: push back (Turn 2)*
 
-**0:41 (1 min).** Pair debrief, then take one answer from the room. Key message: treat the first answer as a draft; much of the value comes from the second turn.
+**0:43 (1 min).** Pair debrief, then take one answer from the room. Key message: treat the first answer as a draft; much of the value comes from the second turn.
 
-*11. Verify before you use it (0:42 – 0:51)*
+*11. Verify before you use it (0:44 – 0:53)*
 
-**0:42 (9 min). Don't cut this segment.** 1 min demo, 6 min hands-on, 2 min talk.
+**0:44 (9 min). Don't cut this segment.** 1 min demo, 6 min hands-on, 2 min talk.
 
-*11. Verify before you use it (0:42 – 0:51) › Your turn: check quotes and rules*
+*11. Verify before you use it (0:44 – 0:53) › Your turn: check quotes and rules*
 
 Demo one quote check on your screen first (1 min), then let people go.
 
@@ -206,29 +211,29 @@ The bonus: the abstract says 98 people enrolled in the telehealth arm, then repo
 
 The article has two more inconsistencies: the week-48 confidence interval (abstract: 95% CI [30%, 53%]; Results: [14%, 38%], which repeats the week-24 interval) and the share of women (abstract 67%, Results 70%, 139/200). A quote can be "exact" and still be wrong. If someone's explainer cites the week-48 CI, ask which section it came from.
 
-*11. Verify before you use it (0:42 – 0:51) › Your turn: check a citation (Turn 3)*
+*11. Verify before you use it (0:44 – 0:53) › Your turn: check a citation (Turn 3)*
 
 If web search is on, Claude may return real studies. Frame it as: "Declining or labeling is the behavior you want, and you still check." If nobody finds a bad reference, the habit is still the lesson: you checked before you used it.
 
-*11. Verify before you use it (0:42 – 0:51) › Your turn: add one rule*
+*11. Verify before you use it (0:44 – 0:53) › Your turn: add one rule*
 
-**0:48.** This is the second Create moment: their Project now has their own verification rule in it.
+**0:50.** This is the second Create moment: their Project now has their own verification rule in it.
 
-*11. Verify before you use it (0:42 – 0:51) › You're accountable for what you use*
+*11. Verify before you use it (0:44 – 0:53) › You're accountable for what you use*
 
-**0:49 (2 min).** Talk only. If anything went wrong in the room today, use it as the example.
+**0:51 (2 min).** Talk only. If anything went wrong in the room today, use it as the example.
 
 Disclosure template, notice dates, and red flags for fabrication and bias: [Quick reference: verify and disclose](part1-reference.qmd#verify-disclose). Library evidence synthesis service: [link].
 
-*12. Take it with you: the phone app (0:51 – 0:55)*
+*12. Take it with you: the phone app (0:53 – 0:55)*
 
-**0:51 (4 min):** 2 min demo, 2 min optional tryout. Cut option: make this a 1-minute demo with no tryout (saves 3 min).
+**0:53 (2 min):** demo only; people try it on their own phone after class. Cut option: make this a 1-minute demo (saves 1 min).
 
-*12. Take it with you: the phone app (0:51 – 0:55) › Watch, then try: your Project on your phone*
+*12. Take it with you: the phone app (0:53 – 0:55) › Watch, then try: your Project on your phone*
 
 Mirror the phone (iPhone Mirroring or QuickTime). Use the dictation mic for the question. Point out voice mode (beta, the sound-wave icon next to the mic) without running it. Check before class that Projects appear in the phone app for both workspaces.
 
-*12. Take it with you: the phone app (0:51 – 0:55) › Phone rules*
+*12. Take it with you: the phone app (0:53 – 0:55) › Phone rules*
 
 Bridge sentence: "This app has a Code tab. In Part 2, /rc connects it to a Claude Code session on your laptop (if your organization has turned on Remote Control)."
 

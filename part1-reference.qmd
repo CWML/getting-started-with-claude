@@ -119,10 +119,11 @@ Check your settings **before** you upload anything. Some settings may be greyed 
 - In the combined chat-and-Cowork experience, incognito chats open in the previous chat layout, so Claude **can't create files or run code** in them (so document skills won't work).
 - **Incognito changes what Claude remembers, not what data is allowed.**
 
-### Instructions for Claude
+### Your role and instructions for Claude
 
-- **Where:** Settings > Your Claude (older layout: Account > Instructions for Claude; formerly called "profile preferences").
-- **What:** your role, tone and format, used in every chat. Keep it general and put nothing sensitive in it.
+- **Where:** Settings > General *(check before class; older names: Instructions for Claude, profile preferences)*.
+- **Role:** "What best describes your work?" Pick the closest role so Claude can fit its answers to your field.
+- **Personal preferences:** your tone and format, used in every chat. Keep it general and put nothing sensitive in it.
 - **Example:** "Write in plain language. I'm a research coordinator, not a statistician. Use short paragraphs and bullet points."
 - Styles are being folded into skills. For tone and format, use Instructions for Claude or a skill.
 
