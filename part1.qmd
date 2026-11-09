@@ -11,8 +11,6 @@ format:
 
 A 60-minute, hands-on class in the Claude app. You'll build a **Project** (a Claude workspace with its own instructions and files), use it on a real task, check what it gives you, and leave with a tool you can reuse. No programming needed.
 
-[Quick reference](part1-reference.qmd) 
-
 ::: {.callout-note title="Before class"}
 Sign in to Claude, pick your kit, and (optionally) install the Claude phone app: see [Setup for this class](index.qmd#setup-part1).
 :::
@@ -71,7 +69,6 @@ For details on both, see [AI at Yale, Claude ](https://ai.yale.edu/yales-ai-tool
 - Removing a name isn't de-identification. Dates, ZIP codes, record numbers, and rare details can identify someone.
 - Your IRB protocol and any data use agreement may forbid sending data to outside AI services, even de-identified data.
 
-More detail, including which features the HIPAA-supported version covers: [Quick reference: which Claude for which data](part1-reference.qmd#tool-data).
 
 **Safe habits:** describe the situation instead of pasting the record, use made-up examples, and share structure (a template or blank form) rather than content.
 
@@ -522,7 +519,6 @@ The Claude phone app uses the same account as your laptop, so your work comes wi
 Create Projects on your laptop; they open on your phone too.
 
 
-More: [Quick reference: mobile](part1-reference.qmd#mobile).
 
 ## 14. Cowork and the bridge to Claude Code {#cowork-bridge}
 
@@ -563,25 +559,12 @@ Cowork acts, not just answers. Web pages and files can hide instructions that st
 
 ## Where to go next {#next}
 
-**Feedback:** [feedback form link]
+### Tell us how it went
 
-- [Quick reference](part1-reference.qmd): settings, prompts, verification, and more
-- [Claude Academy: free courses from Anthropic](https://academy.claude.com)
-- [Analyzing research data with Claude Code](part2.qmd): the next class
-- Library help: [literature search consults, evidence synthesis service, office hours]
-- Questions about tools and data: [HSIT / ITS AI help]
+[![](images/class-survey-qr.png){fig-alt="QR code that opens the class survey" width="180"}](https://yalesurvey.ca1.qualtrics.com/jfe/form/SV_cZOk3RQmTrQLhYy)
 
-**On the Quick reference page:**
+Scan the code or [take the class survey](https://yalesurvey.ca1.qualtrics.com/jfe/form/SV_cZOk3RQmTrQLhYy).
 
-- [Which Claude for which data](part1-reference.qmd#tool-data)
-- [Settings and privacy](part1-reference.qmd#settings)
-- [Projects and skills how-to](part1-reference.qmd#projects-skills)
-- [Model, effort and the Claude Code commands](part1-reference.qmd#model-effort-commands)
-- [The phone app](part1-reference.qmd#mobile)
-- [Prompt library](part1-reference.qmd#prompt-library)
-- [Verify and disclose](part1-reference.qmd#verify-disclose)
-- [Cowork in brief](part1-reference.qmd#cowork)
-- [More places to learn](part1-reference.qmd#next)
+### Keep learning
 
-**Also useful:** [Claude Help Center](https://support.claude.com) · [teaching-center AI guidance] · [Office of Research Integrity] · [HSARG] · [AIR Tracks B–F offerings]
-
+See the [recommended links](index.qmd#links) on the home page, including free courses at Claude Academy.

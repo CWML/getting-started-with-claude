@@ -39,7 +39,6 @@ These pages are the class materials for two in-person classes from the Cushing/W
 
 - [Setup](#setup-part1): sign in to Claude and download your practice kit (about 10 minutes)
 - [Class page](part1.qmd): the class itself, with every prompt ready to copy
-- [Quick reference](part1-reference.qmd): settings, commands, and the prompt library on one page
 
 **Analyzing research data with Claude Code**
 

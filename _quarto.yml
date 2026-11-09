@@ -6,7 +6,6 @@ project:
   render:
     - index.qmd
     - part1.qmd
-    - part1-reference.qmd
     - part2.qmd
     - part2-slides.qmd
     - cheatsheet.qmd
@@ -53,8 +52,6 @@ website:
         contents:
           - href: part1.qmd
             text: Class page
-          - href: part1-reference.qmd
-            text: Quick reference
           - href: index.html#setup-part1
             text: Setup
       - section: "Analyzing research data with Claude Code"

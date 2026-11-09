@@ -12,7 +12,6 @@ The repo is a [Quarto](https://quarto.org) website. Participants use the publish
 ```
 index.qmd                  # home page, participant setup, access and alternatives, recommended links
 part1.qmd                  # Part 1 class page, taught from directly (no deck)
-part1-reference.qmd        # Part 1 quick reference page
 part2.qmd                  # Part 2 class page you teach from; participants follow along
 part2-slides.qmd           # Part 2 slides (press S for speaker notes)
 cheatsheet.qmd             # Claude Code cheat sheet (Part 2)
@@ -55,6 +54,6 @@ The live site is <https://cwml.github.io/getting-started-with-claude/>. GitHub P
 - Check every `[bracketed placeholder]` (sign-up and HIPAA-version request links, policy links, contacts, enabled connectors).
 - Check the Claude and Claude Code features against both Yale workspaces (standard enterprise and HIPAA-supported), since they change often.
 - Follow the instructor prep checklist: both parts are in `instructor/README.md`.
-- After re-checking features, update the "Last checked" date at the top of `part1-reference.qmd`.
+- After re-checking features, update the date in `instructor/README.md`.
 
 All class data and kit files are **synthetic**, apart from the open-access article in Kit A, which keeps its own license. See `instructor/README.md`.

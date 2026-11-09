@@ -20,7 +20,7 @@ A working document for `[Reviewer 1]` and `[Reviewer 2]` to review both classes 
 
 | Area | Lead | Second look |
 |---|---|---|
-| Part 1: `part1.qmd` (class page), `part1-reference.qmd`, Part 1 kits | `[name]` | `[name]` |
+| Part 1: `part1.qmd` (class page), Part 1 kits | `[name]` | `[name]` |
 | Part 2: `part2.qmd`, `part2-slides.qmd`, `cheatsheet.qmd`, hypertension project | `[name]` | `[name]` |
 | Shared pages: `index.qmd`, both `*-description.md` files | `[name]` | `[name]` |
 | Instructor materials: `instructor/README.md`, answer keys, solutions | `[name]` | `[name]` |
@@ -76,13 +76,6 @@ Answer these once you've done the dry run.
 - [ ] Each section reads well on the projector from the back of the room; nothing important needs scrolling mid-explanation.
 - [ ] The segment notes in `instructor/README.md` match the page, in order, with the right timings.
 - [ ] Nothing on the page is meant for instructors only.
-
-### Reference page (`part1-reference.qmd`)
-
-- [ ] Tool and data guidance matches the class page.
-- [ ] Settings checklist matches what we see in the app today.
-- [ ] Prompt library: try at least one prompt from Research, Teaching, and Administrative.
-- [ ] Verify and disclose and Cowork sections are accurate.
 
 ## 4. Part 2: Analyzing research data with Claude Code (90 min)
 
@@ -156,6 +149,6 @@ One row per issue. Use the file and section heading so we can find it.
 ## 9. After the review
 
 - [ ] Apply the fixes, updating each class page and its slides together.
-- [ ] If you re-checked features, update the "Last checked" date at the top of `part1-reference.qmd` and in `instructor/README.md`.
+- [ ] If you re-checked features, update the date in `instructor/README.md`.
 - [ ] Re-render the site and spot-check the changed pages.
 - [ ] Move private items (such as demo account details) into `instructor/README.md` if any turned up.

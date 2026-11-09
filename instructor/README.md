@@ -11,15 +11,15 @@ Everything here is for the instructor: the dataset spec, the script that generat
 
 ## Part 1: instructor prep
 
-Teach from the class page, `https://cwml.github.io/getting-started-with-claude/part1.html`, on the projector. Participants follow the same page on their own screens (QR code at the top), where they copy prompts, download the kits, and find the take-home material. The reference page, `part1-reference.html`, holds the detail that doesn't fit in class. Keep this guide open on a second screen or printed: the segment notes below give the timing and what to say for each part.
+Teach from the class page, `https://cwml.github.io/getting-started-with-claude/part1.html`, on the projector. Participants follow the same page on their own screens (the link is in segment 1), where they copy prompts, download the kits, and find the take-home material. Keep this guide open on a second screen or printed: the segment notes below give the timing and what to say for each part.
 
 The class page is public, so instructor notes and demo account details live in this file only, never in `part1.qmd`.
 
-Claude's features, menu names and admin settings change often. The feature descriptions were checked against the Claude Help Center (support.claude.com) and the Claude Code docs on October 30, 2026. When you re-check them, update this date and the "Last checked" date at the top of `part1-reference.qmd`.
+Claude's features, menu names and admin settings change often. The feature descriptions were checked against the Claude Help Center (support.claude.com) and the Claude Code docs on October 30, 2026. When you re-check them, update this date.
 
 **Prep checklist**
 
-- [ ] Replace every `[bracketed placeholder]` in `part1.qmd`, `part1-reference.qmd`, `index.qmd` and `materials/part1-kits/` (HIPAA-version request link, policy links, HSIT/ITS contacts, site URL). The list below groups them by who can answer.
+- [ ] Replace every `[bracketed placeholder]` in `part1.qmd`, `index.qmd` and `materials/part1-kits/` (HIPAA-version request link, policy links, HSIT/ITS contacts, site URL). The list below groups them by who can answer.
 - [ ] Registration form asks: kit choice (Kit A Article Explainer or Kit B Committee Assistant), Claude tier (standard, premium, HIPAA-supported) and Claude Code access.
 - [ ] Line up a co-facilitator for the first 3 minutes (sign-in) and the build block (0:26 – 0:35). Strongly recommended for 18 people.
 - [ ] 2–5 days before class, send the sign-in check email: the setup page (`index.html#setup-part1`), "sign in to Claude in a browser and open a new chat," the kit choice, the optional phone app install (with the device policy note), and the "no working account?" section (`index.html#access`).
@@ -39,13 +39,13 @@ Prompt slots such as `[audience]`, `[role]`, `[topic]`, `[committee name]` and `
 | Who | Placeholders | Where |
 |---|---|---|
 | You / the library | `[Instructor name]`, `[Library name]`; `[QR code]` at the top of the class page | `part1.qmd`, `part2-slides.qmd` |
-| You / the library | Forms: `[registration link]`, `[feedback form link]`, `[link to short evaluation form]` | `index.qmd`, `part1.qmd`, `part1-reference.qmd`, `part2.qmd`, `part2-slides.qmd` |
-| You / the library | Services: `[office hours link]`, `[library consult link]`, `[literature search consults…]`, `[library evidence synthesis service]`, `[data services consults…]`, `[AIR Tracks B–F offerings]`, `[AIR SIG channel / Teams]` | `index.qmd`, `part1.qmd`, `part1-reference.qmd`, `part2.qmd`, `part2-slides.qmd` |
-| You / the library | Guidance: `[library license guidance]`, `[link to library guidance on AI disclosure]`, `[Dated source on AI energy use, chosen by a librarian.]`, `[add category]` (Part 2 form) | `part1.qmd`, `part1-reference.qmd`, kits `README.md`, `part2.qmd`, `part2-description.md` |
-| ITS | `[sign-up link]`, `[eligibility…]`, `[who has a license / how to request]`, `[sign-in steps / SSO note]`, `[confirm Yale seat tiers]` (Fable on standard seats), `[Yale retention period…]`, `[whether Yale's agreement allows chats to be used to train models…]`, `[one-line description from ITS]`, `[product name — check]`, `[confirm with ITS which Claude Code surfaces are covered]`, `[ITS contact]`, `[ITS / help contact]`, `[HSIT / ITS AI help]`, `[link to current install instructions]`, `[local guidance for Windows users]`, `[mobile device policy]`, `[how to check / who to ask]` | `index.qmd`, `part1.qmd`, `part1-reference.qmd`, `part2.qmd`, `cheatsheet.qmd` |
-| HSIT / HIPAA Privacy Office | `[request link]` (HIPAA-supported version), `[HSIT / HIPAA Privacy Office contact]`, `[Yale data classification / policy link]`, `[Yale data classification names…]`, the six `[approved data: ___, confirmed by ___ on DATE]` cells and four `[classification, confirmed by HSIT on DATE]` cells, `[Yale AI Tool Registry]`, `[link to institutional AI and data policy]`, `[Insert local policy]` | `index.qmd`, `part1.qmd`, `part1-reference.qmd`, `part2.qmd`, `part2-slides.qmd`, `cheatsheet.qmd` |
-| Research integrity / teaching | `[HSARG]`, `[Office of Research Integrity]`, `[Poorvu Center / ETI AI teaching guidance]`, `[teaching-center AI guidance]`, `[links to other funder notices]`, `[accessibility contact]` | `part1.qmd`, `part1-reference.qmd`, `index.qmd` |
-| Week-before workspace check | The two settings screenshots, `[Record results here]` (Part 2) | `part1-reference.qmd`, `part1.qmd`, `part2.qmd` |
+| You / the library | Forms: `[registration link]`, `[feedback form link]`, `[link to short evaluation form]` | `index.qmd`, `part1.qmd`, `part2.qmd`, `part2-slides.qmd` |
+| You / the library | Services: `[office hours link]`, `[library consult link]`, `[literature search consults…]`, `[library evidence synthesis service]`, `[data services consults…]`, `[AIR Tracks B–F offerings]`, `[AIR SIG channel / Teams]` | `index.qmd`, `part1.qmd`, `part2.qmd`, `part2-slides.qmd` |
+| You / the library | Guidance: `[library license guidance]`, `[link to library guidance on AI disclosure]`, `[Dated source on AI energy use, chosen by a librarian.]`, `[add category]` (Part 2 form) | `part1.qmd`, kits `README.md`, `part2.qmd`, `part2-description.md` |
+| ITS | `[sign-up link]`, `[eligibility…]`, `[who has a license / how to request]`, `[sign-in steps / SSO note]`, `[confirm Yale seat tiers]` (Fable on standard seats), `[Yale retention period…]`, `[whether Yale's agreement allows chats to be used to train models…]`, `[one-line description from ITS]`, `[product name — check]`, `[confirm with ITS which Claude Code surfaces are covered]`, `[ITS contact]`, `[ITS / help contact]`, `[HSIT / ITS AI help]`, `[link to current install instructions]`, `[local guidance for Windows users]`, `[mobile device policy]`, `[how to check / who to ask]` | `index.qmd`, `part1.qmd`, `part2.qmd`, `cheatsheet.qmd` |
+| HSIT / HIPAA Privacy Office | `[request link]` (HIPAA-supported version), `[HSIT / HIPAA Privacy Office contact]`, `[Yale data classification / policy link]`, `[Yale data classification names…]`, the six `[approved data: ___, confirmed by ___ on DATE]` cells and four `[classification, confirmed by HSIT on DATE]` cells, `[Yale AI Tool Registry]`, `[link to institutional AI and data policy]`, `[Insert local policy]` | `index.qmd`, `part1.qmd`, `part2.qmd`, `part2-slides.qmd`, `cheatsheet.qmd` |
+| Research integrity / teaching | `[HSARG]`, `[Office of Research Integrity]`, `[Poorvu Center / ETI AI teaching guidance]`, `[teaching-center AI guidance]`, `[links to other funder notices]`, `[accessibility contact]` | `part1.qmd`, `index.qmd` |
+| Week-before workspace check | The two settings screenshots, `[Record results here]` (Part 2) | `part1.qmd`, `part2.qmd` |
 
 **Check in both Yale workspaces (standard enterprise and HIPAA-supported) the week before, with screenshots**
 
@@ -111,7 +111,7 @@ Keep this to 20 seconds. Nobody signs up for anything during class.
 
 Say plainly: "A HIPAA-supported version of Claude is available by request." Then the caveats: it doesn't approve your project, every feature, or every data set. Follow [Yale data classification / policy link]. Questions go to [HSIT / HIPAA Privacy Office contact]. Never suggest that the standard account covers PHI.
 
-Features in the HIPAA-supported version may differ: some are off, and it keeps an older layout. Check with [ITS]. Full table and dated feature list: the [Quick reference](part1-reference.qmd#tool-data).
+Features in the HIPAA-supported version may differ: some are off, and it keeps an older layout. Check with [ITS].
 
 *4. Getting around the app (0:08 – 0:10)*
 
@@ -137,8 +137,6 @@ Worth one sentence: deleting a chat doesn't delete memories made from it.
 
 **20-second poll:** "A sensitive HR email: Project, incognito, or neither?" Answer: neither. Use the tool approved for that data. Incognito doesn't make anything allowed.
 
-Details for the page: [Quick reference: settings and privacy](part1-reference.qmd#settings).
-
 *6. Everyday chat (0:16 – 0:19)*
 
 **0:16 (3 min):** 30 seconds to send the prompt, 1 min on the chat box table, 1.5 min on the three switches and the "/" look. The point: a plain chat is fine for everyday tasks; a Project is for work you come back to.
@@ -157,7 +155,7 @@ Tie the last line back to segment 2: web search and Research give you links, whi
 
 Open the menu on screen. Current models (check the menu before class): Fable 5.1, Opus 5.5, Sonnet 5.5, Haiku 5.5, with older ones under "More models." Effort levels: Low, Medium, High, Extra high, Max; each model marks its recommended level "Default."
 
-Fable may need usage credits on a standard seat [confirm Yale seat tiers]. More: [Quick reference: model, effort and commands](part1-reference.qmd#model-effort-commands).
+Fable may need usage credits on a standard seat [confirm Yale seat tiers].
 
 *7. Models, effort and skills (0:19 – 0:24) › Skills*
 
@@ -188,8 +186,6 @@ Say out loud: the privacy line in the Project instructions is advice, not enforc
 *10. Watch: anatomy of a strong prompt (0:35 – 0:37) › What each part does*
 
 **0:35 (2 min).** Show the pre-run Turn 1 chat (a live ask-first round trip won't fit in 2 minutes). Point to Claude's questions, then to the "Where this came from" table: it turns checking into a 2-minute Ctrl-F job.
-
-All six prompting patterns, with examples: [Quick reference: prompt library](part1-reference.qmd#prompt-library).
 
 *11. Your turn: run it, then push back (0:37 – 0:46)*
 
@@ -227,7 +223,7 @@ If web search is on, Claude may return real studies. Frame it as: "Declining or 
 
 **0:53 (2 min).** Talk only. If anything went wrong in the room today, use it as the example.
 
-Disclosure template, notice dates, and red flags for fabrication and bias: [Quick reference: verify and disclose](part1-reference.qmd#verify-disclose). Library evidence synthesis service: [link].
+Library evidence synthesis service: [link].
 
 *13. Take it with you: the phone app (0:55 – 0:57)*
 
@@ -245,7 +241,7 @@ Bridge sentence for the Code tab: "In *Analyzing research data with Claude Code*
 
 *14. Cowork and the bridge to Claude Code (0:57 – 0:59) › Cowork in brief*
 
-Don't demo. Spend about a minute: the four steps, then the comparison table, landing on "chat answers, Cowork does." Cowork is on Yale's standard Enterprise accounts, not the HIPAA-supported version. Claude in Chrome (if enabled) is Cowork in your browser: same cautions. More: [Quick reference: Cowork](part1-reference.qmd#cowork).
+Don't demo. Spend about a minute: the four steps, then the comparison table, landing on "chat answers, Cowork does." Cowork is on Yale's standard Enterprise accounts, not the HIPAA-supported version. Claude in Chrome (if enabled) is Cowork in your browser: same cautions.
 
 *14. Cowork and the bridge to Claude Code (0:57 – 0:59) › From today to Claude Code*
 

@@ -4,7 +4,7 @@
 (function () {
   var page = location.pathname.split("/").pop() || "index.html";
   var target = {
-    "part1.html": "part1.html", "part1-reference.html": "part1.html",
+    "part1.html": "part1.html",
     "part2.html": "part2.html", "part2-slides.html": "part2.html", "cheatsheet.html": "part2.html"
   }[page] || "index.html";
   document.querySelectorAll("#navbarCollapse a.nav-link").forEach(function (a) {
