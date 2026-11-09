@@ -541,20 +541,9 @@ From chat to tasks, and from the app to Claude Code.
 
 **Next class: Analyzing research data with Claude Code** (90 min). [Class page](part2.qmd)
 
-## 14. Exit ticket and close {#exit}
-
-Four questions, one per objective. Show of hands or [exit-ticket form link].
-
-### Exit ticket
-
-1. A spreadsheet of clinic no-shows with MRNs: which Claude, if any? And which setting did you lock today before uploading?
-2. Name one pattern from your prompt that changed the output.
-3. Claude gives you a PMID. What do you do first?
-4. One low-risk recurring task you'll use your Project for this week.
+## Where to go next {#next}
 
 **Feedback:** [feedback form link]
-
-## Where to go next {#next}
 
 - [Quick reference](part1-reference.qmd): settings, prompts, verification, and more
 - [Claude Academy: free courses from Anthropic](https://academy.claude.com)

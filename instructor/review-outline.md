@@ -68,7 +68,7 @@ Answer these once you've done the dry run.
 | 11 | Verify before you use it | 0:44 – 0:53 | | |
 | 12 | Take it with you: the phone app | 0:53 – 0:55 | | |
 | 13 | Cowork and the bridge to Claude Code | 0:55 – 0:57 | | |
-| 14 | Exit ticket and close | 0:57 – 1:00 | | |
+| – | Where to go next (close) | 0:57 – 1:00 | | |
 
 ### Teaching from the page
 

@@ -444,23 +444,11 @@
     ]
   },
   {
-    "objectID": "part1.html#exit",
-    "href": "part1.html#exit",
-    "title": "Getting started with Claude",
-    "section": "14. Exit ticket and close",
-    "text": "14. Exit ticket and close\nFour questions, one per objective. Show of hands or [exit-ticket form link].\n\nExit ticket\n\nA spreadsheet of clinic no-shows with MRNs: which Claude, if any? And which setting did you lock today before uploading?\nName one pattern from your prompt that changed the output.\nClaude gives you a PMID. What do you do first?\nOne low-risk recurring task you’ll use your Project for this week.\n\nFeedback: [feedback form link]",
-    "crumbs": [
-      "Cushing/Whitney Medical Library",
-      "Getting started with Claude",
-      "Class page"
-    ]
-  },
-  {
     "objectID": "part1.html#next",
     "href": "part1.html#next",
     "title": "Getting started with Claude",
     "section": "Where to go next",
-    "text": "Where to go next\n\nQuick reference: settings, prompts, verification, and more\nClaude Academy: free courses from Anthropic\nAnalyzing research data with Claude Code: the next class\nLibrary help: [literature search consults, evidence synthesis service, office hours]\nQuestions about tools and data: [HSIT / ITS AI help]\n\nOn the Quick reference page:\n\nWhich Claude for which data\nSettings and privacy\nProjects and skills how-to\nModel, effort and the Claude Code commands\nThe phone app\nPrompt library\nVerify and disclose\nCowork in brief\nMore places to learn\n\nAlso useful: Claude Help Center · [teaching-center AI guidance] · [Office of Research Integrity] · [HSARG] · [AIR Tracks B–F offerings]",
+    "text": "Where to go next\nFeedback: [feedback form link]\n\nQuick reference: settings, prompts, verification, and more\nClaude Academy: free courses from Anthropic\nAnalyzing research data with Claude Code: the next class\nLibrary help: [literature search consults, evidence synthesis service, office hours]\nQuestions about tools and data: [HSIT / ITS AI help]\n\nOn the Quick reference page:\n\nWhich Claude for which data\nSettings and privacy\nProjects and skills how-to\nModel, effort and the Claude Code commands\nThe phone app\nPrompt library\nVerify and disclose\nCowork in brief\nMore places to learn\n\nAlso useful: Claude Help Center · [teaching-center AI guidance] · [Office of Research Integrity] · [HSARG] · [AIR Tracks B–F offerings]",
     "crumbs": [
       "Cushing/Whitney Medical Library",
       "Getting started with Claude",

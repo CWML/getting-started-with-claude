@@ -39,7 +39,7 @@ Prompt slots such as `[audience]`, `[role]`, `[topic]`, `[committee name]` and `
 | Who | Placeholders | Where |
 |---|---|---|
 | You / the library | `[Instructor name]`, `[Library name]`; `[QR code]` at the top of the class page | `part1.qmd`, `part2-slides.qmd` |
-| You / the library | Forms: `[registration link]`, `[exit-ticket form link]`, `[feedback form link]`, `[link to short evaluation form]` | `index.qmd`, `part1.qmd`, `part1-reference.qmd`, `part2.qmd`, `part2-slides.qmd` |
+| You / the library | Forms: `[registration link]`, `[feedback form link]`, `[link to short evaluation form]` | `index.qmd`, `part1.qmd`, `part1-reference.qmd`, `part2.qmd`, `part2-slides.qmd` |
 | You / the library | Services: `[office hours link]`, `[library consult link]`, `[literature search consults…]`, `[library evidence synthesis service]`, `[data services consults…]`, `[AIR Tracks B–F offerings]`, `[AIR SIG channel / Teams]` | `index.qmd`, `part1.qmd`, `part1-reference.qmd`, `part2.qmd`, `part2-slides.qmd` |
 | You / the library | Guidance: `[library license guidance]`, `[link to library guidance on AI disclosure]`, `[Dated source on AI energy use, chosen by a librarian.]`, `[add category]` (Part 2 form) | `part1.qmd`, `part1-reference.qmd`, kits `README.md`, `part2.qmd`, `part2-description.md` |
 | ITS | `[sign-up link]`, `[eligibility…]`, `[who has a license / how to request]`, `[sign-in steps / SSO note]`, `[confirm Yale seat tiers]` (Fable on standard seats), `[Yale retention period…]`, `[whether Yale's agreement allows chats to be used to train models…]`, `[one-line description from ITS]`, `[product name — check]`, `[confirm with ITS which Claude Code surfaces are covered]`, `[ITS contact]`, `[ITS / help contact]`, `[HSIT / ITS AI help]`, `[link to current install instructions]`, `[local guidance for Windows users]`, `[mobile device policy]`, `[how to check / who to ask]` | `index.qmd`, `part1.qmd`, `part1-reference.qmd`, `part2.qmd`, `cheatsheet.qmd` |
@@ -68,7 +68,7 @@ Prompt slots such as `[audience]`, `[role]`, `[topic]`, `[committee name]` and `
 - **Demo account:** `[demo account name]`, signed in on the presenter laptop (second browser tab, finished Article Explainer Project open) and the demo phone. One pre-run chat ready: Turn 1 with Claude's questions answered (segment 9). Don't teach from a personal account.
 - **Checkpoint at 0:32:** ask who still needs help. The Project works when Claude names the kit's files (both for Kit A, the one for Kit B) and quotes one rule. The co-facilitator goes to anyone stuck. Move on at 0:33 regardless; people catch up during Turn 1.
 - **Timing anchors:** build starts 0:24; checkpoint 0:32; verification starts 0:44 and is never cut.
-- **Cut order if running late:** the phone demo shrinks to 1 minute (saves 1); Cowork moves onto the exit slide (saves 1–2); the skill becomes a screenshot (saves 1); the PubMed opening moves into segment 11 (saves 2); the / menu look in segment 5 becomes an instructor show (saves ~0.5).
+- **Cut order if running late:** the phone demo shrinks to 1 minute (saves 1); Cowork shrinks to one sentence (saves 1–2); the skill becomes a screenshot (saves 1); the PubMed opening moves into segment 11 (saves 2); the / menu look in segment 5 becomes an instructor show (saves ~0.5).
 
 **Segment notes**
 
@@ -81,7 +81,7 @@ Teaching notes for each part of the class page, in order. They used to appear on
 **Cut order if you run late** (verification is never cut):
 
 1. The phone demo shrinks to 1 minute (saves 1 min).
-2. Cowork moves into the exit ticket (saves 1–2).
+2. Cowork shrinks to one sentence (saves 1–2).
 3. The skill demo becomes a screenshot (saves 1).
 4. The PubMed opening moves into segment 11 (saves 2).
 5. The / menu look in segment 5 becomes an instructor show (saves ~0.5).
@@ -238,7 +238,7 @@ Bridge sentence: "This app has a Code tab. In Part 2, /rc connects it to a Claud
 
 *13. Cowork and the bridge to Claude Code (0:55 – 0:57)*
 
-**0:55 (2 min). Talk only.** Cut option: fold Cowork into the exit ticket as one line (saves 1–2 min).
+**0:55 (2 min). Talk only.** Cut option: say Cowork in one sentence (saves 1–2 min).
 
 *13. Cowork and the bridge to Claude Code (0:55 – 0:57) › Cowork in 30 seconds*
 
@@ -248,13 +248,9 @@ Don't demo. Claude in Chrome (if enabled) is Cowork in your browser: same cautio
 
 One sentence: "Everything you did today has a twin in Part 2, but there it works on files and code on your own computer." Part 1 is recommended, not required, for Part 2.
 
-*14. Exit ticket and close (0:57 – 1:00) › Exit ticket*
+*Where to go next (0:57 – 1:00)*
 
-**0:57 (3 min).** Take one answer per question, then show "Where to go next" and the feedback link. End on time.
-
-*Where to go next*
-
-Leave this section on screen while people pack up.
+**0:57 (3 min).** Close: show this section and the feedback link, take a question or two, and end on time. Leave it on screen while people pack up.
 
 **Kit A answer key (Article Explainer)**
 
