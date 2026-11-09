@@ -401,7 +401,7 @@ mark each UNVERIFIED.
 
 Then look up at least one PMID (see [Verify and disclose](#verify-disclose)). If Claude declines, that's the behavior you want; check anything it does give you.
 
-**Tune it** (switch to a smaller model or Low effort first):
+**Try a smaller model** (switch to a smaller model or Low effort first):
 
 ```text
 Make a 6-term glossary for my audience from the article.
@@ -544,7 +544,7 @@ Then open the committee pack and check each quoted charter line yourself.
 
 **Check:** trace 2 action items back to lines in the notes; confirm the confidential item was left out; check that the charter's deadline for sending action items was applied.
 
-**Tune it** (switch to a smaller model or Low effort first):
+**Try a smaller model** (switch to a smaller model or Low effort first):
 
 ```text
 Make a 6-term glossary for a new committee member from the charter.

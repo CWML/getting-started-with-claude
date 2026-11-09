@@ -21,17 +21,17 @@ Claude's features, menu names and admin settings change often. The feature descr
 
 - [ ] Replace every `[bracketed placeholder]` in `part1.qmd`, `part1-reference.qmd`, `index.qmd` and `materials/part1-kits/` (HIPAA-version request link, policy links, HSIT/ITS contacts, site URL). The list below groups them by who can answer.
 - [ ] Registration form asks: kit choice (Kit A Article Explainer or Kit B Committee Assistant), Claude tier (standard, premium, HIPAA-supported) and Claude Code access.
-- [ ] Line up a co-facilitator for the first 3 minutes (sign-in) and the build block (0:17 – 0:26). Strongly recommended for 18 people.
+- [ ] Line up a co-facilitator for the first 3 minutes (sign-in) and the build block (0:22 – 0:31). Strongly recommended for 18 people.
 - [ ] 2–5 days before class, send the sign-in check email: the setup page (`index.html#setup-part1`), "sign in to Claude in a browser and open a new chat," the kit choice, the optional phone app install (with the device policy note), and the "no working account?" section (`index.html#access`).
 - [ ] Run the check-in-both-workspaces list below the week before, with screenshots.
-- [ ] Pre-run the Kit A Turn 1 chat (with your answers to Claude's questions) for segment 8, "Anatomy of a strong prompt."
+- [ ] Pre-run the Kit A Turn 1 chat (with your answers to Claude's questions) for segment 9, "Anatomy of a strong prompt."
 - [ ] Build the demo Projects ("Article Explainer"; optionally "Committee Assistant") in the demo account, and share them **Can view** with participants (if sharing is enabled). This is the fallback when uploads fail.
 - [ ] Test phone mirroring on the SHM L 111 projector (iPhone Mirroring or QuickTime). Check that the demo Project has synced to the phone app.
 - [ ] Clear old demo chats and set the demo account's memory the way you'll teach it, so earlier sessions don't leak into the live demo.
 - [ ] Rehearse from the class page with the segment notes below to check the timing.
 - [ ] Take backup screenshots: both settings layouts, each Project build step, the model menu, the "+" and "/" menus, Customize > Skills, the Word handout, the phone app and its Code tab.
 - [ ] Print green cards, one per seat.
-- [ ] On the published GitHub Pages site, open the kit `.md` links from segment 10 (the article and the committee pack) and check that they show as plain text in the browser and don't download. If they download, tell people to open the file in TextEdit or Notepad instead.
+- [ ] On the published GitHub Pages site, open the kit `.md` links from segment 11 (the article and the committee pack) and check that they show as plain text in the browser and don't download. If they download, tell people to open the file in TextEdit or Notepad instead.
 
 **Placeholders by who can answer** (as of October 31, 2026; site pages only)
 
@@ -65,10 +65,10 @@ Prompt slots such as `[audience]`, `[role]`, `[topic]`, `[committee name]` and `
 
 **Run of show: private details**
 
-- **Demo account:** `[demo account name]`, signed in on the presenter laptop (second browser tab, finished Article Explainer Project open) and the demo phone. One pre-run chat ready: Turn 1 with Claude's questions answered (segment 8). Don't teach from a personal account.
-- **Green cards:** one per seat. Up at 0:03 = signed in with a new chat open. Up at the 0:25 checkpoint = Claude named your kit's files (both for Kit A, the one for Kit B) and quoted one rule. The co-facilitator goes to anyone without a green card. Move on at 0:26 regardless; people catch up during Turn 1.
-- **Timing anchors:** build starts 0:17; checkpoint 0:25; verification starts 0:37 and is never cut.
-- **Cut order if running late:** the phone tryout becomes a 1-minute demo (saves 3); Cowork moves onto the exit slide (saves 1–2); the skill becomes a screenshot (saves 1); the PubMed opening moves into segment 10 (saves 2); the / menu look in segment 5 becomes an instructor show (saves ~0.5).
+- **Demo account:** `[demo account name]`, signed in on the presenter laptop (second browser tab, finished Article Explainer Project open) and the demo phone. One pre-run chat ready: Turn 1 with Claude's questions answered (segment 9). Don't teach from a personal account.
+- **Green cards:** one per seat. Up at 0:03 = signed in with a new chat open. Up at the 0:30 checkpoint = Claude named your kit's files (both for Kit A, the one for Kit B) and quoted one rule. The co-facilitator goes to anyone without a green card. Move on at 0:31 regardless; people catch up during Turn 1.
+- **Timing anchors:** build starts 0:22; checkpoint 0:30; verification starts 0:42 and is never cut.
+- **Cut order if running late:** the phone tryout becomes a 1-minute demo (saves 3); Cowork moves onto the exit slide (saves 1–2); the skill becomes a screenshot (saves 1); the PubMed opening moves into segment 11 (saves 2); the / menu look in segment 5 becomes an instructor show (saves ~0.5).
 
 **Segment notes**
 
@@ -78,19 +78,19 @@ Teaching notes for each part of the class page, in order. They used to appear on
 
 **0:00 (3 min).** Put this section on screen as people arrive. Watch for green cards. Anyone without a working account pairs as navigator with someone who has one. Personal accounts are fine for the public class files only, and nobody signs up during class.
 
-**Cut order if you run late** (verification is never cut, and it starts before anything that can be cut):
+**Cut order if you run late** (verification is never cut):
 
 1. Phone tryout becomes a 1-minute instructor demo (saves 3 min).
 2. Cowork moves into the exit ticket (saves 1–2).
 3. The skill demo becomes a screenshot (saves 1).
-4. The PubMed opening moves into segment 10 (saves 2).
+4. The PubMed opening moves into segment 11 (saves 2).
 5. The / menu look in segment 5 becomes an instructor show (saves ~0.5).
 
 *1. Welcome and sign in (0:00 – 0:03) › By the end of this class, you'll be able to*
 
 Don't read the list. Say it as one sentence: "Pick the right tool, build a Project, prompt it well, check what comes out."
 
-Disclose your own AI use in 15 seconds: "These materials were drafted with Claude and Claude Code, and checked by me." That models the disclosure habit we cover in segment 10.
+Disclose your own AI use in 15 seconds: "These materials were drafted with Claude and Claude Code, and checked by me." That models the disclosure habit we cover in segment 11.
 
 About half the class is hands-on. Point out the pattern: you watch once, then you do it yourself.
 
@@ -100,7 +100,7 @@ Keep this to 20 seconds. Nobody signs up for anything during class.
 
 *2. Trust but verify (0:03 – 0:05)*
 
-**0:03 (2 min).** No demo; talk through the two lists. Make the trust side real: Claude is good enough to use for actual work, which is exactly why its mistakes are easy to miss. Then land the verify side: it sounds equally sure whether or not it's right, so confidence tells you nothing. Point ahead to segment 10, where everyone checks their own answer. Cut option: if you're late, read only the bold line (saves 1 min).
+**0:03 (2 min).** No demo; talk through the two lists. Make the trust side real: Claude is good enough to use for actual work, which is exactly why its mistakes are easy to miss. Then land the verify side: it sounds equally sure whether or not it's right, so confidence tells you nothing. Point ahead to segment 11, where everyone checks their own answer. Cut option: if you're late, read only the bold line (saves 1 min).
 
 *3. Which Claude for which data (0:05 – 0:08)*
 
@@ -140,17 +140,31 @@ Before class, open **+** in a new chat in both Yale workspaces and screenshot it
 
 Tie the last line back to segment 2: web search and Research give you links, which makes checking easier, but a link isn't proof until you open it.
 
-*6. Watch: build a Project (0:15 – 0:17) › Five steps*
+*6. Models, effort and skills (0:15 – 0:20)*
 
-**0:15 (2 min).** Do it once at normal speed on the demo account. Point out the **Share** button (Can view / Can edit, if enabled), but don't stop on it.
+**0:15 (5 min):** talk and show, no hands-on. 2 min on the model menu, 2 min on skills, 1 min for questions. Open each on your screen; participants just watch.
+
+*6. Models, effort and skills (0:15 – 0:20) › Models and effort*
+
+Open the menu on screen. Current models (check the menu before class): Fable 5.1, Opus 5.5, Sonnet 5.5, Haiku 5.5, with older ones under "More models." Effort levels: Low, Medium, High, Extra high, Max; each model marks its recommended level "Default."
+
+Fable may need usage credits on a standard seat [confirm Yale seat tiers]. More: [Quick reference: model, effort and commands](part1-reference.qmd#model-effort-commands).
+
+*6. Models, effort and skills (0:15 – 0:20) › Skills*
+
+Open **Customize > Skills** on the demo account, then type "/" in a chat to show the same skills there. If you want a live example, ask for a one-page Word handout of anything on screen; skip it if skills or file creation are off and show the screenshot instead.
+
+*7. Watch: build a Project (0:20 – 0:22) › Five steps*
+
+**0:20 (2 min).** Do it once at normal speed on the demo account. Point out the **Share** button (Can view / Can edit, if enabled), but don't stop on it.
 
 "Use account memory" keeps this Project's memory separate from the rest of your chats. Check the label before class.
 
-*7. Your turn: build your Project (0:17 – 0:26)*
+*8. Your turn: build your Project (0:22 – 0:31)*
 
-**0:17 (9 min):** 8 min build, 1 min checkpoint. At 0:25, ask for green cards. Move on at 0:26 regardless; anyone still building catches up during Turn 1.
+**0:22 (9 min):** 8 min build, 1 min checkpoint. At 0:30, ask for green cards. Move on at 0:31 regardless; anyone still building catches up during Turn 1.
 
-*7. Your turn: build your Project (0:17 – 0:26) › Your turn: build it*
+*8. Your turn: build your Project (0:22 – 0:31) › Your turn: build it*
 
 Walk the room. Most common problems: the file landed in a regular chat instead of the Project, or the instructions weren't saved.
 
@@ -158,33 +172,33 @@ If an upload fails: paste the style guide's text at the end of the project instr
 
 Windows users who get `.md.txt` files: the fix is on the setup page.
 
-*7. Your turn: build your Project (0:17 – 0:26) › Your kit*
+*8. Your turn: build your Project (0:22 – 0:31) › Your kit*
 
 Say out loud: the privacy line in the Project instructions is advice, not enforcement. Claude will usually follow it, but nothing stops a paste. Part 2 shows tools that actually block things.
 
-*8. Watch: anatomy of a strong prompt (0:26 – 0:28) › What each part does*
+*9. Watch: anatomy of a strong prompt (0:31 – 0:33) › What each part does*
 
-**0:26 (2 min).** Show the pre-run Turn 1 chat (a live ask-first round trip won't fit in 2 minutes). Point to Claude's questions, then to the "Where this came from" table: it turns checking into a 2-minute Ctrl-F job.
+**0:31 (2 min).** Show the pre-run Turn 1 chat (a live ask-first round trip won't fit in 2 minutes). Point to Claude's questions, then to the "Where this came from" table: it turns checking into a 2-minute Ctrl-F job.
 
 All six prompting patterns, with examples: [Quick reference: prompt library](part1-reference.qmd#prompt-library).
 
-*9. Your turn: run it, then push back (0:28 – 0:37)*
+*10. Your turn: run it, then push back (0:33 – 0:42)*
 
-**0:28 (9 min):** 8 min hands-on, 1 min pair debrief. Default model and effort avoid usage limits.
+**0:33 (9 min):** 8 min hands-on, 1 min pair debrief. Default model and effort avoid usage limits.
 
-*9. Your turn: run it, then push back (0:28 – 0:37) › Your turn: Turn 1*
+*10. Your turn: run it, then push back (0:33 – 0:42) › Your turn: Turn 1*
 
 Anyone stuck on Claude's questions can use the fast answers on the class page. Walk the room. If someone's Claude skips the questions, that's a teaching moment: point to the "Wait" line and have them reply "Please ask your questions first."
 
-*9. Your turn: run it, then push back (0:28 – 0:37) › Your turn: push back (Turn 2)*
+*10. Your turn: run it, then push back (0:33 – 0:42) › Your turn: push back (Turn 2)*
 
-**0:36 (1 min).** Pair debrief, then take one answer from the room. Key message: treat the first answer as a draft; much of the value comes from the second turn.
+**0:41 (1 min).** Pair debrief, then take one answer from the room. Key message: treat the first answer as a draft; much of the value comes from the second turn.
 
-*10. Verify before you use it (0:37 – 0:46)*
+*11. Verify before you use it (0:42 – 0:51)*
 
-**0:37 (9 min). Don't cut this segment.** 1 min demo, 6 min hands-on, 2 min talk. It starts before every segment that can be cut.
+**0:42 (9 min). Don't cut this segment.** 1 min demo, 6 min hands-on, 2 min talk.
 
-*10. Verify before you use it (0:37 – 0:46) › Your turn: check quotes and rules*
+*11. Verify before you use it (0:42 – 0:51) › Your turn: check quotes and rules*
 
 Demo one quote check on your screen first (1 min), then let people go.
 
@@ -192,39 +206,19 @@ The bonus: the abstract says 98 people enrolled in the telehealth arm, then repo
 
 The article has two more inconsistencies: the week-48 confidence interval (abstract: 95% CI [30%, 53%]; Results: [14%, 38%], which repeats the week-24 interval) and the share of women (abstract 67%, Results 70%, 139/200). A quote can be "exact" and still be wrong. If someone's explainer cites the week-48 CI, ask which section it came from.
 
-*10. Verify before you use it (0:37 – 0:46) › Your turn: check a citation (Turn 3)*
+*11. Verify before you use it (0:42 – 0:51) › Your turn: check a citation (Turn 3)*
 
 If web search is on, Claude may return real studies. Frame it as: "Declining or labeling is the behavior you want, and you still check." If nobody finds a bad reference, the habit is still the lesson: you checked before you used it.
 
-*10. Verify before you use it (0:37 – 0:46) › Your turn: add one rule*
+*11. Verify before you use it (0:42 – 0:51) › Your turn: add one rule*
 
-**0:43.** This is the second Create moment: their Project now has their own verification rule in it.
+**0:48.** This is the second Create moment: their Project now has their own verification rule in it.
 
-*10. Verify before you use it (0:37 – 0:46) › You're accountable for what you use*
+*11. Verify before you use it (0:42 – 0:51) › You're accountable for what you use*
 
-**0:44 (2 min).** Talk only. If anything went wrong in the room today, use it as the example.
+**0:49 (2 min).** Talk only. If anything went wrong in the room today, use it as the example.
 
 Disclosure template, notice dates, and red flags for fabrication and bias: [Quick reference: verify and disclose](part1-reference.qmd#verify-disclose). Library evidence synthesis service: [link].
-
-*11. Tune it: model, effort and skills (0:46 – 0:51)*
-
-**0:46 (5 min):** 1.5 min demo, 3.5 min hands-on. Cut option: show the skill as a screenshot instead of live (saves 1 min).
-
-*11. Tune it: model, effort and skills (0:46 – 0:51) › Watch: the model menu*
-
-Open the menu on screen. Current models (check the menu before class): Fable 5.1, Opus 5.5, Sonnet 5.5, Haiku 5.5, with older ones under "More models." Effort levels: Low, Medium, High, Extra high, Max; each model marks its recommended level "Default."
-
-Fable may need usage credits on a standard seat [confirm Yale seat tiers]. More: [Quick reference: model, effort and commands](part1-reference.qmd#model-effort-commands).
-
-*11. Tune it: model, effort and skills (0:46 – 0:51) › Your turn: same task, smaller dial*
-
-Switch back to the default afterward if you plan to keep working.
-
-*11. Tune it: model, effort and skills (0:46 – 0:51) › Watch: a skill makes a Word handout*
-
-Run it on the demo account, then open Customize > Skills. Participants can try it as a stretch goal if their workspace allows it.
-
-Caveats: skills need **Create and edit files** (Settings > Capabilities; older label "Code execution and file creation"). They don't work in incognito chats. In the HIPAA-supported version, skills are off by default and not covered if re-enabled [confirm with ITS]. Uploading your own skill: [Quick reference: Projects and skills](part1-reference.qmd#projects-skills).
 
 *12. Take it with you: the phone app (0:51 – 0:55)*
 

@@ -48,7 +48,7 @@ Answer these once you've done the dry run.
 - [ ] Download Kit A and Kit B from the class page. Do both zips open and contain the expected files?
 - [ ] Build the Project, run Turns 1–3 and the "add one rule" step. Do the prompts work as written?
 - [ ] Check the answers against the kit answer keys in `instructor/README.md`.
-- [ ] Try the model/effort menu, the "+" and "/" menus, and the Word handout skill (if enabled).
+- [ ] Check the model/effort menu, the "+" and "/" menus, and Customize > Skills (if enabled).
 - [ ] Open the Project on the phone app.
 
 ### Segment checklist (`part1.qmd`)
@@ -60,12 +60,12 @@ Answer these once you've done the dry run.
 | 3 | Which Claude for which data | 0:05 – 0:08 | | |
 | 4 | Check your settings | 0:08 – 0:12 | | |
 | 5 | Everyday chat | 0:12 – 0:15 | | |
-| 6 | Watch: build a Project | 0:15 – 0:17 | | |
-| 7 | Your turn: build your Project | 0:17 – 0:26 | | |
-| 8 | Watch: anatomy of a strong prompt | 0:26 – 0:28 | | |
-| 9 | Your turn: run it, then push back | 0:28 – 0:37 | | |
-| 10 | Verify before you use it | 0:37 – 0:46 | | |
-| 11 | Tune it: model, effort and skills | 0:46 – 0:51 | | |
+| 6 | Models, effort and skills | 0:15 – 0:20 | | |
+| 7 | Watch: build a Project | 0:20 – 0:22 | | |
+| 8 | Your turn: build your Project | 0:22 – 0:31 | | |
+| 9 | Watch: anatomy of a strong prompt | 0:31 – 0:33 | | |
+| 10 | Your turn: run it, then push back | 0:33 – 0:42 | | |
+| 11 | Verify before you use it | 0:42 – 0:51 | | |
 | 12 | Take it with you: the phone app | 0:51 – 0:55 | | |
 | 13 | Cowork and the bridge to Claude Code | 0:55 – 0:57 | | |
 | 14 | Exit ticket and close | 0:57 – 1:00 | | |

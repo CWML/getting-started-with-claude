@@ -123,7 +123,7 @@ Give me three ways to make a long email easier to read.
 | **Type, paste or drop a file** | **Enter** sends; **Shift+Enter** starts a new line. Drag a file onto the box to attach it. |
 | **+** (lower left) | Add files or photos, and turn tools on or off for this chat (below). |
 | Typing **/** | Opens the same tools from the keyboard, including skills *(if enabled)*. |
-| **Model menu** (next to Send) | Choose the model and effort. More in [Tune it](#tune). |
+| **Model menu** (next to Send) | Choose the model and effort. More in [Models, effort and skills](#tune). |
 | **Microphone** | Dictate instead of typing *(if enabled; check before class)*. |
 | **Ghost icon** (new chats only) | Starts an incognito chat. See [Incognito](#settings). |
 
@@ -145,7 +145,33 @@ Click **+** and find the three switches. Then type **/** and look at the list. D
 
 **A source isn't proof.** Open the links and check that they say what Claude says they say.
 
-## 6. Watch: build a Project {#watch-project}
+## 6. Models, effort and skills {#tune}
+
+Two more things you can change in any chat: which model answers, and which skills it can use.
+
+### Models and effort
+
+The **model menu next to Send** sets the **model** and the **effort**.
+
+- Bigger models handle harder tasks. Smaller ones are faster and use less of your limit.
+- On the current models, thinking is always on, so **effort is the main dial**.
+- Start with the default. Go smaller for simple tasks such as reformatting; go bigger only when the answer isn't good enough.
+- More effort costs more time, usage and energy.
+- Your admin may hide some models or effort levels.
+
+**Use the smallest model and lowest effort that does the job.**
+
+### Skills
+
+A **skill** is a saved how-to that Claude can use in any chat. Built-in skills make Word, Excel, PowerPoint and PDF files *(if enabled)*.
+
+- Claude uses a skill when your request matches it, such as "turn this into a one-page Word handout."
+- Type **/** in the chat box to see your skills and pick one yourself.
+- See and turn skills on or off in **Customize > Skills**.
+
+**A Project is a workspace for one piece of work. A skill is a how-to Claude can use in any chat.**
+
+## 7. Watch: build a Project {#watch-project}
 
 A Project is a workspace for one ongoing piece of work: its own instructions, files, and memory.
 
@@ -157,7 +183,7 @@ A Project is a workspace for one ongoing piece of work: its own instructions, fi
 4. **+** > add your kit's files.
 5. Start a new chat in the Project and send the test prompt.
 
-## 7. Your turn: build your Project {#build-project}
+## 8. Your turn: build your Project {#build-project}
 
 Use the kit you chose: **Kit A, Article Explainer** (default) or **Kit B, Committee Assistant** (for administrative staff).
 
@@ -190,7 +216,7 @@ For anyone who reads research articles: turn an article into an accurate, plain-
 **Files** (or download both: [part1-kit-a.zip](downloads/part1-kit-a.zip))
 
 - [explainer-style-guide.md](materials/part1-kits/kit-a/explainer-style-guide.md): a made-up, one-page style guide with rules Claude must follow.
-- [hickey-2025-telehealth-htn.md](materials/part1-kits/kit-a/hickey-2025-telehealth-htn.md): a text copy of an open-access trial, Hickey MD et al., *PLoS Med* 2025;22(6):e1004632 ([original article](https://doi.org/10.1371/journal.pmed.1004632)), reformatted for teaching under its Creative Commons license. It's a text file so that searching with Ctrl/Cmd+F works in segment 10.
+- [hickey-2025-telehealth-htn.md](materials/part1-kits/kit-a/hickey-2025-telehealth-htn.md): a text copy of an open-access trial, Hickey MD et al., *PLoS Med* 2025;22(6):e1004632 ([original article](https://doi.org/10.1371/journal.pmed.1004632)), reformatted for teaching under its Creative Commons license. It's a text file so that searching with Ctrl/Cmd+F works in segment 11.
 
 **Project name:** Article Explainer
 
@@ -265,7 +291,7 @@ Privacy
 
 The privacy line is advice, not enforcement: Claude will usually follow it, but nothing stops you from pasting something you shouldn't.
 
-## 8. Watch: anatomy of a strong prompt {#strong-prompt}
+## 9. Watch: anatomy of a strong prompt {#strong-prompt}
 
 The Project carries the context, so the prompt can stay short and reusable.
 
@@ -279,7 +305,7 @@ The Project carries the context, so the prompt can stay short and reusable.
 | "150 words or fewer... use only the article" | Constraints |
 | "Where this came from" table | Every claim traced to a quote |
 
-## 9. Your turn: run it, then push back {#run-prompt}
+## 10. Your turn: run it, then push back {#run-prompt}
 
 Start a **new chat inside your Project**. Use the default model and effort.
 
@@ -378,7 +404,7 @@ Now act as a careful committee chair reviewing your drafts.
   out anything that should stay within the committee.
 ```
 
-## 10. Verify before you use it {#verify}
+## 11. Verify before you use it {#verify}
 
 Check against the source, not against Claude. **Don't cut:** this segment stays even when class runs late.
 
@@ -447,53 +473,6 @@ article contradicts itself.
 - **Disclose your AI use.** Follow journal policy (ICMJE, COPE); a template is on the site.
 - **NIH:** applications substantially developed by AI aren't considered original (NOT-OD-25-132), and generative AI is prohibited in peer review (NOT-OD-23-149).
 - **Systematic or scoping review?** Follow RAISE and talk to a librarian.
-
-## 11. Tune it: model, effort and skills {#tune}
-
-Use the smallest model and lowest effort that does the job.
-
-### Watch: the model menu
-
-The **model menu next to Send** sets the **model** and the **effort**.
-
-- On the current models, thinking is always on, so **effort is the main dial**.
-- More effort costs more time, usage, and energy.
-- Your admin may hide some models or effort levels.
-
-### Your turn: same task, smaller dial
-
-::: {.do-now}
-In your Project, switch to a **smaller model** or **Low** effort, then send (Kit B: see below):
-
-```text
-Make a 6-term glossary for my audience from the article.
-```
-
-Good enough? Compare it with what you'd expect from the bigger setting.
-:::
-
-**Kit B:**
-
-```text
-Make a 6-term glossary for a new committee member from the charter.
-```
-
-### Watch: a skill makes a Word handout
-
-```text
-Using the style guide, turn the plain-language version into a
-one-page Word handout.
-```
-
-- Built-in skills make Word, Excel, PowerPoint, and PDF files (if enabled).
-- See and turn on skills in **Customize > Skills**.
-- **A Project is a workspace for one piece of work. A skill is a how-to Claude can use in any chat.**
-
-**Kit B:**
-
-```text
-Turn next month's agenda into a one-page Word document.
-```
 
 ## 12. Take it with you: the phone app {#phone}
 
