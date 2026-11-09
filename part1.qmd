@@ -534,7 +534,7 @@ From chat to tasks, and from the app to Claude Code.
 
 Chat answers. Cowork **does a task for you**:
 
-1. Start a Cowork task in the Claude app *(check before class where it appears)*.
+1. Start a Cowork task in the Claude app.
 2. Describe the finished result you want, and add any files it needs.
 3. Claude makes a plan and works through the steps on its own, such as gathering information, working with files and creating documents. You can watch and step in.
 4. Review what it made before you use or send it.
@@ -546,7 +546,7 @@ Chat answers. Cowork **does a task for you**:
 | **Cowork** | Tasks with several steps | Files you give it, the web, connectors *(if enabled)* | Finished files and completed steps |
 | **Claude Code** | Code and data analysis | A project folder on your computer | Code, analyses and reports (next class) |
 
-**Not for high-risk data.** Cowork acts, not just answers. Web pages and files can hide instructions that steer it ("prompt injection").
+Cowork acts, not just answers. Web pages and files can hide instructions that steer it ("prompt injection").
 
 ### From today to Claude Code
 
