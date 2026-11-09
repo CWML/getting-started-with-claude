@@ -243,9 +243,9 @@ Bridge sentence for the Code tab: "In *Analyzing research data with Claude Code*
 
 **0:57 (2 min). Talk only.** Cut option: say Cowork in one sentence (saves 1–2 min).
 
-*14. Cowork and the bridge to Claude Code (0:57 – 0:59) › Cowork in 30 seconds*
+*14. Cowork and the bridge to Claude Code (0:57 – 0:59) › Cowork in brief*
 
-Don't demo. Claude in Chrome (if enabled) is Cowork in your browser: same cautions. More: [Quick reference: Cowork](part1-reference.qmd#cowork).
+Don't demo. Spend about a minute: the four steps, then the comparison table, landing on "chat answers, Cowork does." Cowork is on Yale's standard Enterprise accounts, not the HIPAA-supported version. Claude in Chrome (if enabled) is Cowork in your browser: same cautions. More: [Quick reference: Cowork](part1-reference.qmd#cowork).
 
 *14. Cowork and the bridge to Claude Code (0:57 – 0:59) › From today to Claude Code*
 

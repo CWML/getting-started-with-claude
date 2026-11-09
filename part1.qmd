@@ -516,16 +516,11 @@ The Claude phone app uses the same account as your laptop, so your work comes wi
 |---|---|
 | **Projects** | Open your Projects and keep working in them. They're saved in your Claude account, not in a folder on your computer, so they're there on any device. |
 | **Chats** | Pick up any past chat where you left off. |
-| **Voice mode** | Talk with Claude out loud instead of typing *(if enabled)*. |
-| **Code tab** | If you use Claude Code, run `/rc` in a session on your computer, then steer it from your phone *(if enabled; not in the HIPAA-supported version)*. |
+| **Voice mode** | Talk with Claude out loud instead of typing |
+| **Code tab** | If you use Claude Code, run `/rc` in a session on your computer, then steer it from your phone. |
 
 Create Projects on your laptop; they open on your phone too.
 
-### Phone rules
-
-- **No photos** of patient lists, charts, screens, or whiteboards.
-- Follow [mobile device policy].
-- Research *(if enabled)* on the phone searches only the web and skips connectors such as PubMed, without warning.
 
 More: [Quick reference: mobile](part1-reference.qmd#mobile).
 
@@ -533,11 +528,25 @@ More: [Quick reference: mobile](part1-reference.qmd#mobile).
 
 From chat to tasks, and from the app to Claude Code.
 
-### Cowork in 30 seconds
+### Cowork in brief
 
-- Since Oct 23, 2026, Cowork is part of the Enterprise chat experience **(if your admin turned it on)**. It carries out multi-step tasks, not just answers.
-- **Not for high-risk data.** Web pages and files can hide instructions that steer it ("prompt injection").
-- The HIPAA-supported version keeps the older layout; Cowork may be off or limited there. Check with [ITS].
+**Cowork** is built into the Claude app on Yale's standard Enterprise accounts. It isn't in the HIPAA-supported version.
+
+Chat answers. Cowork **does a task for you**:
+
+1. Start a Cowork task in the Claude app *(check before class where it appears)*.
+2. Describe the finished result you want, and add any files it needs.
+3. Claude makes a plan and works through the steps on its own, such as gathering information, working with files and creating documents. You can watch and step in.
+4. Review what it made before you use or send it.
+
+| | Best for | Works with | What you get |
+|---|---|---|---|
+| **Chat** | Questions, quick drafts, lookups | What you type or attach | An answer in the chat |
+| **Project** | Ongoing work you come back to | Its saved instructions and files | Answers that follow your setup |
+| **Cowork** | Tasks with several steps | Files you give it, the web, connectors *(if enabled)* | Finished files and completed steps |
+| **Claude Code** | Code and data analysis | A project folder on your computer | Code, analyses and reports (next class) |
+
+**Not for high-risk data.** Cowork acts, not just answers. Web pages and files can hide instructions that steer it ("prompt injection").
 
 ### From today to Claude Code
 
