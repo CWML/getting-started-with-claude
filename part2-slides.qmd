@@ -16,6 +16,8 @@ format:
 
 A 90-minute hands-on class
 
+**Work in progress:** this material isn't complete yet.
+
 [Instructor name], [Library name]
 
 **Open the class page:** `https://cwml.github.io/getting-started-with-claude/part2.html`

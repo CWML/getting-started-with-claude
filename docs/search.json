@@ -582,7 +582,7 @@
     "href": "part2-slides.html#analyzing-research-data-with-claude-code",
     "title": "Getting Started with Claude",
     "section": "Analyzing Research Data with Claude Code",
-    "text": "Analyzing Research Data with Claude Code\nA 90-minute hands-on class\n[Instructor name], [Library name]\nOpen the class page: https://cwml.github.io/getting-started-with-claude/part2.html\nDownload: hypertension-cohort.zip, then open the folder in Positron\n\nBefore 0:00: demo reset done (see “Part 2: instructor prep” in instructor/README.md). Positron open on the demo project at part2-start, the Claude panel docked on the right in Manual mode, /status checked, fonts enlarged. Put this slide up as people arrive.\n0:00. Welcome. Introduce yourself and the library’s role in data services. Every prompt today is on the class page, ready to copy. All data is synthetic.",
+    "text": "Analyzing Research Data with Claude Code\nA 90-minute hands-on class\nWork in progress: this material isn’t complete yet.\n[Instructor name], [Library name]\nOpen the class page: https://cwml.github.io/getting-started-with-claude/part2.html\nDownload: hypertension-cohort.zip, then open the folder in Positron\n\nBefore 0:00: demo reset done (see “Part 2: instructor prep” in instructor/README.md). Positron open on the demo project at part2-start, the Claude panel docked on the right in Manual mode, /status checked, fonts enlarged. Put this slide up as people arrive.\n0:00. Welcome. Introduce yourself and the library’s role in data services. Every prompt today is on the class page, ready to copy. All data is synthetic.",
     "crumbs": [
       "Cushing/Whitney Medical Library",
       "Analyzing research data with Claude Code",

@@ -520,6 +520,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
+<div class="callout callout-style-default callout-warning callout-titled" title="Work in progress">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Work in progress
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This class material isn’t complete yet. Expect changes before the class is offered.</p>
+</div>
+</div>
 <p>In this class you’ll use <strong>Claude Code inside Positron</strong> (or VS Code) to take a synthetic clinical trial from raw CSV to a Quarto report. You’ll plan first, let Claude write and run the code, check every step yourself, and finish by building a reusable tool for your own research data. Bring a laptop. This page has every prompt, ready to copy. <a href="./part2-slides.html">Slides</a> · <a href="./cheatsheet.html">Cheat sheet</a></p>
 <p><strong>For:</strong> faculty, postdocs, students, research coordinators, analysts, and clinicians who can read a little R or Python. <a href="./part1.html">Getting started with Claude</a> (the Claude app class) is helpful but not required.</p>
 <p><strong>By the end of class, you’ll be able to:</strong></p>
@@ -545,7 +558,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled" title="Using Python instead of R?">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -554,7 +567,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Install the Python packages listed in the <a href="./index.html#setup-part2">setup steps</a> instead of the R ones. In class, delete <code>CLAUDE.md</code> from the project, rename <code>CLAUDE.python.md</code> to <code>CLAUDE.md</code>, and start a new Claude conversation. Claude will then put scripts in <code>python/</code>. Every exercise below has a Python tab.</p>
 </div>
@@ -811,7 +824,7 @@ you find, and every decision you need from me. Don't write code yet.</code></pre
 <p>The prompt doesn’t name a language, because <code>CLAUDE.md</code> (or <code>CLAUDE.python.md</code>, renamed) already does.</p>
 <p>The plan opens as a document. <strong>Read it before you approve.</strong> You can add inline comments to change anything you disagree with. When you approve, pick the option that keeps you approving each edit, not one that accepts edits automatically, so you still review every change in 3b. How many data problems did Claude find? Planning first protects research integrity: you decide the analysis <em>before</em> you see results.</p>
 <div class="callout callout-style-default callout-tip callout-titled" title="When Claude asks how to handle a problem">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -820,7 +833,7 @@ you find, and every decision you need from me. Don't write code yet.</code></pre
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><code>CLAUDE.md</code> tells Claude to ask you before handling missing data or outliers. For today, follow the SAP:</p>
 <table class="caption-top table">
@@ -927,7 +940,7 @@ HTML.</code></pre>
 </ul>
 <p>Anything that doesn’t match is a finding. Tell Claude what the SAP says, and have it fix the script.</p>
 <div class="callout callout-style-default callout-tip callout-titled" title="Check your numbers">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -936,7 +949,7 @@ HTML.</code></pre>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>After cleaning: 500 patients (250 per arm). Analyzed (complete case): <strong>n = 451</strong> (Standard 222, Intensive 229). Adjusted difference, Intensive − Standard: <strong>−11.0 mmHg (95% CI −12.8 to −9.2)</strong>. If yours differ, compare the n’s first. Most differences come from cleaning choices, such as how the <code>1</code>/<code>2</code> sex codes or implausible values were handled, and only choices that affect <code>sbp_v0</code>, <code>sbp_v3</code>, <code>arm</code>, <code>site</code>, or duplicates change the primary result.</p>
 </div>

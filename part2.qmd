@@ -3,6 +3,10 @@ title: "Analyzing Research Data with Claude Code"
 subtitle: "A 90-minute hands-on class for researchers with light R or Python"
 ---
 
+::: {.callout-warning title="Work in progress"}
+This class material isn't complete yet. Expect changes before the class is offered.
+:::
+
 In this class you'll use **Claude Code inside Positron** (or VS Code) to take a synthetic clinical trial from raw CSV to a Quarto report. You'll plan first, let Claude write and run the code, check every step yourself, and finish by building a reusable tool for your own research data. Bring a laptop. This page has every prompt, ready to copy. [Slides](part2-slides.qmd) · [Cheat sheet](cheatsheet.qmd)
 
 **For:** faculty, postdocs, students, research coordinators, analysts, and clinicians who can read a little R or Python. [Getting started with Claude](part1.qmd) (the Claude app class) is helpful but not required.
