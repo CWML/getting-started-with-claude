@@ -58,7 +58,7 @@ Answer these once you've done the dry run.
 | 1 | Welcome and sign in | 0:00 – 0:03 | | |
 | 2 | Trust but verify | 0:03 – 0:05 | | |
 | 3 | Which Claude for which data | 0:05 – 0:11 | | |
-| 4 | Lock your settings | 0:11 – 0:15 | | |
+| 4 | Check your settings | 0:11 – 0:15 | | |
 | 5 | Watch: build a Project | 0:15 – 0:17 | | |
 | 6 | Your turn: build your Project | 0:17 – 0:26 | | |
 | 7 | Watch: anatomy of a strong prompt | 0:26 – 0:28 | | |

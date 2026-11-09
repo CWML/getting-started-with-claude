@@ -73,40 +73,22 @@ For details on both, see [AI at Yale, Claude ](https://ai.yale.edu/yales-ai-tool
 
 More detail, including which features the HIPAA-supported version covers: [Quick reference: which Claude for which data](part1-reference.qmd#tool-data).
 
-### Can I share this?
+**Safe habits:** describe the situation instead of pasting the record, use made-up examples, and share structure (a template or blank form) rather than content.
 
-**OK**, **check first**, or **no**? Show of hands.
-
-1. An open-access article
-2. Your own draft lecture slides
-3. A clinic note with the patient's name removed
-4. An NIH application you're reviewing
-5. Notes from a curriculum committee meeting
-6. A PDF from a library subscription
-
-### "Not here" is a valid answer
-
-- Confidential peer review
-- Final clinical decisions or doses
-- Assessed work where course policy forbids AI
-- Anything you can't verify
-- Tasks where checking takes longer than doing it yourself
-
-**Safer habits:** describe the situation instead of pasting the record, use made-up examples, and share structure (a template or blank form) rather than content.
-
-## 4. Lock your settings {#settings}
+## 4. Check your settings {#settings}
 
 Set memory *before* you upload anything.
 
 ### Watch, then do: memory settings
 
 ::: {.do-now}
-**Your turn.** Click your name or initials (lower left) > **Settings > Your Claude** (older layout: **Settings > Memory**).
+**Your turn.** Click your name or initials (lower left) > **Settings > Memory**.
 
-1. Confirm **Include sensitive topics in memory** is **off**.
-2. Find **Memory from chats**: keep it on or off?
-3. Find **Search and reference chats**: keep it on or off?
+1. **Search and reference chats** lets Claude look through your past chats for details. Keep it on or off?
+2. **Generate memory from chats** lets Claude remember things from your chats. Keep it on or off?
 :::
+
+**Export memory** downloads everything Claude remembers about you, as Markdown files.
 
 To turn memory off for one chat: **+ > Memory**, before your first message.
 

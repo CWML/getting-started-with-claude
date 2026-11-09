@@ -87,23 +87,23 @@ Articles, e-books and database content from library subscriptions often come wit
 
 ## Settings and privacy {#settings}
 
-Lock your settings **before** you upload anything. Some settings may be greyed out or missing if your admin controls them.
+Check your settings **before** you upload anything. Some settings may be greyed out or missing if your admin controls them.
 
-[Screenshot: Settings > Your Claude in the combined Enterprise layout]
+[Screenshot: Settings > Memory]
 
 [Screenshot: the same settings in the HIPAA-supported version (older layout)]
 
 ### Memory
 
-**Where:** Settings > Your Claude (older layout: Settings > Memory). On Enterprise, memory stays off for each person until they turn it on, so yours may already be off.
+**Where:** Settings > Memory. On Enterprise, memory stays off for each person until they turn it on, so yours may already be off.
 
 | Setting | What it does | For sensitive work |
 |---|---|---|
-| **Memory from chats** (older name: Generate memory from chats) | Claude saves context from your chats to use later | Leave off, or review what's saved now and then |
-| **Search and reference chats** | Claude can search your past chats when you ask | Turn off if old chats hold things you don't want to resurface |
-| **Include sensitive topics in memory** | Lets memory keep topics such as health, religion or politics | **Confirm it's off** (it's off by default) |
+| **Search and reference chats** | Claude can search your past chats for relevant details | Turn off if old chats hold things you don't want to resurface |
+| **Generate memory from chats** | Claude saves context from your chats to use later | Leave off, or review what's saved now and then |
 | **Pause memory** | Stops using and saving memory for now | Use while you work on something you don't want remembered |
 | **Reset memory** | Deletes all saved memory, **including Project memories** | Use if something was saved by mistake |
+| **Export memory** | Downloads your memory as a .zip of Markdown files | Use it to review everything Claude has saved |
 | **+ > Memory** (in a chat) | Turns memory off for one chat | Do it **before your first message**; it can't change once the chat starts. Works inside Projects too. |
 
 : {tbl-colwidths="[30,38,32]"}
@@ -137,8 +137,7 @@ Lock your settings **before** you upload anything. Some settings may be greyed o
 
 ### Settings checklist
 
-- [ ] Settings > Your Claude: **Include sensitive topics in memory** is off
-- [ ] Decide on **Memory from chats** and **Search and reference chats**
+- [ ] Settings > Memory: decide on **Search and reference chats** and **Generate memory from chats**
 - [ ] Each Project: turn off **Use account memory** unless you want it to use your account memory
 - [ ] Know where the **ghost icon** is (incognito) and what it doesn't do
 - [ ] **Instructions for Claude:** role, tone, format; nothing sensitive

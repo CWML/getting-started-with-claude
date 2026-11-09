@@ -51,7 +51,7 @@ Prompt slots such as `[audience]`, `[role]`, `[topic]`, `[committee name]` and `
 
 **Check in both Yale workspaces (standard enterprise and HIPAA-supported) the week before, with screenshots**
 
-- [ ] The Settings > Your Claude path (older layout: Settings > Memory) and the toggle names: Include sensitive topics in memory, Memory from chats (older: Generate memory from chats), Search and reference chats. + > Memory must be set before the first message.
+- [ ] The Settings > Memory path and the labels there (as of Nov 9, 2026: Search and reference chats, Generate memory from chats, Import memory, Export memory, then a "You" section). The "Include sensitive topics in memory" toggle is gone; don't teach it. + > Memory must be set before the first message.
 - [ ] The Project's "Use account memory" label, and whether there's a way to add typed text to a Project (the "add text" fallback is unverified).
 - [ ] Model names and effort levels in the menu next to Send, and whether Fable is available on standard seats [confirm Yale tiers].
 - [ ] Incognito retention [30 days by default or Yale's setting], and that files and skills don't run in incognito.
@@ -132,19 +132,19 @@ Full answers: [Quick reference](part1-reference.qmd#tool-data).
 
 **0:10 (1 min).** "Choosing not to use AI is a skill too."
 
-*4. Lock your settings (0:11 – 0:15)*
+*4. Check your settings (0:11 – 0:15)*
 
 **0:11 (4 min):** 1 min watch, 3 min do.
 
-*4. Lock your settings (0:11 – 0:15) › Watch, then do: memory settings*
+*4. Check your settings (0:11 – 0:15) › Watch, then do: memory settings*
 
 Show it once on your screen, then let people do it. Have screenshots of both layouts ready: the combined chat-and-Cowork layout, and the older layout that the HIPAA-supported version keeps.
 
-"Include sensitive topics" is off by default, so this is a check, not a change. On Enterprise accounts, memory is off for each person until they turn it on, so many people will find it already off. The older layout calls it "Generate memory from chats."
+On Enterprise accounts, memory is off for each person until they turn it on, so many people will find it already off. Skip **Import memory from other AI providers**; it isn't part of this class.
 
 Worth one sentence: deleting a chat doesn't delete memories made from it.
 
-*4. Lock your settings (0:11 – 0:15) › Incognito: what it does and doesn't do*
+*4. Check your settings (0:11 – 0:15) › Incognito: what it does and doesn't do*
 
 **20-second poll:** "A sensitive HR email: Project, incognito, or neither?" Answer: neither. Use the tool approved for that data. Incognito doesn't make anything allowed.
 

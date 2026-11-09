@@ -621,12 +621,12 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="settings" class="level2">
 <h2 class="anchored" data-anchor-id="settings">Settings and privacy</h2>
-<p>Lock your settings <strong>before</strong> you upload anything. Some settings may be greyed out or missing if your admin controls them.</p>
-<p>[Screenshot: Settings &gt; Your Claude in the combined Enterprise layout]</p>
+<p>Check your settings <strong>before</strong> you upload anything. Some settings may be greyed out or missing if your admin controls them.</p>
+<p>[Screenshot: Settings &gt; Memory]</p>
 <p>[Screenshot: the same settings in the HIPAA-supported version (older layout)]</p>
 <section id="memory" class="level3">
 <h3 class="anchored" data-anchor-id="memory">Memory</h3>
-<p><strong>Where:</strong> Settings &gt; Your Claude (older layout: Settings &gt; Memory). On Enterprise, memory stays off for each person until they turn it on, so yours may already be off.</p>
+<p><strong>Where:</strong> Settings &gt; Memory. On Enterprise, memory stays off for each person until they turn it on, so yours may already be off.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 30%">
@@ -642,29 +642,29 @@ ul.task-list li input[type="checkbox"] {
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>Memory from chats</strong> (older name: Generate memory from chats)</td>
+<td><strong>Search and reference chats</strong></td>
+<td>Claude can search your past chats for relevant details</td>
+<td>Turn off if old chats hold things you don’t want to resurface</td>
+</tr>
+<tr class="even">
+<td><strong>Generate memory from chats</strong></td>
 <td>Claude saves context from your chats to use later</td>
 <td>Leave off, or review what’s saved now and then</td>
 </tr>
-<tr class="even">
-<td><strong>Search and reference chats</strong></td>
-<td>Claude can search your past chats when you ask</td>
-<td>Turn off if old chats hold things you don’t want to resurface</td>
-</tr>
 <tr class="odd">
-<td><strong>Include sensitive topics in memory</strong></td>
-<td>Lets memory keep topics such as health, religion or politics</td>
-<td><strong>Confirm it’s off</strong> (it’s off by default)</td>
-</tr>
-<tr class="even">
 <td><strong>Pause memory</strong></td>
 <td>Stops using and saving memory for now</td>
 <td>Use while you work on something you don’t want remembered</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><strong>Reset memory</strong></td>
 <td>Deletes all saved memory, <strong>including Project memories</strong></td>
 <td>Use if something was saved by mistake</td>
+</tr>
+<tr class="odd">
+<td><strong>Export memory</strong></td>
+<td>Downloads your memory as a .zip of Markdown files</td>
+<td>Use it to review everything Claude has saved</td>
 </tr>
 <tr class="even">
 <td><strong>+ &gt; Memory</strong> (in a chat)</td>
@@ -711,8 +711,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="settings-checklist" class="level3">
 <h3 class="anchored" data-anchor-id="settings-checklist">Settings checklist</h3>
 <ul class="task-list">
-<li><label><input type="checkbox">Settings &gt; Your Claude: <strong>Include sensitive topics in memory</strong> is off</label></li>
-<li><label><input type="checkbox">Decide on <strong>Memory from chats</strong> and <strong>Search and reference chats</strong></label></li>
+<li><label><input type="checkbox">Settings &gt; Memory: decide on <strong>Search and reference chats</strong> and <strong>Generate memory from chats</strong></label></li>
 <li><label><input type="checkbox">Each Project: turn off <strong>Use account memory</strong> unless you want it to use your account memory</label></li>
 <li><label><input type="checkbox">Know where the <strong>ghost icon</strong> is (incognito) and what it doesn’t do</label></li>
 <li><label><input type="checkbox"><strong>Instructions for Claude:</strong> role, tone, format; nothing sensitive</label></li>
