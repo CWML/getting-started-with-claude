@@ -57,17 +57,18 @@ Answer these once you've done the dry run.
 |---|---|---|---|---|
 | 1 | Welcome and sign in | 0:00 – 0:03 | | |
 | 2 | Trust but verify | 0:03 – 0:05 | | |
-| 3 | Which Claude for which data | 0:05 – 0:11 | | |
-| 4 | Check your settings | 0:11 – 0:15 | | |
-| 5 | Watch: build a Project | 0:15 – 0:17 | | |
-| 6 | Your turn: build your Project | 0:17 – 0:26 | | |
-| 7 | Watch: anatomy of a strong prompt | 0:26 – 0:28 | | |
-| 8 | Your turn: run it, then push back | 0:28 – 0:37 | | |
-| 9 | Verify before you use it | 0:37 – 0:46 | | |
-| 10 | Tune it: model, effort and skills | 0:46 – 0:51 | | |
-| 11 | Take it with you: the phone app | 0:51 – 0:55 | | |
-| 12 | Cowork and the bridge to Claude Code | 0:55 – 0:57 | | |
-| 13 | Exit ticket and close | 0:57 – 1:00 | | |
+| 3 | Which Claude for which data | 0:05 – 0:08 | | |
+| 4 | Check your settings | 0:08 – 0:12 | | |
+| 5 | Everyday chat | 0:12 – 0:15 | | |
+| 6 | Watch: build a Project | 0:15 – 0:17 | | |
+| 7 | Your turn: build your Project | 0:17 – 0:26 | | |
+| 8 | Watch: anatomy of a strong prompt | 0:26 – 0:28 | | |
+| 9 | Your turn: run it, then push back | 0:28 – 0:37 | | |
+| 10 | Verify before you use it | 0:37 – 0:46 | | |
+| 11 | Tune it: model, effort and skills | 0:46 – 0:51 | | |
+| 12 | Take it with you: the phone app | 0:51 – 0:55 | | |
+| 13 | Cowork and the bridge to Claude Code | 0:55 – 0:57 | | |
+| 14 | Exit ticket and close | 0:57 – 1:00 | | |
 
 ### Teaching from the page
 

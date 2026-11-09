@@ -104,7 +104,48 @@ The ghost icon in a new chat starts an incognito chat. It isn't saved to your hi
 
 **Incognito changes what Claude remembers, not what data is allowed.**
 
-## 5. Watch: build a Project {#watch-project}
+## 5. Everyday chat {#everyday-chat}
+
+Not everything needs a Project. Use a plain chat for one-off questions, quick drafts and lookups.
+
+::: {.do-now}
+**Your turn.** Click **New chat** (outside any Project) and send:
+
+```text
+Give me three ways to make a long email easier to read.
+```
+:::
+
+### What's in the chat box
+
+| Control | What it does |
+|---|---|
+| **Type, paste or drop a file** | **Enter** sends; **Shift+Enter** starts a new line. Drag a file onto the box to attach it. |
+| **+** (lower left) | Add files or photos, and turn tools on or off for this chat (below). |
+| Typing **/** | Opens the same tools from the keyboard, including skills *(if enabled)*. |
+| **Model menu** (next to Send) | Choose the model and effort. More in [Tune it](#tune). |
+| **Microphone** | Dictate instead of typing *(if enabled; check before class)*. |
+| **Ghost icon** (new chats only) | Starts an incognito chat. See [Incognito](#settings). |
+
+### Research, web search and memory
+
+These three switches are in the **+** menu. A check mark means on. They apply to this chat.
+
+| Switch | What it does | Use it for |
+|---|---|---|
+| **Web search** | Looks things up online and shows its sources | Recent facts and quick lookups |
+| **Research** *(if enabled)* | Runs many searches over several minutes and writes a cited report | A literature scan or a background brief |
+| **Memory** | Uses and adds to your memory in this chat. Set it before your first message | Turn it off for one-off or sensitive chats |
+
+The **+** menu can also list **connectors** *(if enabled)*, such as PubMed, which let Claude search other tools.
+
+::: {.do-now}
+Click **+** and find the three switches. Then type **/** and look at the list. Don't pick anything yet.
+:::
+
+**A source isn't proof.** Open the links and check that they say what Claude says they say.
+
+## 6. Watch: build a Project {#watch-project}
 
 A Project is a workspace for one ongoing piece of work: its own instructions, files, and memory.
 
@@ -116,7 +157,7 @@ A Project is a workspace for one ongoing piece of work: its own instructions, fi
 4. **+** > add your kit's files.
 5. Start a new chat in the Project and send the test prompt.
 
-## 6. Your turn: build your Project {#build-project}
+## 7. Your turn: build your Project {#build-project}
 
 Use the kit you chose: **Kit A, Article Explainer** (default) or **Kit B, Committee Assistant** (for administrative staff).
 
@@ -149,7 +190,7 @@ For anyone who reads research articles: turn an article into an accurate, plain-
 **Files** (or download both: [part1-kit-a.zip](downloads/part1-kit-a.zip))
 
 - [explainer-style-guide.md](materials/part1-kits/kit-a/explainer-style-guide.md): a made-up, one-page style guide with rules Claude must follow.
-- [hickey-2025-telehealth-htn.md](materials/part1-kits/kit-a/hickey-2025-telehealth-htn.md): a text copy of an open-access trial, Hickey MD et al., *PLoS Med* 2025;22(6):e1004632 ([original article](https://doi.org/10.1371/journal.pmed.1004632)), reformatted for teaching under its Creative Commons license. It's a text file so that searching with Ctrl/Cmd+F works in segment 9.
+- [hickey-2025-telehealth-htn.md](materials/part1-kits/kit-a/hickey-2025-telehealth-htn.md): a text copy of an open-access trial, Hickey MD et al., *PLoS Med* 2025;22(6):e1004632 ([original article](https://doi.org/10.1371/journal.pmed.1004632)), reformatted for teaching under its Creative Commons license. It's a text file so that searching with Ctrl/Cmd+F works in segment 10.
 
 **Project name:** Article Explainer
 
@@ -224,7 +265,7 @@ Privacy
 
 The privacy line is advice, not enforcement: Claude will usually follow it, but nothing stops you from pasting something you shouldn't.
 
-## 7. Watch: anatomy of a strong prompt {#strong-prompt}
+## 8. Watch: anatomy of a strong prompt {#strong-prompt}
 
 The Project carries the context, so the prompt can stay short and reusable.
 
@@ -238,7 +279,7 @@ The Project carries the context, so the prompt can stay short and reusable.
 | "150 words or fewer... use only the article" | Constraints |
 | "Where this came from" table | Every claim traced to a quote |
 
-## 8. Your turn: run it, then push back {#run-prompt}
+## 9. Your turn: run it, then push back {#run-prompt}
 
 Start a **new chat inside your Project**. Use the default model and effort.
 
@@ -337,7 +378,7 @@ Now act as a careful committee chair reviewing your drafts.
   out anything that should stay within the committee.
 ```
 
-## 9. Verify before you use it {#verify}
+## 10. Verify before you use it {#verify}
 
 Check against the source, not against Claude. **Don't cut:** this segment stays even when class runs late.
 
@@ -407,7 +448,7 @@ article contradicts itself.
 - **NIH:** applications substantially developed by AI aren't considered original (NOT-OD-25-132), and generative AI is prohibited in peer review (NOT-OD-23-149).
 - **Systematic or scoping review?** Follow RAISE and talk to a librarian.
 
-## 10. Tune it: model, effort and skills {#tune}
+## 11. Tune it: model, effort and skills {#tune}
 
 Use the smallest model and lowest effort that does the job.
 
@@ -437,16 +478,6 @@ Good enough? Compare it with what you'd expect from the bigger setting.
 Make a 6-term glossary for a new committee member from the charter.
 ```
 
-### The **+** and **/** menus
-
-In the chat box, click **+** or type **/** to open the menu.
-
-What you'll see depends on your workspace: things like **Memory** for this chat, web search, connectors, and skills.
-
-::: {.do-now}
-Type **/** in your chat box and look at the list (10 seconds). Don't pick anything yet.
-:::
-
 ### Watch: a skill makes a Word handout
 
 ```text
@@ -464,7 +495,7 @@ one-page Word handout.
 Turn next month's agenda into a one-page Word document.
 ```
 
-## 11. Take it with you: the phone app {#phone}
+## 12. Take it with you: the phone app {#phone}
 
 Your Project should sync to the Claude phone app. Optional.
 
@@ -494,7 +525,7 @@ Create Projects on your laptop; they should open on your phone too. No phone? Ke
 
 Research (if enabled) on the phone searches only the web and skips connectors (if enabled) such as PubMed, without warning. More: [Quick reference: mobile](part1-reference.qmd#mobile).
 
-## 12. Cowork and the bridge to Claude Code {#cowork-bridge}
+## 13. Cowork and the bridge to Claude Code {#cowork-bridge}
 
 From chat to tasks, and from the app to Claude Code.
 
@@ -517,7 +548,7 @@ From chat to tasks, and from the app to Claude Code.
 
 **Next class: Analyzing research data with Claude Code** (90 min). [Class page](part2.qmd)
 
-## 13. Exit ticket and close {#exit}
+## 14. Exit ticket and close {#exit}
 
 Four questions, one per objective. Show of hands or [exit-ticket form link].
 
