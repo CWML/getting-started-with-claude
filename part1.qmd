@@ -60,7 +60,8 @@ Claude is capable. Its output still needs checking.
 
 Yale offers two versions of Claude. Check which one your data needs before you open a chat.
 
-For details on both, see [ITS AI Platform Services](https://yale.service-now.com/it?id=nr_emp_taxonomy_topic&topic_id=9b7bac3947184b9084888aac416d4337).
+
+For details on both, see [AI at Yale, Claude ](https://ai.yale.edu/yales-ai-tools-and-resources/claude).
 
 **HIPAA-supported doesn't mean approved.** It describes a contract and safeguards. It doesn't approve your project, every feature, or every data set.
 
