@@ -79,13 +79,12 @@ More detail, including which features the HIPAA-supported version covers: [Quick
 
 Set up your account and memory *before* you upload anything.
 
-### Account settings: your role and instructions
+### Account settings: instructions for Claude
 
 ::: {.do-now}
 **Your turn.** Click your name or initials (lower left) > **Settings > General** *(check before class)*.
 
-1. **What best describes your work?** Pick the closest role. Claude uses it to fit its answers to your field.
-2. **Personal preferences** (the box asking what Claude should consider in its responses): add a line or two about how you like answers. Claude applies them in every chat.
+Find **Personal preferences** (the box asking what Claude should consider in its responses) and add a line or two about how you like answers. Claude applies them in every chat.
 :::
 
 For example:

@@ -50,7 +50,7 @@ Prompt slots such as `[audience]`, `[role]`, `[topic]`, `[committee name]` and `
 
 **Check in both Yale workspaces (standard enterprise and HIPAA-supported) the week before, with screenshots**
 
-- [ ] The Settings > General labels: "What best describes your work?" and the personal preferences box (older names: Instructions for Claude, profile preferences).
+- [ ] The Settings > General label for the personal preferences box (older names: Instructions for Claude, profile preferences).
 - [ ] The Settings > Memory path and the labels there (as of Nov 9, 2026: Search and reference chats, Generate memory from chats, Import memory, Export memory, then a "You" section). The "Include sensitive topics in memory" toggle is gone; don't teach it. + > Memory must be set before the first message.
 - [ ] The Project's "Use account memory" label, and whether there's a way to add typed text to a Project (the "add text" fallback is unverified).
 - [ ] Model names and effort levels in the menu next to Send, and whether Fable is available on standard seats [confirm Yale tiers].
@@ -117,9 +117,9 @@ Features in the HIPAA-supported version may differ: some are off, and it keeps a
 
 **0:08 (6 min):** 2 min on account settings, 3 min on memory, 1 min on incognito.
 
-*4. Check your settings (0:08 – 0:14) › Account settings: your role and instructions*
+*4. Check your settings (0:08 – 0:14) › Account settings: instructions for Claude*
 
-Show **Settings > General** once on your screen, then let people fill it in. The role pick is optional; the preferences line is the part that changes answers. Suggest the example as a starting point. Say plainly: these go with every chat, so nothing sensitive. Point ahead: Project instructions do the same job for one Project.
+Show **Settings > General** once on your screen, then let people fill it in. Suggest the example as a starting point. Say plainly: these go with every chat, so nothing sensitive. Point ahead: Project instructions do the same job for one Project.
 
 *4. Check your settings (0:08 – 0:14) › Watch, then do: memory settings*
 
