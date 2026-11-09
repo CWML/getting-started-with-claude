@@ -192,6 +192,7 @@ If Claude describes a synthetic hypertension trial, you're ready.
 | [Claude Help Center](https://support.claude.com) | How the Claude app's features work |
 | [Claude Code docs](https://code.claude.com/docs) | Official Claude Code documentation |
 | [Positron](https://positron.posit.co) | The editor used in *Analyzing research data with Claude Code* |
+| [Data Analysis in the Musser Lab](https://musserlab.github.io/lab-compute/) | A lab's guide to reproducible R and Python projects, written with Claude Code |
 | [AI at Yale](https://ai.yale.edu) | Yale's AI tools and guidance |
 | [AI guidance and library resources](https://library.yale.edu/help-and-research-support/research-support/using-ai-research/ai-guidance-library-resources) | Yale Library's guidance on using AI in research |
 | [Citizen Developer Toolkit](https://healthsciencesit.yale.edu/citizendeveloper) | Health Sciences IT's guide to building small tools for your own work |
