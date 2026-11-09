@@ -301,9 +301,7 @@ Privacy
 
 :::
 
-**Why it's worth keeping:** swap in the next open-access article and keep the instructions and style guide, or edit the style guide's Audiences section for your course, clinic, or newsletter. Kit B becomes a reusable notes-to-minutes tool for non-confidential committees. Library-licensed PDFs may not allow upload: use open-access articles or check [library license guidance]. More: [Quick reference: Projects and skills](part1-reference.qmd#projects-skills).
 
-The privacy line is advice, not enforcement: Claude will usually follow it, but nothing stops you from pasting something you shouldn't.
 
 ## 9. Watch: anatomy of a strong prompt {#strong-prompt}
 
