@@ -75,7 +75,25 @@ More detail, including which features the HIPAA-supported version covers: [Quick
 
 **Safe habits:** describe the situation instead of pasting the record, use made-up examples, and share structure (a template or blank form) rather than content.
 
-## 4. Check your settings {#settings}
+## 4. Getting around the app {#app-tour}
+
+Everything starts from the sidebar on the left.
+
+![](images/app-sidebar.png){fig-alt="The Claude app's left sidebar. At the top, a Home and Code switch. Below it: New, Search, Projects, Artifacts and Customize, then Pinned and Chats." width="300"}
+
+| Where | What it's for |
+|---|---|
+| **Home** / **Code** (top) | **Home** is the Claude app you'll use today. **Code** opens Claude Code *(if your seat includes it)*. |
+| **New** | Start a new chat. |
+| **Search** | Find a past chat. |
+| **Projects** | Your Projects. You'll build one today. |
+| **Artifacts** | Things Claude has made for you in chats, such as documents and small apps. |
+| **Customize** | Skills and connectors *(if enabled)*. |
+| **Pinned** and **Chats** | Chats you've pinned, then your recent chats. |
+| **Your name or initials** (lower left) | **Settings**, which you'll check next. |
+| Panel icon (top right) | Hide or show the sidebar. |
+
+## 5. Check your settings {#settings}
 
 Set up your account and memory *before* you upload anything.
 
@@ -120,7 +138,7 @@ The ghost icon ![Ghost icon](images/incognito-icon.png){height="1.4em" style="ve
 
 **Incognito changes what Claude remembers, not what data is allowed.**
 
-## 5. Everyday chat {#everyday-chat}
+## 6. Everyday chat {#everyday-chat}
 
 Not everything needs a Project. Use a plain chat for one-off questions, quick drafts and lookups.
 
@@ -161,7 +179,7 @@ Click **+** and find the three switches. Then type **/** and look at the list. D
 
 **A source isn't proof.** Open the links and check that they say what Claude says they say.
 
-## 6. Models, effort and skills {#tune}
+## 7. Models, effort and skills {#tune}
 
 Two more things you can change in any chat: which model answers, and which skills it can use.
 
@@ -187,7 +205,7 @@ A **skill** is a saved how-to that Claude can use in any chat. Built-in skills m
 
 **A Project is a workspace for one piece of work. A skill is a how-to Claude can use in any chat.**
 
-## 7. Watch: build a Project {#watch-project}
+## 8. Watch: build a Project {#watch-project}
 
 A Project is a workspace for one ongoing piece of work: its own instructions, files, and memory.
 
@@ -199,7 +217,7 @@ A Project is a workspace for one ongoing piece of work: its own instructions, fi
 4. **+** > add your kit's files.
 5. Start a new chat in the Project and send the test prompt.
 
-## 8. Your turn: build your Project {#build-project}
+## 9. Your turn: build your Project {#build-project}
 
 Use the kit you chose: **Kit A, Article Explainer** (default) or **Kit B, Committee Assistant** (for administrative staff).
 
@@ -230,7 +248,7 @@ For anyone who reads research articles: turn an article into an accurate, plain-
 **Files** (or download both: [part1-kit-a.zip](downloads/part1-kit-a.zip))
 
 - [explainer-style-guide.md](materials/part1-kits/kit-a/explainer-style-guide.md): a made-up, one-page style guide with rules Claude must follow.
-- [hickey-2025-telehealth-htn.md](materials/part1-kits/kit-a/hickey-2025-telehealth-htn.md): a text copy of an open-access trial, Hickey MD et al., *PLoS Med* 2025;22(6):e1004632 ([original article](https://doi.org/10.1371/journal.pmed.1004632)), reformatted for teaching under its Creative Commons license. It's a text file so that searching with Ctrl/Cmd+F works in segment 11.
+- [hickey-2025-telehealth-htn.md](materials/part1-kits/kit-a/hickey-2025-telehealth-htn.md): a text copy of an open-access trial, Hickey MD et al., *PLoS Med* 2025;22(6):e1004632 ([original article](https://doi.org/10.1371/journal.pmed.1004632)), reformatted for teaching under its Creative Commons license. It's a text file so that searching with Ctrl/Cmd+F works in segment 12.
 
 **Project name:** Article Explainer
 
@@ -303,7 +321,7 @@ Privacy
 
 
 
-## 9. Watch: anatomy of a strong prompt {#strong-prompt}
+## 10. Watch: anatomy of a strong prompt {#strong-prompt}
 
 Next you'll send your Project its first real prompt, called **Turn 1** (it's in the next section). First, see what each part of it does. Your Project already holds the files and standing instructions, so the prompt only has to say what you want this time.
 
@@ -319,7 +337,7 @@ Next you'll send your Project its first real prompt, called **Turn 1** (it's in 
 
 Kit B's prompt uses the same parts. Its action-item table has an "exact line from the notes" column instead of a separate source table.
 
-## 10. Your turn: run it, then push back {#run-prompt}
+## 11. Your turn: run it, then push back {#run-prompt}
 
 Start a **new chat inside your Project**. Use the default model and effort.
 
@@ -418,7 +436,7 @@ Now act as a careful committee chair reviewing your drafts.
   out anything that should stay within the committee.
 ```
 
-## 11. Verify before you use it {#verify}
+## 12. Verify before you use it {#verify}
 
 Check against the source, not against Claude. **Don't cut:** this segment stays even when class runs late.
 
@@ -488,7 +506,7 @@ article contradicts itself.
 - **NIH:** applications substantially developed by AI aren't considered original (NOT-OD-25-132), and generative AI is prohibited in peer review (NOT-OD-23-149).
 - **Systematic or scoping review?** Follow RAISE and talk to a librarian.
 
-## 12. Take it with you: the phone app {#phone}
+## 13. Take it with you: the phone app {#phone}
 
 Your Project should sync to the Claude phone app. Optional.
 
@@ -518,7 +536,7 @@ Create Projects on your laptop; they should open on your phone too. No phone? Ke
 
 Research (if enabled) on the phone searches only the web and skips connectors (if enabled) such as PubMed, without warning. More: [Quick reference: mobile](part1-reference.qmd#mobile).
 
-## 13. Cowork and the bridge to Claude Code {#cowork-bridge}
+## 14. Cowork and the bridge to Claude Code {#cowork-bridge}
 
 From chat to tasks, and from the app to Claude Code.
 
