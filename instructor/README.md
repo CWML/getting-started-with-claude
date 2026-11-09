@@ -231,15 +231,13 @@ Disclosure template, notice dates, and red flags for fabrication and bias: [Quic
 
 *13. Take it with you: the phone app (0:55 – 0:57)*
 
-**0:55 (2 min):** demo only; people try it on their own phone after class. Cut option: make this a 1-minute demo (saves 1 min).
+**0:55 (2 min):** talk and show, no hands-on and no kit prompts. Cut option: make this a 1-minute walk through the table (saves 1 min).
 
-*13. Take it with you: the phone app (0:55 – 0:57) › Watch, then try: your Project on your phone*
+*13. Take it with you: the phone app (0:55 – 0:57) › What you can do on your phone*
 
-Mirror the phone (iPhone Mirroring or QuickTime). Use the dictation mic for the question. Point out voice mode (beta, the sound-wave icon next to the mic) without running it. Check before class that Projects appear in the phone app for both workspaces.
+If you can, mirror the phone (iPhone Mirroring or QuickTime) and show a Project, a past chat, the voice mode icon, and the Code tab. Don't run voice mode. Check before class that Projects appear in the phone app for both workspaces.
 
-*13. Take it with you: the phone app (0:55 – 0:57) › Phone rules*
-
-Bridge sentence: "This app has a Code tab. In Part 2, /rc connects it to a Claude Code session on your laptop (if your organization has turned on Remote Control)."
+Bridge sentence for the Code tab: "In *Analyzing research data with Claude Code*, /rc connects this tab to a Claude Code session on your laptop (if your organization has turned on Remote Control)."
 
 *14. Cowork and the bridge to Claude Code (0:57 – 0:59)*
 

@@ -508,33 +508,26 @@ article contradicts itself.
 
 ## 13. Take it with you: the phone app {#phone}
 
-Your Project should sync to the Claude phone app. Optional.
+The Claude phone app uses the same account as your laptop, so your work comes with you.
 
-### Watch, then try: your Project on your phone
+### What you can do on your phone
 
-::: {.do-now}
-**Optional.** If you installed the app: open **Claude > Projects >** your Project and ask, by voice or typing:
+| On the phone | What it means |
+|---|---|
+| **Projects** | Open your Projects and keep working in them. They're saved in your Claude account, not in a folder on your computer, so they're there on any device. |
+| **Chats** | Pick up any past chat where you left off. |
+| **Voice mode** | Talk with Claude out loud instead of typing *(if enabled)*. |
+| **Code tab** | If you use Claude Code, run `/rc` in a session on your computer, then steer it from your phone *(if enabled; not in the HIPAA-supported version)*. |
 
-```text
-In two sentences, what's the main limitation of this study?
-```
-:::
-
-**Kit B:**
-
-```text
-In two sentences, what's the most urgent action item from these notes, and who owns it?
-```
-
-Create Projects on your laptop; they should open on your phone too. No phone? Keep verifying on the laptop.
+Create Projects on your laptop; they open on your phone too.
 
 ### Phone rules
 
 - **No photos** of patient lists, charts, screens, or whiteboards.
 - Follow [mobile device policy].
-- The **Code** tab is where Claude Code's `/rc` shows up (if enabled; not available in the HIPAA-supported version). If you don't see it, your plan or organization may not include it.
+- Research *(if enabled)* on the phone searches only the web and skips connectors such as PubMed, without warning.
 
-Research (if enabled) on the phone searches only the web and skips connectors (if enabled) such as PubMed, without warning. More: [Quick reference: mobile](part1-reference.qmd#mobile).
+More: [Quick reference: mobile](part1-reference.qmd#mobile).
 
 ## 14. Cowork and the bridge to Claude Code {#cowork-bridge}
 
