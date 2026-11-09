@@ -4,8 +4,8 @@ subtitle: "Build a Project you'll keep using"
 format:
   html:
     toc: true
-# The class page, taught from directly. ## = timed segment; ### = sub-segment.
-# The agenda table and the ## headings must match exactly and sum to 60 minutes.
+# The class page, taught from directly. ## = segment; ### = sub-segment. No times on this page:
+# the timing (summing to 60 minutes) lives in instructor/README.md.
 # This page is public: instructor notes and private details live in instructor/README.md.
 ---
 
@@ -18,14 +18,16 @@ Sign in to Claude, pick your kit, and (optionally) install the Claude phone app:
 :::
 
 ::: {.callout-important title="No working account?"}
-You can still take part. In class, pair with a neighbor who has an account, or follow along in [Clarity](https://clarity.yale.edu) where it has the same feature. See [Access and alternatives](index.qmd#access).
+[Claude @ Yale](https://ai.yale.edu/yales-ai-tools-and-resources/claude) gives an overview of Yale's Claude offering. [Request a Claude account](https://yale.service-now.com/it?id=service_offering&sys_id=f6429096337382106bab02b19e5c7bf4) before class if you can.
+
+You can still take part without one. In class, pair with a neighbor who has an account, or follow along in [Clarity](https://clarity.yale.edu) for the prompting sections. You can also use a free Claude account, but don't put any Yale information in it: use only the public class files. See [Access and alternatives](index.qmd#access).
 :::
 
 **Ground rule:** no patient information or other sensitive data today. Every file in class is public or made up.
 
-## 1. Welcome and sign in (0:00 – 0:03) {#welcome}
+## 1. Welcome and sign in {#welcome}
 
-**Sign in to Claude in a browser tab now.** Open this page: <https://cwml.github.io/getting-started-with-claude/part1.html> 
+**Sign in to Claude in a browser tab or app now.** Open this page: <https://cwml.github.io/getting-started-with-claude/part1.html> 
 
 
 ### By the end of this class, you'll be able to
@@ -35,54 +37,30 @@ You can still take part. In class, pair with a neighbor who has an account, or f
 3. Evaluate Claude's answers and citations before you use them.
 4. Create a Project you can reuse for your own work.
 
-### Today
 
-| Time | Segment | What you'll do |
-|---|---|---|
-| 0:00 – 0:03 | 1. Welcome and sign in | Sign in; open this page |
-| 0:03 – 0:05 | 2. Why we check | Compare two answers to one question |
-| 0:05 – 0:11 | 3. Which Claude for which data | Decide what you can share |
-| 0:11 – 0:15 | 4. Lock your settings | Set memory before uploading anything |
-| 0:15 – 0:17 | 5. Watch: build a Project | Watch the steps once |
-| 0:17 – 0:26 | 6. Your turn: build your Project | Build it from your kit |
-| 0:26 – 0:28 | 7. Watch: anatomy of a strong prompt | See what each part does |
-| 0:28 – 0:37 | 8. Your turn: run it, then push back | Run two prompts; compare |
-| 0:37 – 0:46 | 9. Verify before you use it | Check quotes, rules, and a citation |
-| 0:46 – 0:51 | 10. Tune it: model, effort and skills | Try a smaller dial; see a skill |
-| 0:51 – 0:55 | 11. Take it with you: the phone app | Open your Project on a phone (optional) |
-| 0:55 – 0:57 | 12. Cowork and the bridge to Claude Code | Hear what comes next |
-| 0:57 – 1:00 | 13. Exit ticket and close | Answer four quick questions |
+## 2. Trust but verify {#trust-verify}
 
+Claude is capable. Its output still needs checking.
 
-## 2. Why we check (0:03 – 0:05) {#why-check}
+### Trust: Claude can do real work
 
-Evidence before enthusiasm.
+- It reads long documents quickly, then summarizes, drafts and reorganizes them well.
+- It follows detailed instructions and handles tasks with several steps.
+- Give it real tasks, not just quick questions.
 
-### Watch: same question, two chats
+### Verify: check the output against the evidence
 
-The same question, sent in two new chats:
+- Claude sounds just as sure when it's wrong. It can misread a source, miss a detail or invent a citation.
+- Check every quote, number, rule and citation against the source before you use it.
+- You're accountable for what you use, not Claude.
 
-```text
-In three sentences: what's the strongest evidence that home blood pressure monitoring improves control?
-```
+**You'll practice this later today in [Verify before you use it](#verify).**
 
-- Do the two answers agree?
-- Which claims would you need to check?
-
-**Claude sounds just as sure either way. That's why the last hands-on step today is verification.**
-
-## 3. Which Claude for which data (0:05 – 0:11) {#which-tool}
+## 3. Which Claude for which data {#which-tool}
 
 Yale offers two versions of Claude. Check which one your data needs before you open a chat.
 
-### Standard or HIPAA-supported?
-
-| | Claude, standard account | Claude, HIPAA-supported version |
-|---|---|---|
-| How to get it | Departmental sign-up (today's class) | [By request](https://yale.service-now.com/it?id=nr_emp_taxonomy_topic&topic_id=9b7bac3947184b9084888aac416d4337) |
-| Data allowed | [classification, confirmed by HSIT on DATE] | [classification, confirmed by HSIT on DATE] |
-| Patient information (PHI) | No | Only if your project and data are approved for it |
-| Features | Everything in today's class (some if enabled) | Some are off or look different; check with [ITS] |
+For details on both, see [ITS AI Platform Services](https://yale.service-now.com/it?id=nr_emp_taxonomy_topic&topic_id=9b7bac3947184b9084888aac416d4337).
 
 **HIPAA-supported doesn't mean approved.** It describes a contract and safeguards. It doesn't approve your project, every feature, or every data set.
 
@@ -115,7 +93,7 @@ More detail, including which features the HIPAA-supported version covers: [Quick
 
 **Safer habits:** describe the situation instead of pasting the record, use made-up examples, and share structure (a template or blank form) rather than content.
 
-## 4. Lock your settings (0:11 – 0:15) {#settings}
+## 4. Lock your settings {#settings}
 
 Set memory *before* you upload anything.
 
@@ -141,7 +119,7 @@ The ghost icon in a new chat starts an incognito chat. It isn't saved to your hi
 
 **Incognito changes what Claude remembers, not what data is allowed.**
 
-## 5. Watch: build a Project (0:15 – 0:17) {#watch-project}
+## 5. Watch: build a Project {#watch-project}
 
 A Project is a workspace for one ongoing piece of work: its own instructions, files, and memory.
 
@@ -153,7 +131,7 @@ A Project is a workspace for one ongoing piece of work: its own instructions, fi
 4. **+** > add your kit's files.
 5. Start a new chat in the Project and send the test prompt.
 
-## 6. Your turn: build your Project (0:17 – 0:26) {#build-project}
+## 6. Your turn: build your Project {#build-project}
 
 Use the kit you chose: **Kit A, Article Explainer** (default) or **Kit B, Committee Assistant** (for administrative staff).
 
@@ -261,7 +239,7 @@ Privacy
 
 The privacy line is advice, not enforcement: Claude will usually follow it, but nothing stops you from pasting something you shouldn't.
 
-## 7. Watch: anatomy of a strong prompt (0:26 – 0:28) {#strong-prompt}
+## 7. Watch: anatomy of a strong prompt {#strong-prompt}
 
 The Project carries the context, so the prompt can stay short and reusable.
 
@@ -275,7 +253,7 @@ The Project carries the context, so the prompt can stay short and reusable.
 | "150 words or fewer... use only the article" | Constraints |
 | "Where this came from" table | Every claim traced to a quote |
 
-## 8. Your turn: run it, then push back (0:28 – 0:37) {#run-prompt}
+## 8. Your turn: run it, then push back {#run-prompt}
 
 Start a **new chat inside your Project**. Use the default model and effort.
 
@@ -374,7 +352,7 @@ Now act as a careful committee chair reviewing your drafts.
   out anything that should stay within the committee.
 ```
 
-## 9. Verify before you use it (0:37 – 0:46) {#verify}
+## 9. Verify before you use it {#verify}
 
 Check against the source, not against Claude. **Don't cut:** this segment stays even when class runs late.
 
@@ -444,7 +422,7 @@ article contradicts itself.
 - **NIH:** applications substantially developed by AI aren't considered original (NOT-OD-25-132), and generative AI is prohibited in peer review (NOT-OD-23-149).
 - **Systematic or scoping review?** Follow RAISE and talk to a librarian.
 
-## 10. Tune it: model, effort and skills (0:46 – 0:51) {#tune}
+## 10. Tune it: model, effort and skills {#tune}
 
 Use the smallest model and lowest effort that does the job.
 
@@ -501,7 +479,7 @@ one-page Word handout.
 Turn next month's agenda into a one-page Word document.
 ```
 
-## 11. Take it with you: the phone app (0:51 – 0:55) {#phone}
+## 11. Take it with you: the phone app {#phone}
 
 Your Project should sync to the Claude phone app. Optional.
 
@@ -531,7 +509,7 @@ Create Projects on your laptop; they should open on your phone too. No phone? Ke
 
 Research (if enabled) on the phone searches only the web and skips connectors (if enabled) such as PubMed, without warning. More: [Quick reference: mobile](part1-reference.qmd#mobile).
 
-## 12. Cowork and the bridge to Claude Code (0:55 – 0:57) {#cowork-bridge}
+## 12. Cowork and the bridge to Claude Code {#cowork-bridge}
 
 From chat to tasks, and from the app to Claude Code.
 
@@ -554,7 +532,7 @@ From chat to tasks, and from the app to Claude Code.
 
 **Next class: Analyzing research data with Claude Code** (90 min). [Class page](part2.qmd)
 
-## 13. Exit ticket and close (0:57 – 1:00) {#exit}
+## 13. Exit ticket and close {#exit}
 
 Four questions, one per objective. Show of hands or [exit-ticket form link].
 

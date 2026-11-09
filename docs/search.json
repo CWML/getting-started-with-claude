@@ -292,7 +292,7 @@
     "href": "part1.html#welcome",
     "title": "Getting started with Claude",
     "section": "1. Welcome and sign in (0:00 – 0:03)",
-    "text": "1. Welcome and sign in (0:00 – 0:03)\nSign in to Claude in a browser tab now. Open this page: https://cwml.github.io/getting-started-with-claude/part1.html\n\nBy the end of this class, you’ll be able to\n\nIdentify the right tool and settings for your data.\nApply prompting patterns to a real task.\nEvaluate Claude’s answers and citations before you use them.\nCreate a Project you can reuse for your own work.\n\n\n\nToday\n\n\n\n\n\n\n\n\nTime\nSegment\nWhat you’ll do\n\n\n\n\n0:00 – 0:03\n1. Welcome and sign in\nSign in; open this page\n\n\n0:03 – 0:05\n2. Why we check\nCompare two answers to one question\n\n\n0:05 – 0:11\n3. Which Claude for which data\nDecide what you can share\n\n\n0:11 – 0:15\n4. Lock your settings\nSet memory before uploading anything\n\n\n0:15 – 0:17\n5. Watch: build a Project\nWatch the steps once\n\n\n0:17 – 0:26\n6. Your turn: build your Project\nBuild it from your kit\n\n\n0:26 – 0:28\n7. Watch: anatomy of a strong prompt\nSee what each part does\n\n\n0:28 – 0:37\n8. Your turn: run it, then push back\nRun two prompts; compare\n\n\n0:37 – 0:46\n9. Verify before you use it\nCheck quotes, rules, and a citation\n\n\n0:46 – 0:51\n10. Tune it: model, effort and skills\nTry a smaller dial; see a skill\n\n\n0:51 – 0:55\n11. Take it with you: the phone app\nOpen your Project on a phone (optional)\n\n\n0:55 – 0:57\n12. Cowork and the bridge to Claude Code\nHear what comes next\n\n\n0:57 – 1:00\n13. Exit ticket and close\nAnswer four quick questions",
+    "text": "1. Welcome and sign in (0:00 – 0:03)\nSign in to Claude in a browser tab or app now. Open this page: https://cwml.github.io/getting-started-with-claude/part1.html\n\nBy the end of this class, you’ll be able to\n\nIdentify the right tool and settings for your data.\nApply prompting patterns to a real task.\nEvaluate Claude’s answers and citations before you use them.\nCreate a Project you can reuse for your own work.",
     "crumbs": [
       "Cushing/Whitney Medical Library",
       "Getting started with Claude",
@@ -300,11 +300,11 @@
     ]
   },
   {
-    "objectID": "part1.html#why-check",
-    "href": "part1.html#why-check",
+    "objectID": "part1.html#trust-verify",
+    "href": "part1.html#trust-verify",
     "title": "Getting started with Claude",
-    "section": "2. Why we check (0:03 – 0:05)",
-    "text": "2. Why we check (0:03 – 0:05)\nEvidence before enthusiasm.\n\nWatch: same question, two chats\nThe same question, sent in two new chats:\nIn three sentences: what's the strongest evidence that home blood pressure monitoring improves control?\n\nDo the two answers agree?\nWhich claims would you need to check?\n\nClaude sounds just as sure either way. That’s why the last hands-on step today is verification.",
+    "section": "2. Trust but verify (0:03 – 0:05)",
+    "text": "2. Trust but verify (0:03 – 0:05)\nClaude is capable. Its output still needs checking.\n\nTrust: Claude can do real work\n\nIt reads long documents quickly, then summarizes, drafts and reorganizes them well.\nIt follows detailed instructions and handles tasks with several steps.\nGive it real tasks, not just quick questions.\n\n\n\nVerify: check the output against the evidence\n\nClaude sounds just as sure when it’s wrong. It can misread a source, miss a detail or invent a citation.\nCheck every quote, number, rule and citation against the source before you use it.\nYou’re accountable for what you use, not Claude.\n\nYou’ll practice this later today in Verify before you use it.",
     "crumbs": [
       "Cushing/Whitney Medical Library",
       "Getting started with Claude",
@@ -537,7 +537,7 @@
     "href": "index.html#access",
     "title": "Claude at the School of Medicine",
     "section": "Access and alternatives",
-    "text": "Access and alternatives\n\n\n\nIf…\nDo this\n\n\n\n\nYou don’t have a working Claude account\nRequest one before class. In class, pair up with someone who has one. In Getting started with Claude, you can also follow along in Clarity where it has the same feature. Don’t create a personal Claude account for anything except the public class files.",
+    "text": "Access and alternatives\n\n\n\nIf…\nDo this\n\n\n\n\nYou don’t have a working Claude account\nSee Claude @ Yale for an overview, then request a Claude account before class. In class, pair up with someone who has one. In Getting started with Claude, you can also follow along in Clarity where it has the same feature. You can also use a free Claude account, but don’t put any Yale information in it: use it only for the public class files.",
     "crumbs": [
       "Cushing/Whitney Medical Library",
       "Home"

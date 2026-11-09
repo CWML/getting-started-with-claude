@@ -56,7 +56,7 @@ Answer these once you've done the dry run.
 | # | Segment | Time | Works as written? | Notes |
 |---|---|---|---|---|
 | 1 | Welcome and sign in | 0:00 – 0:03 | | |
-| 2 | Why we check | 0:03 – 0:05 | | |
+| 2 | Trust but verify | 0:03 – 0:05 | | |
 | 3 | Which Claude for which data | 0:05 – 0:11 | | |
 | 4 | Lock your settings | 0:11 – 0:15 | | |
 | 5 | Watch: build a Project | 0:15 – 0:17 | | |

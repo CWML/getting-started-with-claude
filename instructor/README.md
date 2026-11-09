@@ -66,7 +66,7 @@ Prompt slots such as `[audience]`, `[role]`, `[topic]`, `[committee name]` and `
 
 **Run of show: private details**
 
-- **Demo account:** `[demo account name]`, signed in on the presenter laptop (second browser tab, finished Article Explainer Project open) and the demo phone. One pre-run chat ready: Turn 1 with Claude's questions answered (segment 7). For segment 2, the two-chat screenshot as backup. Don't teach from a personal account.
+- **Demo account:** `[demo account name]`, signed in on the presenter laptop (second browser tab, finished Article Explainer Project open) and the demo phone. One pre-run chat ready: Turn 1 with Claude's questions answered (segment 7). Don't teach from a personal account.
 - **Green cards:** one per seat. Up at 0:03 = signed in with a new chat open. Up at the 0:25 checkpoint = Claude named your kit's files (both for Kit A, the one for Kit B) and quoted one rule. The co-facilitator goes to anyone without a green card. Move on at 0:26 regardless; people catch up during Turn 1.
 - **Timing anchors:** build starts 0:17; checkpoint 0:25; verification starts 0:37 and is never cut.
 - **Cut order if running late:** the phone tryout becomes a 1-minute demo (saves 3); Cowork moves onto the exit slide (saves 1–2); the skill becomes a screenshot (saves 1); the PubMed opening moves into segment 9 (saves 2); the / menu becomes an instructor show (saves ~0.5).
@@ -101,13 +101,9 @@ About half the class is hands-on. Point out the pattern: you watch once, then yo
 
 Keep this to 20 seconds. Nobody signs up for anything during class.
 
-*2. Why we check (0:03 – 0:05)*
+*2. Trust but verify (0:03 – 0:05)*
 
-**0:03 (2 min).** Cut option: if you're late, show the backup screenshot instead of running it live (saves 1 min).
-
-*2. Why we check (0:03 – 0:05) › Watch: same question, two chats*
-
-Open two new incognito chats in the demo account (outside any Project), paste the prompt into both, and send. Put them side by side. Point to a study, number, or claim that appears in one answer and not the other. If the answers agree, ask: "Does agreeing make them right?" Both still need checking. The point: Claude sounds equally confident whether or not it's right, so confidence tells you nothing.
+**0:03 (2 min).** No demo; talk through the two lists. Make the trust side real: Claude is good enough to use for actual work, which is exactly why its mistakes are easy to miss. Then land the verify side: it sounds equally sure whether or not it's right, so confidence tells you nothing. Point ahead to segment 9, where everyone checks their own answer. Cut option: if you're late, read only the bold line (saves 1 min).
 
 *3. Which Claude for which data (0:05 – 0:11)*
 
@@ -311,7 +307,6 @@ Also check: roles only, no names; email under 200 words; the agenda fits 60 minu
 | Uploads fail | Paste the file text into the Project instructions, or open the instructor's shared Project (Can view, if enabled). |
 | Claude outage or Wi-Fi down | Teach from your screen and the backup screenshots. Participants build their Project after class from `part1.html`. |
 | A setting or menu is missing for some people | Say it depends on the workspace or admin settings, show it on your screen, and move on. |
-| Claude is slow or down in segment 2 | Show the two-chat screenshot. |
 | Phone mirroring fails | Show the phone screenshots and say it in one sentence; use the cut order. |
 | Skills or file creation are off | Show the Word handout screenshot and Customize > Skills on your screen. |
 | Windows downloads the kit files as `.md.txt` | Point to the troubleshooting note on the setup page; the files still upload. |

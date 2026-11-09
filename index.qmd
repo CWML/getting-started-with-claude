@@ -183,7 +183,7 @@ If Claude describes a synthetic hypertension trial, you're ready.
 
 | If… | Do this |
 |---|---|
-| **You don't have a working Claude account** | [Request one](https://ai.yale.edu/yales-ai-tools-and-resources/claude) before class. In class, pair up with someone who has one. In *Getting started with Claude*, you can also follow along in [Clarity](https://clarity.yale.edu) where it has the same feature. Don't create a personal Claude account for anything except the public class files. |
+| **You don't have a working Claude account** | See [Claude @ Yale](https://ai.yale.edu/yales-ai-tools-and-resources/claude) for an overview, then [request a Claude account](https://yale.service-now.com/it?id=service_offering&sys_id=f6429096337382106bab02b19e5c7bf4) before class. In class, pair up with someone who has one. In *Getting started with Claude*, you can also follow along in [Clarity](https://clarity.yale.edu) where it has the same feature. You can also use a free Claude account, but don't put any Yale information in it: use it only for the public class files. |
 
 ## Recommended links {#links}
 
