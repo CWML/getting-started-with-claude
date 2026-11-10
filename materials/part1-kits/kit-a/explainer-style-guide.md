@@ -1,6 +1,6 @@
 # Article Explainer style guide (CWML class file, synthetic)
 
-> Fictional/synthetic CWML class file. CC BY 4.0. Contains no real people or patient data.
+> Fictional/synthetic CWML class file. Contains no real people or patient data.
 
 ## Audiences
 - Patients and families: 6th-8th grade reading level, short sentences,

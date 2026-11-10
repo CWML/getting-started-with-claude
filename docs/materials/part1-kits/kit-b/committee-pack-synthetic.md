@@ -1,6 +1,6 @@
 # Preclinical Curriculum Committee: charter and October meeting notes
 
-> Fictional/synthetic CWML class file. CC BY 4.0. Contains no real people or patient data.
+> Fictional/synthetic CWML class file. Contains no real people or patient data.
 
 ## Part 1. Charter
 

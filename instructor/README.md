@@ -4,7 +4,7 @@ Everything here is for the instructor: the dataset spec, the script that generat
 
 | Path | What it is |
 |---|---|
-| `README.md` | This file: Part 1 instructor prep (checklist, workspace check, private run-of-show details, segment notes, kit answer keys, backup plans, 90-minute add-backs), Part 2 instructor prep (checklist, run of show, demo reset, segment notes, backup plans), dataset spec, Part 2 answer keys, extra project files, real-dataset ideas, and how to regenerate the data |
+| `README.md` | This file: Part 1 instructor prep (checklist, workspace check, segment notes, kit answer keys, backup plans, 90-minute add-backs), Part 2 instructor prep (checklist, demo reset, segment notes, backup plans), dataset spec, Part 2 answer keys, extra project files, real-dataset ideas, and how to regenerate the data |
 | `make_data.R` | Generates the class cohort and the Part 2 REDCap exports (seeded, so the output is the same every time) |
 | `solutions/R/`, `solutions/python/` | Answer key and demo fallback for the Part 2 build segment: `01_clean` … `04_figure` and `report.qmd` |
 | `part2-answer-key/` | Part 2 answer key: example `.claude/` folder (settings, command, skill, subagent, hooks), tests, and `CLAUDE.md` additions |
@@ -13,7 +13,7 @@ Everything here is for the instructor: the dataset spec, the script that generat
 
 Teach from the class page, `https://cwml.github.io/getting-started-with-claude/part1.html`, on the projector. Participants follow the same page on their own screens (the link is in segment 1), where they copy prompts, download the kits, and find the take-home material. Keep this guide open on a second screen or printed: the segment notes below give the timing and what to say for each part.
 
-The class page is public, so instructor notes and demo account details live in this file only, never in `part1.qmd`.
+The class page is public, so instructor notes live in this file only, never in `part1.qmd`.
 
 Claude's features, menu names and admin settings change often. The feature descriptions were checked against the Claude Help Center (support.claude.com) and the Claude Code docs on October 30, 2026. When you re-check them, update this date.
 
@@ -63,13 +63,6 @@ Prompt slots such as `[audience]`, `[role]`, `[topic]`, `[committee name]` and `
 - [ ] The Cowork layout (built into Enterprise chat since Oct 23, 2026, if enabled; the HIPAA workspace keeps the older layout).
 - [ ] The Hickey article: the license version on the PMC page, and whether the full text explains 98 vs 99.
 - [ ] Org usage headroom for 18 people running multi-part prompts.
-
-**Run of show: private details**
-
-- **Demo account:** `[demo account name]`, signed in on the presenter laptop (second browser tab, finished Article Explainer Project open) and the demo phone. One pre-run chat ready: Turn 1 with Claude's questions answered (segment 10). Don't teach from a personal account.
-- **Checkpoint at 0:34:** ask who still needs help. The Project works when Claude names the kit's files (both for Kit A, the one for Kit B) and quotes one rule. The co-facilitator goes to anyone stuck. Move on at 0:35 regardless; people catch up during Turn 1.
-- **Timing anchors:** build starts 0:26; checkpoint 0:34; verification starts 0:46 and is never cut.
-- **Cut order if running late:** the phone demo shrinks to 1 minute (saves 1); Cowork shrinks to one sentence (saves 1–2); the skill becomes a screenshot (saves 1); the PubMed opening moves into segment 12 (saves 2); the / menu look in segment 6 becomes an instructor show (saves ~0.5).
 
 **Segment notes**
 
@@ -331,22 +324,6 @@ Claude Code changes almost weekly. This page was checked against code.claude.com
 - [ ] Install `jq`, `styler`, and `lintr` on the demo laptop. The answer-key `settings.json` registers both hooks and turns the sandbox on, so pre-install all R packages.
 - [ ] Rehearse Exercise 1 end to end on the start tag, and compare your numbers with the answer key in `instructor/README.md` (n = 451; −11.01 mmHg, 95% CI −12.80 to −9.22). Keep `instructor/solutions/R/` open in a second Positron window as the fallback.
 - [ ] Record backup screenshots or video of each demo. Enlarge Positron's zoom and the panel font. Check the [slides](https://cwml.github.io/getting-started-with-claude/part2-slides.html)' speaker notes (press **S**).
-
-**Run of show.** Two windows: the slides (presenter view) and Positron with the demo project on `part2-start`, the Claude panel docked on the right.
-
-| Time | On screen | Instructor does |
-|---|---|---|
-| −0:15 | Slides: title | Demo reset (below). Open the panel, check `/status`, enlarge fonts. |
-| 0:00 | Slides → Positron | **1** Welcome. Everyone opens the project and the panel. |
-| 0:05 | Slides → Positron | **2a** data rules · **2b** `CLAUDE.md` and memory · **2c** Manual mode, deny rule, git |
-| 0:17 | Positron | **3a** plan mode on the SAP · **3b** `R/01_clean.R` · **3c** Data Explorer check |
-| 0:33 | Positron | **3d** Table 1, model, report · **3e** rewind and commit. Circulate. |
-| 0:42 | Slides: break | Help people who are behind. Pull in `R/` from `part2-complete` on your screen if needed. |
-| 0:47 | Slides → Positron | **4a** context · **4b** model and effort · **4c** ultracode · **4d** `/rc` |
-| 0:57 | Slides → Positron | **5a** talk · **5b** pull in two skills, agent, hook · **5c** Exercise 2 |
-| 1:12 | Positron | **6** REDCap and legacy code (cut first if late) |
-| 1:20 | Positron → slides | **7** tests, reviewer, "why cleaning matters," discussion |
-| 1:27 | Slides: takeaways | **8** Try at home, feedback link, Q&A until 1:30. Then run the demo reset. |
 
 **Demo reset** (before class and after each run):
 

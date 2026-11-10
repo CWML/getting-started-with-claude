@@ -24,6 +24,6 @@ The files are plain text (`.md`). You can open them in any text editor or web br
 
 ## License and data
 
-- The style guide and the committee pack carry this banner: "Fictional/synthetic CWML class file. CC BY 4.0. Contains no real people or patient data." They and this README are from the Cushing/Whitney Medical Library (CWML) and are shared under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+- The style guide and the committee pack carry this banner: "Fictional/synthetic CWML class file. Contains no real people or patient data." They and this README are from the Cushing/Whitney Medical Library (CWML).
 - The article copy is © 2025 Hickey et al. and is shared under its own Creative Commons Attribution (CC BY 4.0) license. If you reuse it, credit the authors and the original article.
 - After class, you can swap in your own files, but follow the same rules: no patient information, no confidential student or personnel records, and only content you're allowed to share. For library-licensed articles, use open-access versions or check [library license guidance].
