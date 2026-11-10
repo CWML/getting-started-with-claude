@@ -97,7 +97,7 @@ Set up your account and memory *before* you upload anything.
 ### Account settings: instructions for Claude
 
 ::: {.do-now}
-**Your turn.** Click your name or initials (lower left) > **Settings > General** *(check before class)*.
+**Your turn.** Click your name or initials (lower left) > **Settings > General**.
 
 Find **Personal preferences** (the box asking what Claude should consider in its responses) and add a line or two about how you like answers. Claude applies them in every chat.
 :::
@@ -435,7 +435,7 @@ Now act as a careful committee chair reviewing your drafts.
 
 ## 12. Verify before you use it {#verify}
 
-Check against the source, not against Claude. **Don't cut:** this segment stays even when class runs late.
+Check against the source, not against Claude. 
 
 ### Your turn: check quotes and rules
 
