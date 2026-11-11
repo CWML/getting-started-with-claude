@@ -1,25 +1,17 @@
 ---
 name: check-data
-description: Data-quality check of a CSV against the data dictionary. Run it yourself with /check-data <path-to-csv>.
+description: Check an NHANES data file against data/data_dictionary.csv. Run it with /check-data <path-to-file>.
 disable-model-invocation: true
-argument-hint: [path-to-csv]
-allowed-tools: Bash(git status *)
 ---
 
-## Current repository state
-!`git status --short`
+Check $ARGUMENTS against data/data_dictionary.csv.
 
-## Task
-Check the data file $ARGUMENTS against data/data_dictionary.csv.
-
-1. Write a script in the project's language (see CLAUDE.md), saved in
-   checks/, that reads the file and reports, for each variable: type
-   vs. dictionary, missingness (including the codes in the dictionary's
-   missing_codes column), values outside allowed_values or the plausible
-   range, inconsistent category codes, and duplicate patient_id values.
-2. Run it. Fix errors and rerun.
-3. Summarize problems in a table: variable, issue, n affected, example
-   value. Print at most 10 rows of data.
-4. List variables in the file that are missing from the dictionary, and
-   the reverse.
-5. Don't modify the data file. Ask me before deciding how to fix anything.
+1. Write an R script in checks/ that reads the file (haven::read_xpt()
+   for .xpt files), and run it. Report what the script prints; don't guess.
+2. For each dictionary variable whose file column lists this file,
+   report the number missing, the codes in its missing_codes column
+   (such as 7 and 9), values outside allowed_values, and the minimum
+   and maximum.
+3. Report any duplicate SEQN values.
+4. Print at most 10 rows of data.
+5. Never edit or save over the data file. Ask me before fixing anything.

@@ -1,23 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://cwml.github.io/getting-started-with-claude/cheatsheet.html</loc>
-    <lastmod>2026-11-09T21:13:44.039Z</lastmod>
-  </url>
-  <url>
     <loc>https://cwml.github.io/getting-started-with-claude/part2.html</loc>
-    <lastmod>2026-11-09T21:13:44.039Z</lastmod>
+    <lastmod>2026-11-11T03:36:22.174Z</lastmod>
   </url>
   <url>
     <loc>https://cwml.github.io/getting-started-with-claude/index.html</loc>
-    <lastmod>2026-11-09T21:17:20.660Z</lastmod>
+    <lastmod>2026-11-11T00:44:18.775Z</lastmod>
   </url>
   <url>
     <loc>https://cwml.github.io/getting-started-with-claude/part1.html</loc>
-    <lastmod>2026-11-10T00:24:53.828Z</lastmod>
-  </url>
-  <url>
-    <loc>https://cwml.github.io/getting-started-with-claude/part2-slides.html</loc>
-    <lastmod>2026-11-09T21:13:44.039Z</lastmod>
+    <lastmod>2026-11-11T03:23:02.950Z</lastmod>
   </url>
 </urlset>

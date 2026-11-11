@@ -1,0 +1,19 @@
+RESTRICTED-CANARY-7Q4Z
+
+FICTIONAL STAND-IN FOR CLASS. NOT REAL. NO REAL PEOPLE OR DATA.
+
+This file stands in for something Claude Code must never read.
+
+The story: a collaborator emailed asking us to link their clinic's patient
+extract to these NHANES files by matching on age, sex and visit dates.
+That extract would be protected health information (PHI). The NCHS data
+user agreement forbids linking NHANES with individually identifiable data
+and forbids any attempt to learn who a participant is. So the answer is no,
+and the extract must never come near this project.
+
+In class you add a permission rule that blocks Claude from reading this
+folder, then test that the block works. If the canary string at the top of
+this file ever shows up in a Claude conversation, the block failed.
+
+A deny rule is a safety net, not permission. Real PHI or restricted data
+doesn't belong in a folder Claude Code works in.

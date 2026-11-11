@@ -80,9 +80,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-ac0a192a280d01e3ff19409a8090d491.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-b415a55bb24f02d078fdecd4dbf90cdc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-e33373163f51f8843b6f1d9b9a8c9552.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-b415a55bb24f02d078fdecd4dbf90cdc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-18872a46b4cfa5ef19c802de734c2b94.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-4755211b1e8fe089f66b017163236d70.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-18872a46b4cfa5ef19c802de734c2b94.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -400,18 +400,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./part2-slides.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Slides</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./cheatsheet.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cheat sheet</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./index.html#setup-part2" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Setup</span></a>
   </div>
@@ -456,7 +444,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></li>
   <li><a href="#setup-part2" id="toc-setup-part2" class="nav-link" data-scroll-target="#setup-part2">Setup for Analyzing research data with Claude Code</a>
   <ul class="collapse">
-  <li><a href="#positron-and-r-or-python" id="toc-positron-and-r-or-python" class="nav-link" data-scroll-target="#positron-and-r-or-python">1. Positron and R (or Python)</a></li>
+  <li><a href="#positron-and-r" id="toc-positron-and-r" class="nav-link" data-scroll-target="#positron-and-r">1. Positron and R</a></li>
   <li><a href="#git-required" id="toc-git-required" class="nav-link" data-scroll-target="#git-required">2. git (required)</a></li>
   <li><a href="#the-claude-code-extension" id="toc-the-claude-code-extension" class="nav-link" data-scroll-target="#the-claude-code-extension">3. The Claude Code extension</a></li>
   <li><a href="#the-practice-project" id="toc-the-practice-project" class="nav-link" data-scroll-target="#the-practice-project">4. The practice project</a></li>
@@ -512,8 +500,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ol type="1">
 <li><strong>Configure</strong> a Claude Code project that protects raw and restricted data.</li>
 <li><strong>Implement</strong> a plan-first workflow to clean and analyze study data.</li>
+<li><strong>Distinguish</strong> tasks to delegate to Claude from decisions you keep.</li>
 <li><strong>Evaluate</strong> AI-generated code and results against the analysis plan.</li>
-<li><strong>Build</strong> a reusable command, skill, or hook for a research data task.</li>
 </ol>
 </section>
 </section>
@@ -536,12 +524,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="odd">
 <td><strong>For</strong></td>
 <td>Anyone at the School of Medicine. No programming needed.</td>
-<td>Researchers, coordinators, analysts, and clinicians who can read a little R or Python. <em>Getting started with Claude</em> helps but isn’t required.</td>
+<td>Researchers, coordinators, analysts, and clinicians who can read a little R. <em>Getting started with Claude</em> helps but isn’t required.</td>
 </tr>
 <tr class="even">
 <td><strong>What you’ll do</strong></td>
 <td>Build a Claude Project you’ll keep using, then prompt it well and check what it gives you.</td>
-<td>Take a synthetic clinical trial from raw data to a report with Claude Code in Positron, checking every step yourself.</td>
+<td>Use Claude Code in Positron to prepare and analyze real CDC survey data (NHANES) and reproduce a published CDC estimate. You make the decisions and check every step.</td>
 </tr>
 <tr class="odd">
 <td><strong>Time</strong></td>
@@ -565,9 +553,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <p><strong>Analyzing research data with Claude Code</strong></p>
 <ul>
-<li><a href="#setup-part2">Setup</a>: install Positron, git, and the Claude Code extension (about 30 minutes)</li>
+<li><a href="#setup-part2">Setup</a>: install Positron, R, git, and the Claude Code extension, and download the practice project (about 30 minutes)</li>
 <li><a href="./part2.html">Class page</a>: the class itself, step by step</li>
-<li><a href="./cheatsheet.html">Cheat sheet</a>: Claude Code commands and workflow at a glance</li>
 </ul>
 </section>
 <section id="data" class="level2">
@@ -584,12 +571,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="callout-body-container callout-body">
 <ul>
 <li>In class, use <strong>only the class files and public information</strong>. Never use patient data or other sensitive information in either class.</li>
-<li><strong>A HIPAA-supported version of Claude is available by request:</strong> <code>[request link]</code>. Being HIPAA-supported doesn’t approve your project, every feature, or every data set.</li>
-<li>Before you use Claude with real work data, follow <code>[Yale data classification / policy link]</code>. Questions go to <code>[HSIT / HIPAA Privacy Office contact]</code>.</li>
+<li><strong>A HIPAA-supported version of Claude is available by request</strong> (see the <a href="https://yale.service-now.com/it?id=service_offering&amp;sys_id=f6429096337382106bab02b19e5c7bf4">ITS service page for Claude Enterprise</a>). Being HIPAA-supported doesn’t approve your project, every feature, or every data set.</li>
+<li>Before you use Claude with real work data, follow <a href="https://cybersecurity.yale.edu/data-classification">Yale’s data classification</a>. Questions go to <code>[HSIT / HIPAA Privacy Office contact]</code>.</li>
 </ul>
 </div>
 </div>
-<p>Both classes use only fictional (synthetic) files or public, openly licensed material. The article in <em>Getting started with Claude</em> is an open-access paper (Hickey et al., <em>PLoS Medicine</em> 2025, CC BY). The hypertension trial in <em>Analyzing research data with Claude Code</em> is made up.</p>
+<p>Both classes use only fictional (synthetic) files or public, openly licensed material. The article in <em>Getting started with Claude</em> is an open-access paper (Hickey et al., <em>PLoS Medicine</em> 2025, CC BY). <em>Analyzing research data with Claude Code</em> uses real, public CDC survey data (NHANES, August 2021–August 2023). It’s de-identified survey data, not patient data. The NCHS data user agreement still applies: use it for statistical analysis only, never try to identify anyone, and never link it to other data about the same people.</p>
 <p><span id="setup"></span></p>
 </section>
 <section id="setup-part1" class="level2">
@@ -669,27 +656,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="setup-part2" class="level2">
 <h2 class="anchored" data-anchor-id="setup-part2">Setup for Analyzing research data with Claude Code</h2>
 <p>About 30 minutes. Do the steps in order. You need a Yale Claude account whose seat includes <strong>Claude Code</strong>: <code>[how to check / who to ask]</code>.</p>
-<section id="positron-and-r-or-python" class="level3">
-<h3 class="anchored" data-anchor-id="positron-and-r-or-python">1. Positron and R (or Python)</h3>
-<p><a href="https://positron.posit.co">Positron</a> is a free data science editor from Posit, the makers of RStudio. It works with R and Python and includes Quarto. VS Code (version 1.94 or later) works too, but class is taught in Positron.</p>
+<section id="positron-and-r" class="level3">
+<h3 class="anchored" data-anchor-id="positron-and-r">1. Positron and R</h3>
+<p><a href="https://positron.posit.co">Positron</a> is a free data science editor from Posit, the makers of RStudio. It works with R and supports Quarto. VS Code (version 1.94 or later) works too, but class is taught in Positron.</p>
 <ul class="task-list">
 <li><label><input type="checkbox">Install Positron: <a href="https://positron.posit.co/download.html" class="uri">https://positron.posit.co/download.html</a></label></li>
-<li><label><input type="checkbox">Install R or Python and the class packages:</label></li>
+<li><label><input type="checkbox">Install <strong>R</strong> from <a href="https://cloud.r-project.org" class="uri">https://cloud.r-project.org</a>. Positron should find R. If it doesn’t, restart Positron, then ask the instructors.</label></li>
+<li><label><input type="checkbox">In Positron’s <strong>Console</strong>, install the class packages:</label></li>
 </ul>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">R (recommended)</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Python</a></li></ul>
-<div class="tab-content">
-<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p>Install <strong>R</strong> from <a href="https://cloud.r-project.org" class="uri">https://cloud.r-project.org</a>. Positron finds it automatically. Then, in Positron’s <strong>R Console</strong>, run:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"tidyverse"</span>, <span class="st">"here"</span>, <span class="st">"gtsummary"</span>, <span class="st">"gt"</span>, <span class="st">"broom"</span>, <span class="st">"janitor"</span>, <span class="st">"testthat"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<p>Install <strong>Python 3.10 or later</strong> from <a href="https://www.python.org/downloads/" class="uri">https://www.python.org/downloads/</a>. Then, in Positron’s <strong>Terminal</strong>, run:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> pip install pandas numpy statsmodels matplotlib jupyter pytest</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>In class, you’ll swap the project’s <code>CLAUDE.md</code> for the Python version (the project’s <code>README.md</code> explains how).</p>
-</div>
-</div>
-</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"tidyverse"</span>, <span class="st">"haven"</span>, <span class="st">"survey"</span>, <span class="st">"here"</span>, <span class="st">"gtsummary"</span>, <span class="st">"gt"</span>, <span class="st">"broom"</span>, <span class="st">"janitor"</span>, <span class="st">"testthat"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The class uses R only. If you work in Python, pair with an R user or follow along.</p>
 </section>
 <section id="git-required" class="level3">
 <h3 class="anchored" data-anchor-id="git-required">2. git (required)</h3>
@@ -699,23 +675,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><label><input type="checkbox"><strong>Windows:</strong> install <strong>Git for Windows</strong> from <a href="https://git-scm.com/downloads" class="uri">https://git-scm.com/downloads</a>. Accept the default options.</label></li>
 <li><label><input type="checkbox">Set your name and email. In Positron, open the <strong>Terminal</strong> tab and run:</label></li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"Your Name"</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">"you@yale.edu"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"Your Name"</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">"you@yale.edu"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="the-claude-code-extension" class="level3">
 <h3 class="anchored" data-anchor-id="the-claude-code-extension">3. The Claude Code extension</h3>
 <ul class="task-list">
-<li><label><input type="checkbox">In Positron, open the <strong>Extensions</strong> view (the four-squares icon in the left sidebar).</label></li>
-<li><label><input type="checkbox">Search for <strong>Claude Code</strong> and install the extension published by <strong>Anthropic</strong>. (Positron gets extensions from the Open VSX registry; VS Code uses its own marketplace.)</label></li>
+<li><label><input type="checkbox">In Positron, open the <strong>Extensions</strong> view from the Activity Bar on the left.</label></li>
+<li><label><input type="checkbox">Search for <strong>Claude Code</strong> and install the extension published by <strong>Anthropic</strong>. (Positron installs extensions from a mirror of the Open VSX catalog; VS Code uses its own marketplace.)</label></li>
 <li><label><input type="checkbox">Open the Claude Code panel and sign in with your Yale Claude account.</label></li>
 </ul>
 </section>
 <section id="the-practice-project" class="level3">
 <h3 class="anchored" data-anchor-id="the-practice-project">4. The practice project</h3>
 <ul class="task-list">
-<li><label><input type="checkbox">Download <a href="downloads/hypertension-cohort.zip">hypertension-cohort.zip</a>. It holds a synthetic blood-pressure trial, a data dictionary, an analysis plan, REDCap-style exports, and legacy SAS/Stata code.</label></li>
-<li><label><input type="checkbox">Unzip it somewhere easy to find, such as <code>Documents</code>.</label></li>
-<li><label><input type="checkbox">In Positron, choose <strong>File &gt; Open Folder</strong> and select the <code>hypertension-cohort</code> folder.</label></li>
+<li><label><input type="checkbox">Download <a href="downloads/nhanes-bp.zip">nhanes-bp.zip</a>. It holds three real data files from the CDC’s National Health and Nutrition Examination Survey (NHANES), August 2021–August 2023: demographics, blood pressure readings, and a blood pressure questionnaire. It also has the CDC codebooks, a data dictionary, and a one-page analysis plan.</label></li>
+<li><label><input type="checkbox">Unzip it somewhere easy to find, such as <code>Documents</code>. On Windows, right-click the zip and choose <strong>Extract All</strong>. If you end up with an <code>nhanes-bp</code> folder inside another <code>nhanes-bp</code> folder, use the inner one.</label></li>
+<li><label><input type="checkbox">In Positron, choose <strong>File &gt; Open Folder</strong> and select the <code>nhanes-bp</code> folder.</label></li>
 </ul>
 </section>
 <section id="check-that-it-works" class="level3">
@@ -723,11 +699,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul class="task-list">
 <li><label><input type="checkbox">In the Claude Code panel, send this prompt:</label></li>
 </ul>
-<pre class="text"><code>Read the README and CLAUDE.md, then tell me in three sentences what this project is.</code></pre>
+<div class="prompt-block">
+<div class="prompt-label">
+Prompt
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>Read the README and CLAUDE.md, then tell me in three sentences what this project is.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>If Claude describes CDC NHANES blood-pressure data from 2021–2023, you’re ready.</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Check that Claude can run R and git for you. Send this prompt. If Claude asks to run a command, allow it:</label></li>
+</ul>
+<div class="prompt-block">
+<div class="prompt-label">
+Prompt
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>Run `Rscript --version` and `git --version`, then tell me what each one printed.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>If both print a version number, Claude can run R and git. If one fails, check that it’s installed, restart Positron, and try again.</p>
+<p><strong>Windows:</strong> the R installer doesn’t add <code>Rscript</code> to your PATH, so Claude can’t find it. Open Start, search for <strong>Edit environment variables for your account</strong>, select <strong>Path</strong>, click <strong>Edit</strong>, then <strong>New</strong>, and add R’s <code>bin</code> folder, usually <code>C:\Program Files\R\R-4.x.x\bin</code> (use your version’s folder). Click OK, restart Positron, and run the prompt again.</p>
 <ul class="task-list">
 <li><label><input type="checkbox">Type <code>/status</code> in the panel. Check that it shows your Yale account. Note the version number.</label></li>
 </ul>
-<p>If Claude describes a synthetic hypertension trial, you’re ready.</p>
 </section>
 <section id="optional-extras" class="level3">
 <h3 class="anchored" data-anchor-id="optional-extras">Optional extras</h3>
@@ -742,18 +734,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <td><strong>Standalone Claude Code CLI</strong></td>
-<td>A few things in class only work in the terminal version. You can also just watch those parts. The extension doesn’t add <code>claude</code> to your Terminal.</td>
+<td>One optional step in class uses the terminal version of Claude Code. You can also just watch it. The extension doesn’t add <code>claude</code> to your Terminal.</td>
 <td><code>[link to current install instructions]</code> (see the <a href="https://code.claude.com/docs">Claude Code docs</a>)</td>
-</tr>
-<tr class="even">
-<td><strong>jq</strong></td>
-<td>To try the hook example yourself</td>
-<td>macOS: <code>brew install jq</code> · Linux: <code>sudo apt-get install jq</code> · Windows: <code>[local guidance for Windows users]</code> (the sandbox needs WSL2)</td>
-</tr>
-<tr class="odd">
-<td><strong>Claude phone app</strong></td>
-<td>To watch and approve your laptop’s Claude Code session from your phone with <code>/rc</code> (Remote Control), if enabled. Remote Control is off in the HIPAA-supported version.</td>
-<td>Install <strong>Claude</strong> by Anthropic from the App Store or Google Play and sign in. Follow <code>[mobile device policy]</code>.</td>
 </tr>
 </tbody>
 </table>
@@ -847,7 +829,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   var page = location.pathname.split("/").pop() || "index.html";
   var target = {
     "part1.html": "part1.html",
-    "part2.html": "part2.html", "part2-slides.html": "part2.html", "cheatsheet.html": "part2.html"
+    "part2.html": "part2.html"
   }[page] || "index.html";
   document.querySelectorAll("#navbarCollapse a.nav-link").forEach(function (a) {
     var href = (a.getAttribute("href") || "").split("#")[0].split("/").pop();

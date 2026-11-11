@@ -1,9 +1,0 @@
-patient_id,visit,note
-HTN-0012,v1,"SYNTHETIC STAND-IN. Fictional note: reports mild dizziness on standing after dose increase."
-HTN-0047,v1,"SYNTHETIC STAND-IN. Fictional note: missed two weeks of medication while traveling."
-HTN-0103,v2,"SYNTHETIC STAND-IN. Fictional note: home readings lower than clinic readings."
-HTN-0158,v2,"SYNTHETIC STAND-IN. Fictional note: ankle swelling, amlodipine dose reduced."
-HTN-0221,v3,"SYNTHETIC STAND-IN. Fictional note: cuff size changed from M to L at this visit."
-HTN-0299,v3,"SYNTHETIC STAND-IN. Fictional note: declined 12-month labs."
-HTN-0350,v1,"SYNTHETIC STAND-IN. Fictional note: new cough, switched from ACE inhibitor to ARB."
-HTN-0412,v2,"SYNTHETIC STAND-IN. Fictional note: fall at home, no injury, reported as adverse event."

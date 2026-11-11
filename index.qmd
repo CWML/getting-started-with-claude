@@ -18,15 +18,15 @@ These pages are the class materials for two in-person classes from the Cushing/W
 
 1. **Configure** a Claude Code project that protects raw and restricted data.
 2. **Implement** a plan-first workflow to clean and analyze study data.
-3. **Evaluate** AI-generated code and results against the analysis plan.
-4. **Build** a reusable command, skill, or hook for a research data task.
+3. **Distinguish** tasks to delegate to Claude from decisions you keep.
+4. **Evaluate** AI-generated code and results against the analysis plan.
 
 ## The two classes {#classes}
 
 | | Getting started with Claude | Analyzing research data with Claude Code |
 |---|---|---|
-| **For** | Anyone at the School of Medicine. No programming needed. | Researchers, coordinators, analysts, and clinicians who can read a little R or Python. *Getting started with Claude* helps but isn't required. |
-| **What you'll do** | Build a Claude Project you'll keep using, then prompt it well and check what it gives you. | Take a synthetic clinical trial from raw data to a report with Claude Code in Positron, checking every step yourself. |
+| **For** | Anyone at the School of Medicine. No programming needed. | Researchers, coordinators, analysts, and clinicians who can read a little R. *Getting started with Claude* helps but isn't required. |
+| **What you'll do** | Build a Claude Project you'll keep using, then prompt it well and check what it gives you. | Use Claude Code in Positron to prepare and analyze real CDC survey data (NHANES) and reproduce a published CDC estimate. You make the decisions and check every step. |
 | **Time** | 60 minutes | 90 minutes |
 | **Where** | In person, SHM L 111, up to 18 people | In person, SHM L 111, up to 18 people |
 
@@ -41,20 +41,19 @@ These pages are the class materials for two in-person classes from the Cushing/W
 
 **Analyzing research data with Claude Code**
 
-- [Setup](#setup-part2): install Positron, git, and the Claude Code extension (about 30 minutes)
+- [Setup](#setup-part2): install Positron, R, git, and the Claude Code extension, and download the practice project (about 30 minutes)
 - [Class page](part2.qmd): the class itself, step by step
-- [Cheat sheet](cheatsheet.qmd): Claude Code commands and workflow at a glance
 
 
 ## Data use {#data}
 
 ::: {.callout-warning title="No patient data, ever"}
 - In class, use **only the class files and public information**. Never use patient data or other sensitive information in either class.
-- **A HIPAA-supported version of Claude is available by request:** `[request link]`. Being HIPAA-supported doesn't approve your project, every feature, or every data set.
-- Before you use Claude with real work data, follow `[Yale data classification / policy link]`. Questions go to `[HSIT / HIPAA Privacy Office contact]`.
+- **A HIPAA-supported version of Claude is available by request** (see the [ITS service page for Claude Enterprise](https://yale.service-now.com/it?id=service_offering&sys_id=f6429096337382106bab02b19e5c7bf4)). Being HIPAA-supported doesn't approve your project, every feature, or every data set.
+- Before you use Claude with real work data, follow [Yale's data classification](https://cybersecurity.yale.edu/data-classification). Questions go to `[HSIT / HIPAA Privacy Office contact]`.
 :::
 
-Both classes use only fictional (synthetic) files or public, openly licensed material. The article in *Getting started with Claude* is an open-access paper (Hickey et al., *PLoS Medicine* 2025, CC BY). The hypertension trial in *Analyzing research data with Claude Code* is made up.
+Both classes use only fictional (synthetic) files or public, openly licensed material. The article in *Getting started with Claude* is an open-access paper (Hickey et al., *PLoS Medicine* 2025, CC BY). *Analyzing research data with Claude Code* uses real, public CDC survey data (NHANES, August 2021–August 2023). It's de-identified survey data, not patient data. The NCHS data user agreement still applies: use it for statistical analysis only, never try to identify anyone, and never link it to other data about the same people.
 
 []{#setup}
 
@@ -102,32 +101,19 @@ Near the end of class we'll open your Project on a phone. This step is optional;
 
 About 30 minutes. Do the steps in order. You need a Yale Claude account whose seat includes **Claude Code**: `[how to check / who to ask]`.
 
-### 1. Positron and R (or Python)
+### 1. Positron and R
 
-[Positron](https://positron.posit.co) is a free data science editor from Posit, the makers of RStudio. It works with R and Python and includes Quarto. VS Code (version 1.94 or later) works too, but class is taught in Positron.
+[Positron](https://positron.posit.co) is a free data science editor from Posit, the makers of RStudio. It works with R and supports Quarto. VS Code (version 1.94 or later) works too, but class is taught in Positron.
 
 - [ ] Install Positron: <https://positron.posit.co/download.html>
-- [ ] Install R or Python and the class packages:
-
-::: {.panel-tabset}
-#### R (recommended)
-
-Install **R** from <https://cloud.r-project.org>. Positron finds it automatically. Then, in Positron's **R Console**, run:
+- [ ] Install **R** from <https://cloud.r-project.org>. Positron should find R. If it doesn't, restart Positron, then ask the instructors.
+- [ ] In Positron's **Console**, install the class packages:
 
 ```r
-install.packages(c("tidyverse", "here", "gtsummary", "gt", "broom", "janitor", "testthat"))
+install.packages(c("tidyverse", "haven", "survey", "here", "gtsummary", "gt", "broom", "janitor", "testthat"))
 ```
 
-#### Python
-
-Install **Python 3.10 or later** from <https://www.python.org/downloads/>. Then, in Positron's **Terminal**, run:
-
-```bash
-python3 -m pip install pandas numpy statsmodels matplotlib jupyter pytest
-```
-
-In class, you'll swap the project's `CLAUDE.md` for the Python version (the project's `README.md` explains how).
-:::
+The class uses R only. If you work in Python, pair with an R user or follow along.
 
 ### 2. git (required)
 
@@ -144,15 +130,15 @@ git config --global user.email "you@yale.edu"
 
 ### 3. The Claude Code extension
 
-- [ ] In Positron, open the **Extensions** view (the four-squares icon in the left sidebar).
-- [ ] Search for **Claude Code** and install the extension published by **Anthropic**. (Positron gets extensions from the Open VSX registry; VS Code uses its own marketplace.)
+- [ ] In Positron, open the **Extensions** view from the Activity Bar on the left.
+- [ ] Search for **Claude Code** and install the extension published by **Anthropic**. (Positron installs extensions from a mirror of the Open VSX catalog; VS Code uses its own marketplace.)
 - [ ] Open the Claude Code panel and sign in with your Yale Claude account.
 
 ### 4. The practice project
 
-- [ ] Download [hypertension-cohort.zip](downloads/hypertension-cohort.zip). It holds a synthetic blood-pressure trial, a data dictionary, an analysis plan, REDCap-style exports, and legacy SAS/Stata code.
-- [ ] Unzip it somewhere easy to find, such as `Documents`.
-- [ ] In Positron, choose **File > Open Folder** and select the `hypertension-cohort` folder.
+- [ ] Download [nhanes-bp.zip](downloads/nhanes-bp.zip). It holds three real data files from the CDC's National Health and Nutrition Examination Survey (NHANES), August 2021–August 2023: demographics, blood pressure readings, and a blood pressure questionnaire. It also has the CDC codebooks, a data dictionary, and a one-page analysis plan.
+- [ ] Unzip it somewhere easy to find, such as `Documents`. On Windows, right-click the zip and choose **Extract All**. If you end up with an `nhanes-bp` folder inside another `nhanes-bp` folder, use the inner one.
+- [ ] In Positron, choose **File > Open Folder** and select the `nhanes-bp` folder.
 
 ### 5. Check that it works
 
@@ -162,17 +148,25 @@ git config --global user.email "you@yale.edu"
 Read the README and CLAUDE.md, then tell me in three sentences what this project is.
 ```
 
-- [ ] Type `/status` in the panel. Check that it shows your Yale account. Note the version number.
+If Claude describes CDC NHANES blood-pressure data from 2021–2023, you're ready.
 
-If Claude describes a synthetic hypertension trial, you're ready.
+- [ ] Check that Claude can run R and git for you. Send this prompt. If Claude asks to run a command, allow it:
+
+```text
+Run `Rscript --version` and `git --version`, then tell me what each one printed.
+```
+
+If both print a version number, Claude can run R and git. If one fails, check that it's installed, restart Positron, and try again.
+
+**Windows:** the R installer doesn't add `Rscript` to your PATH, so Claude can't find it. Open Start, search for **Edit environment variables for your account**, select **Path**, click **Edit**, then **New**, and add R's `bin` folder, usually `C:\Program Files\R\R-4.x.x\bin` (use your version's folder). Click OK, restart Positron, and run the prompt again.
+
+- [ ] Type `/status` in the panel. Check that it shows your Yale account. Note the version number.
 
 ### Optional extras
 
 | Extra | Why | How |
 |---|---|---|
-| **Standalone Claude Code CLI** | A few things in class only work in the terminal version. You can also just watch those parts. The extension doesn't add `claude` to your Terminal. | `[link to current install instructions]` (see the [Claude Code docs](https://code.claude.com/docs)) |
-| **jq** | To try the hook example yourself | macOS: `brew install jq` · Linux: `sudo apt-get install jq` · Windows: `[local guidance for Windows users]` (the sandbox needs WSL2) |
-| **Claude phone app** | To watch and approve your laptop's Claude Code session from your phone with `/rc` (Remote Control), if enabled. Remote Control is off in the HIPAA-supported version. | Install **Claude** by Anthropic from the App Store or Google Play and sign in. Follow `[mobile device policy]`. |
+| **Standalone Claude Code CLI** | One optional step in class uses the terminal version of Claude Code. You can also just watch it. The extension doesn't add `claude` to your Terminal. | `[link to current install instructions]` (see the [Claude Code docs](https://code.claude.com/docs)) |
 
 - [ ] Read the [institutional AI and data policy](https://provost.yale.edu/news/guidelines-use-generative-ai-tools).
 

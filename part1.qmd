@@ -104,7 +104,7 @@ Find **Personal preferences** (the box asking what Claude should consider in its
 
 For example:
 
-```text
+```{.text prompt-label="Instructions for Claude"}
 Write in plain language. Use short paragraphs and bullet points. Ask me a question if my request is unclear.
 ```
 
@@ -251,7 +251,7 @@ For anyone who reads research articles: turn an article into an accurate, plain-
 
 **Project instructions:** copy, paste, then change one line (for example, swap "medical-school audiences" for your own audience).
 
-```text
+```{.text prompt-label="Project instructions"}
 You help me turn research articles into accurate, plain-language
 explainers for medical-school audiences.
 
@@ -292,7 +292,7 @@ For administrative staff: turn rough meeting notes into a summary email, an acti
 
 **Project instructions:** copy, paste, then change one line (for example, name the kind of committee you staff).
 
-```text
+```{.text prompt-label="Project instructions"}
 You help me staff a curriculum committee.
 
 Sources

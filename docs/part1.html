@@ -23,6 +23,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -46,9 +81,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-ac0a192a280d01e3ff19409a8090d491.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-b415a55bb24f02d078fdecd4dbf90cdc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-e33373163f51f8843b6f1d9b9a8c9552.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-b415a55bb24f02d078fdecd4dbf90cdc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-18872a46b4cfa5ef19c802de734c2b94.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-4755211b1e8fe089f66b017163236d70.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-18872a46b4cfa5ef19c802de734c2b94.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -366,18 +401,6 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./part2-slides.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Slides</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./cheatsheet.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cheat sheet</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./index.html#setup-part2" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Setup</span></a>
   </div>
@@ -642,7 +665,12 @@ ul.task-list li input[type="checkbox"] {
 <p>Find <strong>Personal preferences</strong> (the box asking what Claude should consider in its responses) and add a line or two about how you like answers. Claude applies them in every chat.</p>
 </div>
 <p>For example:</p>
-<pre class="text"><code>Write in plain language. Use short paragraphs and bullet points. Ask me a question if my request is unclear.</code></pre>
+<div class="prompt-block">
+<div class="prompt-label">
+Instructions for Claude
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>Write in plain language. Use short paragraphs and bullet points. Ask me a question if my request is unclear.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <p><strong>Keep it general and put nothing sensitive in it.</strong> These instructions go with every chat. Later today you’ll write Project instructions, which apply to one piece of work.</p>
 </section>
 <section id="watch-then-do-memory-settings" class="level3">
@@ -674,7 +702,12 @@ ul.task-list li input[type="checkbox"] {
 <p>Not everything needs a Project. Use a plain chat for one-off questions, quick drafts and lookups.</p>
 <div class="do-now">
 <p><strong>Your turn.</strong> Click <strong>New chat</strong> (outside any Project) and send:</p>
-<pre class="text"><code>Give me three ways to make a long email easier to read.</code></pre>
+<div class="prompt-block">
+<div class="prompt-label">
+Prompt
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Give me three ways to make a long email easier to read.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 </div>
 <section id="whats-in-the-chat-box" class="level3">
 <h3 class="anchored" data-anchor-id="whats-in-the-chat-box">What’s in the chat box</h3>
@@ -808,8 +841,13 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>+</strong> &gt; add your kit’s files.</li>
 <li>Start a new chat in the Project and send the test prompt:</li>
 </ol>
-<pre class="text"><code>In 3 bullets: what files do you have, what will you do for me, and
-what will you refuse to do?</code></pre>
+<div class="prompt-block">
+<div class="prompt-label">
+Prompt
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>In 3 bullets: what files do you have, what will you do for me, and</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>what will you refuse to do?</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 </div>
 </section>
 <section id="your-kit" class="level3">
@@ -826,32 +864,37 @@ what will you refuse to do?</code></pre>
 </ul>
 <p><strong>Project name:</strong> Article Explainer</p>
 <p><strong>Project instructions:</strong> copy, paste, then change one line (for example, swap “medical-school audiences” for your own audience).</p>
-<pre class="text"><code>You help me turn research articles into accurate, plain-language
-explainers for medical-school audiences.
-
-Sources
-- Use only the files in this Project unless I say otherwise. The
-  article is the source of truth; the style guide sets format and tone.
-- Never invent numbers or quotes. If the article doesn't say it,
-  write "NOT IN ARTICLE."
-- Label anything from outside the article as [general knowledge].
-- Don't add references unless I ask. If I ask, mark each one
-  UNVERIFIED and give its PMID or DOI so I can check it.
-
-How to work
-- Before a new explainer, ask me up to 3 questions about my audience
-  and purpose, then wait for my answers.
-- Report results with the actual numbers: both groups, the
-  difference, and the 95% confidence interval.
-- Use cautious language: "was associated with," not "caused," and
-  "early evidence" for pilot or small studies.
-- Flag anything that needs a clinician's or librarian's review
-  before I share it.
-
-Privacy
-- I won't share patient information here. If I paste anything that
-  looks like a name, MRN, date of birth, or other identifier, stop
-  and remind me not to.</code></pre>
+<div class="prompt-block">
+<div class="prompt-label">
+Project instructions
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>You help me turn research articles into accurate, plain-language</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>explainers for medical-school audiences.</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>Sources</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>- Use only the files in this Project unless I say otherwise. The</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  article is the source of truth; the style guide sets format and tone.</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>- Never invent numbers or quotes. If the article doesn't say it,</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  write "NOT IN ARTICLE."</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>- Label anything from outside the article as [general knowledge].</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>- Don't add references unless I ask. If I ask, mark each one</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>  UNVERIFIED and give its PMID or DOI so I can check it.</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>How to work</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>- Before a new explainer, ask me up to 3 questions about my audience</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>  and purpose, then wait for my answers.</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>- Report results with the actual numbers: both groups, the</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>  difference, and the 95% confidence interval.</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>- Use cautious language: "was associated with," not "caused," and</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>  "early evidence" for pilot or small studies.</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>- Flag anything that needs a clinician's or librarian's review</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>  before I share it.</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>Privacy</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>- I won't share patient information here. If I paste anything that</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>  looks like a name, MRN, date of birth, or other identifier, stop</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>  and remind me not to.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <p>For administrative staff: turn rough meeting notes into a summary email, an action-item table, and next month’s agenda.</p>
@@ -861,25 +904,30 @@ Privacy
 </ul>
 <p><strong>Project name:</strong> Committee Assistant</p>
 <p><strong>Project instructions:</strong> copy, paste, then change one line (for example, name the kind of committee you staff).</p>
-<pre class="text"><code>You help me staff a curriculum committee.
-
-Sources
-- Use only the files in this Project. If the notes don't say it,
-  write "NOT IN NOTES."
-- Label anything not from the files [general knowledge].
-
-How to work
-- Ask me up to 3 questions before drafting, then wait for my answers.
-- Refer to people by role, never by name.
-- Every action item needs an owner (role), a due date, and the line
-  from the notes it came from.
-- Flag anything that looks confidential (personnel, student records,
-  appeals) and leave it out of drafts.
-
-Privacy
-- I won't share patient information here. If I paste anything that
-  looks like a name, MRN, date of birth, or other identifier, stop
-  and remind me not to.</code></pre>
+<div class="prompt-block">
+<div class="prompt-label">
+Project instructions
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>You help me staff a curriculum committee.</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>Sources</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>- Use only the files in this Project. If the notes don't say it,</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  write "NOT IN NOTES."</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>- Label anything not from the files [general knowledge].</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>How to work</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>- Ask me up to 3 questions before drafting, then wait for my answers.</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>- Refer to people by role, never by name.</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>- Every action item needs an owner (role), a due date, and the line</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>  from the notes it came from.</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>- Flag anything that looks confidential (personnel, student records,</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>  appeals) and leave it out of drafts.</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>Privacy</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>- I won't share patient information here. If I paste anything that</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>  looks like a name, MRN, date of birth, or other identifier, stop</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>  and remind me not to.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 </div>
 </div>
 </div>
@@ -943,45 +991,60 @@ Privacy
 <p>Copy <strong>Turn 1</strong> for your kit below. Fill in the two brackets, send, then answer Claude’s questions.</p>
 </div>
 <p><strong>Kit A: Turn 1</strong></p>
-<pre class="text"><code>I'm a [your role, e.g., second-year medical student / clinic nurse
-educator / research coordinator / library staff].
-I need an explainer of the article in this Project for
-[audience, e.g., my journal club / adults in a blood-pressure clinic /
-our department newsletter].
-
-Before you write anything, ask me up to 3 questions about my audience
-and purpose. Wait for my answers.
-
-Then, following the style guide in this Project, give me:
-1. Study at a glance: question, design, who was studied, where, and
-   how many.
-2. The main result with the actual numbers (both groups, the
-   difference, 95% CI), and the main limitation the authors state.
-3. A plain-language version for my audience, 150 words or fewer.
-4. Three questions a careful reader should ask about the methods or
-   conclusions.
-5. A "Where this came from" table: for every number or claim in
-   parts 1-3, the exact sentence from the article and its section,
-   or [general knowledge]. If you can't find support, write
-   NOT IN ARTICLE.
-
-Rules: use only the article; don't add references; if the article
-is unclear or inconsistent on something, say so.</code></pre>
+<div class="prompt-block">
+<div class="prompt-label">
+Prompt
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>I'm a [your role, e.g., second-year medical student / clinic nurse</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>educator / research coordinator / library staff].</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>I need an explainer of the article in this Project for</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>[audience, e.g., my journal club / adults in a blood-pressure clinic /</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>our department newsletter].</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>Before you write anything, ask me up to 3 questions about my audience</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>and purpose. Wait for my answers.</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>Then, following the style guide in this Project, give me:</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>1. Study at a glance: question, design, who was studied, where, and</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>   how many.</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>2. The main result with the actual numbers (both groups, the</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>   difference, 95% CI), and the main limitation the authors state.</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>3. A plain-language version for my audience, 150 words or fewer.</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>4. Three questions a careful reader should ask about the methods or</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>   conclusions.</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>5. A "Where this came from" table: for every number or claim in</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>   parts 1-3, the exact sentence from the article and its section,</span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>   or [general knowledge]. If you can't find support, write</span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>   NOT IN ARTICLE.</span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>Rules: use only the article; don't add references; if the article</span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>is unclear or inconsistent on something, say so.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <p><strong>Stuck on Claude’s questions?</strong> Fast answers:</p>
-<pre class="text"><code>Busy readers with no stats background; goal is a 2-minute read; tone
-friendly but accurate.</code></pre>
+<div class="prompt-block">
+<div class="prompt-label">
+Prompt
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>Busy readers with no stats background; goal is a 2-minute read; tone</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>friendly but accurate.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <p><strong>Kit B: Turn 1</strong></p>
-<pre class="text"><code>I staff the [committee name]. Before you start, ask me up to 3
-questions about the audience or what has already been sent. Wait.
-
-Then, using only the files in this Project:
-1. A summary email to the committee, under 200 words.
-2. An action-item table: action | owner (role) | due date | exact
-   line from the notes. Use NOT IN NOTES if the notes don't say.
-3. Next month's agenda that fits in 60 minutes, each item tied to
-   one of the charter's duties.
-4. Anything that should NOT go into a wider email, and why.
-Roles only, no names; don't invent owners, dates, or decisions.</code></pre>
+<div class="prompt-block">
+<div class="prompt-label">
+Prompt
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>I staff the [committee name]. Before you start, ask me up to 3</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>questions about the audience or what has already been sent. Wait.</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>Then, using only the files in this Project:</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>1. A summary email to the committee, under 200 words.</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>2. An action-item table: action | owner (role) | due date | exact</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>   line from the notes. Use NOT IN NOTES if the notes don't say.</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>3. Next month's agenda that fits in 60 minutes, each item tied to</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>   one of the charter's duties.</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>4. Anything that should NOT go into a wider email, and why.</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>Roles only, no names; don't invent owners, dates, or decisions.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 </section>
 <section id="your-turn-push-back-turn-2" class="level3">
 <h3 class="anchored" data-anchor-id="your-turn-push-back-turn-2">Your turn: push back (Turn 2)</h3>
@@ -989,27 +1052,37 @@ Roles only, no names; don't invent owners, dates, or decisions.</code></pre>
 <p>In the same chat, send Turn 2. <strong>Kit B:</strong> use the Kit B version below.</p>
 </div>
 <p><strong>Kit A: Turn 2</strong></p>
-<pre class="text"><code>Now act as a skeptical reviewer of your own explainer.
-- Flag any sentence that overstates the result (causal language,
-  "proves," or ignoring that this was a pilot).
-- Check the plain-language version against every rule in the style
-  guide and tell me which rule each problem breaks.
-- Check for assumptions about culture, literacy, language, gender,
-  or race, for race-based clinical claims, and for who these
-  results might not apply to.
-- List each problem with a fix, then give me the revised
-  plain-language version.</code></pre>
+<div class="prompt-block">
+<div class="prompt-label">
+Prompt
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>Now act as a skeptical reviewer of your own explainer.</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>- Flag any sentence that overstates the result (causal language,</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  "proves," or ignoring that this was a pilot).</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>- Check the plain-language version against every rule in the style</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  guide and tell me which rule each problem breaks.</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>- Check for assumptions about culture, literacy, language, gender,</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  or race, for race-based clinical claims, and for who these</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  results might not apply to.</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>- List each problem with a fix, then give me the revised</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>  plain-language version.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <p><strong>With a neighbor:</strong> what did the second turn change?</p>
 <p><strong>Kit B: Turn 2</strong></p>
-<pre class="text"><code>Now act as a careful committee chair reviewing your drafts.
-- Check every action item: is the owner, due date, and quoted line
-  really in the notes? Mark anything you can't trace NOT IN NOTES.
-- Check the agenda against the charter's duties and the 60-minute
-  limit.
-- Flag anything confidential (personnel, student records, appeals)
-  that slipped into a draft.
-- Then rewrite the summary email for the full faculty list, leaving
-  out anything that should stay within the committee.</code></pre>
+<div class="prompt-block">
+<div class="prompt-label">
+Prompt
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>Now act as a careful committee chair reviewing your drafts.</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>- Check every action item: is the owner, due date, and quoted line</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  really in the notes? Mark anything you can't trace NOT IN NOTES.</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>- Check the agenda against the charter's duties and the 60-minute</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  limit.</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>- Flag anything confidential (personnel, student records, appeals)</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>  that slipped into a draft.</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>- Then rewrite the summary email for the full faculty list, leaving</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>  out anything that should stay within the committee.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 </section>
 </section>
 <section id="verify" class="level2">
@@ -1036,14 +1109,24 @@ Roles only, no names; don't invent owners, dates, or decisions.</code></pre>
 <p>Send this, then look up <strong>one</strong> PMID at <a href="https://pubmed.ncbi.nlm.nih.gov">pubmed.ncbi.nlm.nih.gov</a> (your phone works). <strong>Kit B:</strong> your Turn 3 is below.</p>
 </div>
 <p><strong>Kit A: Turn 3</strong></p>
-<pre class="text"><code>Suggest three other published studies on this topic a reader could
-look at next. For each, give authors, year, journal, and PMID, and
-mark each UNVERIFIED.</code></pre>
+<div class="prompt-block">
+<div class="prompt-label">
+Prompt
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>Suggest three other published studies on this topic a reader could</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>look at next. For each, give authors, year, journal, and PMID, and</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>mark each UNVERIFIED.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <p>Does it exist? Do the title, authors, and year match? If Claude declines or labels it UNVERIFIED, that’s good behavior. <strong>Check anyway.</strong></p>
 <p><strong>Kit B: Turn 3</strong></p>
-<pre class="text"><code>When do this meeting's action items have to go out, and when is the
-next meeting? For each rule you use, quote the charter line and show
-your date math. If the files don't say, write NOT IN NOTES.</code></pre>
+<div class="prompt-block">
+<div class="prompt-label">
+Prompt
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>When do this meeting's action items have to go out, and when is the</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>next meeting? For each rule you use, quote the charter line and show</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>your date math. If the files don't say, write NOT IN NOTES.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <p>Then open <a href="materials/part1-kits/kit-b/committee-pack-synthetic.md">the committee pack</a> and check each quoted charter line yourself. If you have time, watch someone at your table do the PubMed check: that’s the same skill.</p>
 </section>
 <section id="your-turn-add-one-rule" class="level3">
@@ -1052,8 +1135,13 @@ your date math. If the files don't say, write NOT IN NOTES.</code></pre>
 <p>Open your Project instructions. <strong>Add one line</strong> based on what you caught today.</p>
 </div>
 <p>For example:</p>
-<pre class="text"><code>Quote the exact sentence for every number, and flag any place the
-article contradicts itself.</code></pre>
+<div class="prompt-block">
+<div class="prompt-label">
+Prompt
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>Quote the exact sentence for every number, and flag any place the</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>article contradicts itself.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <p><strong>Show of hands:</strong> how many quotes were exact? Any citation that didn’t match?</p>
 </section>
 <section id="youre-accountable-for-what-you-use" class="level3">
@@ -1228,7 +1316,7 @@ article contradicts itself.</code></pre>
   var page = location.pathname.split("/").pop() || "index.html";
   var target = {
     "part1.html": "part1.html",
-    "part2.html": "part2.html", "part2-slides.html": "part2.html", "cheatsheet.html": "part2.html"
+    "part2.html": "part2.html"
   }[page] || "index.html";
   document.querySelectorAll("#navbarCollapse a.nav-link").forEach(function (a) {
     var href = (a.getAttribute("href") || "").split("#")[0].split("/").pop();

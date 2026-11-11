@@ -1,14 +1,12 @@
 project:
   type: website
   output-dir: docs   # committed; GitHub Pages serves main /docs
-  # Only render the course pages. materials/ and instructor/ hold R/Python
-  # projects (including their own .qmd reports) that participants run locally.
+  # Only render the course pages. materials/ and instructor/ hold the class kits
+  # and R projects (including their own .qmd reports) that participants run locally.
   render:
     - index.qmd
     - part1.qmd
     - part2.qmd
-    - part2-slides.qmd
-    - cheatsheet.qmd
   resources:
     - "/.nojekyll"
     - materials/part1-kits/*
@@ -58,10 +56,6 @@ website:
         contents:
           - href: part2.qmd
             text: Class page
-          - href: part2-slides.qmd
-            text: Slides
-          - href: cheatsheet.qmd
-            text: Cheat sheet
           - href: index.html#setup-part2
             text: Setup
       - href: index.html#access
@@ -82,6 +76,8 @@ format:
     toc: true
     toc-title: "On this page"
     code-copy: true
+    filters:
+      - theme/prompt-blocks.lua
     code-overflow: wrap
     include-before-body: theme/skip-link.html
     include-after-body: theme/nav-active.html

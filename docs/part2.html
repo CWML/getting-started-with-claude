@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Analyzing Research Data with Claude Code – Getting Started with Claude</title>
+<title>Analyzing research data with Claude Code – Getting Started with Claude</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -68,7 +68,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./part2-slides.html" rel="next">
+<link href="./index.html#setup-part2" rel="next">
 <link href="./index.html#setup-part1" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -81,9 +81,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-ac0a192a280d01e3ff19409a8090d491.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-b415a55bb24f02d078fdecd4dbf90cdc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-e33373163f51f8843b6f1d9b9a8c9552.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-b415a55bb24f02d078fdecd4dbf90cdc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-18872a46b4cfa5ef19c802de734c2b94.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-4755211b1e8fe089f66b017163236d70.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-18872a46b4cfa5ef19c802de734c2b94.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -401,18 +401,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./part2-slides.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Slides</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./cheatsheet.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cheat sheet</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./index.html#setup-part2" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Setup</span></a>
   </div>
@@ -443,53 +431,66 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#before-class" id="toc-before-class" class="nav-link active" data-scroll-target="#before-class">Before class</a></li>
   <li><a href="#download" id="toc-download" class="nav-link" data-scroll-target="#download">Download</a></li>
-  <li><a href="#agenda" id="toc-agenda" class="nav-link" data-scroll-target="#agenda">Agenda</a></li>
-  <li><a href="#welcome-and-setup-check-000-005" id="toc-welcome-and-setup-check-000-005" class="nav-link" data-scroll-target="#welcome-and-setup-check-000-005">1. Welcome and setup check (0:00 – 0:05)</a></li>
-  <li><a href="#data-rules-and-project-setup-005-017" id="toc-data-rules-and-project-setup-005-017" class="nav-link" data-scroll-target="#data-rules-and-project-setup-005-017">2. Data rules and project setup (0:05 – 0:17)</a>
+  <li><a href="#plan-of-the-day" id="toc-plan-of-the-day" class="nav-link" data-scroll-target="#plan-of-the-day">Today’s plan</a></li>
+  <li><a href="#open" id="toc-open" class="nav-link" data-scroll-target="#open">1. Open the project</a></li>
+  <li><a href="#control" id="toc-control" class="nav-link" data-scroll-target="#control">2. What Claude sees, and who’s in control</a>
   <ul class="collapse">
-  <li><a href="#a.-claude-code-sends-what-it-reads-4-min" id="toc-a.-claude-code-sends-what-it-reads-4-min" class="nav-link" data-scroll-target="#a.-claude-code-sends-what-it-reads-4-min">2a. Claude Code sends what it reads (4 min)</a></li>
-  <li><a href="#b.-claude.md-and-the-memory-hierarchy-4-min" id="toc-b.-claude.md-and-the-memory-hierarchy-4-min" class="nav-link" data-scroll-target="#b.-claude.md-and-the-memory-hierarchy-4-min">2b. <code>CLAUDE.md</code> and the memory hierarchy (4 min)</a></li>
-  <li><a href="#c.-protect-the-data-manual-mode-a-deny-rule-and-git-4-min" id="toc-c.-protect-the-data-manual-mode-a-deny-rule-and-git-4-min" class="nav-link" data-scroll-target="#c.-protect-the-data-manual-mode-a-deny-rule-and-git-4-min">2c. Protect the data: Manual mode, a deny rule, and git (4 min)</a></li>
+  <li><a href="#claude-code-sends-what-it-reads" id="toc-claude-code-sends-what-it-reads" class="nav-link" data-scroll-target="#claude-code-sends-what-it-reads">Claude Code sends what it reads</a></li>
+  <li><a href="#read-claude.md-advice" id="toc-read-claude.md-advice" class="nav-link" data-scroll-target="#read-claude.md-advice">Read <code>CLAUDE.md</code>: advice</a></li>
+  <li><a href="#choose-manual-mode" id="toc-choose-manual-mode" class="nav-link" data-scroll-target="#choose-manual-mode">Choose Manual mode</a></li>
+  <li><a href="#add-a-deny-rule-enforcement" id="toc-add-a-deny-rule-enforcement" class="nav-link" data-scroll-target="#add-a-deny-rule-enforcement">Add a deny rule: enforcement</a></li>
+  <li><a href="#test-the-rule" id="toc-test-the-rule" class="nav-link" data-scroll-target="#test-the-rule">Test the rule</a></li>
+  <li><a href="#start-version-control" id="toc-start-version-control" class="nav-link" data-scroll-target="#start-version-control">Start version control</a></li>
   </ul></li>
-  <li><a href="#exercise-1" id="toc-exercise-1" class="nav-link" data-scroll-target="#exercise-1">3. Plan, build, verify (0:17 – 0:42)</a>
+  <li><a href="#plan" id="toc-plan" class="nav-link" data-scroll-target="#plan">3. Plan before you code</a>
   <ul class="collapse">
-  <li><a href="#a.-plan-mode-on-the-sap-5-min" id="toc-a.-plan-mode-on-the-sap-5-min" class="nav-link" data-scroll-target="#a.-plan-mode-on-the-sap-5-min">3a. Plan mode on the SAP (5 min)</a></li>
-  <li><a href="#b.-claude-writes-and-runs-the-cleaning-script-8-min" id="toc-b.-claude-writes-and-runs-the-cleaning-script-8-min" class="nav-link" data-scroll-target="#b.-claude-writes-and-runs-the-cleaning-script-8-min">3b. Claude writes and runs the cleaning script (8 min)</a></li>
-  <li><a href="#c.-check-it-yourself-in-positron-3-min" id="toc-c.-check-it-yourself-in-positron-3-min" class="nav-link" data-scroll-target="#c.-check-it-yourself-in-positron-3-min">3c. Check it yourself in Positron (3 min)</a></li>
-  <li><a href="#d.-table-1-the-primary-model-and-a-quarto-report-6-min" id="toc-d.-table-1-the-primary-model-and-a-quarto-report-6-min" class="nav-link" data-scroll-target="#d.-table-1-the-primary-model-and-a-quarto-report-6-min">3d. Table 1, the primary model, and a Quarto report (6 min)</a></li>
-  <li><a href="#e.-safety-nets-checkpoints-rewind-and-git-3-min" id="toc-e.-safety-nets-checkpoints-rewind-and-git-3-min" class="nav-link" data-scroll-target="#e.-safety-nets-checkpoints-rewind-and-git-3-min">3e. Safety nets: checkpoints, rewind, and git (3 min)</a></li>
+  <li><a href="#first-you" id="toc-first-you" class="nav-link" data-scroll-target="#first-you">First, you</a></li>
+  <li><a href="#ask-claude-for-a-plan" id="toc-ask-claude-for-a-plan" class="nav-link" data-scroll-target="#ask-claude-for-a-plan">Ask Claude for a plan</a></li>
+  <li><a href="#compare-then-approve" id="toc-compare-then-approve" class="nav-link" data-scroll-target="#compare-then-approve">Compare, then approve</a></li>
   </ul></li>
-  <li><a href="#break-catch-up-042-047" id="toc-break-catch-up-042-047" class="nav-link" data-scroll-target="#break-catch-up-042-047">Break / catch-up (0:42 – 0:47)</a></li>
-  <li><a href="#working-well-047-057" id="toc-working-well-047-057" class="nav-link" data-scroll-target="#working-well-047-057">4. Working well (0:47 – 0:57)</a>
+  <li><a href="#build" id="toc-build" class="nav-link" data-scroll-target="#build">4. Build the prepare script</a>
   <ul class="collapse">
-  <li><a href="#a.-context-is-the-budget-2-min" id="toc-a.-context-is-the-budget-2-min" class="nav-link" data-scroll-target="#a.-context-is-the-budget-2-min">4a. Context is the budget (2 min)</a></li>
-  <li><a href="#b.-model-and-effort-3-min" id="toc-b.-model-and-effort-3-min" class="nav-link" data-scroll-target="#b.-model-and-effort-3-min">4b. <code>/model</code> and <code>/effort</code> (3 min)</a></li>
-  <li><a href="#c.-ultracode-and-dynamic-workflows-if-enabled-3-min" id="toc-c.-ultracode-and-dynamic-workflows-if-enabled-3-min" class="nav-link" data-scroll-target="#c.-ultracode-and-dynamic-workflows-if-enabled-3-min">4c. Ultracode and dynamic workflows (if enabled) (3 min)</a></li>
-  <li><a href="#d.-check-in-from-your-phone-rc-if-enabled-2-min" id="toc-d.-check-in-from-your-phone-rc-if-enabled-2-min" class="nav-link" data-scroll-target="#d.-check-in-from-your-phone-rc-if-enabled-2-min">4d. Check in from your phone: <code>/rc</code> (if enabled) (2 min)</a></li>
+  <li><a href="#write-and-run-it" id="toc-write-and-run-it" class="nav-link" data-scroll-target="#write-and-run-it">Write and run it</a></li>
+  <li><a href="#explain-it-back" id="toc-explain-it-back" class="nav-link" data-scroll-target="#explain-it-back">Explain it back</a></li>
   </ul></li>
-  <li><a href="#extending-claude-code-057-112" id="toc-extending-claude-code-057-112" class="nav-link" data-scroll-target="#extending-claude-code-057-112">5. Extending Claude Code (0:57 – 1:12)</a>
+  <li><a href="#check" id="toc-check" class="nav-link" data-scroll-target="#check">5. Check it yourself</a>
   <ul class="collapse">
-  <li><a href="#a.-where-does-each-instruction-belong-2-min" id="toc-a.-where-does-each-instruction-belong-2-min" class="nav-link" data-scroll-target="#a.-where-does-each-instruction-belong-2-min">5a. Where does each instruction belong? (2 min)</a></li>
-  <li><a href="#b.-demo-two-skills-a-reviewer-and-a-hook-5-min" id="toc-b.-demo-two-skills-a-reviewer-and-a-hook-5-min" class="nav-link" data-scroll-target="#b.-demo-two-skills-a-reviewer-and-a-hook-5-min">5b. Demo: two skills, a reviewer, and a hook (5 min)</a></li>
-  <li><a href="#exercise-2" id="toc-exercise-2" class="nav-link" data-scroll-target="#exercise-2">5c. Exercise 2: build one skill (8 min)</a></li>
+  <li><a href="#open-the-results-in-positron" id="toc-open-the-results-in-positron" class="nav-link" data-scroll-target="#open-the-results-in-positron">Open the results in Positron</a></li>
+  <li><a href="#check-the-numbers" id="toc-check-the-numbers" class="nav-link" data-scroll-target="#check-the-numbers">Check the numbers</a></li>
+  <li><a href="#trace-one-person-by-hand" id="toc-trace-one-person-by-hand" class="nav-link" data-scroll-target="#trace-one-person-by-hand">Trace one person by hand</a></li>
+  <li><a href="#save-your-work-with-git" id="toc-save-your-work-with-git" class="nav-link" data-scroll-target="#save-your-work-with-git">Save your work with git</a></li>
   </ul></li>
-  <li><a href="#messy-sources" id="toc-messy-sources" class="nav-link" data-scroll-target="#messy-sources">6. Messy real-world sources (1:12 – 1:20)</a>
+  <li><a href="#estimate" id="toc-estimate" class="nav-link" data-scroll-target="#estimate">6. Estimate, then decide what to report</a>
   <ul class="collapse">
-  <li><a href="#a.-harmonize-the-redcap-exports" id="toc-a.-harmonize-the-redcap-exports" class="nav-link" data-scroll-target="#a.-harmonize-the-redcap-exports">6a. Harmonize the REDCap exports</a></li>
-  <li><a href="#b.-explain-or-translate-legacy-sas-and-stata-code" id="toc-b.-explain-or-translate-legacy-sas-and-stata-code" class="nav-link" data-scroll-target="#b.-explain-or-translate-legacy-sas-and-stata-code">6b. Explain or translate legacy SAS and Stata code</a></li>
+  <li><a href="#predict-first" id="toc-predict-first" class="nav-link" data-scroll-target="#predict-first">Predict first</a></li>
+  <li><a href="#write-the-estimate-script" id="toc-write-the-estimate-script" class="nav-link" data-scroll-target="#write-the-estimate-script">Write the estimate script</a></li>
+  <li><a href="#you-decide-what-to-report" id="toc-you-decide-what-to-report" class="nav-link" data-scroll-target="#you-decide-what-to-report">You decide: what to report</a></li>
+  <li><a href="#optional-a-short-report" id="toc-optional-a-short-report" class="nav-link" data-scroll-target="#optional-a-short-report">Optional: a short report</a></li>
   </ul></li>
-  <li><a href="#verification" id="toc-verification" class="nav-link" data-scroll-target="#verification">7. Verification and research integrity (1:20 – 1:27)</a>
+  <li><a href="#verification" id="toc-verification" class="nav-link" data-scroll-target="#verification">7. Verification and research integrity</a>
   <ul class="collapse">
   <li><a href="#give-claude-a-check-it-can-run" id="toc-give-claude-a-check-it-can-run" class="nav-link" data-scroll-target="#give-claude-a-check-it-can-run">Give Claude a check it can run</a></li>
-  <li><a href="#why-cleaning-matters" id="toc-why-cleaning-matters" class="nav-link" data-scroll-target="#why-cleaning-matters">Why cleaning matters</a></li>
-  <li><a href="#garden-of-forking-paths" id="toc-garden-of-forking-paths" class="nav-link" data-scroll-target="#garden-of-forking-paths">Garden of forking paths</a></li>
+  <li><a href="#why-decisions-matter" id="toc-why-decisions-matter" class="nav-link" data-scroll-target="#why-decisions-matter">Why decisions matter</a></li>
+  <li><a href="#read-the-claims" id="toc-read-the-claims" class="nav-link" data-scroll-target="#read-the-claims">Read the claims</a></li>
+  <li><a href="#human-review-is-required" id="toc-human-review-is-required" class="nav-link" data-scroll-target="#human-review-is-required">Human review is required</a></li>
+  <li><a href="#the-garden-of-forking-paths" id="toc-the-garden-of-forking-paths" class="nav-link" data-scroll-target="#the-garden-of-forking-paths">The garden of forking paths</a></li>
   <li><a href="#disclosure-and-the-audit-trail" id="toc-disclosure-and-the-audit-trail" class="nav-link" data-scroll-target="#disclosure-and-the-audit-trail">Disclosure and the audit trail</a></li>
   </ul></li>
-  <li><a href="#wrap-up-127-130" id="toc-wrap-up-127-130" class="nav-link" data-scroll-target="#wrap-up-127-130">8. Wrap-up (1:27 – 1:30)</a>
+  <li><a href="#working-well" id="toc-working-well" class="nav-link" data-scroll-target="#working-well">8. Working well, and skills</a>
   <ul class="collapse">
+  <li><a href="#context-start-fresh-often" id="toc-context-start-fresh-often" class="nav-link" data-scroll-target="#context-start-fresh-often">Context: start fresh often</a></li>
+  <li><a href="#model-and-effort" id="toc-model-and-effort" class="nav-link" data-scroll-target="#model-and-effort">Model and effort</a></li>
+  <li><a href="#skills-briefly" id="toc-skills-briefly" class="nav-link" data-scroll-target="#skills-briefly">Skills, briefly</a></li>
+  <li><a href="#optional-pick-up-in-the-terminal" id="toc-optional-pick-up-in-the-terminal" class="nav-link" data-scroll-target="#optional-pick-up-in-the-terminal">Optional: pick up in the terminal</a></li>
+  <li><a href="#beyond-today" id="toc-beyond-today" class="nav-link" data-scroll-target="#beyond-today">Beyond today</a></li>
+  </ul></li>
+  <li><a href="#wrap-up" id="toc-wrap-up" class="nav-link" data-scroll-target="#wrap-up">9. Wrap-up</a>
+  <ul class="collapse">
+  <li><a href="#claude-speeds-this-up-you-decide" id="toc-claude-speeds-this-up-you-decide" class="nav-link" data-scroll-target="#claude-speeds-this-up-you-decide">Claude speeds this up; you decide</a></li>
+  <li><a href="#three-takeaways" id="toc-three-takeaways" class="nav-link" data-scroll-target="#three-takeaways">Three takeaways</a></li>
+  <li><a href="#tell-us-how-it-went" id="toc-tell-us-how-it-went" class="nav-link" data-scroll-target="#tell-us-how-it-went">Tell us how it went</a></li>
   <li><a href="#try-at-home" id="toc-try-at-home" class="nav-link" data-scroll-target="#try-at-home">Try at home</a></li>
   </ul></li>
-  <li><a href="#finished-files" id="toc-finished-files" class="nav-link" data-scroll-target="#finished-files">Finished files</a></li>
   <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/CWML/getting-started-with-claude/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
@@ -502,8 +503,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./part2.html">Analyzing research data with Claude Code</a></li><li class="breadcrumb-item"><a href="./part2.html">Class page</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Analyzing Research Data with Claude Code</h1>
-<p class="subtitle lead">A 90-minute hands-on class for researchers with light R or Python</p>
+<h1 class="title">Analyzing research data with Claude Code</h1>
+<p class="subtitle lead">A 90-minute hands-on class for researchers who can read a little R</p>
 </div>
 
 
@@ -533,14 +534,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>This class material isn’t complete yet. Expect changes before the class is offered.</p>
 </div>
 </div>
-<p>In this class you’ll use <strong>Claude Code inside Positron</strong> (or VS Code) to take a synthetic clinical trial from raw CSV to a Quarto report. You’ll plan first, let Claude write and run the code, check every step yourself, and finish by building a reusable tool for your own research data. Bring a laptop. This page has every prompt, ready to copy. <a href="./part2-slides.html">Slides</a> · <a href="./cheatsheet.html">Cheat sheet</a></p>
-<p><strong>For:</strong> faculty, postdocs, students, research coordinators, analysts, and clinicians who can read a little R or Python. <a href="./part1.html">Getting started with Claude</a> (the Claude app class) is helpful but not required.</p>
+<p>In this class you’ll analyze <strong>real CDC survey data</strong> (NHANES, August 2021–August 2023) with <strong>Claude Code</strong> in Positron. Claude Code is an AI coding agent: it reads your files, writes code, runs it, and fixes its own errors. You’ll work in its extension panel. You’ll plan first, let Claude build the scripts, and check every step yourself. By the end, you’ll try to reproduce a published CDC estimate of how many U.S. adults have high blood pressure. This page has every prompt, ready to copy.</p>
+<p><strong>The goal:</strong> this class doesn’t replace learning R or statistics. You’ll learn where a coding agent speeds up good analysis, and where your expertise must stay in control. Each step below says what Claude does and what <strong>you</strong> decide.</p>
+<p><strong>For:</strong> researchers, research coordinators, analysts, and clinicians who can read a little R. <a href="./part1.html">Getting started with Claude</a> (the Claude app class) helps but isn’t required. If you work in Python, pair with an R user or follow along.</p>
 <p><strong>By the end of class, you’ll be able to:</strong></p>
 <ol type="1">
 <li><strong>Configure</strong> a Claude Code project that protects raw and restricted data.</li>
 <li><strong>Implement</strong> a plan-first workflow to clean and analyze study data.</li>
+<li><strong>Distinguish</strong> tasks to delegate to Claude from decisions you keep.</li>
 <li><strong>Evaluate</strong> AI-generated code and results against the analysis plan.</li>
-<li><strong>Build</strong> a reusable command, skill, or hook for a research data task.</li>
 </ol>
 <section id="before-class" class="level2">
 <h2 class="anchored" data-anchor-id="before-class">Before class</h2>
@@ -554,32 +556,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Do the <a href="./index.html#setup-part2">setup steps</a> before class. In short: an enterprise Claude account whose seat includes Claude Code (<code>[how to check / who to ask]</code>), Positron (or VS Code) with the Claude Code extension, the R or Python packages, and git with your name and email set. The Claude mobile app and the standalone CLI are optional.</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled" title="Using Python instead of R?">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Using Python instead of R?
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Install the Python packages listed in the <a href="./index.html#setup-part2">setup steps</a> instead of the R ones. In class, delete <code>CLAUDE.md</code> from the project, rename <code>CLAUDE.python.md</code> to <code>CLAUDE.md</code>, and start a new Claude conversation. Claude will then put scripts in <code>python/</code>. Every exercise below has a Python tab.</p>
-</div>
+<p>Do the <a href="./index.html#setup-part2">setup steps</a> before class. In short: a Yale Claude account whose seat includes Claude Code (<code>[how to check / who to ask]</code>), Positron with the Claude Code extension, R with the class packages (including <code>haven</code> and <code>survey</code>), and git with your name and email set.</p>
 </div>
 </div>
 </section>
 <section id="download" class="level2">
 <h2 class="anchored" data-anchor-id="download">Download</h2>
-<p><a href="./part2-slides.html" class="btn btn-outline-secondary btn-sm">View slides</a> <a href="./part2-slides.html" class="btn btn-outline-secondary btn-sm" download="part2-slides.html">⬇ Download slides (HTML)</a></p>
-<p>In the slides, press <strong>F</strong> for full screen and <strong>Esc</strong> for an overview. To save a PDF, add <code>?print-pdf</code> to the slides’ web address and print to PDF (works best in Chrome).</p>
-<p><a href="downloads/hypertension-cohort.zip"><strong>hypertension-cohort.zip</strong></a> is the class project. It contains synthetic data from a fictional two-arm blood-pressure trial at three sites, the data dictionary, a one-page statistical analysis plan (<code>docs/SAP.md</code>), per-site “REDCap exports,” legacy SAS and Stata code, a stand-in <code>data/restricted/</code> folder, and <code>CLAUDE.md</code>. The <code>R/</code>, <code>output/</code>, and <code>reports/</code> folders are empty, because you’ll fill them in class.</p>
-<p>Unzip it somewhere easy to find, such as <code>Documents/</code>, and open the <code>hypertension-cohort</code> folder in Positron (<strong>File → Open Folder</strong>).</p>
+<p><a href="downloads/nhanes-bp.zip"><strong>nhanes-bp.zip</strong></a> is the class project. It holds:</p>
+<ul>
+<li>three <strong>unmodified CDC data files</strong> in <code>data/raw/</code> (<code>DEMO_L.xpt</code> demographics, <code>BPXO_L.xpt</code> blood pressure readings, <code>BPQ_L.xpt</code> blood pressure questions), with CDC’s codebooks in <code>docs/codebooks/</code></li>
+<li>a data dictionary of the variables we use (<code>data/data_dictionary.csv</code>)</li>
+<li>a one-page analysis plan (<code>docs/analysis-plan.md</code>)</li>
+<li><code>CLAUDE.md</code>, the project rules for Claude</li>
+<li>a fictional stand-in in <code>data/restricted/</code></li>
+<li>an excerpt of CDC’s own SAS code in <code>legacy/</code>, for a try-at-home exercise</li>
+</ul>
+<p>The <code>R/</code>, <code>output/</code>, and <code>reports/</code> folders are empty. You’ll fill them in class.</p>
+<p>Unzip it somewhere easy to find, such as <code>Documents/</code>. On Windows, right-click the zip and choose <strong>Extract All</strong>. If you get an <code>nhanes-bp</code> folder inside another <code>nhanes-bp</code> folder, open the inner one. <code>CLAUDE.md</code> should be at the top of Positron’s Explorer. Then open the <code>nhanes-bp</code> folder in Positron (<strong>File → Open Folder</strong>).</p>
+<p><a href="downloads/nhanes-bp-checkpoint.zip"><strong>nhanes-bp-checkpoint.zip</strong></a> is for <strong>if you fall behind</strong>. It’s the same project with a working <code>R/01_prepare.R</code>. You only need it if your own script isn’t working by the <a href="#catch-up">catch-up point</a>.</p>
 <div class="callout callout-style-default callout-important callout-titled" title="Data rule for today">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -590,82 +584,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Every file in the project is <strong>synthetic</strong>, including <code>data/restricted/visit_notes.csv</code>, which only <em>stands in</em> for data Claude must never read. Don’t add real patient data to this project. Guardrails like deny rules are safety nets. They don’t make it OK to keep PHI or DUA-restricted data in a folder Claude Code works in. Policy comes first: <code>[Yale data classification / policy link]</code>.</p>
+<ul>
+<li><strong>The data are real.</strong> NHANES is a public, de-identified CDC survey. It isn’t patient data, but the <a href="https://www.cdc.gov/nchs/policy/data-user-agreement.html">NCHS data user agreement</a> still applies: use the data for statistical analysis only, never try to identify anyone, and never link it to other data about the same people.</li>
+<li><strong><code>data/restricted/</code> is fictional.</strong> It holds one made-up file that <em>stands in</em> for data Claude must never read.</li>
+<li><strong>Don’t add PHI or data under a data use agreement to this project.</strong> Guardrails like deny rules are safety nets. They don’t make it OK to keep restricted data in a folder Claude Code works in. Policy comes first: follow <a href="https://cybersecurity.yale.edu/data-classification">Yale’s data classification</a>.</li>
+<li><strong>A HIPAA-supported version of Claude is available by request</strong> (see the <a href="https://yale.service-now.com/it?id=service_offering&amp;sys_id=f6429096337382106bab02b19e5c7bf4">ITS service page for Claude Enterprise</a>). It doesn’t approve your project, every feature, or every data set, and its features may differ. Check with ITS before using Claude Code with sensitive data.</li>
+</ul>
 </div>
 </div>
 </section>
-<section id="agenda" class="level2">
-<h2 class="anchored" data-anchor-id="agenda">Agenda</h2>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Time</th>
-<th>Segment</th>
-<th>What you’ll do</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>0:00 – 0:05</td>
-<td>1. Welcome and setup check</td>
-<td>Open the project and the Claude panel</td>
-</tr>
-<tr class="even">
-<td>0:05 – 0:17</td>
-<td>2. Data rules and project setup</td>
-<td><code>CLAUDE.md</code>, a deny rule, git</td>
-</tr>
-<tr class="odd">
-<td>0:17 – 0:42</td>
-<td>3. Plan, build, verify</td>
-<td><strong>Hands-on:</strong> Exercise 1</td>
-</tr>
-<tr class="even">
-<td>0:42 – 0:47</td>
-<td><em>Break / catch-up</em></td>
-<td>Finish Exercise 1</td>
-</tr>
-<tr class="odd">
-<td>0:47 – 0:57</td>
-<td>4. Working well</td>
-<td>Context, models, effort, ultracode, Remote Control</td>
-</tr>
-<tr class="even">
-<td>0:57 – 1:12</td>
-<td>5. Extending Claude Code</td>
-<td>Demo + <strong>hands-on:</strong> Exercise 2</td>
-</tr>
-<tr class="odd">
-<td>1:12 – 1:20</td>
-<td>6. Messy real-world sources (cut first if late)</td>
-<td>REDCap exports, legacy SAS/Stata</td>
-</tr>
-<tr class="even">
-<td>1:20 – 1:27</td>
-<td>7. Verification and research integrity</td>
-<td>Demo + discussion</td>
-</tr>
-<tr class="odd">
-<td>1:27 – 1:30</td>
-<td>8. Wrap-up</td>
-<td>Try at home, Q&amp;A</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="welcome-and-setup-check-000-005" class="level2">
-<h2 class="anchored" data-anchor-id="welcome-and-setup-check-000-005">1. Welcome and setup check (0:00 – 0:05)</h2>
+<section id="plan-of-the-day" class="level2">
+<h2 class="anchored" data-anchor-id="plan-of-the-day">Today’s plan</h2>
 <ol type="1">
-<li>Open the <code>hypertension-cohort</code> folder in Positron.</li>
-<li>Open the <strong>Claude Code panel</strong>: click the Spark icon in the editor toolbar (open any file first), or click <strong>✻ Claude Code</strong> in the status bar.</li>
-<li>Type <code>/status</code> in the panel’s prompt box to confirm your account, version, and model.</li>
+<li><a href="#open">Open the project</a></li>
+<li><a href="#control">What Claude sees, and who’s in control</a></li>
+<li><a href="#plan">Plan before you code</a></li>
+<li><a href="#build">Build the prepare script</a></li>
+<li><a href="#check">Check it yourself</a>, then a short break to catch up</li>
+<li><a href="#estimate">Estimate, then decide what to report</a></li>
+<li><a href="#verification">Verification and research integrity</a></li>
+<li><a href="#working-well">Working well, and skills</a></li>
+<li><a href="#wrap-up">Wrap-up</a></li>
 </ol>
-<p><strong>Panel or terminal?</strong> Today we use the <strong>extension panel</strong>. It shows Claude’s edits as side-by-side diffs, opens plans as documents you can comment on, and lets you rewind from any message. A few things only work in the <strong>terminal CLI</strong> (<code>claude</code> in Positron’s Terminal tab). When we use one, we’ll say so.</p>
+</section>
+<section id="open" class="level2">
+<h2 class="anchored" data-anchor-id="open">1. Open the project</h2>
+<ol type="1">
+<li>Open the <code>nhanes-bp</code> folder in Positron.</li>
+<li>Open the <strong>Claude Code panel</strong>. Click the Spark icon in the editor toolbar (open any file first, such as <code>README.md</code>), or click <strong>✻ Claude Code</strong> in the status bar at the bottom right.</li>
+<li>Type <code>/status</code> in the panel’s prompt box. Check that it shows your Yale account. Note the version and the model.</li>
+</ol>
+<p>Today we use the <strong>extension panel</strong>. It shows Claude’s edits as side-by-side diffs and opens plans as documents. Claude Code also runs in a <strong>terminal</strong>. We’ll show one optional terminal step near the end.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -675,602 +624,510 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <thead>
 <tr class="header">
 <th></th>
-<th>Extension panel</th>
-<th>Terminal CLI</th>
+<th>Extension panel (today)</th>
+<th>Terminal (optional)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
+<td>Start</td>
+<td>Spark icon, or <strong>✻ Claude Code</strong> in the status bar</td>
+<td>Type <code>claude</code> in Positron’s <strong>Terminal</strong> tab (needs the standalone CLI)</td>
+</tr>
+<tr class="even">
 <td>Commands</td>
 <td>A subset: type <code>/</code> to see yours</td>
 <td>All commands</td>
 </tr>
-<tr class="even">
-<td>Review edits</td>
-<td>Side-by-side diffs; accept or reject each change</td>
-<td>In the terminal, or in Positron with <code>/ide</code></td>
-</tr>
 <tr class="odd">
-<td>Undo</td>
-<td>Hover a message → rewind button</td>
-<td><code>Esc</code> <code>Esc</code> or <code>/rewind</code></td>
-</tr>
-<tr class="even">
-<td><code>!</code> shell prefix, tab completion</td>
-<td>No</td>
-<td>Yes</td>
+<td>Review edits</td>
+<td>Side-by-side diffs: accept or reject each change</td>
+<td>In the terminal</td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="data-rules-and-project-setup-005-017" class="level2">
-<h2 class="anchored" data-anchor-id="data-rules-and-project-setup-005-017">2. Data rules and project setup (0:05 – 0:17)</h2>
-<section id="a.-claude-code-sends-what-it-reads-4-min" class="level3">
-<h3 class="anchored" data-anchor-id="a.-claude-code-sends-what-it-reads-4-min">2a. Claude Code sends what it reads (4 min)</h3>
-<p>When Claude Code opens a file, runs a command, or sees its output, that content goes to the model. The same rules apply as for uploading a file to the Claude app. In the extension, Claude also sees <strong>text you select</strong> in the editor and the <strong>name of the file you have open</strong>.</p>
+<section id="control" class="level2">
+<h2 class="anchored" data-anchor-id="control">2. What Claude sees, and who’s in control</h2>
+<p><strong>Claude does:</strong> reads files, runs commands, and follows your project rules. <strong>You decide:</strong> what it may read and what it may change.</p>
+<section id="claude-code-sends-what-it-reads" class="level3">
+<h3 class="anchored" data-anchor-id="claude-code-sends-what-it-reads">Claude Code sends what it reads</h3>
+<p>When Claude Code opens a file, runs a command, or reads its output, that content goes to the model. In the panel, Claude also sees <strong>text you select</strong> in the editor and the <strong>name of the file you have open</strong>. Both are on by default. Read deny rules apply to this context on a best-effort basis, so don’t rely on them to hide sensitive files.</p>
 <p><strong>Two patterns that keep sensitive data out:</strong></p>
 <ul>
-<li><strong>“Claude writes the code, you run it on the real data.”</strong> Give Claude the data dictionary, the SAP, and a few synthetic rows. It writes and tests the pipeline. You run the finished script yourself, in an approved environment that Claude never sees.</li>
-<li><strong>“Synthetic first.”</strong> Build and debug everything on synthetic or public data, like today’s cohort. Switch to real data only after the code is reviewed, and only where policy allows.</li>
+<li><strong>Claude writes the code; you run it on restricted data elsewhere.</strong> Give Claude the data dictionary, the plan, and public or made-up rows. It writes and tests the scripts. You run the finished scripts yourself, in an approved environment that Claude never sees.</li>
+<li><strong>Public or made-up data first.</strong> Build and debug on public data, like today’s NHANES files, or on made-up data. Switch to real data only after the code is reviewed, and only where policy allows.</li>
 </ul>
-<p><strong>Habits that help:</strong> keep the “print at most 10 rows” rule in <code>CLAUDE.md</code>. Check data in Positron’s Data Explorer rather than asking Claude to print it. Don’t open restricted files in the editor while Claude is running.</p>
-<p><strong>What about the HIPAA-supported version?</strong> A HIPAA-supported version of Claude is available by request: <code>[request link]</code>. Being HIPAA-supported doesn’t approve your project, every feature, or every data set, and Claude Code may not be covered even there. Anthropic’s documentation says the VS Code extension (the one Positron uses) isn’t covered by its HIPAA agreement, and that Remote Control and cloud sessions are turned off in the HIPAA configuration. <code>[confirm with ITS which Claude Code surfaces are covered]</code>. Follow <code>[Yale data classification / policy link]</code>, and send questions to <code>[HSIT / HIPAA Privacy Office contact]</code>. Today’s class uses synthetic data only.</p>
 </section>
-<section id="b.-claude.md-and-the-memory-hierarchy-4-min" class="level3">
-<h3 class="anchored" data-anchor-id="b.-claude.md-and-the-memory-hierarchy-4-min">2b. <code>CLAUDE.md</code> and the memory hierarchy (4 min)</h3>
-<p>Open <code>CLAUDE.md</code> in the project. Claude reads it at the start of every conversation. It sets the study rules: <code>data/raw/</code> is read-only, never read <code>data/restricted/</code>, write numbered scripts in <code>R/</code>, log every cleaning change, ask before deciding about missing data or outliers, and print at most 10 rows.</p>
-<p>Claude Code loads instructions from several places. They’re all combined, and none overrides another:</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Scope</th>
-<th>Location</th>
-<th>Shared with</th>
-<th>Use for</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Managed policy</td>
-<td>Set by IT</td>
-<td>Everyone in the org</td>
-<td>Institutional rules <code>[if your org deploys one]</code></td>
-</tr>
-<tr class="even">
-<td>User</td>
-<td><code>~/.claude/CLAUDE.md</code></td>
-<td>Just you, every project</td>
-<td>“I prefer tidyverse and <code>here::here()</code>”</td>
-</tr>
-<tr class="odd">
-<td>Project</td>
-<td><code>./CLAUDE.md</code></td>
-<td>Your team, via git</td>
-<td>Today’s study rules</td>
-</tr>
-<tr class="even">
-<td>Local</td>
-<td><code>./CLAUDE.local.md</code> (gitignored)</td>
-<td>Just you, this project</td>
-<td>Personal paths and preferences</td>
-</tr>
-<tr class="odd">
-<td>Auto memory</td>
-<td>Panel: <code>/</code> → <strong>Customize → Memory</strong></td>
-<td>Just you, this machine</td>
-<td>Notes Claude saves from your corrections</td>
-</tr>
-</tbody>
-</table>
+<section id="read-claude.md-advice" class="level3">
+<h3 class="anchored" data-anchor-id="read-claude.md-advice">Read <code>CLAUDE.md</code>: advice</h3>
+<p>Open <code>CLAUDE.md</code> in the project. Claude reads it at the start of every conversation. It sets the study rules, such as:</p>
 <ul>
-<li><strong>Keep it short:</strong> the docs suggest under 200 lines per file. An import line like <code>@docs/SAP.md</code> loads another file every session: fine for a 2-page SAP, not for a 40-page protocol.</li>
-<li><strong>Advice, not enforcement:</strong> <code>CLAUDE.md</code> shapes what Claude <em>tries</em> to do. It doesn’t limit what Claude <em>can</em> do. That’s what permission rules are for (next).</li>
-<li><strong>If you took <em>Getting started with Claude</em>:</strong> a Claude Code project folder plays the role of your Claude app Project. The Project’s instructions become <code>CLAUDE.md</code>, and its files become documents in the folder, such as <code>docs/SAP.md</code>.</li>
-<li><strong>In the panel:</strong> <code>/</code> → <strong>Customize → Instructions</strong> opens your <code>CLAUDE.md</code> files, and <strong>Memory</strong> turns auto memory on or off and shows what it saved. In the CLI, use <code>/memory</code>. For your own projects, <code>/init</code> drafts a <code>CLAUDE.md</code>. If it isn’t in your panel’s <code>/</code> menu, run it in the CLI.</li>
+<li><code>data/raw/</code> is read-only.</li>
+<li>Never read <code>data/restricted/</code>.</li>
+<li>Write numbered scripts in <code>R/</code> and save results to <code>output/</code>.</li>
+<li>Follow <code>docs/analysis-plan.md</code>, and ask before deciding about missing codes, weights, or exclusions.</li>
+<li>Print at most 10 rows of data.</li>
 </ul>
+<p><code>CLAUDE.md</code> is <strong>advice</strong>. It shapes what Claude <em>tries</em> to do. It doesn’t limit what Claude <em>can</em> do. That’s what permission rules are for.</p>
 </section>
-<section id="c.-protect-the-data-manual-mode-a-deny-rule-and-git-4-min" class="level3">
-<h3 class="anchored" data-anchor-id="c.-protect-the-data-manual-mode-a-deny-rule-and-git-4-min">2c. Protect the data: Manual mode, a deny rule, and git (4 min)</h3>
-<p><strong>1. Choose Manual mode.</strong> Click the mode indicator at the bottom of the prompt box and choose <strong>Manual</strong>, so Claude asks before every edit and most commands. Recent versions (v2.1.283 and later) start in <strong>Auto</strong> unless your organization turns it off. The extension ignores a project’s default-mode setting, so pick Manual yourself today.</p>
-<p><strong>2. Add a deny rule for <code>data/restricted/</code>.</strong> In the panel, type <code>/</code> and choose <strong>Customize → Permissions</strong>, add a <strong>Deny</strong> rule, and save it to <strong>project</strong> settings:</p>
-<pre class="text"><code>Read(./data/restricted/**)</code></pre>
-<p>Or create <code>.claude/settings.json</code> in Positron’s Explorer with:</p>
+<section id="choose-manual-mode" class="level3">
+<h3 class="anchored" data-anchor-id="choose-manual-mode">Choose Manual mode</h3>
+<p>Click the <strong>mode indicator</strong> at the bottom of the prompt box and choose <strong>Manual</strong>. In Manual mode, Claude asks before every file edit and most shell commands. The panel may start in Auto, the built-in default in Claude Code v2.1.283 and later. It remembers the last Manual, Edit automatically, or Auto mode you picked. Check the mode indicator each time you start.</p>
+</section>
+<section id="add-a-deny-rule-enforcement" class="level3">
+<h3 class="anchored" data-anchor-id="add-a-deny-rule-enforcement">Add a deny rule: enforcement</h3>
+<p>In the panel, type <code>/</code> and choose <strong>Customize → Permissions</strong>. Add a <strong>Deny</strong> rule and save it to the <strong>project</strong> settings:</p>
+<div class="prompt-block">
+<div class="prompt-label">
+Permission rule
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>Read(./data/restricted/**)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Or create the file <code>.claude/settings.json</code> in Positron’s Explorer with:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"permissions"</span><span class="fu">:</span> <span class="fu">{</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"deny"</span><span class="fu">:</span> <span class="ot">[</span><span class="st">"Read(./data/restricted/**)"</span><span class="ot">]</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><strong>3. Test it.</strong> Start a new conversation, so the new settings are loaded, and send:</p>
-<pre class="text"><code>This is a test of a permission rule. Try to read
-data/restricted/visit_notes.csv with your Read tool and tell me the
-exact message you get. Don't try any other way to open it.</code></pre>
-<p>You want a <strong>permission-denied</strong> message from Claude Code, not just a polite refusal. A refusal means Claude followed <code>CLAUDE.md</code> (advice). A denial means Claude Code blocked the tool (enforcement).</p>
-<p><strong>4. Start version control.</strong> Ask Claude, and approve the commands:</p>
-<pre class="text"><code>Initialize a git repository here, add a .gitignore that excludes
-.claude/settings.local.json and CLAUDE.local.md, and commit everything
-with the message "Starting point".</code></pre>
-<div class="callout callout-style-default callout-warning callout-titled">
+</section>
+<section id="test-the-rule" class="level3">
+<h3 class="anchored" data-anchor-id="test-the-rule">Test the rule</h3>
+<p>Save the rule, then send:</p>
+<div class="prompt-block">
+<div class="prompt-label">
+Prompt
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>This is a test of a permission rule. Use your Read tool to open</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>data/restricted/STANDIN_linkage_request.txt and tell me the exact</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>message you get. Don't try any other way to open it.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>If Claude can still read the file, run <code>/status</code> and check the <strong>Setting sources</strong> line to confirm the project settings loaded.</p>
+<p><strong>Check:</strong> you want this message: <em>File is covered by a Read deny rule in your permission settings.</em> A polite refusal means Claude followed <code>CLAUDE.md</code> (advice). This message means Claude Code blocked the file (enforcement).</p>
+<p>If Claude refuses without trying, reply: <code>It's a test of the deny rule. Call the Read tool once on that file.</code> If you see the text <code>RESTRICTED-CANARY-7Q4Z</code>, Claude read the file and the rule isn’t working. Check that the file is <code>nhanes-bp/.claude/settings.json</code> (the folder name starts with a dot) and that it matches the text above exactly. Then start a new conversation and test again.</p>
+<div class="callout callout-style-default callout-warning callout-titled" title="Know the gap">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Warning
+<span class="screen-reader-only">Warning</span>Know the gap
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>Know the gap.</strong> Read deny rules cover Claude’s own file tools and shell commands it recognizes, such as <code>cat</code> and <code>head</code>. They <strong>don’t</strong> cover a program that opens the file itself, like an R script that Claude writes and runs. The <strong>sandbox</strong> closes that gap at the operating-system level (<code>/sandbox</code>; macOS, Linux, or WSL2). That’s one more reason the real rule is “don’t put restricted data in the project.”</p>
+<p>A <code>Read</code> deny rule covers Claude’s own file tools and shell commands it recognizes, such as <code>cat</code>. It <strong>doesn’t</strong> stop a script that Claude writes and runs, such as an R script, from opening the file. So the real rule is simple: <strong>don’t put restricted data in the project.</strong></p>
+</div>
+</div>
+</section>
+<section id="start-version-control" class="level3">
+<h3 class="anchored" data-anchor-id="start-version-control">Start version control</h3>
+<p>Ask Claude, and approve each git command when it asks:</p>
+<div class="prompt-block">
+<div class="prompt-label">
+Prompt
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>Initialize a git repository here. Add a .gitignore that excludes</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>.claude/settings.local.json and data/restricted/. Then commit</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>everything with the message "Starting point".</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>git keeps a record of every version of your files. It’s your safety net for the rest of class.</p>
+<p><em>Aim to finish this section about 15 minutes into class.</em></p>
+</section>
+</section>
+<section id="plan" class="level2">
+<h2 class="anchored" data-anchor-id="plan">3. Plan before you code</h2>
+<p><strong>Claude does:</strong> reads the plan, the dictionary, and the data files, and proposes the steps. <strong>You decide:</strong> whether the plan matches the analysis you committed to.</p>
+<section id="first-you" class="level3">
+<h3 class="anchored" data-anchor-id="first-you">First, you</h3>
+<p>Open <code>data/data_dictionary.csv</code> (not the plan yet). Look at the <code>missing_codes</code>, <code>skip_logic</code> and <code>notes</code> columns. Then, on paper, write down:</p>
+<ul class="task-list">
+<li><label><input type="checkbox"><strong>Two problems you expect</strong> in the raw data.</label></li>
+<li><label><input type="checkbox"><strong>Your answer to three questions:</strong></label>
+<ol type="1">
+<li>A participant has a blank <code>BPQ150</code> (“now taking BP medication”). Are they taking medication, not taking it, or unknown?</li>
+<li><code>BPQ020</code> and <code>BPQ150</code> use the codes 7 and 9. What do they mean, and what should the script do with them?</li>
+<li>Should the percentages be weighted? If so, with which weight: <code>WTINT2YR</code> or <code>WTMEC2YR</code>?</li>
+</ol></li>
+</ul>
+<p>Then open <code>docs/analysis-plan.md</code>. Did the study team decide the way you did? You’ll also check Claude’s plan against these answers.</p>
+</section>
+<section id="ask-claude-for-a-plan" class="level3">
+<h3 class="anchored" data-anchor-id="ask-claude-for-a-plan">Ask Claude for a plan</h3>
+<p>Switch to <strong>plan mode</strong>: click the mode indicator and choose <strong>Plan</strong>, or type <code>/plan</code> in the prompt box. In plan mode, Claude reads and proposes, and doesn’t change files. If Claude asks to run R to look at the data files, approve it. If auto mode is available in your setup, Claude may run some shell commands in plan mode without asking, and a classifier checks them. That’s expected.</p>
+<div class="prompt-block">
+<div class="prompt-label">
+Prompt
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>Read docs/analysis-plan.md and data/data_dictionary.csv. Open the</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>codebooks in docs/codebooks/ only if you need them. Then inspect the</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>three files in data/raw/: variable names, types, row counts, value</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>counts, and ranges, printing no more than 10 rows. Propose a</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>step-by-step plan for R/01_prepare.R, and outline R/02_prevalence.R.</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>List every decision you need from me. Don't write code yet. Once I</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>approve, write only R/01_prepare.R, then stop.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="compare-then-approve" class="level3">
+<h3 class="anchored" data-anchor-id="compare-then-approve">Compare, then approve</h3>
+<p>The plan opens as a document. <strong>Read it before you approve.</strong> Compare it with your notes:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">What did Claude catch that you missed?</label></li>
+<li><label><input type="checkbox">What did you catch that Claude missed?</label></li>
+<li><label><input type="checkbox">Did Claude follow the plan on the blank <code>BPQ150</code>, the 7 and 9 codes, the weight, and the pregnancy filter, or quietly change one? Did it decide anything the plan doesn’t cover, such as file formats, column names, or rounding?</label></li>
+<li><label><input type="checkbox">Mark each step of Claude’s plan <strong>C</strong> (Claude can do it) or <strong>Me</strong> (a decision I keep).</label></li>
+</ul>
+<p>If anything is wrong, add a comment to the plan or tell Claude what to change. When it’s right, approve with <strong>Yes, and manually approve edits</strong>. Don’t choose the first option, <strong>Yes, and use auto mode</strong> (or <strong>Yes, and auto-accept</strong>): it turns off the per-edit review you’ll use next.</p>
+<p>Approving starts the work: Claude begins writing <code>R/01_prepare.R</code> at once, and each edit opens as a side-by-side diff. Review each one (see the next section).</p>
+<p>Planning first protects research integrity: you fix the decisions <em>before</em> you see results.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Reference decisions for today (open after you compare)">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Reference decisions for today (open after you compare)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>These come from <code>docs/analysis-plan.md</code>. They match the CDC definitions.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Question</th>
+<th>Today’s answer</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Blank <code>BPQ150</code> (BP medication)</td>
+<td>When <code>BPQ020 == 2</code> (never told they had high BP), the medication question was skipped. Count them as <strong>not taking medication</strong>.</td>
+<td>The codebook’s skip logic. A skipped question isn’t a missing answer.</td>
+</tr>
+<tr class="even">
+<td>Codes 7 and 9</td>
+<td><strong>Missing.</strong> 7 = refused, 9 = don’t know.</td>
+<td>They’re codes, not values. Never average them.</td>
+</tr>
+<tr class="odd">
+<td>Weights</td>
+<td><strong>Weighted</strong>, with the exam weight <code>WTMEC2YR</code>, plus the strata and PSUs.</td>
+<td>Blood pressure comes from the exam. NHANES oversamples some groups, so unweighted results don’t describe U.S. adults.</td>
+</tr>
+<tr class="even">
+<td>Population</td>
+<td>Adults 18+, examined, at least one SBP or DBP reading, not pregnant.</td>
+<td>The plan’s question is about U.S. adults; pregnancy changes blood pressure.</td>
+</tr>
+<tr class="odd">
+<td>Pregnancy</td>
+<td>Exclude only <code>RIDEXPRG == 1</code>. A missing <code>RIDEXPRG</code> counts as <strong>not pregnant</strong>.</td>
+<td><code>RIDEXPRG</code> is recorded only for women 20–44. Everyone else is blank.</td>
+</tr>
+<tr class="even">
+<td>Readings</td>
+<td>Mean of the available readings 1–3.</td>
+<td>CDC’s definition.</td>
+</tr>
+<tr class="odd">
+<td>Hypertension</td>
+<td>Mean SBP ≥ 130 or mean DBP ≥ 80 mmHg, or <code>BPQ150 == 1</code> (taking BP medication). If the medication answer is missing, the readings decide.</td>
+<td>The 2017 ACC/AHA definition, as the plan states.</td>
+</tr>
+<tr class="even">
+<td>Age 80</td>
+<td>Means <strong>80 or older</strong>. Keep it; it still falls in the 60+ group.</td>
+<td>CDC top-codes age at 80 to protect privacy.</td>
+</tr>
+<tr class="odd">
+<td>Wording</td>
+<td>Describe, don’t explain: “had hypertension,” not “caused” or “led to.”</td>
+<td>It’s a cross-sectional survey.</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 </div>
 </section>
 </section>
-<section id="exercise-1" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-1">3. Plan, build, verify (0:17 – 0:42)</h2>
-<p><strong>Exercise 1 (hands-on, about 25 minutes).</strong> You’ll direct Claude through the SAP: plan, clean, check, analyze, report, and commit. Work at your own pace. If you fall behind, finish the cleaning script and the Data Explorer check. The instructor will show the rest on screen.</p>
-<section id="a.-plan-mode-on-the-sap-5-min" class="level3">
-<h3 class="anchored" data-anchor-id="a.-plan-mode-on-the-sap-5-min">3a. Plan mode on the SAP (5 min)</h3>
-<p>Switch to <strong>plan mode</strong>: click the mode indicator and choose <strong>Plan</strong>, or type <code>/plan</code> in the prompt box. In plan mode, Claude reads and proposes, and doesn’t change files.</p>
-<pre class="text"><code>Read docs/SAP.md and data/data_dictionary.csv. Then inspect
-data/raw/class_cohort.csv: column names, types, value counts, and
-ranges, printing no more than 10 rows. Propose a step-by-step plan to
-clean the data and run the primary analysis. List every data problem
-you find, and every decision you need from me. Don't write code yet.</code></pre>
-<p>The prompt doesn’t name a language, because <code>CLAUDE.md</code> (or <code>CLAUDE.python.md</code>, renamed) already does.</p>
-<p>The plan opens as a document. <strong>Read it before you approve.</strong> You can add inline comments to change anything you disagree with. When you approve, pick the option that keeps you approving each edit, not one that accepts edits automatically, so you still review every change in 3b. How many data problems did Claude find? Planning first protects research integrity: you decide the analysis <em>before</em> you see results.</p>
-<div class="callout callout-style-default callout-tip callout-titled" title="When Claude asks how to handle a problem">
+<section id="build" class="level2">
+<h2 class="anchored" data-anchor-id="build">4. Build the prepare script</h2>
+<p><strong>Claude does:</strong> reads the XPT files, merges them on <code>SEQN</code>, writes the code, runs it, and fixes errors. <strong>You decide:</strong> whether each change matches the plan.</p>
+<section id="write-and-run-it" class="level3">
+<h3 class="anchored" data-anchor-id="write-and-run-it">Write and run it</h3>
+<p>Claude is now writing <code>R/01_prepare.R</code>. Review each diff as it appears. When Claude stops, send this prompt so the script covers every point:</p>
+<div class="prompt-block">
+<div class="prompt-label">
+Prompt
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>Check that R/01_prepare.R does all of the following, and fix it if not:</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>- read the three files in data/raw/ with haven::read_xpt()</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>- merge them on SEQN, keeping every participant in DEMO_L</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>- apply the plan's population steps in order, printing n before and</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  after each step</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>- average the available readings 1-3 for SBP and DBP</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>- set 7 and 9 to missing in BPQ020 and BPQ150 themselves (don't keep</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  a copy with the codes)</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>- name the derived columns mean_sbp, mean_dbp, bp_med (1 = taking,</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  0 = not), hypertension (1 = yes, 0 = no), sex, and age_group, and</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  derive hypertension as the plan defines it, including the BPQ150</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  skip rule</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>- write output/analysis_data.csv (the analysis population, with SEQN,</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>  the variables you used, and the derived ones) and output/prep_log.csv</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>  (step, n_before, n_after, reason)</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>Never change anything in data/raw/. Run the script with Rscript and fix</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>any errors.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><strong>Review each change.</strong> In Manual mode, every edit opens as a side-by-side diff. Accept or reject it, or tell Claude what to do instead. Approve the <code>Rscript</code> command when Claude asks. Watch the loop: <strong>write, run, read the error, fix, run again.</strong></p>
+<p><strong>Check:</strong> in the diff, find two lines: the pregnancy filter (the plan says a blank <code>RIDEXPRG</code> counts as not pregnant: does the code keep those people?) and the line that turns 7 and 9 into missing. If you can’t find one, ask Claude to point to it.</p>
+</section>
+<section id="explain-it-back" class="level3">
+<h3 class="anchored" data-anchor-id="explain-it-back">Explain it back</h3>
+<p>You need to understand code before you trust it. Asking for an explanation is also a fast way to learn R.</p>
+<div class="prompt-block">
+<div class="prompt-label">
+Prompt
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>Explain R/01_prepare.R section by section in plain language. For each</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>section, tell me which decision from the plan it carries out. Point</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>out any choice you made that I didn't ask for.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><strong>You decide:</strong> find the line that handles the blank <code>BPQ150</code>. Does it match your answer from the plan step? Is there a choice you didn’t ask for? If so, keep it, change it, or ask why.</p>
+</section>
+</section>
+<section id="check" class="level2">
+<h2 class="anchored" data-anchor-id="check">5. Check it yourself</h2>
+<p><strong>Claude does:</strong> only the git commit at the end. <strong>You decide:</strong> whether the output is right. Don’t take Claude’s summary on trust.</p>
+<section id="open-the-results-in-positron" class="level3">
+<h3 class="anchored" data-anchor-id="open-the-results-in-positron">Open the results in Positron</h3>
+<p>In Positron’s <strong>Console</strong>, run:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>prep <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"output/analysis_data.csv"</span>)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>log  <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"output/prep_log.csv"</span>)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>log</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Open <code>prep</code> from the <strong>Variables</strong> pane in the <strong>Data Explorer</strong>. If Claude renamed any columns, use its names below.</p>
+</section>
+<section id="check-the-numbers" class="level3">
+<h3 class="anchored" data-anchor-id="check-the-numbers">Check the numbers</h3>
+<ul class="task-list">
+<li><label><input type="checkbox"><strong>The n flow</strong> in <code>log</code> reads 8,153 adults → 6,337 examined → 6,123 with at least one reading → <strong>6,084</strong> not pregnant. <code>prep</code> has 6,084 rows.</label></li>
+<li><label><input type="checkbox"><strong>No 7 or 9 left</strong> in <code>BPQ020</code> or <code>BPQ150</code>. Sort each column, or run <code>count(prep, BPQ020, BPQ150)</code>.</label></li>
+<li><label><input type="checkbox"><strong>The blank <code>BPQ150</code>s</strong> are handled per the plan. Run <code>count(prep, BPQ020, BPQ150, bp_med)</code>. The 3,842 people with <code>BPQ020</code> = 2 and a blank <code>BPQ150</code> should have <code>bp_med</code> = 0 (not taking medication). Seven other rows have a blank because the answer was refused or don’t know. Their <code>bp_med</code> stays blank.</label></li>
+<li><label><input type="checkbox"><strong>No blank <code>hypertension</code>.</strong> <code>count(prep, hypertension)</code> shows only 0 and 1. The plan says that when the medication answer is missing, the readings decide.</label></li>
+<li><label><input type="checkbox"><strong>The oldest age is 80.</strong> What does 80 mean here? (See the reference decisions.)</label></li>
+<li><label><input type="checkbox"><strong>No averages of codes.</strong> Run <code>mean(haven::read_xpt("data/raw/BPQ_L.xpt")$BPQ150, na.rm = TRUE)</code>. It returns about 1.19: an average of the codes 1, 2, and 9, which means nothing. Now count them instead: <code>count(haven::read_xpt("data/raw/BPQ_L.xpt"), BPQ150)</code>. Count codes; don’t average them.</label></li>
+</ul>
+</section>
+<section id="trace-one-person-by-hand" class="level3">
+<h3 class="anchored" data-anchor-id="trace-one-person-by-hand">Trace one person by hand</h3>
+<p>Pick participant <code>130559</code> and follow them from the raw readings to the flag:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>haven<span class="sc">::</span><span class="fu">read_xpt</span>(<span class="st">"data/raw/BPXO_L.xpt"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(SEQN <span class="sc">==</span> <span class="dv">130559</span>) <span class="sc">|&gt;</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(SEQN, <span class="fu">starts_with</span>(<span class="st">"BPXOSY"</span>), <span class="fu">starts_with</span>(<span class="st">"BPXODI"</span>))</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>haven<span class="sc">::</span><span class="fu">read_xpt</span>(<span class="st">"data/raw/BPQ_L.xpt"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(SEQN <span class="sc">==</span> <span class="dv">130559</span>) <span class="sc">|&gt;</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(SEQN, BPQ020, BPQ150)</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>prep <span class="sc">|&gt;</span> <span class="fu">filter</span>(SEQN <span class="sc">==</span> <span class="dv">130559</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Work out the mean SBP and mean DBP yourself. Is this person on BP medication? Do they have hypertension under the plan’s definition? Does <code>prep</code> agree?</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Answer for participant 130559">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>When Claude asks how to handle a problem
+<span class="screen-reader-only">Tip</span>Answer for participant 130559
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><code>CLAUDE.md</code> tells Claude to ask you before handling missing data or outliers. For today, follow the SAP:</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Claude asks about</th>
-<th>Your answer for today</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Implausible values (outside the dictionary’s range)</td>
-<td>Set them to missing and log them. Don’t guess the intended value.</td>
-</tr>
-<tr class="even">
-<td><code>-99</code>, <code>999</code>, blanks, <code>NA</code></td>
-<td>All are missing (see the dictionary’s <code>missing_codes</code> column).</td>
-</tr>
-<tr class="odd">
-<td>Sex coded <code>Female</code>, <code>Male</code>, <code>f</code>, <code>1</code>, <code>2</code></td>
-<td>Recode to <code>F</code>/<code>M</code>. Assume <code>1</code> = M and <code>2</code> = F, and log it as a question for the data manager.</td>
-</tr>
-<tr class="even">
-<td>Duplicate rows</td>
-<td>Remove exact duplicates, then confirm that every <code>patient_id</code> is unique.</td>
-</tr>
-<tr class="odd">
-<td>Mixed date formats</td>
-<td>Parse each format with its own rule, and stop if any date fails to parse.</td>
-</tr>
-<tr class="even">
-<td><code>cuff_size</code> (not in the dictionary)</td>
-<td>Keep it, don’t use it, and log it as a question for the data manager.</td>
-</tr>
-</tbody>
-</table>
+<p>The SBP readings are 134, 129, and 129, so the mean SBP is 130.7. The DBP readings are 77, 78, and 77, so the mean DBP is 77.3. <code>BPQ020</code> is 2 (never told they had high BP), so <code>BPQ150</code> is blank by design: <strong>not taking medication</strong>. Only one reading is 130 or higher, but the <strong>mean</strong> is, so this person <strong>has hypertension</strong> under the plan’s definition.</p>
 </div>
 </div>
 </div>
 </section>
-<section id="b.-claude-writes-and-runs-the-cleaning-script-8-min" class="level3">
-<h3 class="anchored" data-anchor-id="b.-claude-writes-and-runs-the-cleaning-script-8-min">3b. Claude writes and runs the cleaning script (8 min)</h3>
-<p>Switch back to <strong>Manual</strong>. Then send:</p>
-<div class="tabset-margin-container"></div><div class="panel-tabset" data-group="language">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Python</a></li></ul>
-<div class="tab-content" data-group="language">
-<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<pre class="text"><code>Following the approved plan, write R/01_clean.R. It should read
-data/raw/class_cohort.csv, fix each problem we agreed on, and write
-output/cohort_clean.csv and output/cleaning_log.csv, with one row per
-change: step, variable, patient_id, old value, new value, reason.
-Print the row count before and after each step. Run it with Rscript
-and fix any errors.</code></pre>
+<section id="save-your-work-with-git" class="level3">
+<h3 class="anchored" data-anchor-id="save-your-work-with-git">Save your work with git</h3>
+<div class="prompt-block">
+<div class="prompt-label">
+Prompt
 </div>
-<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<pre class="text"><code>Following the approved plan, write python/01_clean.py. It should read
-data/raw/class_cohort.csv, fix each problem we agreed on, and write
-output/cohort_clean.csv and output/cleaning_log.csv, with one row per
-change: step, variable, patient_id, old value, new value, reason.
-Print the row count before and after each step. Run it and fix any
-errors.</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>Commit R/01_prepare.R and the files in output/ with a message that</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>says what they do. Then show me git log --oneline.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-</div>
-</div>
-<p><strong>Review each change.</strong> In Manual mode, every edit opens as a side-by-side diff. Accept or reject each change, or tell Claude what to do instead. Approve the <code>Rscript</code> command when Claude asks. Watch the loop: write, run, read the error, fix, rerun.</p>
-</section>
-<section id="c.-check-it-yourself-in-positron-3-min" class="level3">
-<h3 class="anchored" data-anchor-id="c.-check-it-yourself-in-positron-3-min">3c. Check it yourself in Positron (3 min)</h3>
-<p>Don’t take Claude’s summary on trust. In Positron’s <strong>R Console</strong>, run:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>clean <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">"output/cohort_clean.csv"</span>)</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>log   <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">"output/cleaning_log.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><em>Python:</em> <code>import pandas as pd; clean = pd.read_csv("output/cohort_clean.csv")</code></p>
-<p>Open <code>clean</code> from the <strong>Variables</strong> pane in the <strong>Data Explorer</strong>, and check:</p>
-<ul class="task-list">
-<li><label><input type="checkbox">The row count is what you expect after removing duplicates.</label></li>
-<li><label><input type="checkbox">Sorting <code>sbp_v1</code> from high to low shows no 1200. Sorting <code>sbp_v0</code> from low to high shows no <code>-99</code>.</label></li>
-<li><label><input type="checkbox"><code>sex</code> has only <code>F</code>, <code>M</code>, and missing values.</label></li>
-<li><label><input type="checkbox">Every fix in <code>log</code> names the patient IDs it changed. Pick one row of the log and find that patient in <code>clean</code>.</label></li>
-</ul>
-<p>This is what “trace every change” means: the script is the record, the log shows each change, and you’ve checked both.</p>
-</section>
-<section id="d.-table-1-the-primary-model-and-a-quarto-report-6-min" class="level3">
-<h3 class="anchored" data-anchor-id="d.-table-1-the-primary-model-and-a-quarto-report-6-min">3d. Table 1, the primary model, and a Quarto report (6 min)</h3>
-<pre class="text"><code>Write R/02_table1.R (baseline characteristics by arm, as the SAP
-describes) and R/03_primary_model.R (the SAP's primary analysis,
-reporting n by arm and the adjusted difference with its 95% CI). Read
-output/cohort_clean.csv, save results to output/, and run both.</code></pre>
-<pre class="text"><code>Write reports/report.qmd, a Quarto report that presents Table 1, the
-analysis population, and the primary result. Read every number from
-the files in output/; don't type numbers into the text. Render it to
-HTML.</code></pre>
-<p><em>Python:</em> change the script names to <code>python/02_table1.py</code> and <code>python/03_primary_model.py</code>. The report uses Quarto’s Jupyter engine.</p>
-<p>Open <code>reports/report.html</code> in Positron’s Viewer, next to its source.</p>
-<p><strong>Check it against the SAP.</strong> While the report renders, open <code>R/03_primary_model.R</code> (or <code>python/03_primary_model.py</code>) and <code>R/02_table1.R</code> next to <code>docs/SAP.md</code>, and check:</p>
-<ul class="task-list">
-<li><label><input type="checkbox">The model is <code>sbp_change ~ arm + sbp_v0 + site</code>, with <strong>Standard</strong> as the reference arm.</label></li>
-<li><label><input type="checkbox">The analysis population is complete case: patients with both <code>sbp_v0</code> and <code>sbp_v3</code>.</label></li>
-<li><label><input type="checkbox">The result is the adjusted difference, Intensive − Standard, with its 95% CI and p-value.</label></li>
-<li><label><input type="checkbox">Table 1 shows missing counts and has no p-values.</label></li>
-</ul>
-<p>Anything that doesn’t match is a finding. Tell Claude what the SAP says, and have it fix the script.</p>
-<div class="callout callout-style-default callout-tip callout-titled" title="Check your numbers">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Check your numbers
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-7" class="callout-7-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>After cleaning: 500 patients (250 per arm). Analyzed (complete case): <strong>n = 451</strong> (Standard 222, Intensive 229). Adjusted difference, Intensive − Standard: <strong>−11.0 mmHg (95% CI −12.8 to −9.2)</strong>. If yours differ, compare the n’s first. Most differences come from cleaning choices, such as how the <code>1</code>/<code>2</code> sex codes or implausible values were handled, and only choices that affect <code>sbp_v0</code>, <code>sbp_v3</code>, <code>arm</code>, <code>site</code>, or duplicates change the primary result.</p>
-</div>
-</div>
-</div>
-</section>
-<section id="e.-safety-nets-checkpoints-rewind-and-git-3-min" class="level3">
-<h3 class="anchored" data-anchor-id="e.-safety-nets-checkpoints-rewind-and-git-3-min">3e. Safety nets: checkpoints, rewind, and git (3 min)</h3>
-<p><strong>Checkpoints</strong> let you undo Claude’s file edits within a session. Hover over any of your messages and click the rewind button. Then choose <strong>Fork conversation from here</strong>, <strong>Rewind code to here</strong>, or both. Try it on a deliberate mistake:</p>
-<pre class="text"><code>In R/01_clean.R, rename every variable to upper case.</code></pre>
-<p>Accept the change, then hover over that message and choose <strong>Rewind code to here</strong>.</p>
-<p><strong>Checkpoints have limits.</strong> They track only edits made by Claude’s file-editing tools. Files written <em>by your scripts</em> (everything in <code>output/</code> and <code>reports/report.html</code>) and changes from shell commands aren’t captured. <strong>Git is your real safety net:</strong></p>
-<pre class="text"><code>Commit the scripts, the outputs, and the report with a descriptive
-message. Show me git log --oneline afterward.</code></pre>
-</section>
-</section>
-<section id="break-catch-up-042-047" class="level2">
-<h2 class="anchored" data-anchor-id="break-catch-up-042-047">Break / catch-up (0:42 – 0:47)</h2>
-<p>Finish Exercise 1, or at least get <code>R/01_clean.R</code> working and committed. Segment 5 uses it.</p>
-</section>
-<section id="working-well-047-057" class="level2">
-<h2 class="anchored" data-anchor-id="working-well-047-057">4. Working well (0:47 – 0:57)</h2>
-<section id="a.-context-is-the-budget-2-min" class="level3">
-<h3 class="anchored" data-anchor-id="a.-context-is-the-budget-2-min">4a. Context is the budget (2 min)</h3>
-<p>Everything Claude reads fills its <strong>context window</strong>: your messages, <code>CLAUDE.md</code>, every file it opens, and every line of output. As it fills, quality drops. The prompt box has a <strong>context indicator</strong> that shows how full it is.</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>When…</th>
-<th>Do this</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>The session is long, but you’re on the same task</td>
-<td><code>/compact keep the cleaning decisions and the n at each step</code></td>
-</tr>
-<tr class="even">
-<td>You’re switching to an unrelated task</td>
-<td>Start a new conversation (new tab or <strong>New Conversation</strong>); CLI: <code>/clear</code></td>
-</tr>
-<tr class="odd">
-<td>You want to see what’s using space</td>
-<td>CLI: <code>/context</code> (the panel shows the indicator)</td>
-</tr>
-<tr class="even">
-<td>You have a quick side question</td>
-<td><code>/btw &lt;question&gt;</code>: answered beside the chat, not added to it</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Rule of thumb from the docs:</strong> if you’ve corrected Claude more than twice on the same issue, start a fresh conversation with a better prompt that includes what you learned.</p>
-</section>
-<section id="b.-model-and-effort-3-min" class="level3">
-<h3 class="anchored" data-anchor-id="b.-model-and-effort-3-min">4b. <code>/model</code> and <code>/effort</code> (3 min)</h3>
-<p><strong>In the panel,</strong> click the model name at the bottom of the prompt box, or choose <strong>Switch model…</strong> from the <code>/</code> menu. The picker has an <strong>Effort</strong> row. <strong>In the CLI,</strong> use <code>/model</code> and <code>/effort</code>. If you took <em>Getting started with Claude</em>, these are the same two dials as the model and effort menu next to Send in the Claude app.</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Model alias</th>
-<th>What it uses</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>default</code></td>
-<td>Your account’s default (Opus 5.5 on Enterprise, unless your admin set an organization default)</td>
-</tr>
-<tr class="even">
-<td><code>opus</code> / <code>sonnet</code> / <code>haiku</code></td>
-<td>Latest Opus (hardest reasoning) / Sonnet (everyday work) / Haiku (fast, simple tasks)</td>
-</tr>
-<tr class="odd">
-<td><code>opusplan</code></td>
-<td><strong>Opus in plan mode, then Sonnet to carry out the plan</strong>. A good fit for today’s plan-first workflow</td>
-</tr>
-<tr class="even">
-<td><code>fable</code> / <code>best</code></td>
-<td>Fable, the most capable model, for long, hard tasks (if available; may bill to usage credits)</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Effort</strong> controls how much Claude reasons on each step: <code>low</code>, <code>medium</code>, <code>high</code>, <code>xhigh</code>, or <code>max</code>. Opus 5.5, Sonnet 5.5, and Haiku 5.5 default to <strong><code>medium</code></strong>. Higher effort tests more edge cases and verifies more, but uses more tokens and time. <code>max</code> applies to the current session only, and your organization may cap the levels you can choose.</p>
-<p><strong><code>ultrathink</code>, for one turn.</strong> Put the word <code>ultrathink</code> anywhere in a prompt to ask for deeper reasoning on that turn only, without changing your effort setting:</p>
-<pre class="text"><code>ultrathink: The SAP's primary analysis is complete case, and loss to
-follow-up is higher in older patients. What could that do to the
-estimate, and which planned sensitivity analysis addresses it? Don't
-write code.</code></pre>
-</section>
-<section id="c.-ultracode-and-dynamic-workflows-if-enabled-3-min" class="level3">
-<h3 class="anchored" data-anchor-id="c.-ultracode-and-dynamic-workflows-if-enabled-3-min">4c. Ultracode and dynamic workflows (if enabled) (3 min)</h3>
-<p>A <strong>dynamic workflow</strong> is a script Claude writes that runs many subagents in the background. Each one checks part of the job, and you get one report at the end.</p>
-<ul>
-<li><strong>One task:</strong> start a prompt with the keyword <strong><code>ultracode</code></strong>. The docs say this works when you type it in the IDE extension panel. It doesn’t trigger in <code>claude -p</code>.</li>
-<li><strong>A whole session:</strong> <code>/effort ultracode</code> (CLI), or the <strong>Ultracode</strong> switch under the Effort row in the panel’s model picker. Ultracode is a <em>setting</em>, not an effort level. Claude then plans a workflow for every substantive task until you turn it off (<code>/effort ultracode off</code>).</li>
-<li><strong>Built in:</strong> <code>/deep-research &lt;question&gt;</code> searches the web from several angles, cross-checks sources, and returns a cited report. It needs web search to be available.</li>
-</ul>
-<pre class="text"><code>ultracode: review every script in R/ against docs/SAP.md, one reviewer
-per script, then adversarially check each finding and report only the
-ones that survive. Don't change any files.</code></pre>
-<pre class="text"><code>/deep-research What do recent methods papers recommend for missing
-12-month outcomes in hypertension RCTs: complete case, multiple
-imputation, or mixed models?</code></pre>
-<div class="callout callout-style-default callout-warning callout-titled">
+<p><strong>Rewind is a partial safety net.</strong> In the panel, hover over a message and click the rewind button (check before class) to undo Claude’s file edits since then. It also undoes shell changes to files Claude had already edited. It doesn’t undo files that only a script wrote, such as everything in <code>output/</code>, or most edits made by subagents. <strong>git is the record.</strong></p>
+<p><em>Aim to finish this section about 50 minutes into class.</em></p>
+<div id="catch-up" class="callout callout-style-default callout-note callout-titled" title="Catch-up">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Warning
+<span class="screen-reader-only">Note</span>Catch-up
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>Cost and usage.</strong> A workflow can use <strong>meaningfully more tokens</strong> than the same task in conversation, and it counts toward your plan’s usage limits. With ultracode on, every request costs more and takes longer. Try a small slice first, and turn ultracode off for routine work. Your organization can turn workflows off entirely. Verify every citation <code>/deep-research</code> returns, and keep study data out of research questions.</p>
+<p>We’ll take a short break here. Use it to catch up. If your script isn’t working, download <a href="downloads/nhanes-bp-checkpoint.zip">nhanes-bp-checkpoint.zip</a>. Unzip it to a <strong>different</strong> folder so it doesn’t overwrite your work (or rename your old <code>nhanes-bp</code> folder first). Open the new <code>nhanes-bp</code> folder in Positron. Check that the mode is <strong>Manual</strong>, add the deny rule again (<a href="#add-a-deny-rule-enforcement">Add a deny rule</a>), and send the <a href="#start-version-control">Start version control</a> prompt again. Then, in the <strong>Console</strong>, run <code>source("R/01_prepare.R")</code> and check that it ends with 6,084 people. Then carry on.</p>
 </div>
 </div>
 </section>
-<section id="d.-check-in-from-your-phone-rc-if-enabled-2-min" class="level3">
-<h3 class="anchored" data-anchor-id="d.-check-in-from-your-phone-rc-if-enabled-2-min">4d. Check in from your phone: <code>/rc</code> (if enabled) (2 min)</h3>
-<p><strong>Remote Control</strong> lets you check on your current local session from the Claude mobile app (iOS and Android) or a browser. Start a long render or model run, then check progress or approve permission prompts from another device. If you took <em>Getting started with Claude</em>, this is what the phone app’s <strong>Code</strong> tab is for.</p>
-<ol type="1">
-<li>In the panel, type <code>/rc</code> (or <code>/remote-control</code>). The first time, confirm <strong>Enable Remote Control</strong>. A <strong>Remote Control</strong> indicator appears in the prompt box footer. In the panel, the command takes no name and shows no QR code.</li>
-<li>On your phone, open the Claude app, tap <strong>Code</strong>, and pick the session (a computer icon with a green dot means it’s online). In a browser, the same session also shows in the Code section of the Claude web app.</li>
-<li>Type <code>/rc</code> again to disconnect.</li>
-</ol>
-<ul>
-<li><strong>Claude keeps running on your computer.</strong> Code execution and file access stay local, so your computer has to stay on and the session has to keep running.</li>
-<li><strong>Not the same as Claude Code on the web.</strong> Remote Control is <em>your local session</em>, viewed from your phone or a browser. Claude Code on the web runs separate <em>cloud</em> sessions on a GitHub repository (if enabled). It can’t see Positron or today’s project folder, so it isn’t a substitute for this class.</li>
-<li><strong>Governance:</strong> while connected, the session transcript (messages, responses, and tool activity) is stored on Anthropic servers. That’s another reason not to print data values into the session. It requires a claude.ai login, and on Enterprise an Owner must turn it on; custom roles also need the Remote Control permission, and your organization may require enrolled (“trusted”) devices. It isn’t available when your organization has the HIPAA configuration applied, under Zero Data Retention, through Amazon Bedrock, Google Cloud’s Agent Platform, or Microsoft Foundry, or through a custom gateway. Admins can disable it with <code>disableRemoteControl</code>.</li>
-<li><strong>CLI only:</strong> <code>claude --remote-control "name"</code> starts a session with it on, <code>claude remote-control</code> runs server mode with a QR code, and <code>/mobile</code> shows a QR code for getting the Claude app.</li>
+</section>
+<section id="estimate" class="level2">
+<h2 class="anchored" data-anchor-id="estimate">6. Estimate, then decide what to report</h2>
+<p><strong>Claude does:</strong> writes the survey-design code and fixes its errors. <strong>You decide:</strong> the design (already fixed in the plan), what to report, and how to say it.</p>
+<p>NHANES isn’t a simple random sample. CDC samples in stages: in this cycle, 15 <strong>strata</strong> (groups of areas), each with 2 <strong>PSUs</strong> (primary sampling units, the first areas sampled). It also oversamples some groups. The <strong>weights</strong> make the sample represent U.S. adults. The strata and PSUs make the confidence intervals honest. CDC releases masked versions of the strata and PSUs to protect privacy. Use them exactly as given.</p>
+<section id="predict-first" class="level3">
+<h3 class="anchored" data-anchor-id="predict-first">Predict first</h3>
+<p>Before you run anything, write down:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Will the <strong>unweighted</strong> percentage with hypertension be higher or lower than the weighted one?</label></li>
+<li><label><input type="checkbox">Why? (Hint: run <code>mean(prep$RIDAGEYR &gt;= 60)</code> to see what share of the sample is 60 or older. About 30% of U.S. adults are. Which age group has the most hypertension?)</label></li>
 </ul>
-<p><strong>Optional: <code>/fast</code>.</strong> Fast mode makes Opus responses up to about 2.5× faster, at a higher price per token. On subscription plans it’s billed to usage credits, and on Enterprise an Owner must enable it. In the panel, use the <strong>Toggle fast mode</strong> command when your model supports it.</p>
 </section>
+<section id="write-the-estimate-script" class="level3">
+<h3 class="anchored" data-anchor-id="write-the-estimate-script">Write the estimate script</h3>
+<div class="prompt-block">
+<div class="prompt-label">
+Prompt
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>Write R/02_prevalence.R following the survey design in</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>docs/analysis-plan.md. Build the design on all examined participants</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>(WTMEC2YR &gt; 0 in data/raw/DEMO_L.xpt), join output/analysis_data.csv</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>on SEQN, and then use subset() for the analysis population. Don't</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>filter rows before building the design. Estimate the percentage with</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>hypertension overall, by sex, and by age group (18-39, 40-59, 60+),</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>each with a Korn-Graubard 95% CI (svyciprop with method = "beta").</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>Also compute the unweighted overall percentage for comparison. Save</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>the results to output/prevalence.csv. Run the script.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>A <strong>Korn–Graubard</strong> interval is a confidence interval for a percentage that works well with survey data. CDC uses it.</p>
+<p>Review the diff. <strong>Check:</strong> find <code>weights = ~WTMEC2YR</code>, a <code>subset(</code> that comes <em>after</em> <code>svydesign(</code>, and <code>method = "beta"</code>. If any is missing, tell Claude what the plan says. Then approve the <code>Rscript</code> command and open <code>output/prevalence.csv</code> in the Data Explorer.</p>
 </section>
-<section id="extending-claude-code-057-112" class="level2">
-<h2 class="anchored" data-anchor-id="extending-claude-code-057-112">5. Extending Claude Code (0:57 – 1:12)</h2>
-<section id="a.-where-does-each-instruction-belong-2-min" class="level3">
-<h3 class="anchored" data-anchor-id="a.-where-does-each-instruction-belong-2-min">5a. Where does each instruction belong? (2 min)</h3>
+<section id="you-decide-what-to-report" class="level3">
+<h3 class="anchored" data-anchor-id="you-decide-what-to-report">You decide: what to report</h3>
+<ul class="task-list">
+<li><label><input type="checkbox">Was your prediction right? Why do the weighted and unweighted numbers differ?</label></li>
+<li><label><input type="checkbox">Which number would you report as “the percentage of U.S. adults with hypertension”? Why?</label></li>
+<li><label><input type="checkbox">Write one sentence that reports it, with its CI. Use descriptive words (“had,” “was”), not causal ones.</label></li>
+</ul>
+<p>Only then, open the check below.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Check against CDC's published numbers">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Check against CDC’s published numbers
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>CDC published these estimates in <a href="https://www.cdc.gov/nchs/products/databriefs/db511.htm">NCHS Data Brief 511</a>, using the same files and the same definitions:</p>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
 <thead>
 <tr class="header">
-<th>Put it in…</th>
-<th>When it’s…</th>
-<th>Example in the answer key</th>
+<th>Group</th>
+<th>Hypertension</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><code>CLAUDE.md</code></td>
-<td>A rule for <em>every</em> session</td>
-<td>“<code>data/raw/</code> is read-only”</td>
+<td>All adults</td>
+<td><strong>47.7%</strong> (95% CI 45.4–49.9)</td>
 </tr>
 <tr class="even">
-<td>A <strong>skill you run by name</strong></td>
-<td>A prompt you start yourself</td>
-<td><code>/check-data &lt;file&gt;</code></td>
+<td>Men</td>
+<td>50.8%</td>
 </tr>
 <tr class="odd">
-<td>A <strong>skill Claude loads when relevant</strong></td>
-<td>A procedure Claude should follow whenever it fits</td>
-<td><code>table1</code>: journal-ready Table 1</td>
+<td>Women</td>
+<td>44.6%</td>
 </tr>
 <tr class="even">
-<td>A <strong>subagent</strong></td>
-<td>Work in a <em>separate context</em>, such as an independent review</td>
-<td><code>biostat-reviewer</code></td>
+<td>Ages 18–39</td>
+<td>23.4%</td>
 </tr>
 <tr class="odd">
-<td>A <strong>hook</strong></td>
-<td>Something that must happen <em>every time</em></td>
-<td>Block edits to <code>data/raw/</code></td>
+<td>Ages 40–59</td>
+<td>52.5%</td>
 </tr>
 <tr class="even">
-<td>A <strong>deny rule</strong></td>
-<td>Something that must <em>never</em> happen</td>
-<td>Read <code>data/restricted/</code></td>
+<td>Ages 60+</td>
+<td>71.6%</td>
 </tr>
 </tbody>
 </table>
-<ul>
-<li><strong>Skills</strong> are folders with a <code>SKILL.md</code> file: <code>.claude/skills/check-data/SKILL.md</code> becomes <code>/check-data</code>, and text after the name fills <code>$ARGUMENTS</code>. Only a skill’s short <code>description</code> loads at first, and Claude reads the rest when your request matches. Add <code>disable-model-invocation: true</code> to the frontmatter, and the skill runs only when <em>you</em> type its name.</li>
-<li><strong>Custom commands are now skills.</strong> Claude Code merged them: an older <code>.claude/commands/check-data.md</code> file still works the same way, but a skill folder is the recommended form.</li>
-<li><strong>If you took <em>Getting started with Claude</em>:</strong> a skill you use in the Claude app is the same <code>SKILL.md</code> format. Skills from claude.ai can sync into Claude Code (read-only, if enabled).</li>
-<li><strong>Subagents</strong> (<code>.claude/agents/*.md</code>) have their own instructions and tools, and start fresh. To make one, ask Claude to create it, or write the file yourself. (The <code>/agents</code> command now only prints that reminder.) <strong>Hooks</strong> are scripts Claude Code runs at set points, whatever Claude decides.</li>
-</ul>
+<p>The <strong>unweighted</strong> percentage is <strong>53.3%</strong>, higher than the weighted one. Adults 60 and older are 43.7% of the examined adults but only 30.0% of the population once weighted, and they have the most hypertension. So the weighted 47.7% is the one to report.</p>
+<p><strong>If you don’t match, compare the n’s first</strong> (6,084 in the analysis population), then the skip rule, the weight, and the pregnancy filter.</p>
+<p><strong>For the stretch goals at home:</strong> among adults with hypertension, CDC reports 59.2% aware, 51.2% treated, and 20.7% controlled. The age-adjusted overall prevalence is 44.5%.</p>
+</div>
+</div>
+</div>
 </section>
-<section id="b.-demo-two-skills-a-reviewer-and-a-hook-5-min" class="level3">
-<h3 class="anchored" data-anchor-id="b.-demo-two-skills-a-reviewer-and-a-hook-5-min">5b. Demo: two skills, a reviewer, and a hook (5 min)</h3>
-<p><strong><code>/check-data</code>.</strong> This skill, which runs only when you type it, checks a file against the data dictionary by <em>writing and running a script</em>, so results are computed, not guessed. You’ll build it yourself in Exercise 2, so the demo runs it on <code>redcap_export_site_A.csv</code>.</p>
-<p><strong>The Table 1 skill.</strong> Claude loads this one on its own when your request matches. It encodes your judgment: no p-values for baseline characteristics in an RCT (CONSORT), missing values shown as their own row, and labels from the dictionary. A plain request should load it:</p>
-<pre class="text"><code>Make a baseline characteristics table by treatment arm.</code></pre>
-<p><strong>The skeptical biostatistician.</strong> It has read-only tools (<code>Read</code>, <code>Grep</code>, <code>Glob</code>), so it <em>can’t</em> change files:</p>
-<pre class="text"><code>Use the biostat-reviewer agent to review R/01_clean.R and
-R/03_primary_model.R against docs/SAP.md.</code></pre>
-<p><em>Python:</em> review <code>python/01_clean.py</code> and <code>python/03_primary_model.py</code>.</p>
-<p><strong>A hook that protects <code>data/raw/</code>.</strong> A <code>PreToolUse</code> hook runs before every edit. If the target is in <code>data/raw/</code>, it blocks the edit and tells Claude to write to <code>output/</code> instead:</p>
-<pre class="text"><code>Change sex from Female to F in data/raw/class_cohort.csv.</code></pre>
-</section>
-<section id="exercise-2" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-2">5c. Exercise 2: build one skill (8 min)</h3>
-<p>Choose <strong>A</strong> or <strong>B</strong>.</p>
-<p><strong>Option A (everyone): the <code>/check-data</code> skill.</strong> In Positron’s Explorer, create the folder <code>.claude/skills/check-data/</code> and a new file in it named <code>SKILL.md</code> (capital letters). Paste in this text and save:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="an">name:</span><span class="co"> check-data</span></span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> Data-quality check of a CSV against the data dictionary. Run it yourself with /check-data &lt;path-to-csv&gt;.</span></span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="an">disable-model-invocation:</span><span class="co"> true</span></span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="an">argument-hint:</span><span class="co"> [path-to-csv]</span></span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="an">allowed-tools:</span><span class="co"> Bash(git status *)</span></span>
-<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a><span class="fu">## Current repository state</span></span>
-<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>!<span class="in">`git status --short`</span></span>
-<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a><span class="fu">## Task</span></span>
-<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>Check the data file $ARGUMENTS against data/data_dictionary.csv.</span>
-<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Write a script in the project's language (see CLAUDE.md), saved in</span>
-<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a>   checks/, that reads the file and reports, for each variable: type</span>
-<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a>   vs. dictionary, missingness (including the codes in the dictionary's</span>
-<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a>   missing_codes column), values outside allowed_values or the plausible</span>
-<span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a>   range, inconsistent category codes, and duplicate patient_id values.</span>
-<span id="cb19-20"><a href="#cb19-20" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Run it. Fix errors and rerun.</span>
-<span id="cb19-21"><a href="#cb19-21" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Summarize problems in a table: variable, issue, n affected, example</span>
-<span id="cb19-22"><a href="#cb19-22" aria-hidden="true" tabindex="-1"></a>   value. Print at most 10 rows of data.</span>
-<span id="cb19-23"><a href="#cb19-23" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>List variables in the file that are missing from the dictionary, and</span>
-<span id="cb19-24"><a href="#cb19-24" aria-hidden="true" tabindex="-1"></a>   the reverse.</span>
-<span id="cb19-25"><a href="#cb19-25" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Don't modify the data file. Ask me before deciding how to fix anything.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Start a new conversation (or run <code>/reload-skills</code>), type <code>/check-data</code>, and run it on a REDCap export:</p>
-<pre class="text"><code>/check-data data/raw/redcap/redcap_export_site_B.csv</code></pre>
-<p>The <code>!`git status --short`</code> line runs <em>before</em> Claude sees the prompt, and <code>allowed-tools</code> pre-approves it. <code>disable-model-invocation: true</code> means Claude never starts this skill on its own; it runs only when you type <code>/check-data</code>. The skill says “the project’s language,” so it works unchanged for Python. (Older guides put the same text in <code>.claude/commands/check-data.md</code>. That still works, but skills are now the recommended form.)</p>
-<p><strong>Option B: a Table 1 skill.</strong> This needs <code>output/cohort_clean.csv</code> from Exercise 1.</p>
-<pre class="text"><code>Create a project skill in .claude/skills/table1/SKILL.md that builds a
-journal-ready Table 1 with gtsummary from output/cohort_clean.csv,
-stratified by the argument I give (default: arm). Rules: use only the
-baseline variables the SAP lists, no p-values for baseline
-characteristics, a separate Missing row, and labels from
-data/data_dictionary.csv. Report n per group as evidence. Write a
-description that makes you load it when I ask for a "Table 1" or
-"baseline characteristics." Show me the file before saving.</code></pre>
-<p><em>Python:</em> replace “with gtsummary” with “with pandas”.</p>
-<p>Start a new conversation and test both ways: a plain request (“Make a Table 1 by site”) and <code>/table1 site</code>.</p>
-<p><strong>If it doesn’t show up,</strong> check that the file is in the right folder, then start a new conversation. <strong>If a skill doesn’t load automatically,</strong> the description is usually too vague. Put the main use case first, in the words people actually type.</p>
-<p><strong>Then make it yours (2 min).</strong> Change one rule so your skill fits a data task you actually do. For example, add a check your own data needs to <code>/check-data</code> (visit dates out of order, IDs that don’t match your study’s format), or add a rule to the Table 1 skill (your target journal’s rounding rules, or a footnote that defines each abbreviation). Save, start a new conversation, and run it again.</p>
-</section>
-</section>
-<section id="messy-sources" class="level2">
-<h2 class="anchored" data-anchor-id="messy-sources">6. Messy real-world sources (1:12 – 1:20)</h2>
-<p><strong>Cut this segment first if you’re running late.</strong> It’s also a good “try at home” exercise.</p>
-<section id="a.-harmonize-the-redcap-exports" class="level3">
-<h3 class="anchored" data-anchor-id="a.-harmonize-the-redcap-exports">6a. Harmonize the REDCap exports</h3>
-<p><code>data/raw/redcap/</code> has one export per site, and each site exported a little differently. First investigate, without changing anything:</p>
-<pre class="text"><code>Use a subagent to compare the three REDCap exports in data/raw/redcap/
-with each other and with data/data_dictionary.csv: column names, codes
-for arm and sex, date formats, extra columns, and missing-data codes.
-Return one comparison table. Don't change any files.</code></pre>
-<p>Then plan and build:</p>
-<pre class="text"><code>Plan first: write R/05_harmonize_redcap.R that maps each site's export
-to the dictionary's names and codes, stacks the three sites, and logs
-every rename and recode to output/harmonize_log.csv. Then compare the
-result with data/raw/class_cohort.csv by patient_id and report every
-difference instead of hiding it.</code></pre>
-<p><em>Python:</em> use <code>python/05_harmonize_redcap.py</code>. For 6b, translate to <code>python/legacy_baseline_table.py</code> with pandas.</p>
-</section>
-<section id="b.-explain-or-translate-legacy-sas-and-stata-code" class="level3">
-<h3 class="anchored" data-anchor-id="b.-explain-or-translate-legacy-sas-and-stata-code">6b. Explain or translate legacy SAS and Stata code</h3>
-<pre class="text"><code>Explain what legacy/baseline_table.sas does, step by step, for someone
-who doesn't know SAS. Then list anything that looks like a bug, or
-that would give a different answer from the SAP. Don't run or change
-anything.</code></pre>
-<pre class="text"><code>Translate legacy/baseline_table.do into R/legacy_baseline_table.R with
-the tidyverse, keeping its logic, bugs included. Run it, compare its
-numbers with the Table 1 from Exercise 1, and explain each difference.</code></pre>
+<section id="optional-a-short-report" class="level3">
+<h3 class="anchored" data-anchor-id="optional-a-short-report">Optional: a short report</h3>
+<div class="prompt-block">
+<div class="prompt-label">
+Prompt
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>Write reports/report.qmd, a short Quarto report with the analysis</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>population (the n at each step) and the prevalence table. Read every</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>number from the files in output/; don't type numbers into the text.</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>Render it to HTML.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Open <code>reports/report.html</code> in Positron’s <strong>Viewer</strong>, next to its source.</p>
+<p><em>Aim to finish this section about 65 minutes into class.</em></p>
 </section>
 </section>
 <section id="verification" class="level2">
-<h2 class="anchored" data-anchor-id="verification">7. Verification and research integrity (1:20 – 1:27)</h2>
-<p><strong>Don’t cut this segment.</strong> Claude is a fast collaborator that can be confidently wrong. These checks are how you find out.</p>
+<h2 class="anchored" data-anchor-id="verification">7. Verification and research integrity</h2>
+<p>Claude is a fast collaborator that can be confidently wrong. These checks are how you find out.</p>
 <section id="give-claude-a-check-it-can-run" class="level3">
 <h3 class="anchored" data-anchor-id="give-claude-a-check-it-can-run">Give Claude a check it can run</h3>
-<p>The docs’ first best practice is to give Claude a way to verify its work. Without a check, “looks done” is the only signal, and you’re the only verifier.</p>
-<div class="tabset-margin-container"></div><div class="panel-tabset" data-group="language">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">Python</a></li></ul>
-<div class="tab-content" data-group="language">
-<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
-<pre class="text"><code>Using the data dictionary and SAP, write testthat tests in
-tests/testthat/test-cleaning.R for output/cohort_clean.csv: unique
-patient_id, 500 rows, no -99 or 999 codes, sbp_v0 to sbp_v3 within
-80-220, and sex coded F/M only. Add tests/run_checks.R to run them.
-Show that the tests FAIL on the raw file, then that they pass on the
-cleaned file. Don't edit the tests to make them pass. Show me the
-test output as evidence.</code></pre>
+<p><strong>You decide</strong> what “correct” means. <strong>Claude writes</strong> the code that checks it. Before you send the prompt, add one rule of your own to the list.</p>
+<div class="prompt-block">
+<div class="prompt-label">
+Prompt
 </div>
-<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
-<pre class="text"><code>Using the data dictionary and SAP, write pytest tests in
-tests/test_cleaning.py for output/cohort_clean.csv: unique patient_id,
-500 rows, no -99 or 999 codes, sbp_v0 to sbp_v3 within 80-220, and sex
-coded F/M only. Show that the tests FAIL on the raw file, then that
-they pass on the cleaned file. Don't edit the tests to make them pass.
-Show me the test output as evidence.</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>Write testthat tests in tests/testthat/test-prepare.R, and a script</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>tests/run_checks.R that runs them. Write the checks as a function of a</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>data frame, so they can run on any version of the data. Test that:</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>- SEQN is unique</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>- there are 6,084 rows</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>- BPQ020 and BPQ150 contain no 7 or 9</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>- every row is an adult (18+), examined, and not pregnant</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>- every mean SBP lies within the range of the raw SBP readings</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>First show that the tests FAIL on a plain merge of the three raw files,</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>before any preparation. Then show that they PASS on</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>output/analysis_data.csv. Don't edit the tests to make them pass. Show</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>me the test output.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-</div>
-</div>
-<p><strong>Watch for</strong> Claude editing the <em>tests</em> instead of the code, or “fixing” a failure by dropping rows. Read the diff of <code>tests/</code> as carefully as the diff of your code.</p>
-<p><strong>Get an independent review:</strong> the <code>biostat-reviewer</code> subagent against the SAP (Segment 5), <code>/code-review</code> on the current diff (a bundled skill; type <code>/</code> to check it’s in your panel), and a human statistician or co-author, which is <strong>required, not optional</strong>.</p>
+<p><strong>Check:</strong> read the diff of <code>tests/</code> as carefully as the diff of your code. Watch for Claude editing the <em>tests</em> instead of the code, or “fixing” a failure by dropping rows.</p>
 </section>
-<section id="why-cleaning-matters" class="level3">
-<h3 class="anchored" data-anchor-id="why-cleaning-matters">Why cleaning matters</h3>
-<p>Same model, same data file, with and without the cleaning script:</p>
+<section id="why-decisions-matter" class="level3">
+<h3 class="anchored" data-anchor-id="why-decisions-matter">Why decisions matter</h3>
+<div class="callout callout-style-default callout-note callout-titled" title="Why decisions matter (open after your estimate runs)">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Why decisions matter (open after your estimate runs)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Every row below ran without an error. Only one follows the plan.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 25%">
@@ -1280,77 +1137,332 @@ Show me the test output as evidence.</code></pre>
 </colgroup>
 <thead>
 <tr class="header">
-<th></th>
-<th>n analyzed</th>
-<th>Intensive − Standard (mmHg)</th>
-<th>95% CI</th>
+<th>Choice</th>
+<th>n</th>
+<th>Hypertension</th>
+<th>What happened</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Raw file, no cleaning (sentinel codes read as real BP; duplicates kept)</td>
-<td>462</td>
-<td>−8.4</td>
-<td>−19.6 to 2.9 (not significant)</td>
+<td><strong>Per the plan</strong> (weighted, skip rule applied)</td>
+<td>6,084</td>
+<td><strong>47.7% (45.4–49.9)</strong></td>
+<td>Matches CDC.</td>
 </tr>
 <tr class="even">
-<td>After <code>01_clean</code></td>
-<td>451</td>
-<td><strong>−11.0</strong></td>
-<td><strong>−12.8 to −9.2</strong></td>
+<td>No survey weights</td>
+<td>6,084</td>
+<td>53.3%</td>
+<td>Adults 60+ are over-represented in the sample (43.7% of examined adults, 30.0% once weighted), and they have the most hypertension.</td>
+</tr>
+<tr class="odd">
+<td>Interview weight <code>WTINT2YR</code> instead of exam weight <code>WTMEC2YR</code></td>
+<td>6,084</td>
+<td>48.2%</td>
+<td>Looks plausible, but blood pressure comes from the exam, so the exam weight applies.</td>
+</tr>
+<tr class="even">
+<td>140/90 definition instead of 130/80</td>
+<td>6,084</td>
+<td>32.4%</td>
+<td>A different, older definition. That’s a plan decision, not a data fix.</td>
+</tr>
+<tr class="odd">
+<td>Medication skip left as <code>NA</code> in <code>sbp &gt;= 130 \| dbp &gt;= 80 \| BPQ150 == 1</code></td>
+<td>3,395</td>
+<td>95.0%</td>
+<td>In R, <code>FALSE \| NA</code> is <code>NA</code>. People with normal BP and a skipped <code>BPQ150</code> become <code>NA</code> and drop out, so mostly people with hypertension remain.</td>
+</tr>
+<tr class="even">
+<td>Rows with a blank <code>BPQ150</code> dropped (complete case)</td>
+<td>2,235</td>
+<td>91.8%</td>
+<td>Drops everyone who was never told they had high BP, so mostly people with a diagnosis remain.</td>
+</tr>
+<tr class="odd">
+<td>Pregnancy filter written as <code>filter(RIDEXPRG != 1)</code></td>
+<td>1,036</td>
+<td>20.1%</td>
+<td><code>filter()</code> drops rows where the test is <code>NA</code>, and <code>RIDEXPRG</code> is blank for everyone but women 20–44. Only young women remain.</td>
+</tr>
+<tr class="even">
+<td>Pregnant participants kept</td>
+<td>6,123</td>
+<td>47.3%</td>
+<td>Only 39 people. Not every decision moves the answer much.</td>
 </tr>
 </tbody>
 </table>
-<p>A few <code>-99</code> and <code>999</code> codes are enough to hide a 10 mmHg treatment effect. Fast code is only as good as the checks around it.</p>
+<p>One codebook skip rule nearly doubles the answer. One filter line drops five of every six people.</p>
+</div>
+</div>
+</div>
 </section>
-<section id="garden-of-forking-paths" class="level3">
-<h3 class="anchored" data-anchor-id="garden-of-forking-paths">Garden of forking paths</h3>
-<p>Claude makes it cheap to run “one more model.” If you try 20 specifications and report the one that’s significant, the p-value no longer means what it says. <strong>Pre-specify</strong> analyses in the SAP, label sensitivity and post hoc analyses as such, and use plan mode to fix decisions <em>before</em> you see results. Watch for scope creep too: Claude “helpfully” changing a decision the SAP already fixed.</p>
+<section id="read-the-claims" class="level3">
+<h3 class="anchored" data-anchor-id="read-the-claims">Read the claims</h3>
+<p>Numbers are only half the result. The sentences around them are where overclaiming creeps in. We’ll run this together on screen. You mark each sentence. If you made your own report, you can send the same prompt yourself:</p>
+<div class="prompt-block">
+<div class="prompt-label">
+Prompt
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>List every sentence in reports/report.qmd that interprets a result.</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>For each one, give the number it relies on and the file that number</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>comes from. Flag any causal wording, such as "causes," "leads to," or</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>"effect of," and any claim the analysis plan doesn't support. Don't</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>change anything.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><strong>You decide:</strong> mark each sentence <strong>keep</strong>, <strong>revise</strong>, or <strong>delete</strong>. Watch for causal language, claims about groups the plan doesn’t cover, and missing caveats about who was excluded.</p>
+</section>
+<section id="human-review-is-required" class="level3">
+<h3 class="anchored" data-anchor-id="human-review-is-required">Human review is required</h3>
+<p>A human statistician or co-author must review the analysis before it goes anywhere. That’s <strong>required, not optional</strong>. AI review can help you prepare: <code>/code-review</code> reviews the current changes (if available; type <code>/</code> to check). But a reviewer told to find problems will always find some, and you decide which are real.</p>
+</section>
+<section id="the-garden-of-forking-paths" class="level3">
+<h3 class="anchored" data-anchor-id="the-garden-of-forking-paths">The garden of forking paths</h3>
+<p>Claude makes it cheap to try “one more” definition, weight, or subgroup. If you try many and report the one you like, your result no longer means what it says. <strong>Fix decisions in the plan before you see results</strong>, and label anything extra as exploratory. Watch for scope creep too: Claude “helpfully” changing a decision the plan already fixed.</p>
+<p>Claude may already know CDC’s published estimate from its training. A matching number proves nothing unless it comes <strong>from your scripts</strong>. Never tune choices until the number matches.</p>
 </section>
 <section id="disclosure-and-the-audit-trail" class="level3">
 <h3 class="anchored" data-anchor-id="disclosure-and-the-audit-trail">Disclosure and the audit trail</h3>
 <ul>
-<li><strong>Keep the record:</strong> commit <code>.claude/</code> (settings, skills, agents, hooks) with the analysis. Keep <code>settings.local.json</code> and <code>CLAUDE.local.md</code> out of git. Save key sessions with <code>/export</code>, and note the Claude Code version and model (<code>/status</code>).</li>
-<li><strong>Disclose specifically</strong>, for example: “Analysis code was drafted with Claude Code (version, model). All code was reviewed by the authors, tested against pre-specified checks, and rerun from raw data.” Follow each journal’s and funder’s policy: <code>[link to library guidance on AI disclosure]</code>.</li>
+<li><strong>Keep the record:</strong> your git log, the scripts, and <code>.claude/settings.json</code>. Save key conversations with <code>/export</code>. Note the Claude Code version and model from <code>/status</code>.</li>
+<li><strong>Disclose specifically</strong>, for example: “Analysis code was drafted with Claude Code (version, model). The authors reviewed all code, tested it against pre-specified checks, and reran it from the raw files.” Follow each journal’s and funder’s policy. The library’s <a href="https://library.yale.edu/help-and-research-support/research-support/using-ai-research/ai-guidance-library-resources">AI guidance and resources</a> can help.</li>
 </ul>
-<p><strong>Discuss (2 min):</strong> What would you need to see before you trusted an AI-assisted analysis in a paper you were reviewing?</p>
+<p><strong>Discuss (2 minutes):</strong> what would you need to see before you trusted an AI-assisted analysis in a paper you were reviewing?</p>
+<p><em>Aim to finish this section about 80 minutes into class.</em></p>
 </section>
 </section>
-<section id="wrap-up-127-130" class="level2">
-<h2 class="anchored" data-anchor-id="wrap-up-127-130">8. Wrap-up (1:27 – 1:30)</h2>
+<section id="working-well" class="level2">
+<h2 class="anchored" data-anchor-id="working-well">8. Working well, and skills</h2>
+<section id="context-start-fresh-often" class="level3">
+<h3 class="anchored" data-anchor-id="context-start-fresh-often">Context: start fresh often</h3>
+<p>Everything Claude reads fills its <strong>context window</strong>: your messages, <code>CLAUDE.md</code>, every file it opens, and every line of output. As it fills, quality drops. The prompt box has a <strong>context indicator</strong> that shows how full it is.</p>
+<ul>
+<li><strong>New task?</strong> Start a new conversation.</li>
+<li><strong>Long session, same task?</strong> Type <code>/compact</code> and say what to keep, for example <code>/compact keep the plan's decisions and the n at each step</code>.</li>
+<li><strong>Corrected Claude twice on the same thing, and it’s still wrong?</strong> Start a new conversation with a better prompt that includes what you learned.</li>
+</ul>
+</section>
+<section id="model-and-effort" class="level3">
+<h3 class="anchored" data-anchor-id="model-and-effort">Model and effort</h3>
+<p>Click the model name at the bottom of the prompt box to open the picker. It lets you choose the <strong>model</strong>, and, for models that support it, the <strong>effort</strong>: how much Claude reasons on each step, from low to max. Higher effort checks more, but takes longer and uses more of your allowance. Your organization may limit the choices. If you took <a href="./part1.html">Getting started with Claude</a>, these are the same two dials as the model and effort menu in the Claude app.</p>
+</section>
+<section id="skills-briefly" class="level3">
+<h3 class="anchored" data-anchor-id="skills-briefly">Skills, briefly</h3>
+<p>A <strong>skill</strong> is a saved set of instructions in a file: <code>.claude/skills/&lt;name&gt;/SKILL.md</code>. You run it by typing <code>/&lt;name&gt;</code>, or Claude loads it on its own when your request matches its description. A skill is a way to reuse a good prompt, and to share it with your team through git. If skills are enabled in the Claude app, uploads accept only these frontmatter fields: name, description, license, compatibility, metadata, allowed-tools. The example below uses <code>disable-model-invocation</code>, so it won’t upload there as is.</p>
+<p>Here’s a skill that checks an NHANES file against the data dictionary:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="an">name:</span><span class="co"> check-data</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> Check an NHANES data file against data/data_dictionary.csv. Run it with /check-data &lt;path-to-file&gt;.</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="an">disable-model-invocation:</span><span class="co"> true</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>Check $ARGUMENTS against data/data_dictionary.csv.</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Write an R script in checks/ that reads the file (haven::read_xpt()</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>   for .xpt files), and run it. Report what the script prints; don't guess.</span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>For each dictionary variable whose file column lists this file,</span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>   report the number missing, the codes in its missing_codes column</span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>   (such as 7 and 9), values outside allowed_values, and the minimum</span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>   and maximum.</span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Report any duplicate SEQN values.</span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Print at most 10 rows of data.</span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Never edit or save over the data file. Ask me before fixing anything.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li><code>$ARGUMENTS</code> is replaced by whatever you type after the skill’s name.</li>
+<li><code>disable-model-invocation: true</code> means Claude never starts this skill on its own. It runs only when you type <code>/check-data</code>.</li>
+<li>Step 1 makes Claude <strong>compute</strong> the results with a script, not guess them.</li>
+</ul>
+<p><strong>Try it (optional; if enabled).</strong> In Positron’s Explorer, create the folder <code>.claude/skills/check-data/</code> and a file in it named <code>SKILL.md</code> (capital letters). Paste in the text above and save. Start a new conversation, then send:</p>
+<div class="prompt-block">
+<div class="prompt-label">
+Prompt
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>/check-data data/raw/BPQ_L.xpt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="optional-pick-up-in-the-terminal" class="level3">
+<h3 class="anchored" data-anchor-id="optional-pick-up-in-the-terminal">Optional: pick up in the terminal</h3>
+<p>Some things only work in the terminal version of Claude Code. If you installed the standalone CLI, open Positron’s <strong>Terminal</strong> tab and run <code>claude --resume</code>. Pick today’s conversation from the list. The panel and the terminal share the same conversation history, so you carry on where you left off.</p>
+</section>
+<section id="beyond-today" class="level3">
+<h3 class="anchored" data-anchor-id="beyond-today">Beyond today</h3>
+<p>These are useful, but they’re beyond this class. The <a href="https://code.claude.com/docs">Claude Code docs</a> and <a href="https://academy.claude.com">Claude Academy</a> cover them.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Topic</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Subagents</td>
+<td>Helpers with their own instructions that work in a separate context, such as an independent reviewer</td>
+</tr>
+<tr class="even">
+<td>Hooks</td>
+<td>Scripts Claude Code runs at set points, whatever Claude decides</td>
+</tr>
+<tr class="odd">
+<td>The sandbox</td>
+<td>Operating-system limits on what Claude’s commands can read and write</td>
+</tr>
+<tr class="even">
+<td>Dynamic workflows (ultracode)</td>
+<td>Scripts that run many subagents on one big task</td>
+</tr>
+<tr class="odd">
+<td><code>/deep-research</code></td>
+<td>A cited web research report from several searches</td>
+</tr>
+<tr class="even">
+<td>Remote Control (<code>/rc</code>)</td>
+<td>Watching and approving your session from your phone</td>
+</tr>
+<tr class="odd">
+<td>Fast mode</td>
+<td>Faster responses at a higher price</td>
+</tr>
+<tr class="even">
+<td><code>opusplan</code> and Fable</td>
+<td>Other model choices, and when to use which (if available)</td>
+</tr>
+<tr class="odd">
+<td>Worktrees</td>
+<td>Separate copies of your project for parallel work</td>
+</tr>
+<tr class="even">
+<td>Headless runs (<code>claude -p</code>)</td>
+<td>Running Claude Code from scripts</td>
+</tr>
+<tr class="odd">
+<td>MCP connectors</td>
+<td>Connecting Claude Code to other tools and data sources</td>
+</tr>
+<tr class="even">
+<td>Where instructions live</td>
+<td>User, project, and local <code>CLAUDE.md</code> files and auto memory</td>
+</tr>
+<tr class="odd">
+<td>Combining messy sources</td>
+<td>Harmonizing exports such as REDCap from several sites</td>
+</tr>
+<tr class="even">
+<td>Legacy code</td>
+<td>Translating SAS and Stata code to R, and checking the result</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="wrap-up" class="level2">
+<h2 class="anchored" data-anchor-id="wrap-up">9. Wrap-up</h2>
+<p><strong>The goal, again:</strong> this class doesn’t replace learning R or statistics. You’ve seen where a coding agent speeds up good analysis, and where your expertise must stay in control.</p>
+<section id="claude-speeds-this-up-you-decide" class="level3">
+<h3 class="anchored" data-anchor-id="claude-speeds-this-up-you-decide">Claude speeds this up; you decide</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Stage</th>
+<th>Claude speeds this up</th>
+<th>You decide (and check)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Plan</td>
+<td>Reads the plan, the dictionary, and the codebooks; profiles the three files</td>
+<td>The question, the definitions, and the survey design, before you see results</td>
+</tr>
+<tr class="even">
+<td>Prepare</td>
+<td>Reads XPT files, merges on <code>SEQN</code>, writes the script and the n at each step</td>
+<td>Who’s in the population; whether the n flow makes sense</td>
+</tr>
+<tr class="odd">
+<td>Recode</td>
+<td>Applies codes and skip rules to every row</td>
+<td>What a blank, a 7, a 9, or an 80 means</td>
+</tr>
+<tr class="even">
+<td>Estimate</td>
+<td>Writes survey-design code and fixes errors</td>
+<td>Weighted or not, which weight, and what to report</td>
+</tr>
+<tr class="odd">
+<td>Report</td>
+<td>Drafts tables and text from the output files</td>
+<td>Every sentence of interpretation; no causal claims</td>
+</tr>
+<tr class="even">
+<td>Old code</td>
+<td>Explains and translates CDC’s SAS code</td>
+<td>Which differences are real, and which matter</td>
+</tr>
+<tr class="odd">
+<td>Verify</td>
+<td>Writes tests from your rules</td>
+<td>The rules themselves; a human reviewer signs off</td>
+</tr>
+</tbody>
+</table>
+<p><em>Claude drafts and runs. You decide and verify.</em></p>
+</section>
+<section id="three-takeaways" class="level3">
+<h3 class="anchored" data-anchor-id="three-takeaways">Three takeaways</h3>
 <ol type="1">
-<li><strong>Protect first.</strong> Set up <code>CLAUDE.md</code>, a deny rule, Manual mode, and git before Claude touches the data. Remember: Claude Code sends what it reads.</li>
-<li><strong>Plan, build, verify.</strong> Plan against the SAP. Let Claude write and run the code. Check it yourself, and commit.</li>
-<li><strong>Encode your judgment once.</strong> Skills, subagents, and hooks turn good prompts into shared, versioned team tools.</li>
+<li><strong>Protect first.</strong> <code>CLAUDE.md</code> is advice; a deny rule is enforcement. Choose Manual mode and start git before Claude touches the data. Claude Code sends what it reads, so keep restricted data out of the project.</li>
+<li><strong>Plan, build, check.</strong> Plan against the analysis plan. Let Claude write and run the code. Then check the results yourself, and commit.</li>
+<li><strong>You make the decisions.</strong> Definitions, weights, exclusions, and wording are yours. Claude speeds up the coding.</li>
 </ol>
+</section>
+<section id="tell-us-how-it-went" class="level3">
+<h3 class="anchored" data-anchor-id="tell-us-how-it-went">Tell us how it went</h3>
+<p><a href="https://yalesurvey.ca1.qualtrics.com/jfe/form/SV_cZOk3RQmTrQLhYy"><img src="images/class-survey-qr.png" class="img-fluid" alt="QR code that opens the class survey" width="180"></a></p>
+<p>Scan the code or <a href="https://yalesurvey.ca1.qualtrics.com/jfe/form/SV_cZOk3RQmTrQLhYy">take the class survey</a>. It takes a few minutes.</p>
+</section>
 <section id="try-at-home" class="level3">
 <h3 class="anchored" data-anchor-id="try-at-home">Try at home</h3>
 <ul>
-<li><strong>Worktrees (CLI):</strong> <code>claude --worktree sensitivity-mi</code> starts a separate git checkout, so you can build the SAP’s multiple-imputation sensitivity analysis without touching the main analysis.</li>
-<li><strong>Headless runs (CLI):</strong> <code>claude -p "Explain legacy/baseline_table.sas and list likely bugs" --allowedTools "Read"</code> runs once and prints the result, for scripts and batch jobs. Script deterministic steps (<code>Rscript</code>, <code>quarto render</code>) without AI.</li>
-<li><strong>The sandbox:</strong> turn on <code>/sandbox</code> (macOS, Linux, or WSL2) and repeat the restricted-data test with an R script.</li>
-<li><strong>MCP servers and connectors (if enabled):</strong> run <code>/mcp</code> to see what your organization has connected, such as PubMed. Use only approved servers: <code>[contact / policy link]</code>.</li>
-<li><strong>A real public dataset:</strong> repeat today’s workflow on <a href="https://wwwn.cdc.gov/nchs/nhanes/"><strong>NHANES</strong></a> blood-pressure files (for example, the blood pressure and demographics files from one cycle). Plan first, write a <code>CLAUDE.md</code>, and note that NHANES needs its survey weights. Avoid controlled-access data (MIMIC, dbGaP, UK Biobank), whose DUAs restrict external AI services.</li>
+<li><p><strong>Explain CDC’s own code.</strong> <code>legacy/db511_prep_excerpt.sas</code> is part of the SAS program CDC used for Data Brief 511. Ask Claude:</p>
+<div class="prompt-block">
+<div class="prompt-label">
+Prompt
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>Explain legacy/db511_prep_excerpt.sas step by step for someone who</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>doesn't know SAS. Then translate it into R, and compare its population</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>rules with docs/analysis-plan.md and R/01_prepare.R. List every</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>difference. Don't change any existing files.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><strong>Watch for the pregnancy-filter trap.</strong> In SAS, <code>ridexprg ne 1</code> keeps people with a missing value. A word-for-word R translation, <code>filter(RIDEXPRG != 1)</code>, drops them, and the answer falls to 20.1%. Does Claude’s translation catch it?</p></li>
+<li><p><strong>Awareness, treatment, and control.</strong> Among adults with hypertension, estimate the percentage who were aware of it (<code>BPQ020</code>), treated (<code>BPQ150</code>), and controlled (below 130/80). Plan first, then compare with Data Brief 511.</p></li>
+<li><p><strong>Age-adjust.</strong> Ask Claude how CDC age-adjusts in Data Brief 511, then add the age-adjusted overall prevalence. Check it against the brief.</p></li>
+<li><p><strong>Look ahead.</strong> Read about the <a href="#beyond-today">topics beyond today</a> in the Claude Code docs.</p></li>
 </ul>
 </section>
-</section>
-<section id="finished-files" class="level2">
-<h2 class="anchored" data-anchor-id="finished-files">Finished files</h2>
-<ul>
-<li><strong>Exercise 1 answer key and fallback:</strong> <code>instructor/solutions/R/</code> and <code>instructor/solutions/python/</code> (<code>01_clean</code> … <code>04_figure</code> and <code>report.qmd</code>). The expected results and every planted problem are in <code>instructor/README.md</code> (in the repo, not on the site).</li>
-<li><strong>Segment 5 answer key:</strong> <code>instructor/part2-answer-key/</code>: <code>.claude/settings.json</code>, <code>skills/check-data/</code>, <code>skills/table1/</code>, <code>agents/biostat-reviewer.md</code>, <code>hooks/</code>, <code>rules/</code>, the <code>tests/</code>, and <code>CLAUDE-additions.md</code>. These files are R only. For Python, ask Claude to convert them, for example: “Convert .claude/skills/table1/SKILL.md and tests/ to Python with pandas and pytest.”</li>
-</ul>
 </section>
 <section id="resources" class="level2">
 <h2 class="anchored" data-anchor-id="resources">Resources</h2>
 <ul>
-<li>Claude Code docs: <a href="https://code.claude.com/docs" class="uri">https://code.claude.com/docs</a>. Start with <strong>Use Claude Code in VS Code</strong> (it also applies to Positron), <strong>Best practices</strong>, <strong>Model configuration</strong>, <strong>Skills</strong>, <strong>Subagents</strong>, <strong>Hooks</strong>, and <strong>Permissions</strong>.</li>
-<li><a href="./cheatsheet.html">Cheat sheet</a>: what works in the panel vs.&nbsp;the CLI, models and effort, key files</li>
+<li>Claude Code docs: <a href="https://code.claude.com/docs" class="uri">https://code.claude.com/docs</a>. Start with <a href="https://code.claude.com/docs/en/vs-code">Use Claude Code in VS Code</a> (it also applies to Positron), <a href="https://code.claude.com/docs/en/best-practices">Best practices</a>, <a href="https://code.claude.com/docs/en/permissions">Permissions</a>, and <a href="https://code.claude.com/docs/en/skills">Skills</a>.</li>
 <li>Positron documentation: <a href="https://positron.posit.co" class="uri">https://positron.posit.co</a></li>
-<li>Claude Academy (free courses from Anthropic): <a href="https://academy.claude.com" class="uri">https://academy.claude.com</a></li>
-<li>Institutional AI and data policy: <code>[link]</code></li>
-<li>Library services: <code>[data services consults, office hours, follow-up workshops]</code></li>
-<li>Feedback on today’s class: <code>[link to short evaluation form]</code></li>
+<li><a href="https://academy.claude.com">Claude Academy</a>: free courses from Anthropic</li>
+<li><a href="https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/default.aspx?Cycle=2021-2023">NHANES August 2021–August 2023</a>: the data files and codebooks</li>
+<li><a href="https://www.cdc.gov/nchs/products/databriefs/db511.htm">NCHS Data Brief 511</a>: hypertension prevalence in U.S. adults, August 2021–August 2023</li>
+<li><a href="https://www.cdc.gov/nchs/policy/data-user-agreement.html">NCHS data user agreement</a></li>
+<li>Institutional AI and data policy: <a href="https://cybersecurity.yale.edu/data-classification">Yale’s data classification</a> and Yale’s <a href="https://provost.yale.edu/news/guidelines-use-generative-ai-tools">guidelines for the use of generative AI tools</a></li>
+<li>Library services: <code>[data services consults, office hours]</code></li>
 </ul>
 
 
@@ -1364,7 +1476,7 @@ Show me the test output as evidence.</code></pre>
   var page = location.pathname.split("/").pop() || "index.html";
   var target = {
     "part1.html": "part1.html",
-    "part2.html": "part2.html", "part2-slides.html": "part2.html", "cheatsheet.html": "part2.html"
+    "part2.html": "part2.html"
   }[page] || "index.html";
   document.querySelectorAll("#navbarCollapse a.nav-link").forEach(function (a) {
     var href = (a.getAttribute("href") || "").split("#")[0].split("/").pop();
@@ -1794,8 +1906,8 @@ Show me the test output as evidence.</code></pre>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./part2-slides.html" class="pagination-link" aria-label="Slides">
-        <span class="nav-page-text">Slides</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./index.html#setup-part2" class="pagination-link" aria-label="Setup">
+        <span class="nav-page-text">Setup</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

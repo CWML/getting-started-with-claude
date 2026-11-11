@@ -1,44 +1,7 @@
 {
   "permissions": {
-    "defaultMode": "default",
-    "allow": [
-      "Bash(Rscript R/*)",
-      "Bash(Rscript tests/run_checks.R)",
-      "Bash(quarto render *)"
-    ],
-    "ask": [
-      "Bash(git commit *)"
-    ],
     "deny": [
-      "Read(./data/restricted/**)",
-      "Edit(./data/raw/**)",
-      "Bash(git push *)"
-    ]
-  },
-  "sandbox": {
-    "enabled": true,
-    "allowUnsandboxedCommands": false,
-    "filesystem": {
-      "denyWrite": ["./data/raw"],
-      "denyRead": ["./data/restricted"]
-    }
-  },
-  "hooks": {
-    "PreToolUse": [
-      {
-        "matcher": "Edit|Write",
-        "hooks": [
-          { "type": "command", "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/protect-raw.sh" }
-        ]
-      }
-    ],
-    "PostToolUse": [
-      {
-        "matcher": "Edit|Write",
-        "hooks": [
-          { "type": "command", "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/style-r.sh" }
-        ]
-      }
+      "Read(./data/restricted/**)"
     ]
   }
 }
