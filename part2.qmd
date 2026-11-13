@@ -30,7 +30,7 @@ In this class you'll analyze **real CDC survey data** (NHANES, August 2021–Aug
 ## Before class {#before-class}
 
 ::: {.callout-important title="Setup (about 30 minutes)"}
-Do the [setup steps](index.qmd#setup-part2) before class. In short: a Yale Claude account whose seat includes Claude Code (`[how to check / who to ask]`), Positron with the Claude Code extension, R with the class packages (including `haven` and `survey`), and git with your name and email set.
+Do the [setup steps](index.qmd#setup-part2) before class. In short: a Yale Claude account whose seat includes Claude Code, Positron with the Claude Code extension, R with the class packages (including `haven` and `survey`), and git with your name and email set.
 :::
 
 ## Download {#download}
@@ -156,11 +156,14 @@ Ask Claude, and approve each git command when it asks:
 
 ```text
 Initialize a git repository here. Add a .gitignore that excludes
-.claude/settings.local.json and data/restricted/. Then commit
-everything with the message "Starting point".
+.claude/settings.local.json and data/restricted/. Create an empty
+.here file at the top of the project. Then commit everything with
+the message "Starting point".
 ```
 
 git keeps a record of every version of your files. It's your safety net for the rest of class.
+
+The `.here` file marks the top of the project. The `here` package uses it to build file paths, such as `here("data", "raw")`, so scripts find the data wherever they run from. It's committed with everything else, so it stays with the project.
 
 *Aim to finish this section about 15 minutes into class.*
 
@@ -191,7 +194,8 @@ three files in data/raw/: variable names, types, row counts, value
 counts, and ranges, printing no more than 10 rows. Propose a
 step-by-step plan for R/01_prepare.R, and outline R/02_prevalence.R.
 List every decision you need from me. Don't write code yet. Once I
-approve, write only R/01_prepare.R, then stop.
+approve, write only the first part of R/01_prepare.R: read the three
+files and merge them. Then stop.
 ```
 
 ### Compare, then approve
@@ -205,7 +209,7 @@ The plan opens as a document. **Read it before you approve.** Compare it with yo
 
 If anything is wrong, add a comment to the plan or tell Claude what to change. When it's right, approve with **Yes, and manually approve edits**. Don't choose the first option, **Yes, and use auto mode** (or **Yes, and auto-accept**): it turns off the per-edit review you'll use next.
 
-Approving starts the work: Claude begins writing `R/01_prepare.R` at once, and each edit opens as a side-by-side diff. Review each one (see the next section).
+Approving starts the work: Claude begins the first part of `R/01_prepare.R` at once, and each edit opens as a side-by-side diff. Review each one (see the next section).
 
 Planning first protects research integrity: you fix the decisions *before* you see results.
 
@@ -229,14 +233,30 @@ These come from `docs/analysis-plan.md`. They match the CDC definitions.
 
 **Claude does:** reads the XPT files, merges them on `SEQN`, writes the code, runs it, and fixes errors. **You decide:** whether each change matches the plan.
 
-### Write and run it
+### Read and merge
 
-Claude is now writing `R/01_prepare.R`. Review each diff as it appears. When Claude stops, send this prompt so the script covers every point:
+Claude is now writing the first part of `R/01_prepare.R`. Review each diff as it appears. When Claude stops, send this prompt:
 
 ```text
-Check that R/01_prepare.R does all of the following, and fix it if not:
+Check that R/01_prepare.R does only this so far, and fix it if not:
 - read the three files in data/raw/ with haven::read_xpt()
 - merge them on SEQN, keeping every participant in DEMO_L
+- print the number of rows in each file and in the merged data
+Never change anything in data/raw/. Run the script with Rscript, fix
+any errors, then stop.
+```
+
+**Check the merge:** the merged data should have **11,933 rows**, one for each person in `DEMO_L`. Only 7,801 people have blood pressure readings and 8,501 have questionnaire answers, so many rows have blanks. That's expected.
+
+**You decide:** which join did Claude use? A left join (`left_join()`) keeps everyone in `DEMO_L`. An inner join (`inner_join()`) keeps only the 6,615 people who are in all three files. It drops people before your population steps run, so you can't see who left or why. If you're not sure which one Claude used, ask it.
+
+### Finish the script
+
+Now send this prompt so Claude writes the rest of the script:
+
+```text
+Finish R/01_prepare.R. Keep the read and merge part, and make sure the
+script does all of the following:
 - apply the plan's population steps in order, printing n before and
   after each step
 - average the available readings 1-3 for SBP and DBP

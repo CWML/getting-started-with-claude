@@ -41,8 +41,6 @@ Some brackets aren't placeholders. Leave these alone: `[committee name]` is a sl
 | You / the library | `[data services consults, office hours]` | `part2.qmd` (Resources) |
 | You / the library | `[add category]` | `part2-description.md` |
 | You / the library | `[library license guidance]` | `materials/part1-kits/README.md` |
-| ITS | `[how to check / who to ask]` (Claude Code seats) | `index.qmd`, `part2.qmd` |
-| ITS | `[link to current install instructions]` (standalone Claude Code CLI) | `index.qmd` |
 | ITS | `[30 days by default, or Yale's setting]` (chat retention) | `part1.qmd` |
 | HSIT / HIPAA Privacy Office | `[HSIT / HIPAA Privacy Office contact]` | `index.qmd` |
 
@@ -371,7 +369,8 @@ rm -rf nhanes-bp-tags tmp && mkdir tmp && unzip -q "$ZIP" -d tmp && mv tmp/nhane
 cd nhanes-bp-tags
 printf '.claude/settings.local.json\nCLAUDE.local.md\n.Rhistory\n.Rproj.user/\n' > .gitignore
 mkdir -p .claude && cp "$REPO/instructor/part2-answer-key/.claude/settings.json" .claude/
-git init -q && git add -A && git commit -qm "Start: project, deny rule, .gitignore" && git tag start
+touch .here
+git init -q && git add -A && git commit -qm "Start: project, deny rule, .gitignore, .here" && git tag start
 
 cp "$REPO/instructor/solutions/R/01_prepare.R" R/
 Rscript R/01_prepare.R
@@ -410,7 +409,7 @@ L = lead at the projector. R = roamer and timekeeper. Minutes sum to 90.
 |---|---|---|---|---|---|
 | −0:15–0:00 | – | Doors open | Demo laptop on the projector: fresh folder, Manual mode, `/status`, `/usage`, zoom up | **Setup clinic.** Checks each laptop: right folder (`CLAUDE.md` at the top), panel signed in. Pairs people without a seat. Hands out sticky notes | – |
 | 0:00–0:05 | 5 | Open the project | Introduces both instructors and the roles ("red sticky = come help"). Says the class goal. Opens the folder and panel, runs `/status` | Fixes sign-ins and nested folders. Sets up driver/navigator pairs | – |
-| 0:05–0:16 | 11 | What Claude sees, and who's in control | "Sends what it reads." Opens `CLAUDE.md`, adds the deny rule, runs the deny test, picks Manual, asks Claude to `git init` and commit | Checks deny-test messages on screens (denied, not refused). Fixes dot-folder, CRLF and git-identity problems. Calls "2 minutes left" at 0:14 | **1 (0:16):** permission-denied message seen; `git log` shows one commit |
+| 0:05–0:16 | 11 | What Claude sees, and who's in control | "Sends what it reads." Opens `CLAUDE.md`, adds the deny rule, runs the deny test, picks Manual, asks Claude to `git init`, add `.here` and commit | Checks deny-test messages on screens (denied, not refused). Fixes dot-folder, CRLF and git-identity problems. Calls "2 minutes left" at 0:14 | **1 (0:16):** permission-denied message seen; `git log` shows one commit |
 | 0:16–0:29 | 13 | Plan before you code | Times the 4-minute "first, you." Runs the plan prompt. Asks "What did Claude decide silently?" Shows the approval choice | Watches for people who chose auto mode. Answers decision questions without giving the reference answers away | – |
 | 0:29–0:44 | 15 | Build the prepare script | Narrates the first write → run → error → fix loop. Reviews one diff out loud. Runs the explain-it-back prompt | Red stickies first. Handles `Rscript` not found, package errors and approval mistakes | **2 (0:40):** `output/prep_log.csv` exists; the not-pregnant step shows 6,084 |
 | 0:44–0:52 | 8 | Check it yourself | Demos the n-flow check and one `SEQN` trace on screen | Roams. Helps people open the Data Explorer | **3 (0:52):** checks done, second commit made |
@@ -423,7 +422,7 @@ L = lead at the projector. R = roamer and timekeeper. Minutes sum to 90.
 
 **Checkpoints:** at each one, L asks everyone to put up a green sticky (done) or a red one (stuck). R goes to the red ones first. At checkpoint 3, anyone still red downloads the catch-up zip during the break.
 
-**Realistic step times** (with Claude's response time at the default model and medium effort; re-measure in rehearsal): deny rule + test 3–4; git init with approvals 2–3; plan prompt 2–4 min; reading the plan and answering decisions 4–5; prepare-script generation 1–2; diff review 2; run plus one or two fixes 3–6; Data Explorer checks 4–6; prevalence script 4–6; tests (write, fail, pass) 5–7 (Manual mode: 2–3 file diffs and 2 `Rscript` approvals).
+**Realistic step times** (with Claude's response time at the default model and medium effort; re-measure in rehearsal): deny rule + test 3–4; git init with approvals 2–3; plan prompt 2–4 min; reading the plan and answering decisions 4–5; read and merge with its check 2–3; rest of the prepare script 1–2; diff review 2; run plus one or two fixes 3–6; Data Explorer checks 4–6; prevalence script 4–6; tests (write, fail, pass) 5–7 (Manual mode: 2–3 file diffs and 2 `Rscript` approvals).
 
 **Cut order if you run late** (R calls it; Verification is never cut):
 
@@ -458,11 +457,11 @@ Open the folder (File → Open Folder → `nhanes-bp`), open the panel (Spark ic
 
 Say the gap in one sentence: the deny rule stops Claude's Read tool, but not an R script Claude writes that opens the file. The real rule is "don't put restricted data in the project." Don't demo the gap.
 
-Pick **Manual** in the mode indicator. Then ask Claude to `git init`, write `.gitignore`, and make the first commit. Git is the safety net. Rewind (hover a message) undoes Claude's file edits and shell changes to files Claude already edited. It doesn't undo files that only a script wrote, or most subagent edits. Git is the full record.
+Pick **Manual** in the mode indicator. Then ask Claude to `git init`, write `.gitignore`, create an empty `.here` file, and make the first commit. The `.here` file anchors `here()` at the project folder, and it's committed so it travels with the project. Git is the safety net. Rewind (hover a message) undoes Claude's file edits and shell changes to files Claude already edited. It doesn't undo files that only a script wrote, or most subagent edits. Git is the full record.
 
 **R:** Check screens for the denied message. Dot-folder hidden in Explorer: have the person ask Claude to "create `.claude/settings.json` with exactly this text" and paste the JSON from the page. CRLF warnings on Windows are harmless. Git identity error: see the backup plans. Call "2 minutes left" at 0:14.
 
-**Checkpoint 1 (0:16):** permission-denied message seen; `git log` shows one commit.
+**Checkpoint 1 (0:16):** permission-denied message seen; `git log` shows one commit, and `git ls-files .here` lists the file.
 
 #### Plan before you code (0:16–0:29)
 
@@ -477,15 +476,16 @@ Take two examples aloud for the C / Me sorting: "merge on SEQN" (C) vs "what a b
 
 Approve with **"Yes, and manually approve edits"**, not "Yes, and use auto mode" (or "Yes, and auto-accept"). Then open the collapsed "Reference decisions for today" callout.
 
-**Where people get stuck:** someone picks auto mode (R switches them back to Manual in the mode indicator); Claude starts writing code before the plan is approved (say "No, keep planning"); Claude quotes CDC's 47.7% from memory (note it; it's a talking point in Verification). Approving the plan starts the work at once. If Claude also starts on R/02_prevalence.R, reject that diff and say 'Stop after R/01_prepare.R.'
+**Where people get stuck:** someone picks auto mode (R switches them back to Manual in the mode indicator); Claude starts writing code before the plan is approved (say "No, keep planning"); Claude quotes CDC's 47.7% from memory (note it; it's a talking point in Verification). Approving the plan starts the work at once. Claude should write only the read-and-merge part of `R/01_prepare.R`. If it goes further (the population steps, or `R/02_prevalence.R`), reject that diff and say 'Stop after the merge.'
 
 #### Build the prepare script (0:29–0:44)
 
-**L:** Run the prompt for `R/01_prepare.R`. Review the first diff out loud: "Does this line do what the plan says?" Approve `Rscript`. The first time an error appears, narrate the loop: Claude writes, runs, reads the error, fixes. That loop is the core value of a coding agent. Then run the explain-it-back prompt and find the line that carries out one of your decisions (the medication skip rule is a good one).
+**L:** The build is now two prompts. First, **Read and merge**: send the check prompt, approve `Rscript`, and point at the printed row counts. The merged data has 11,933 rows (DEMO_L 11,933, BPXO_L 7,801, BPQ_L 8,501; every SEQN in the smaller files is in DEMO_L). Ask the room which join Claude used. An inner join keeps 6,615 rows. In this data the final n still ends at 6,084, because the inner join drops exactly the people the "examined" step drops later (6,337 adults either way). But the prep log loses the 8,153 → 6,337 step, so nobody can see who left or why. That's the teaching point: in other data, the wrong join changes who's in the analysis without a trace. Then **Finish the script**: send the second prompt and review the first diff out loud: "Does this line do what the plan says?" Approve `Rscript`. The first time an error appears, narrate the loop: Claude writes, runs, reads the error, fixes. That loop is the core value of a coding agent. Then run the explain-it-back prompt and find the line that carries out one of your decisions (the medication skip rule is a good one). The merge step adds 2–3 minutes. If the room is behind at 0:38, L runs explain-it-back as a demo on the projector instead of everyone sending it. Re-time this segment in rehearsal.
 
 **Where people get stuck:**
 
 - `Rscript` not found (Windows PATH): see the backup plans.
+- The merged data doesn't have 11,933 rows. Fewer means an inner join (6,615 with all three files): ask Claude to switch to `left_join()` from `DEMO_L`. More means duplicate `SEQN`s, which these files don't have, so check that Claude joined on `SEQN` alone.
 - `haven` or `here` not installed: approve `install.packages()` only for packages on the setup list.
 - The n doesn't end at 6,084. Compare the log step by step. The usual causes: `RIDEXPRG != 1` keeps only 1,036 people (see the answer key); rows with a blank `BPQ150` were dropped; the weight filter was applied as a row filter; or the steps ran in a different order (the step counts change, but the final n should still be 6,084).
 - Claude edits a file in `data/raw/`. Stop it, `git checkout -- data/raw`, and restate the rule.

@@ -145,7 +145,7 @@ Times come from the run of show in `instructor/README.md`; the page itself shows
 |---|---|---|
 | License and footer wording for the public site | `[options]` | |
 | Part 2 restructure (real NHANES data, R only, no deck, catch-up zip, advanced topics named only) | Decided 2026-11-10: adopted | Class lead |
-| Part 2 objectives (Configure, Implement, Distinguish, Evaluate) | Decided 2026-11-10: adopted; `part2-description.md` still to update | Class lead |
+| Part 2 objectives (Configure, Implement, Distinguish, Evaluate) | Decided 2026-11-10: adopted in `part2.qmd`, `part2-description.md` and `index.qmd` | Class lead |
 | Bracketed placeholders still to fill (HIPAA request link, contacts, policy links) | Who confirms each one | |
 | `[add more]` | | |
 

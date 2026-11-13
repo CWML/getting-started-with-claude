@@ -70,6 +70,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="./">
 <link href="./index.html#setup-part2" rel="next">
 <link href="./index.html#setup-part1" rel="prev">
+<link href="./theme/favicon.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -450,7 +451,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></li>
   <li><a href="#build" id="toc-build" class="nav-link" data-scroll-target="#build">4. Build the prepare script</a>
   <ul class="collapse">
-  <li><a href="#write-and-run-it" id="toc-write-and-run-it" class="nav-link" data-scroll-target="#write-and-run-it">Write and run it</a></li>
+  <li><a href="#read-and-merge" id="toc-read-and-merge" class="nav-link" data-scroll-target="#read-and-merge">Read and merge</a></li>
+  <li><a href="#finish-the-script" id="toc-finish-the-script" class="nav-link" data-scroll-target="#finish-the-script">Finish the script</a></li>
   <li><a href="#explain-it-back" id="toc-explain-it-back" class="nav-link" data-scroll-target="#explain-it-back">Explain it back</a></li>
   </ul></li>
   <li><a href="#check" id="toc-check" class="nav-link" data-scroll-target="#check">5. Check it yourself</a>
@@ -556,7 +558,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Do the <a href="./index.html#setup-part2">setup steps</a> before class. In short: a Yale Claude account whose seat includes Claude Code (<code>[how to check / who to ask]</code>), Positron with the Claude Code extension, R with the class packages (including <code>haven</code> and <code>survey</code>), and git with your name and email set.</p>
+<p>Do the <a href="./index.html#setup-part2">setup steps</a> before class. In short: a Yale Claude account whose seat includes Claude Code, Positron with the Claude Code extension, R with the class packages (including <code>haven</code> and <code>survey</code>), and git with your name and email set.</p>
 </div>
 </div>
 </section>
@@ -727,10 +729,12 @@ Prompt
 Prompt
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>Initialize a git repository here. Add a .gitignore that excludes</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>.claude/settings.local.json and data/restricted/. Then commit</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>everything with the message "Starting point".</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>.claude/settings.local.json and data/restricted/. Create an empty</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>.here file at the top of the project. Then commit everything with</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>the message "Starting point".</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>git keeps a record of every version of your files. It’s your safety net for the rest of class.</p>
+<p>The <code>.here</code> file marks the top of the project. The <code>here</code> package uses it to build file paths, such as <code>here("data", "raw")</code>, so scripts find the data wherever they run from. It’s committed with everything else, so it stays with the project.</p>
 <p><em>Aim to finish this section about 15 minutes into class.</em></p>
 </section>
 </section>
@@ -764,7 +768,8 @@ Prompt
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>counts, and ranges, printing no more than 10 rows. Propose a</span>
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>step-by-step plan for R/01_prepare.R, and outline R/02_prevalence.R.</span>
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>List every decision you need from me. Don't write code yet. Once I</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>approve, write only R/01_prepare.R, then stop.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>approve, write only the first part of R/01_prepare.R: read the three</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>files and merge them. Then stop.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="compare-then-approve" class="level3">
@@ -777,7 +782,7 @@ Prompt
 <li><label><input type="checkbox">Mark each step of Claude’s plan <strong>C</strong> (Claude can do it) or <strong>Me</strong> (a decision I keep).</label></li>
 </ul>
 <p>If anything is wrong, add a comment to the plan or tell Claude what to change. When it’s right, approve with <strong>Yes, and manually approve edits</strong>. Don’t choose the first option, <strong>Yes, and use auto mode</strong> (or <strong>Yes, and auto-accept</strong>): it turns off the per-edit review you’ll use next.</p>
-<p>Approving starts the work: Claude begins writing <code>R/01_prepare.R</code> at once, and each edit opens as a side-by-side diff. Review each one (see the next section).</p>
+<p>Approving starts the work: Claude begins the first part of <code>R/01_prepare.R</code> at once, and each edit opens as a side-by-side diff. Review each one (see the next section).</p>
 <p>Planning first protects research integrity: you fix the decisions <em>before</em> you see results.</p>
 <div class="callout callout-style-default callout-tip callout-titled" title="Reference decisions for today (open after you compare)">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
@@ -861,30 +866,46 @@ Prompt
 <section id="build" class="level2">
 <h2 class="anchored" data-anchor-id="build">4. Build the prepare script</h2>
 <p><strong>Claude does:</strong> reads the XPT files, merges them on <code>SEQN</code>, writes the code, runs it, and fixes errors. <strong>You decide:</strong> whether each change matches the plan.</p>
-<section id="write-and-run-it" class="level3">
-<h3 class="anchored" data-anchor-id="write-and-run-it">Write and run it</h3>
-<p>Claude is now writing <code>R/01_prepare.R</code>. Review each diff as it appears. When Claude stops, send this prompt so the script covers every point:</p>
+<section id="read-and-merge" class="level3">
+<h3 class="anchored" data-anchor-id="read-and-merge">Read and merge</h3>
+<p>Claude is now writing the first part of <code>R/01_prepare.R</code>. Review each diff as it appears. When Claude stops, send this prompt:</p>
 <div class="prompt-block">
 <div class="prompt-label">
 Prompt
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>Check that R/01_prepare.R does all of the following, and fix it if not:</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>Check that R/01_prepare.R does only this so far, and fix it if not:</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>- read the three files in data/raw/ with haven::read_xpt()</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>- merge them on SEQN, keeping every participant in DEMO_L</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>- apply the plan's population steps in order, printing n before and</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  after each step</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>- average the available readings 1-3 for SBP and DBP</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>- set 7 and 9 to missing in BPQ020 and BPQ150 themselves (don't keep</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  a copy with the codes)</span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>- name the derived columns mean_sbp, mean_dbp, bp_med (1 = taking,</span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  0 = not), hypertension (1 = yes, 0 = no), sex, and age_group, and</span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  derive hypertension as the plan defines it, including the BPQ150</span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  skip rule</span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>- write output/analysis_data.csv (the analysis population, with SEQN,</span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>  the variables you used, and the derived ones) and output/prep_log.csv</span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>  (step, n_before, n_after, reason)</span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>Never change anything in data/raw/. Run the script with Rscript and fix</span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>any errors.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>- print the number of rows in each file and in the merged data</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>Never change anything in data/raw/. Run the script with Rscript, fix</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>any errors, then stop.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><strong>Check the merge:</strong> the merged data should have <strong>11,933 rows</strong>, one for each person in <code>DEMO_L</code>. Only 7,801 people have blood pressure readings and 8,501 have questionnaire answers, so many rows have blanks. That’s expected.</p>
+<p><strong>You decide:</strong> which join did Claude use? A left join (<code>left_join()</code>) keeps everyone in <code>DEMO_L</code>. An inner join (<code>inner_join()</code>) keeps only the 6,615 people who are in all three files. It drops people before your population steps run, so you can’t see who left or why. If you’re not sure which one Claude used, ask it.</p>
+</section>
+<section id="finish-the-script" class="level3">
+<h3 class="anchored" data-anchor-id="finish-the-script">Finish the script</h3>
+<p>Now send this prompt so Claude writes the rest of the script:</p>
+<div class="prompt-block">
+<div class="prompt-label">
+Prompt
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>Finish R/01_prepare.R. Keep the read and merge part, and make sure the</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>script does all of the following:</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>- apply the plan's population steps in order, printing n before and</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  after each step</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>- average the available readings 1-3 for SBP and DBP</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>- set 7 and 9 to missing in BPQ020 and BPQ150 themselves (don't keep</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  a copy with the codes)</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>- name the derived columns mean_sbp, mean_dbp, bp_med (1 = taking,</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  0 = not), hypertension (1 = yes, 0 = no), sex, and age_group, and</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>  derive hypertension as the plan defines it, including the BPQ150</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>  skip rule</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>- write output/analysis_data.csv (the analysis population, with SEQN,</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>  the variables you used, and the derived ones) and output/prep_log.csv</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>  (step, n_before, n_after, reason)</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>Never change anything in data/raw/. Run the script with Rscript and fix</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>any errors.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p><strong>Review each change.</strong> In Manual mode, every edit opens as a side-by-side diff. Accept or reject it, or tell Claude what to do instead. Approve the <code>Rscript</code> command when Claude asks. Watch the loop: <strong>write, run, read the error, fix, run again.</strong></p>
 <p><strong>Check:</strong> in the diff, find two lines: the pregnancy filter (the plan says a blank <code>RIDEXPRG</code> counts as not pregnant: does the code keep those people?) and the line that turns 7 and 9 into missing. If you can’t find one, ask Claude to point to it.</p>
@@ -896,9 +917,9 @@ Prompt
 <div class="prompt-label">
 Prompt
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>Explain R/01_prepare.R section by section in plain language. For each</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>section, tell me which decision from the plan it carries out. Point</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>out any choice you made that I didn't ask for.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>Explain R/01_prepare.R section by section in plain language. For each</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>section, tell me which decision from the plan it carries out. Point</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>out any choice you made that I didn't ask for.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p><strong>You decide:</strong> find the line that handles the blank <code>BPQ150</code>. Does it match your answer from the plan step? Is there a choice you didn’t ask for? If so, keep it, change it, or ask why.</p>
 </section>
@@ -909,10 +930,10 @@ Prompt
 <section id="open-the-results-in-positron" class="level3">
 <h3 class="anchored" data-anchor-id="open-the-results-in-positron">Open the results in Positron</h3>
 <p>In Positron’s <strong>Console</strong>, run:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>prep <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"output/analysis_data.csv"</span>)</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>log  <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"output/prep_log.csv"</span>)</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>log</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>prep <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"output/analysis_data.csv"</span>)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>log  <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"output/prep_log.csv"</span>)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>log</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Open <code>prep</code> from the <strong>Variables</strong> pane in the <strong>Data Explorer</strong>. If Claude renamed any columns, use its names below.</p>
 </section>
 <section id="check-the-numbers" class="level3">
@@ -929,13 +950,13 @@ Prompt
 <section id="trace-one-person-by-hand" class="level3">
 <h3 class="anchored" data-anchor-id="trace-one-person-by-hand">Trace one person by hand</h3>
 <p>Pick participant <code>130559</code> and follow them from the raw readings to the flag:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>haven<span class="sc">::</span><span class="fu">read_xpt</span>(<span class="st">"data/raw/BPXO_L.xpt"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(SEQN <span class="sc">==</span> <span class="dv">130559</span>) <span class="sc">|&gt;</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(SEQN, <span class="fu">starts_with</span>(<span class="st">"BPXOSY"</span>), <span class="fu">starts_with</span>(<span class="st">"BPXODI"</span>))</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>haven<span class="sc">::</span><span class="fu">read_xpt</span>(<span class="st">"data/raw/BPQ_L.xpt"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(SEQN <span class="sc">==</span> <span class="dv">130559</span>) <span class="sc">|&gt;</span></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(SEQN, BPQ020, BPQ150)</span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>prep <span class="sc">|&gt;</span> <span class="fu">filter</span>(SEQN <span class="sc">==</span> <span class="dv">130559</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>haven<span class="sc">::</span><span class="fu">read_xpt</span>(<span class="st">"data/raw/BPXO_L.xpt"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(SEQN <span class="sc">==</span> <span class="dv">130559</span>) <span class="sc">|&gt;</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(SEQN, <span class="fu">starts_with</span>(<span class="st">"BPXOSY"</span>), <span class="fu">starts_with</span>(<span class="st">"BPXODI"</span>))</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>haven<span class="sc">::</span><span class="fu">read_xpt</span>(<span class="st">"data/raw/BPQ_L.xpt"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(SEQN <span class="sc">==</span> <span class="dv">130559</span>) <span class="sc">|&gt;</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(SEQN, BPQ020, BPQ150)</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>prep <span class="sc">|&gt;</span> <span class="fu">filter</span>(SEQN <span class="sc">==</span> <span class="dv">130559</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Work out the mean SBP and mean DBP yourself. Is this person on BP medication? Do they have hypertension under the plan’s definition? Does <code>prep</code> agree?</p>
 <div class="callout callout-style-default callout-tip callout-titled" title="Answer for participant 130559">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
@@ -960,8 +981,8 @@ Prompt
 <div class="prompt-label">
 Prompt
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>Commit R/01_prepare.R and the files in output/ with a message that</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>says what they do. Then show me git log --oneline.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>Commit R/01_prepare.R and the files in output/ with a message that</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>says what they do. Then show me git log --oneline.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p><strong>Rewind is a partial safety net.</strong> In the panel, hover over a message and click the rewind button (check before class) to undo Claude’s file edits since then. It also undoes shell changes to files Claude had already edited. It doesn’t undo files that only a script wrote, such as everything in <code>output/</code>, or most edits made by subagents. <strong>git is the record.</strong></p>
 <p><em>Aim to finish this section about 50 minutes into class.</em></p>
@@ -998,15 +1019,15 @@ Prompt
 <div class="prompt-label">
 Prompt
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>Write R/02_prevalence.R following the survey design in</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>docs/analysis-plan.md. Build the design on all examined participants</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>(WTMEC2YR &gt; 0 in data/raw/DEMO_L.xpt), join output/analysis_data.csv</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>on SEQN, and then use subset() for the analysis population. Don't</span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>filter rows before building the design. Estimate the percentage with</span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>hypertension overall, by sex, and by age group (18-39, 40-59, 60+),</span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>each with a Korn-Graubard 95% CI (svyciprop with method = "beta").</span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>Also compute the unweighted overall percentage for comparison. Save</span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>the results to output/prevalence.csv. Run the script.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>Write R/02_prevalence.R following the survey design in</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>docs/analysis-plan.md. Build the design on all examined participants</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>(WTMEC2YR &gt; 0 in data/raw/DEMO_L.xpt), join output/analysis_data.csv</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>on SEQN, and then use subset() for the analysis population. Don't</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>filter rows before building the design. Estimate the percentage with</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>hypertension overall, by sex, and by age group (18-39, 40-59, 60+),</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>each with a Korn-Graubard 95% CI (svyciprop with method = "beta").</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>Also compute the unweighted overall percentage for comparison. Save</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>the results to output/prevalence.csv. Run the script.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>A <strong>Korn–Graubard</strong> interval is a confidence interval for a percentage that works well with survey data. CDC uses it.</p>
 <p>Review the diff. <strong>Check:</strong> find <code>weights = ~WTMEC2YR</code>, a <code>subset(</code> that comes <em>after</em> <code>svydesign(</code>, and <code>method = "beta"</code>. If any is missing, tell Claude what the plan says. Then approve the <code>Rscript</code> command and open <code>output/prevalence.csv</code> in the Data Explorer.</p>
@@ -1079,10 +1100,10 @@ Prompt
 <div class="prompt-label">
 Prompt
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>Write reports/report.qmd, a short Quarto report with the analysis</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>population (the n at each step) and the prevalence table. Read every</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>number from the files in output/; don't type numbers into the text.</span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>Render it to HTML.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>Write reports/report.qmd, a short Quarto report with the analysis</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>population (the n at each step) and the prevalence table. Read every</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>number from the files in output/; don't type numbers into the text.</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>Render it to HTML.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Open <code>reports/report.html</code> in Positron’s <strong>Viewer</strong>, next to its source.</p>
 <p><em>Aim to finish this section about 65 minutes into class.</em></p>
@@ -1098,18 +1119,18 @@ Prompt
 <div class="prompt-label">
 Prompt
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>Write testthat tests in tests/testthat/test-prepare.R, and a script</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>tests/run_checks.R that runs them. Write the checks as a function of a</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>data frame, so they can run on any version of the data. Test that:</span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>- SEQN is unique</span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>- there are 6,084 rows</span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>- BPQ020 and BPQ150 contain no 7 or 9</span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>- every row is an adult (18+), examined, and not pregnant</span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>- every mean SBP lies within the range of the raw SBP readings</span>
-<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>First show that the tests FAIL on a plain merge of the three raw files,</span>
-<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>before any preparation. Then show that they PASS on</span>
-<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>output/analysis_data.csv. Don't edit the tests to make them pass. Show</span>
-<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>me the test output.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>Write testthat tests in tests/testthat/test-prepare.R, and a script</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>tests/run_checks.R that runs them. Write the checks as a function of a</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>data frame, so they can run on any version of the data. Test that:</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>- SEQN is unique</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>- there are 6,084 rows</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>- BPQ020 and BPQ150 contain no 7 or 9</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>- every row is an adult (18+), examined, and not pregnant</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>- every mean SBP lies within the range of the raw SBP readings</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>First show that the tests FAIL on a plain merge of the three raw files,</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>before any preparation. Then show that they PASS on</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>output/analysis_data.csv. Don't edit the tests to make them pass. Show</span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>me the test output.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p><strong>Check:</strong> read the diff of <code>tests/</code> as carefully as the diff of your code. Watch for Claude editing the <em>tests</em> instead of the code, or “fixing” a failure by dropping rows.</p>
 </section>
@@ -1206,11 +1227,11 @@ Prompt
 <div class="prompt-label">
 Prompt
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>List every sentence in reports/report.qmd that interprets a result.</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>For each one, give the number it relies on and the file that number</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>comes from. Flag any causal wording, such as "causes," "leads to," or</span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>"effect of," and any claim the analysis plan doesn't support. Don't</span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>change anything.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>List every sentence in reports/report.qmd that interprets a result.</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>For each one, give the number it relies on and the file that number</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>comes from. Flag any causal wording, such as "causes," "leads to," or</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>"effect of," and any claim the analysis plan doesn't support. Don't</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>change anything.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p><strong>You decide:</strong> mark each sentence <strong>keep</strong>, <strong>revise</strong>, or <strong>delete</strong>. Watch for causal language, claims about groups the plan doesn’t cover, and missing caveats about who was excluded.</p>
 </section>
@@ -1252,23 +1273,23 @@ Prompt
 <h3 class="anchored" data-anchor-id="skills-briefly">Skills, briefly</h3>
 <p>A <strong>skill</strong> is a saved set of instructions in a file: <code>.claude/skills/&lt;name&gt;/SKILL.md</code>. You run it by typing <code>/&lt;name&gt;</code>, or Claude loads it on its own when your request matches its description. A skill is a way to reuse a good prompt, and to share it with your team through git. If skills are enabled in the Claude app, uploads accept only these frontmatter fields: name, description, license, compatibility, metadata, allowed-tools. The example below uses <code>disable-model-invocation</code>, so it won’t upload there as is.</p>
 <p>Here’s a skill that checks an NHANES file against the data dictionary:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="an">name:</span><span class="co"> check-data</span></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> Check an NHANES data file against data/data_dictionary.csv. Run it with /check-data &lt;path-to-file&gt;.</span></span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="an">disable-model-invocation:</span><span class="co"> true</span></span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>Check $ARGUMENTS against data/data_dictionary.csv.</span>
-<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Write an R script in checks/ that reads the file (haven::read_xpt()</span>
-<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>   for .xpt files), and run it. Report what the script prints; don't guess.</span>
-<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>For each dictionary variable whose file column lists this file,</span>
-<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>   report the number missing, the codes in its missing_codes column</span>
-<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>   (such as 7 and 9), values outside allowed_values, and the minimum</span>
-<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>   and maximum.</span>
-<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Report any duplicate SEQN values.</span>
-<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Print at most 10 rows of data.</span>
-<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Never edit or save over the data file. Ask me before fixing anything.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="an">name:</span><span class="co"> check-data</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> Check an NHANES data file against data/data_dictionary.csv. Run it with /check-data &lt;path-to-file&gt;.</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="an">disable-model-invocation:</span><span class="co"> true</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>Check $ARGUMENTS against data/data_dictionary.csv.</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Write an R script in checks/ that reads the file (haven::read_xpt()</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>   for .xpt files), and run it. Report what the script prints; don't guess.</span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>For each dictionary variable whose file column lists this file,</span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>   report the number missing, the codes in its missing_codes column</span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>   (such as 7 and 9), values outside allowed_values, and the minimum</span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>   and maximum.</span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Report any duplicate SEQN values.</span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Print at most 10 rows of data.</span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Never edit or save over the data file. Ask me before fixing anything.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
 <li><code>$ARGUMENTS</code> is replaced by whatever you type after the skill’s name.</li>
 <li><code>disable-model-invocation: true</code> means Claude never starts this skill on its own. It runs only when you type <code>/check-data</code>.</li>
@@ -1279,7 +1300,7 @@ Prompt
 <div class="prompt-label">
 Prompt
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>/check-data data/raw/BPQ_L.xpt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>/check-data data/raw/BPQ_L.xpt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="optional-pick-up-in-the-terminal" class="level3">
@@ -1440,10 +1461,10 @@ Prompt
 <div class="prompt-label">
 Prompt
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>Explain legacy/db511_prep_excerpt.sas step by step for someone who</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>doesn't know SAS. Then translate it into R, and compare its population</span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>rules with docs/analysis-plan.md and R/01_prepare.R. List every</span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>difference. Don't change any existing files.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>Explain legacy/db511_prep_excerpt.sas step by step for someone who</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>doesn't know SAS. Then translate it into R, and compare its population</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>rules with docs/analysis-plan.md and R/01_prepare.R. List every</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>difference. Don't change any existing files.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p><strong>Watch for the pregnancy-filter trap.</strong> In SAS, <code>ridexprg ne 1</code> keeps people with a missing value. A word-for-word R translation, <code>filter(RIDEXPRG != 1)</code>, drops them, and the answer falls to 20.1%. Does Claude’s translation catch it?</p></li>
 <li><p><strong>Awareness, treatment, and control.</strong> Among adults with hypertension, estimate the percentage who were aware of it (<code>BPQ020</code>), treated (<code>BPQ150</code>), and controlled (below 130/80). Plan first, then compare with Data Brief 511.</p></li>

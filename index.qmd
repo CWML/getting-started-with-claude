@@ -99,7 +99,7 @@ Near the end of class we'll open your Project on a phone. This step is optional;
 
 ## Setup for Analyzing research data with Claude Code {#setup-part2}
 
-About 30 minutes. Do the steps in order. You need a Yale Claude account whose seat includes **Claude Code**: `[how to check / who to ask]`.
+About 30 minutes. Do the steps in order. You need a Yale Claude account whose seat includes **Claude Code**.
 
 ### 1. Positron and R
 
@@ -166,7 +166,7 @@ If both print a version number, Claude can run R and git. If one fails, check th
 
 | Extra | Why | How |
 |---|---|---|
-| **Standalone Claude Code CLI** | One optional step in class uses the terminal version of Claude Code. You can also just watch it. The extension doesn't add `claude` to your Terminal. | `[link to current install instructions]` (see the [Claude Code docs](https://code.claude.com/docs)) |
+| **Standalone Claude Code CLI** | One optional step in class uses the terminal version of Claude Code. You can also just watch it. The extension doesn't add `claude` to your Terminal. | Install it from [claude.com/product/claude-code](https://claude.com/product/claude-code) |
 
 - [ ] Read the [institutional AI and data policy](https://provost.yale.edu/news/guidelines-use-generative-ai-tools).
 

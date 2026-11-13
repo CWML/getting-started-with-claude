@@ -16,6 +16,7 @@ website:
   title: "Getting Started with Claude"
   description: "Two hands-on library classes: getting started with Claude, and analyzing research data with Claude Code."
   site-url: "https://cwml.github.io/getting-started-with-claude/"
+  favicon: theme/favicon.png
   repo-url: "https://github.com/CWML/getting-started-with-claude"
   repo-actions: [issue]
   search: true
