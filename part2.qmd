@@ -81,7 +81,8 @@ Today we use the **extension panel**. It shows Claude's edits as side-by-side di
 
 ## 2. What Claude sees, and who's in control {#control}
 
-**Claude does:** reads files, runs commands, and follows your project rules. **You decide:** what it may read and what it may change.
+**Claude does:** reads files, runs commands, and follows your project rules.\
+**You decide:** what it may read and what it may change.
 
 ### Claude Code sends what it reads
 
@@ -165,7 +166,8 @@ The `.here` file marks the top of the project. The `here` package uses it to bui
 
 ## 3. Plan before you code {#plan}
 
-**Claude does:** reads the plan, the dictionary, and the data files, and proposes the steps. **You decide:** whether the plan matches the analysis you committed to.
+**Claude does:** reads the plan, the dictionary, and the data files, and proposes the steps.\
+**You decide:** whether the plan matches the analysis you committed to.
 
 ### First, you
 
@@ -227,7 +229,8 @@ These come from `docs/analysis-plan.md`. They match the CDC definitions.
 
 ## 4. Build the prepare script {#build}
 
-**Claude does:** reads the XPT files, merges them on `SEQN`, writes the code, runs it, and fixes errors. **You decide:** whether each change matches the plan.
+**Claude does:** reads the XPT files, merges them on `SEQN`, writes the code, runs it, and fixes errors.\
+**You decide:** whether each change matches the plan.
 
 ### Read and merge
 
@@ -287,7 +290,8 @@ out any choice you made that I didn't ask for.
 
 ## 5. Check it yourself {#check}
 
-**Claude does:** only the git commit at the end. **You decide:** whether the output is right. Don't take Claude's summary on trust.
+**Claude does:** only the git commit at the end.\
+**You decide:** whether the output is right. Don't take Claude's summary on trust.
 
 ### Open the results in Positron
 
@@ -348,7 +352,8 @@ We'll take a short break here. Use it to catch up. If your script isn't working,
 
 ## 6. Estimate, then decide what to report {#estimate}
 
-**Claude does:** writes the survey-design code and fixes its errors. **You decide:** the design (already fixed in the plan), what to report, and how to say it.
+**Claude does:** writes the survey-design code and fixes its errors.\
+**You decide:** the design (already fixed in the plan), what to report, and how to say it.
 
 NHANES isn't a simple random sample. CDC samples in stages: in this cycle, 15 **strata** (groups of areas), each with 2 **PSUs** (primary sampling units, the first areas sampled). It also oversamples some groups. The **weights** make the sample represent U.S. adults. The strata and PSUs make the confidence intervals honest. CDC releases masked versions of the strata and PSUs to protect privacy. Use them exactly as given.
 

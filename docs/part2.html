@@ -638,7 +638,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="control" class="level2">
 <h2 class="anchored" data-anchor-id="control">2. What Claude sees, and who’s in control</h2>
-<p><strong>Claude does:</strong> reads files, runs commands, and follows your project rules. <strong>You decide:</strong> what it may read and what it may change.</p>
+<p><strong>Claude does:</strong> reads files, runs commands, and follows your project rules.<br>
+<strong>You decide:</strong> what it may read and what it may change.</p>
 <section id="claude-code-sends-what-it-reads" class="level3">
 <h3 class="anchored" data-anchor-id="claude-code-sends-what-it-reads">Claude Code sends what it reads</h3>
 <p>When Claude Code opens a file, runs a command, or reads its output, that content goes to the model. In the panel, Claude also sees <strong>text you select</strong> in the editor and the <strong>name of the file you have open</strong>. Both are on by default. Read deny rules apply to this context on a best-effort basis, so don’t rely on them to hide sensitive files.</p>
@@ -727,7 +728,8 @@ Prompt
 </section>
 <section id="plan" class="level2">
 <h2 class="anchored" data-anchor-id="plan">3. Plan before you code</h2>
-<p><strong>Claude does:</strong> reads the plan, the dictionary, and the data files, and proposes the steps. <strong>You decide:</strong> whether the plan matches the analysis you committed to.</p>
+<p><strong>Claude does:</strong> reads the plan, the dictionary, and the data files, and proposes the steps.<br>
+<strong>You decide:</strong> whether the plan matches the analysis you committed to.</p>
 <section id="first-you" class="level3">
 <h3 class="anchored" data-anchor-id="first-you">First, you</h3>
 <p>Open <code>data/data_dictionary.csv</code> (not the plan yet). Look at the <code>missing_codes</code>, <code>skip_logic</code> and <code>notes</code> columns. Then, on paper, write down:</p>
@@ -852,7 +854,8 @@ Prompt
 </section>
 <section id="build" class="level2">
 <h2 class="anchored" data-anchor-id="build">4. Build the prepare script</h2>
-<p><strong>Claude does:</strong> reads the XPT files, merges them on <code>SEQN</code>, writes the code, runs it, and fixes errors. <strong>You decide:</strong> whether each change matches the plan.</p>
+<p><strong>Claude does:</strong> reads the XPT files, merges them on <code>SEQN</code>, writes the code, runs it, and fixes errors.<br>
+<strong>You decide:</strong> whether each change matches the plan.</p>
 <section id="read-and-merge" class="level3">
 <h3 class="anchored" data-anchor-id="read-and-merge">Read and merge</h3>
 <p>Claude is now writing the first part of <code>R/01_prepare.R</code>. Review each diff as it appears. When Claude stops, send this prompt:</p>
@@ -913,7 +916,8 @@ Prompt
 </section>
 <section id="check" class="level2">
 <h2 class="anchored" data-anchor-id="check">5. Check it yourself</h2>
-<p><strong>Claude does:</strong> only the git commit at the end. <strong>You decide:</strong> whether the output is right. Don’t take Claude’s summary on trust.</p>
+<p><strong>Claude does:</strong> only the git commit at the end.<br>
+<strong>You decide:</strong> whether the output is right. Don’t take Claude’s summary on trust.</p>
 <section id="open-the-results-in-positron" class="level3">
 <h3 class="anchored" data-anchor-id="open-the-results-in-positron">Open the results in Positron</h3>
 <p>In Positron’s <strong>Console</strong>, run:</p>
@@ -990,7 +994,8 @@ Prompt
 </section>
 <section id="estimate" class="level2">
 <h2 class="anchored" data-anchor-id="estimate">6. Estimate, then decide what to report</h2>
-<p><strong>Claude does:</strong> writes the survey-design code and fixes its errors. <strong>You decide:</strong> the design (already fixed in the plan), what to report, and how to say it.</p>
+<p><strong>Claude does:</strong> writes the survey-design code and fixes its errors.<br>
+<strong>You decide:</strong> the design (already fixed in the plan), what to report, and how to say it.</p>
 <p>NHANES isn’t a simple random sample. CDC samples in stages: in this cycle, 15 <strong>strata</strong> (groups of areas), each with 2 <strong>PSUs</strong> (primary sampling units, the first areas sampled). It also oversamples some groups. The <strong>weights</strong> make the sample represent U.S. adults. The strata and PSUs make the confidence intervals honest. CDC releases masked versions of the strata and PSUs to protect privacy. Use them exactly as given.</p>
 <section id="predict-first" class="level3">
 <h3 class="anchored" data-anchor-id="predict-first">Predict first</h3>
