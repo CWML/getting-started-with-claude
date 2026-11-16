@@ -1,9 +1,9 @@
-# Claude & Claude Code  Workshop Materials
+# Claude & Claude Code workshop materials
 
-Materials for two medical library classes:
+Materials for two Cushing/Whitney Medical Library classes. The site is titled **Getting started with Claude** and is live at <https://cwml.github.io/getting-started-with-claude/>.
 
-- **Part 1: Getting started with Claude** (60 minutes; Track A Foundations · Beginner). A hands-on Project workshop in the Claude app for anyone at the School of Medicine. Every participant builds one Project from a class kit (Kit A Article Explainer or Kit B Committee Assistant), runs one multi-part prompt, and checks the answer against the source. It also covers important settings (memory, incognito), the app's model/effort menu, "+" and "/" menu, skills, and the phone app, and names the Claude Code equivalents as a bridge to Part 2. No coding, no data work.
-- **Part 2: Analyzing research data with Claude Code** (90 minutes). For researchers who can read a little R. Claude Code in Positron (VS Code as the alternative), mainly through the extension panel. Participants protect a project, then plan, build and check an analysis of real public CDC NHANES data (August 2021–August 2023) that reproduces a published CDC estimate (NCHS Data Brief 511). It covers context, the model and effort picker, and skills briefly, and ends with verification and research integrity. R only. Two instructors teach it from the class page; there is no slide deck. Subagents, hooks, the sandbox, workflows and similar topics are named only, as beyond this class.
+- **Part 1: Getting started with Claude** (60 minutes; Track A Foundations · Beginner). A hands-on Project workshop in the Claude app for anyone at the School of Medicine. It opens with "trust but verify," which Claude account fits which data, and a tour of the app. It covers settings (instructions for Claude, memory, incognito), everyday chat, and the model/effort menu and skills (explained, not practiced). Every participant then builds one Project from a class kit (Kit A Article Explainer or Kit B Committee Assistant), runs one multi-part prompt, pushes back, and checks the answer, quotes and a citation against the source. It ends with the phone app, a short look at Cowork, the Claude Code equivalents as a bridge to Part 2, and the class survey. No coding, no data work.
+- **Part 2: Analyzing research data with Claude Code** (90 minutes). For researchers who can read a little R. Claude Code in Positron (VS Code as the alternative), mainly through the extension panel. Participants protect a project (a `CLAUDE.md`, a deny rule, Manual mode and git), then plan, build and check an analysis of real public CDC NHANES data (August 2021–August 2023) that reproduces a published CDC estimate (NCHS Data Brief 511). The build is two steps: read and merge the three files (with a row-count check), then finish the prepare script. Each section says what Claude does and what you decide. It covers context, the model and effort picker, and skills briefly, and ends with verification and research integrity. R only. Two instructors teach it from the class page; there is no slide deck. Subagents, hooks, the sandbox, workflows and similar topics are named only, as beyond this class.
 
 The repo is a [Quarto](https://quarto.org) website. Participants use the published site; instructors use the repo.
 
@@ -15,10 +15,12 @@ part1.qmd                  # Part 1 class page, taught from directly (no deck)
 part2.qmd                  # Part 2 class page, taught from directly (no deck); participants follow along
 part1-description.md       # Part 1 entry for the library's training request form (not rendered)
 part2-description.md       # Part 2 entry for the library's training request form (not rendered)
-materials/part1-kits/      # Part 1 Project kits: Kit A (Article Explainer), Kit B (Committee Assistant)
-materials/nhanes-bp/       # the Part 2 practice project: NHANES 2021–2023 files, codebooks, analysis plan (zipped at build time)
-theme/                     # CWML web style adapter: cwml.scss, cwml-dark.scss, nav-active.html, skip-link.html
-instructor/                # not rendered: README (Part 1 and Part 2 prep, run of show, NHANES data spec, answer keys), R solutions, Part 2 answer key, review-outline.md (checklist for reviewing the materials)
+materials/part1-kits/      # Part 1 Project kits: Kit A (Article Explainer), Kit B (Committee Assistant), plus a README
+materials/nhanes-bp/       # the Part 2 practice project: NHANES 2021–2023 files, codebooks, data dictionary, analysis plan,
+                           #   a fictional data/restricted/ stand-in, an optional CDC SAS excerpt (zipped at build time)
+theme/                     # CWML web style adapter: cwml.scss, cwml-dark.scss, nav-active.html, skip-link.html,
+                           #   favicon.png (Yale Library "Y"), prompt-blocks.lua (turns text-fenced prompts into labelled boxes with a copy button)
+instructor/                # not rendered: README (Part 1 prep, segment notes and timing; Part 2 prep, run of show, section notes and backup plans; NHANES data spec; answer keys), R solutions, Part 2 answer key, review-outline.md (checklist for reviewing the materials)
 scripts/build_downloads.py # post-render step that builds the zip downloads
 ```
 
@@ -36,6 +38,7 @@ What the render does:
 - **Part 1 has no deck:** instructors teach from the class page, `part1.html`. The page is public, so the teaching notes live in `instructor/README.md`.
 - **Part 2 has no deck either:** instructors teach from `part2.html`. Its timing, run of show and teaching notes also live in `instructor/README.md`.
 - **Zip downloads:** `scripts/build_downloads.py` builds `downloads/nhanes-bp.zip` and the catch-up `downloads/nhanes-bp-checkpoint.zip` (Part 2: the practice project, plus a working `R/01_prepare.R` in the checkpoint) and `downloads/part1-kit-a.zip` and `downloads/part1-kit-b.zip` (Part 1). The kit files are also copied to the site as single files.
+- **Prompt boxes:** `theme/prompt-blocks.lua` turns every ```` ```text ```` block into an outlined box labelled "Prompt" with a copy button. Other pasted text sets its own label (```` ```{.text prompt-label="..."} ````).
 - **Theme:** the pages use the CWML web style (draft 0.1) through the Quarto adapter in `theme/`. Dark mode (`cwml-dark.scss`) is a local extension that isn't part of CWML 0.1; the site follows the reader's system setting and has a light/dark toggle.
 
 ## Publish to GitHub Pages
@@ -43,8 +46,9 @@ What the render does:
 The live site is <https://cwml.github.io/getting-started-with-claude/>. GitHub Pages serves the `docs/` folder on `main` (**Settings → Pages → Deploy from a branch → `main` / `/docs`**).
 
 1. Stop `quarto preview`, then run `quarto render`.
-2. Commit the source changes and `docs/` together, and push to `main`.
-3. Wait a minute or two, then hard-refresh the site (Cmd + Shift + R).
+2. Check `docs/`: every image has alt text, text contrast passes in light and dark mode, and `git status --short --ignored` shows nothing in `docs/` ignored.
+3. Commit the source changes and `docs/` together, and push to `main`.
+4. Wait a minute or two, then hard-refresh the site (Cmd + Shift + R).
 
 `docs/` is generated: never edit it by hand.
 
