@@ -170,7 +170,7 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Claude at the School of Medicine",
+    "title": "Getting started with Claude",
     "section": "",
     "text": "Skip to main content\nThese pages are the class materials for two in-person classes from the Cushing/Whitney Medical Library. Getting started with Claude shows anyone at the School of Medicine how to use the Claude app well and safely. Analyzing research data with Claude Code teaches researchers to clean and analyze study data. The second class builds on the first, but you can take either one on its own. Instructors teach from these pages, so you can follow along in class or work through them on your own.",
     "crumbs": [
@@ -181,7 +181,7 @@
   {
     "objectID": "index.html#learn",
     "href": "index.html#learn",
-    "title": "Claude at the School of Medicine",
+    "title": "Getting started with Claude",
     "section": "What you’ll learn",
     "text": "What you’ll learn\n\nGetting started with Claude\n\nIdentify the right tool and settings for your data.\nApply prompting patterns to a real task.\nEvaluate Claude’s answers and citations before you use them.\nCreate a Project you can reuse for your own work.\n\n\n\nAnalyzing research data with Claude Code\n\nConfigure a Claude Code project that protects raw and restricted data.\nImplement a plan-first workflow to clean and analyze study data.\nDistinguish tasks to delegate to Claude from decisions you keep.\nEvaluate AI-generated code and results against the analysis plan.",
     "crumbs": [
@@ -192,7 +192,7 @@
   {
     "objectID": "index.html#classes",
     "href": "index.html#classes",
-    "title": "Claude at the School of Medicine",
+    "title": "Getting started with Claude",
     "section": "The two classes",
     "text": "The two classes\n\n\n\n\n\n\n\n\n\nGetting started with Claude\nAnalyzing research data with Claude Code\n\n\n\n\nFor\nAnyone at the School of Medicine. No programming needed.\nResearchers, coordinators, analysts, and clinicians who can read a little R. Getting started with Claude helps but isn’t required.\n\n\nWhat you’ll do\nBuild a Claude Project you’ll keep using, then prompt it well and check what it gives you.\nUse Claude Code in Positron to prepare and analyze real CDC survey data (NHANES) and reproduce a published CDC estimate. You make the decisions and check every step.\n\n\nTime\n60 minutes\n90 minutes\n\n\nWhere\nIn person, SHM L 111, up to 18 people\nIn person, SHM L 111, up to 18 people",
     "crumbs": [
@@ -203,7 +203,7 @@
   {
     "objectID": "index.html#start",
     "href": "index.html#start",
-    "title": "Claude at the School of Medicine",
+    "title": "Getting started with Claude",
     "section": "Start here",
     "text": "Start here\nGetting started with Claude\n\nSetup: sign in to Claude and download your practice kit (about 10 minutes)\nClass page: the class itself, with every prompt ready to copy\n\nAnalyzing research data with Claude Code\n\nSetup: install Positron, R, git, and the Claude Code extension, and download the practice project (about 30 minutes)\nClass page: the class itself, step by step",
     "crumbs": [
@@ -214,7 +214,7 @@
   {
     "objectID": "index.html#data",
     "href": "index.html#data",
-    "title": "Claude at the School of Medicine",
+    "title": "Getting started with Claude",
     "section": "Data use",
     "text": "Data use\n\n\n\n\n\n\nWarningNo patient data, ever\n\n\n\n\nIn class, use only the class files and public information. Never use patient data or other sensitive information in either class.\nA HIPAA-supported version of Claude is available by request (see the ITS service page for Claude Enterprise). Being HIPAA-supported doesn’t approve your project, every feature, or every data set.\nBefore you use Claude with real work data, follow Yale’s data classification. Questions go to [HSIT / HIPAA Privacy Office contact].\n\n\n\nBoth classes use only fictional (synthetic) files or public, openly licensed material. The article in Getting started with Claude is an open-access paper (Hickey et al., PLoS Medicine 2025, CC BY). Analyzing research data with Claude Code uses real, public CDC survey data (NHANES, August 2021–August 2023). It’s de-identified survey data, not patient data. The NCHS data user agreement still applies: use it for statistical analysis only, never try to identify anyone, and never link it to other data about the same people.",
     "crumbs": [
@@ -225,7 +225,7 @@
   {
     "objectID": "index.html#setup-part1",
     "href": "index.html#setup-part1",
-    "title": "Claude at the School of Medicine",
+    "title": "Getting started with Claude",
     "section": "Setup for Getting started with Claude",
     "text": "Setup for Getting started with Claude\n\n1. Download Claude app\n\nDownload and install the Claude desktop app.\nIn a web browser, go to claude.ai, sign in with your Yale account, and send a test message such as “Hello.”\n\n\n\n2. Choose your practice kit\nIn class you’ll build a Claude Project: a workspace with your own instructions and files. Pick one kit. Both use the same steps.\n\n\n\nKit\nWho it’s for\nWhat’s in it\nDownload\n\n\n\n\nKit A: Article Explainer (default)\nAnyone who reads or explains research articles\nA style guide (fictional) and a text copy of an open-access article (Hickey et al., PLoS Medicine 2025, CC BY)\npart1-kit-a.zip\n\n\nKit B: Committee Assistant\nAdministrative staff who run meetings and committees\nA made-up committee charter and meeting notes\npart1-kit-b.zip\n\n\n\n\nDownload your kit’s zip file and unzip it somewhere easy to find, such as Documents. On Windows, right-click the zip and choose Extract All.\nDon’t upload anything yet. In class, we’ll check your settings first, then build the Project together.\n\n\n\n\n\n\n\nNoteIndividual files, and the Windows .md.txt problem\n\n\n\n\n\nIndividual files (if you’d rather not use a zip):\n\nKit A: explainer-style-guide.md · hickey-2025-telehealth-htn.md\nKit B: committee-pack-synthetic.md\nAbout the kits: README.md\n\nTo save a single file, right-click the link and choose Save link as (or Download linked file). If you just click it, the file may open as text in your browser.\nWindows: your file may save as name.md.txt. That’s fine; Claude can read it. To fix the name, open File Explorer, choose View &gt; Show &gt; File name extensions, and delete .txt from the end.\n\n\n\n\n\n3. Optional: the Claude phone app\nNear the end of class we’ll open your Project on a phone. This step is optional; you can do everything on your laptop.\n\nInstall Claude from the App Store (iPhone) or Google Play (Android). Check that the publisher is Anthropic.\nSign in with the same Yale account.\nNever photograph patient lists, charts, screens, or whiteboards. If you use the HIPAA-supported version, check with Health Sciences IT before using the phone app.",
     "crumbs": [
@@ -236,7 +236,7 @@
   {
     "objectID": "index.html#setup-part2",
     "href": "index.html#setup-part2",
-    "title": "Claude at the School of Medicine",
+    "title": "Getting started with Claude",
     "section": "Setup for Analyzing research data with Claude Code",
     "text": "Setup for Analyzing research data with Claude Code\nAbout 30 minutes. Do the steps in order. You need a Yale Claude account whose seat includes Claude Code.\n\n1. Positron and R\nPositron is a free data science editor from Posit, the makers of RStudio. It works with R and supports Quarto. VS Code (version 1.94 or later) works too, but class is taught in Positron.\n\nInstall Positron: https://positron.posit.co/download.html\nInstall R from https://cloud.r-project.org. Positron should find R. If it doesn’t, restart Positron, then ask the instructors.\nIn Positron’s Console, install the class packages:\n\ninstall.packages(c(\"tidyverse\", \"haven\", \"survey\", \"here\", \"gtsummary\", \"gt\", \"broom\", \"janitor\", \"testthat\"))\nThe class uses R only. If you work in Python, pair with an R user or follow along.\n\n\n2. git (required)\nIn class, git saves checkpoints of your work so you can undo mistakes.\n\nmacOS: open Terminal and run xcode-select --install. This installs Apple’s Command Line Tools, which include git. If it says they’re already installed, you’re done.\nWindows: install Git for Windows from https://git-scm.com/downloads. Accept the default options.\nSet your name and email. In Positron, open the Terminal tab and run:\n\ngit config --global user.name \"Your Name\"\ngit config --global user.email \"you@yale.edu\"\n\n\n3. The Claude Code extension\n\nIn Positron, open the Extensions view from the Activity Bar on the left.\nSearch for Claude Code and install the extension published by Anthropic. (Positron installs extensions from a mirror of the Open VSX catalog; VS Code uses its own marketplace.)\nOpen the Claude Code panel and sign in with your Yale Claude account.\n\n\n\n4. The practice project\n\nDownload nhanes-bp.zip. It holds three real data files from the CDC’s National Health and Nutrition Examination Survey (NHANES), August 2021–August 2023: demographics, blood pressure readings, and a blood pressure questionnaire. It also has the CDC codebooks, a data dictionary, and a one-page analysis plan.\nUnzip it somewhere easy to find, such as Documents. On Windows, right-click the zip and choose Extract All. If you end up with an nhanes-bp folder inside another nhanes-bp folder, use the inner one.\nIn Positron, choose File &gt; Open Folder and select the nhanes-bp folder.\n\n\n\n5. Check that it works\n\nIn the Claude Code panel, send this prompt:\n\n\n\nPrompt\n\nRead the README and CLAUDE.md, then tell me in three sentences what this project is.\n\nIf Claude describes CDC NHANES blood-pressure data from 2021–2023, you’re ready.\n\nCheck that Claude can run R and git for you. Send this prompt. If Claude asks to run a command, allow it:\n\n\n\nPrompt\n\nRun `Rscript --version` and `git --version`, then tell me what each one printed.\n\nIf both print a version number, Claude can run R and git. If one fails, check that it’s installed, restart Positron, and try again.\nWindows: the R installer doesn’t add Rscript to your PATH, so Claude can’t find it. Open Start, search for Edit environment variables for your account, select Path, click Edit, then New, and add R’s bin folder, usually C:\\Program Files\\R\\R-4.x.x\\bin (use your version’s folder). Click OK, restart Positron, and run the prompt again.\n\nType /status in the panel. Check that it shows your Yale account. Note the version number.\n\n\n\nOptional extras\n\n\n\nExtra\nWhy\nHow\n\n\n\n\nStandalone Claude Code CLI\nOne optional step in class uses the terminal version of Claude Code. You can also just watch it. The extension doesn’t add claude to your Terminal.\nInstall it from claude.com/product/claude-code\n\n\n\n\nRead the institutional AI and data policy.",
     "crumbs": [
@@ -247,7 +247,7 @@
   {
     "objectID": "index.html#access",
     "href": "index.html#access",
-    "title": "Claude at the School of Medicine",
+    "title": "Getting started with Claude",
     "section": "Access and alternatives",
     "text": "Access and alternatives\n\n\n\nIf…\nDo this\n\n\n\n\nYou don’t have a working Claude account\nSee Claude @ Yale for an overview, then request a Claude account before class. In class, pair up with someone who has one. In Getting started with Claude, you can also follow along in Clarity where it has the same feature. You can also use a free Claude account, but don’t put any Yale information in it: use it only for the public class files.",
     "crumbs": [
@@ -258,7 +258,7 @@
   {
     "objectID": "index.html#links",
     "href": "index.html#links",
-    "title": "Claude at the School of Medicine",
+    "title": "Getting started with Claude",
     "section": "Recommended links",
     "text": "Recommended links\n\n\n\nLink\nWhat it’s for\n\n\n\n\nClaude Academy\nFree courses from Anthropic\n\n\nClaude Help Center\nHow the Claude app’s features work\n\n\nClaude Code docs\nOfficial Claude Code documentation\n\n\nPositron\nThe editor used in Analyzing research data with Claude Code\n\n\nData Analysis in the Musser Lab\nA lab’s guide to reproducible R and Python projects, written with Claude Code\n\n\nAI at Yale\nYale’s AI tools and guidance\n\n\nAI guidance and library resources\nYale Library’s guidance on using AI in research\n\n\nCitizen Developer Toolkit\nHealth Sciences IT’s guide to building small tools for your own work\n\n\nYale data classification\nWhich data can go where",
     "crumbs": [
@@ -269,7 +269,7 @@
   {
     "objectID": "index.html#contact",
     "href": "index.html#contact",
-    "title": "Claude at the School of Medicine",
+    "title": "Getting started with Claude",
     "section": "Contact",
     "text": "Contact\nJustin DeMayo, Cushing/Whitney Medical Library, Yale School of Medicine\nEmail: justin.demayo@yale.edu\nMax Wegener, Cushing/Whitney Medical Library, Yale School of Medicine\nEmail: maximilian.wegener@yale.edu\nFeedback is welcome. Found something unclear, out of date, or broken? Send us your feedback, or use the Feedback link at the top of every page.",
     "crumbs": [

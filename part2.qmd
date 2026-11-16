@@ -10,10 +10,6 @@ format:
 # This page is public: instructor notes and private details live in instructor/README.md.
 ---
 
-::: {.callout-warning title="Work in progress"}
-This class material isn't complete yet. Expect changes before the class is offered.
-:::
-
 In this class you'll analyze **real CDC survey data** (NHANES, August 2021–August 2023) with **Claude Code** in Positron. Claude Code is an AI coding agent: it reads your files, writes code, runs it, and fixes its own errors. You'll work in its extension panel. You'll plan first, let Claude build the scripts, and check every step yourself. By the end, you'll try to reproduce a published CDC estimate of how many U.S. adults have high blood pressure. This page has every prompt, ready to copy.
 
 **The goal:** this class doesn't replace learning R or statistics. You'll learn where a coding agent speeds up good analysis, and where your expertise must stay in control. Each step below says what Claude does and what **you** decide.

@@ -1,5 +1,5 @@
 ---
-title: "Claude at the School of Medicine"
+title: "Getting started with Claude"
 subtitle: "Training materials from the Yale Cushing/Whitney Medical Library"
 ---
 
