@@ -13,7 +13,7 @@ project:
   post-render: scripts/build_downloads.py
 
 website:
-  title: "Getting Started with Claude"
+  title: "Getting started with Claude"
   description: "Two hands-on library classes: getting started with Claude, and analyzing research data with Claude Code."
   site-url: "https://cwml.github.io/getting-started-with-claude/"
   favicon: theme/favicon.png
@@ -65,7 +65,7 @@ website:
         text: Recommended links
   page-footer:
     left: "Cushing/Whitney Medical Library · Yale School of Medicine"
-    center: "Questions or feedback? Email [justin.demayo@yale.edu](mailto:justin.demayo@yale.edu?subject=Claude%20classes%20feedback) · Copyright © 2026 Yale University · All Rights Reserved · [Accessibility at Yale](https://usability.yale.edu/digital-accessibility/accessibility-at-yale) · [Privacy Policy](https://privacy.yale.edu/resources/privacy-statement)"
+    center: "Questions or feedback? Email [justin.demayo@yale.edu](mailto:justin.demayo@yale.edu?subject=Claude%20classes%20feedback) · [Accessibility at Yale](https://usability.yale.edu/digital-accessibility/accessibility-at-yale) · [Privacy Policy](https://privacy.yale.edu/resources/privacy-statement)"
     right: "Built with [Quarto](https://quarto.org)"
 
 format:

@@ -50,7 +50,7 @@ These pages are the class materials for two in-person classes from the Cushing/W
 ::: {.callout-warning title="No patient data, ever"}
 - In class, use **only the class files and public information**. Never use patient data or other sensitive information in either class.
 - **A HIPAA-supported version of Claude is available by request** (see the [ITS service page for Claude Enterprise](https://yale.service-now.com/it?id=service_offering&sys_id=f6429096337382106bab02b19e5c7bf4)). Being HIPAA-supported doesn't approve your project, every feature, or every data set.
-- Before you use Claude with real work data, follow [Yale's data classification](https://cybersecurity.yale.edu/data-classification). Questions go to `[HSIT / HIPAA Privacy Office contact]`.
+- Before you use Claude with real work data, follow [Yale's data classification](https://cybersecurity.yale.edu/data-classification). Questions go to [Health Sciences IT](https://healthsciencesit.yale.edu/hsit-team/services).
 :::
 
 Both classes use only fictional (synthetic) files or public, openly licensed material. The article in *Getting started with Claude* is an open-access paper (Hickey et al., *PLoS Medicine* 2025, CC BY). *Analyzing research data with Claude Code* uses real, public CDC survey data (NHANES, August 2021–August 2023). It's de-identified survey data, not patient data. The NCHS data user agreement still applies: use it for statistical analysis only, never try to identify anyone, and never link it to other data about the same people.
@@ -59,7 +59,7 @@ Both classes use only fictional (synthetic) files or public, openly licensed mat
 
 ## Setup for Getting started with Claude {#setup-part1}
 
-### 1. Download Claude app
+### 1. Download the Claude app
 
 - [ ] Download and install the [**Claude** desktop app](https://claude.ai/downloads).
 - [ ] In a web browser, go to [**claude.ai**](https://claude.ai), sign in with your Yale account, and send a test message such as "Hello."
@@ -100,6 +100,8 @@ Near the end of class we'll open your Project on a phone. This step is optional;
 ## Setup for Analyzing research data with Claude Code {#setup-part2}
 
 About 30 minutes. Do the steps in order. You need a Yale Claude account whose seat includes **Claude Code**.
+
+- [ ] Read the [institutional AI and data policy](https://provost.yale.edu/news/guidelines-use-generative-ai-tools).
 
 ### 1. Positron and R
 
@@ -167,8 +169,6 @@ If both print a version number, Claude can run R and git. If one fails, check th
 | Extra | Why | How |
 |---|---|---|
 | **Standalone Claude Code CLI** | One optional step in class uses the terminal version of Claude Code. You can also just watch it. The extension doesn't add `claude` to your Terminal. | Install it from [claude.com/product/claude-code](https://claude.com/product/claude-code) |
-
-- [ ] Read the [institutional AI and data policy](https://provost.yale.edu/news/guidelines-use-generative-ai-tools).
 
 
 ## Access and alternatives {#access}

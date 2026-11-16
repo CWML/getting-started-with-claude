@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Analyzing research data with Claude Code – Getting Started with Claude</title>
+<title>Analyzing research data with Claude Code – Getting started with Claude</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -295,7 +295,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Getting Started with Claude</span>
+    <span class="navbar-title">Getting started with Claude</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -561,7 +561,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>an excerpt of CDC’s own SAS code in <code>legacy/</code>, for a try-at-home exercise</li>
 </ul>
 <p>The <code>R/</code>, <code>output/</code>, and <code>reports/</code> folders are empty. You’ll fill them in class.</p>
-<p>Unzip it somewhere easy to find, such as <code>Documents/</code>. On Windows, right-click the zip and choose <strong>Extract All</strong>. If you get an <code>nhanes-bp</code> folder inside another <code>nhanes-bp</code> folder, open the inner one. <code>CLAUDE.md</code> should be at the top of Positron’s Explorer. Then open the <code>nhanes-bp</code> folder in Positron (<strong>File → Open Folder</strong>).</p>
+<p>Unzip it somewhere easy to find, such as <code>Documents/</code>. On Windows, right-click the zip and choose <strong>Extract All</strong>. If you get an <code>nhanes-bp</code> folder inside another <code>nhanes-bp</code> folder, open the inner one. <code>CLAUDE.md</code> should be at the top of Positron’s Explorer. Then open the <code>nhanes-bp</code> folder in Positron (<strong>File &gt; Open Folder</strong>).</p>
 <p><a href="downloads/nhanes-bp-checkpoint.zip"><strong>nhanes-bp-checkpoint.zip</strong></a> is for <strong>if you fall behind</strong>. It’s the same project with a working <code>R/01_prepare.R</code>. You only need it if your own script isn’t working by the <a href="#catch-up">catch-up point</a>.</p>
 <div class="callout callout-style-default callout-important callout-titled" title="Data rule for today">
 <div class="callout-header d-flex align-content-center">
@@ -667,7 +667,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="add-a-deny-rule-enforcement" class="level3">
 <h3 class="anchored" data-anchor-id="add-a-deny-rule-enforcement">Add a deny rule: enforcement</h3>
-<p>In the panel, type <code>/</code> and choose <strong>Customize → Permissions</strong>. Add a <strong>Deny</strong> rule and save it to the <strong>project</strong> settings:</p>
+<p>In the panel, type <code>/</code> and choose <strong>Customize &gt; Permissions</strong>. Add a <strong>Deny</strong> rule and save it to the <strong>project</strong> settings:</p>
 <div class="prompt-block">
 <div class="prompt-label">
 Permission rule
@@ -975,7 +975,7 @@ Prompt
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>Commit R/01_prepare.R and the files in output/ with a message that</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>says what they do. Then show me git log --oneline.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p><strong>Rewind is a partial safety net.</strong> In the panel, hover over a message and click the rewind button (check before class) to undo Claude’s file edits since then. It also undoes shell changes to files Claude had already edited. It doesn’t undo files that only a script wrote, such as everything in <code>output/</code>, or most edits made by subagents. <strong>git is the record.</strong></p>
+<p><strong>Rewind is a partial safety net.</strong> In the panel, hover over a message and click the rewind button to undo Claude’s file edits since then. It also undoes shell changes to files Claude had already edited. It doesn’t undo files that only a script wrote, such as everything in <code>output/</code>, or most edits made by subagents. <strong>git is the record.</strong></p>
 <p><em>Aim to finish this section about 50 minutes into class.</em></p>
 <div id="catch-up" class="callout callout-style-default callout-note callout-titled" title="Catch-up">
 <div class="callout-header d-flex align-content-center">
@@ -1182,10 +1182,10 @@ Prompt
 <td>A different, older definition. That’s a plan decision, not a data fix.</td>
 </tr>
 <tr class="odd">
-<td>Medication skip left as <code>NA</code> in <code>sbp &gt;= 130 \| dbp &gt;= 80 \| BPQ150 == 1</code></td>
+<td>Medication skip left as <code>NA</code> in <code>sbp &gt;= 130 | dbp &gt;= 80 | BPQ150 == 1</code></td>
 <td>3,395</td>
 <td>95.0%</td>
-<td>In R, <code>FALSE \| NA</code> is <code>NA</code>. People with normal BP and a skipped <code>BPQ150</code> become <code>NA</code> and drop out, so mostly people with hypertension remain.</td>
+<td>In R, <code>FALSE | NA</code> is <code>NA</code>. People with normal BP and a skipped <code>BPQ150</code> become <code>NA</code> and drop out, so mostly people with hypertension remain.</td>
 </tr>
 <tr class="even">
 <td>Rows with a blank <code>BPQ150</code> dropped (complete case)</td>
@@ -1475,7 +1475,7 @@ Prompt
 <li><a href="https://www.cdc.gov/nchs/products/databriefs/db511.htm">NCHS Data Brief 511</a>: hypertension prevalence in U.S. adults, August 2021–August 2023</li>
 <li><a href="https://www.cdc.gov/nchs/policy/data-user-agreement.html">NCHS data user agreement</a></li>
 <li>Institutional AI and data policy: <a href="https://cybersecurity.yale.edu/data-classification">Yale’s data classification</a> and Yale’s <a href="https://provost.yale.edu/news/guidelines-use-generative-ai-tools">guidelines for the use of generative AI tools</a></li>
-<li>Library services: <code>[data services consults, office hours]</code></li>
+<li>Library services: email the health data librarian at <a href="mailto:healthdatalibrarian@yale.edu">healthdatalibrarian@yale.edu</a></li>
 </ul>
 
 
@@ -1931,7 +1931,7 @@ Prompt
 <p>Cushing/Whitney Medical Library · Yale School of Medicine</p>
 </div>   
     <div class="nav-footer-center">
-<p>Questions or feedback? Email <a href="mailto:justin.demayo@yale.edu?subject=Claude%20classes%20feedback">justin.demayo@yale.edu</a> · Copyright © 2026 Yale University · All Rights Reserved · <a href="https://usability.yale.edu/digital-accessibility/accessibility-at-yale">Accessibility at Yale</a> · <a href="https://privacy.yale.edu/resources/privacy-statement">Privacy Policy</a></p>
+<p>Questions or feedback? Email <a href="mailto:justin.demayo@yale.edu?subject=Claude%20classes%20feedback">justin.demayo@yale.edu</a> · <a href="https://usability.yale.edu/digital-accessibility/accessibility-at-yale">Accessibility at Yale</a> · <a href="https://privacy.yale.edu/resources/privacy-statement">Privacy Policy</a></p>
 <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/CWML/getting-started-with-claude/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Built with <a href="https://quarto.org">Quarto</a></p>

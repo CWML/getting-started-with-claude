@@ -37,7 +37,7 @@ The agreement describes legal penalties for misuse. In practice: analyze, don't 
 ## Open the project in Positron
 
 1. Unzip the folder somewhere you can find it, such as `Documents/`. (On Windows, check that **Extract All** didn't create a folder inside a folder.)
-2. In Positron, choose **File → Open Folder** and select the `nhanes-bp` folder.
+2. In Positron, choose **File > Open Folder** and select the `nhanes-bp` folder.
 3. You should see `CLAUDE.md`, `data/`, `docs/` and the other folders in the Explorer.
 
 ## Start Claude Code

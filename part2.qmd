@@ -42,7 +42,7 @@ Do the [setup steps](index.qmd#setup-part2) before class. In short: a Yale Claud
 
 The `R/`, `output/`, and `reports/` folders are empty. You'll fill them in class.
 
-Unzip it somewhere easy to find, such as `Documents/`. On Windows, right-click the zip and choose **Extract All**. If you get an `nhanes-bp` folder inside another `nhanes-bp` folder, open the inner one. `CLAUDE.md` should be at the top of Positron's Explorer. Then open the `nhanes-bp` folder in Positron (**File → Open Folder**).
+Unzip it somewhere easy to find, such as `Documents/`. On Windows, right-click the zip and choose **Extract All**. If you get an `nhanes-bp` folder inside another `nhanes-bp` folder, open the inner one. `CLAUDE.md` should be at the top of Positron's Explorer. Then open the `nhanes-bp` folder in Positron (**File > Open Folder**).
 
 [**nhanes-bp-checkpoint.zip**](downloads/nhanes-bp-checkpoint.zip) is for **if you fall behind**. It's the same project with a working `R/01_prepare.R`. You only need it if your own script isn't working by the [catch-up point](#catch-up).
 
@@ -111,7 +111,7 @@ Click the **mode indicator** at the bottom of the prompt box and choose **Manual
 
 ### Add a deny rule: enforcement
 
-In the panel, type `/` and choose **Customize → Permissions**. Add a **Deny** rule and save it to the **project** settings:
+In the panel, type `/` and choose **Customize > Permissions**. Add a **Deny** rule and save it to the **project** settings:
 
 ```{.text prompt-label="Permission rule"}
 Read(./data/restricted/**)
@@ -342,7 +342,7 @@ Commit R/01_prepare.R and the files in output/ with a message that
 says what they do. Then show me git log --oneline.
 ```
 
-**Rewind is a partial safety net.** In the panel, hover over a message and click the rewind button (check before class) to undo Claude's file edits since then. It also undoes shell changes to files Claude had already edited. It doesn't undo files that only a script wrote, such as everything in `output/`, or most edits made by subagents. **git is the record.**
+**Rewind is a partial safety net.** In the panel, hover over a message and click the rewind button to undo Claude's file edits since then. It also undoes shell changes to files Claude had already edited. It doesn't undo files that only a script wrote, such as everything in `output/`, or most edits made by subagents. **git is the record.**
 
 *Aim to finish this section about 50 minutes into class.*
 
@@ -458,7 +458,7 @@ Every row below ran without an error. Only one follows the plan.
 | No survey weights | 6,084 | 53.3% | Adults 60+ are over-represented in the sample (43.7% of examined adults, 30.0% once weighted), and they have the most hypertension. |
 | Interview weight `WTINT2YR` instead of exam weight `WTMEC2YR` | 6,084 | 48.2% | Looks plausible, but blood pressure comes from the exam, so the exam weight applies. |
 | 140/90 definition instead of 130/80 | 6,084 | 32.4% | A different, older definition. That's a plan decision, not a data fix. |
-| Medication skip left as `NA` in `sbp >= 130 \| dbp >= 80 \| BPQ150 == 1` | 3,395 | 95.0% | In R, `FALSE \| NA` is `NA`. People with normal BP and a skipped `BPQ150` become `NA` and drop out, so mostly people with hypertension remain. |
+| Medication skip left as `NA` in <code>sbp &gt;= 130 &#124; dbp &gt;= 80 &#124; BPQ150 == 1</code> | 3,395 | 95.0% | In R, <code>FALSE &#124; NA</code> is `NA`. People with normal BP and a skipped `BPQ150` become `NA` and drop out, so mostly people with hypertension remain. |
 | Rows with a blank `BPQ150` dropped (complete case) | 2,235 | 91.8% | Drops everyone who was never told they had high BP, so mostly people with a diagnosis remain. |
 | Pregnancy filter written as `filter(RIDEXPRG != 1)` | 1,036 | 20.1% | `filter()` drops rows where the test is `NA`, and `RIDEXPRG` is blank for everyone but women 20–44. Only young women remain. |
 | Pregnant participants kept | 6,123 | 47.3% | Only 39 people. Not every decision moves the answer much. |
@@ -629,4 +629,4 @@ Scan the code or [take the class survey](https://yalesurvey.ca1.qualtrics.com/jf
 - [NCHS Data Brief 511](https://www.cdc.gov/nchs/products/databriefs/db511.htm): hypertension prevalence in U.S. adults, August 2021–August 2023
 - [NCHS data user agreement](https://www.cdc.gov/nchs/policy/data-user-agreement.html)
 - Institutional AI and data policy: [Yale's data classification](https://cybersecurity.yale.edu/data-classification) and Yale's [guidelines for the use of generative AI tools](https://provost.yale.edu/news/guidelines-use-generative-ai-tools)
-- Library services: `[data services consults, office hours]`
+- Library services: email the health data librarian at [healthdatalibrarian@yale.edu](mailto:healthdatalibrarian@yale.edu)

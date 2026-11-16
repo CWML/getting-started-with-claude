@@ -140,7 +140,7 @@ The ghost icon ![Ghost icon](images/incognito-icon.png){height="1.4em" style="ve
 Not everything needs a Project. Use a plain chat for one-off questions, quick drafts and lookups.
 
 ::: {.do-now}
-**Your turn.** Click **New chat** (outside any Project) and send:
+**Your turn.** Click **New** (outside any Project) and send:
 
 ```text
 Give me three ways to make a long email easier to read.
@@ -154,7 +154,7 @@ Give me three ways to make a long email easier to read.
 | **Type, paste or drop a file** | **Enter** sends; **Shift+Enter** starts a new line. Drag a file onto the box to attach it. |
 | **+** (lower left) | Add files or photos, and turn tools on or off for this chat (below). |
 | Typing **/** | Opens the same tools from the keyboard, including skills *(if enabled)*. |
-| **Model menu** (near to Send) | Choose the model and effort. More in [Models, effort and skills](#tune). |
+| **Model menu** (next to Send) | Choose the model and effort. More in [Models, effort and skills](#tune). |
 | **Microphone** | Dictate instead of typing. |
 | **Ghost icon** (new chats only) | Starts an incognito chat. See [Incognito](#settings). |
 
@@ -245,7 +245,7 @@ For anyone who reads research articles: turn an article into an accurate, plain-
 **Files** (or download both: [part1-kit-a.zip](downloads/part1-kit-a.zip))
 
 - [explainer-style-guide.md](materials/part1-kits/kit-a/explainer-style-guide.md): a made-up, one-page style guide with rules Claude must follow.
-- [hickey-2025-telehealth-htn.md](materials/part1-kits/kit-a/hickey-2025-telehealth-htn.md): a text copy of an open-access trial, Hickey MD et al., *PLoS Med* 2025;22(6):e1004632 ([original article](https://doi.org/10.1371/journal.pmed.1004632)), reformatted for teaching under its Creative Commons license. It's a text file so that searching with Ctrl/Cmd+F works in segment 12.
+- [hickey-2025-telehealth-htn.md](materials/part1-kits/kit-a/hickey-2025-telehealth-htn.md): a text copy of an open-access trial, Hickey MD et al., *PLoS Med* 2025;22(6):e1004632 ([original article](https://doi.org/10.1371/journal.pmed.1004632)), reformatted for teaching under its Creative Commons license. It's a text file so that searching with Ctrl/Cmd+F works in section 12.
 
 **Project name:** Article Explainer
 
@@ -341,7 +341,7 @@ Start a **new chat inside your Project**. Use the default model and effort.
 ### Your turn: Turn 1
 
 ::: {.do-now}
-Copy **Turn 1** for your kit below. Fill in the two brackets, send, then answer Claude's questions.
+Copy **Turn 1** for your kit below. Fill in the brackets, send, then answer Claude's questions.
 :::
 
 **Kit A: Turn 1**
@@ -440,9 +440,9 @@ Check against the source, not against Claude.
 ### Your turn: check quotes and rules
 
 ::: {.do-now}
-**Quote check (2 min).** Pick 2 rows of your "Where this came from" table. Open [the article](materials/part1-kits/kit-a/hickey-2025-telehealth-htn.md) in a new browser tab, then search for each quote with **Ctrl/Cmd+F**. Mark it: **exact**, **paraphrased**, or **not there**.
+**Kit A: quote check (2 min).** Pick 2 rows of your "Where this came from" table. Open [the article](materials/part1-kits/kit-a/hickey-2025-telehealth-htn.md) in a new browser tab, then search for each quote with **Ctrl/Cmd+F**. Mark it: **exact**, **paraphrased**, or **not there**.
 
-**Rule check (1 min).** Is the plain-language version 150 words or fewer? If it's for patients, does it end with "Talk with your care team"? Does it avoid "proves" and "breakthrough"?
+**Kit A: rule check (1 min).** Is the plain-language version 150 words or fewer? If it's for patients, does it end with "Talk with your care team"? Does it avoid "proves" and "breakthrough"?
 :::
 
 Bonus: does the article agree with itself about how many people were in each group?
@@ -526,7 +526,7 @@ From chat to tasks, and from the app to Claude Code.
 
 ### Cowork in brief
 
-**Cowork** is built into the Claude app on Yale's standard Enterprise accounts. It isn't in the HIPAA-supported version.
+**Cowork** is built into the Claude app on Yale's standard Enterprise accounts. It isn't in the HIPAA-supported version, and it isn't for high-risk data.
 
 Chat answers. Cowork **does a task for you**:
 

@@ -32,17 +32,20 @@ Claude's features, menu names and admin settings change often. The feature descr
 - [ ] Take backup screenshots: both settings layouts, each Project build step, the model menu, the "+" and "/" menus, Customize > Skills, the Word handout, the phone app and its Code tab.
 - [ ] On the published GitHub Pages site, open the kit `.md` links from segment 12 (the article and the committee pack) and check that they show as plain text in the browser and don't download. If they download, tell people to open the file in TextEdit or Notepad instead.
 
-**Placeholders by who can answer** (as of November 10, 2026; site pages, description files and kits)
+**Placeholders by who can answer** (as of November 16, 2026; site pages, description files and kits)
 
 Some brackets aren't placeholders. Leave these alone: `[committee name]` is a slot participants fill in, `[general knowledge]` is a label Claude is told to use, and the bracketed numbers in the Kit A article are its own citations and confidence intervals. To find what's left, search the site files for `[`.
 
 | Who | Placeholders | Where |
 |---|---|---|
-| You / the library | `[data services consults, office hours]` | `part2.qmd` (Resources) |
 | You / the library | `[add category]` | `part2-description.md` |
-| You / the library | `[library license guidance]` | `materials/part1-kits/README.md` |
-| ITS | `[30 days by default, or Yale's setting]` (chat retention) | `part1.qmd` |
-| HSIT / HIPAA Privacy Office | `[HSIT / HIPAA Privacy Office contact]` | `index.qmd` |
+| ITS | `[30 days by default, or Yale's setting]` (incognito chat retention; leave it until Yale's setting is known) | `part1.qmd` |
+
+**Open fixes on the Getting started with Claude page** (found in the November 16, 2026 proofread; not fixed yet)
+
+- [ ] Segment 3, "Which Claude for which data," says Yale offers two versions of Claude but never names or compares them. Add a short comparison of the standard account and the HIPAA-supported version. This segment carries learning objective 1.
+- [ ] Segment 3's link text `[AI at Yale, Claude ]` has a stray space. Use "Claude @ Yale" to match the other pages.
+- [ ] Segment 12 says "a template is on the site" for disclosing AI use, but there isn't one. Add a template or drop the claim.
 
 **Check in both Yale workspaces (standard enterprise and HIPAA-supported) the week before, with screenshots**
 
@@ -99,7 +102,7 @@ Keep this to 20 seconds. Nobody signs up for anything during class.
 
 *3. Which Claude for which data (0:05 – 0:08) › Standard or HIPAA-supported?*
 
-Say plainly: "A HIPAA-supported version of Claude is available by request." Then the caveats: it doesn't approve your project, every feature, or every data set. Follow [Yale data classification / policy link]. Questions go to [HSIT / HIPAA Privacy Office contact]. Never suggest that the standard account covers PHI.
+Say plainly: "A HIPAA-supported version of Claude is available by request." Then the caveats: it doesn't approve your project, every feature, or every data set. Follow [Yale data classification / policy link]. Questions go to Health Sciences IT (https://healthsciencesit.yale.edu/hsit-team/services). Never suggest that the standard account covers PHI.
 
 Features in the HIPAA-supported version may differ: some are off, and it keeps an older layout. Check with [ITS].
 
@@ -295,7 +298,7 @@ Two instructors teach *Analyzing research data with Claude Code* from the class 
 - **L (lead):** at the projector. Drives Positron, narrates, demos each step once, and owns transitions.
 - **R (roamer):** walks the room, owns the clock and the cut decisions, triages laptops, and hands out the catch-up zip. R's laptop is signed in and open on the finished demo folder, ready to take over the projector.
 
-Claude Code changes almost weekly. This guide was checked against code.claude.com/docs in **November 2026** (menu labels last checked on November 10, 2026, against the installed extension, version 2.1.319; record the version from `/status` each time you re-check). The week before class, update the extension and re-check every item marked **check before class**. Positron installs the extension from its own mirror of the Open VSX catalog, and it isn't the editor the docs describe. Items marked **(if enabled)** depend on enterprise admin settings. Replace every `[bracketed placeholder]` on the page.
+Claude Code changes almost weekly. This guide was checked against code.claude.com/docs in **November 2026** (menu labels last checked on November 10, 2026, against the installed extension, version 2.1.319; the rewind button, `/code-review`, and Auto as the default mode confirmed on November 16, 2026; record the version from `/status` each time you re-check). The week before class, update the extension and re-check every item marked **check before class**. Positron installs the extension from its own mirror of the Open VSX catalog, and it isn't the editor the docs describe. Items marked **(if enabled)** depend on enterprise admin settings. Replace every `[bracketed placeholder]` on the page.
 
 **Instructor files (repo only):** this file (prep, run of show, section notes, dataset spec, answer key), `instructor/solutions/R/` (finished scripts, tests and report: your fallback), and `instructor/part2-answer-key/` (the deny rule and the example `check-data` skill).
 
